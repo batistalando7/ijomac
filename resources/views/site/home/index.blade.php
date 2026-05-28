@@ -1,1811 +1,3906 @@
 @extends('layouts._site.main')
 @section('title', 'Home | EventHub')
 @section('content')
-    <!-- Hero Section Start -->
-    <div class="hero bg-section dark-section parallaxie">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <!-- Hero Content Box Start -->
-                    <div class="hero-content-box">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">Seu evento começa aqui</h3>
-                            <h1 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">EventHub – Sistema Web de
-                                Gestão de Eventos <span>Eventos</span></h1>
-                            <p class="wow fadeInUp" data-wow-delay="0.4s">solução tecnológica moderna e eficiente para
-                                gestão de eventos, promovendo inovação digital, praticidade e melhor controlo
-                                administrativo.</p>
-                        </div>
-                        <!-- Section Title End -->
 
-                        <!-- Hero Button Start -->
-                        <div class="hero-btn wow fadeInUp" data-wow-delay="0.6s">
-                            <a href="contact.html" class="btn-default">Comece a usar</a>
-                            <a href="services.html" class="btn-default btn-highlighted">Ver Eventos</a>
-                        </div>
-                        <!-- Hero Button End -->
-
-                        <!-- Video Play Button Start -->
-                        <div class="video-play-button">
-                            <a href="{{ url('www.google.com/sorry/index6e55.html?v=Y-x0efG1seA') }}" class="popup-video"
-                                data-cursor-text="Play">
-                                <i class="fa-solid fa-play"></i>
-                            </a>
-                            <h3>Continuar</h3>
-                        </div>
-                        <!-- Video Play Button End -->
-                    </div>
-                    <!-- Hero Content Box End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Hero Section End -->
-
-    <!-- About Us Section Start -->
-    <div class="about-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <!-- About Us Info Start -->
-                    <div class="about-us-info">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">Sobre Nós</h3>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- About Us Circle Start -->
-                        <div class="year-experience-circle">
-                            <img src="{{ url('site/images/year-experience-circle.svg') }}" alt="">
-                            <h2><span class="counter">20</span>+</h2>
-                        </div>
-                        <!-- About Us Circle End -->
-                    </div>
-                    <!-- About Us Info End -->
+<div id="mini_cart" class="min_cart_wrapper">
+            <div class="cart_drawer">
+                <div class="cart_top">
+                    <a href="#" class="cart_close"><i class="bx bx-x"></i></a>
+                    <h3 class="title">Courses List</h3>
+                    <span class="cart_number"> 0 </span>
                 </div>
 
-                <div class="col-lg-8">
-                    <!-- About Us Content Start -->
-                    <div class="about-us-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h2 class="text-effect wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">A team of
-                                creative voice artists and sound expert dedicated to turning your words into powerful.</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.4s">O sistema permitirá que organizadores,
-                                participantes e administradores interajam de forma prática e segura, automatizando processos
-                                que normalmente são realizados manualmente, como cadastro de participantes, divulgação de
-                                eventos, aprovação de publicações e geração de relatórios administrativos.</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- About Us Button Start -->
-                        <div class="about-us-btn wow fadeInUp" data-wow-delay="0.6s">
-                            <a href="about.html" class="btn-default">Ver Mais</a>
-                        </div>
-                        <!-- About Us Button End -->
-                    </div>
-                    <!-- About Us Content End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- About Item List Start -->
-                    <div class="about-item-list">
-                        <!-- About Box 1 Start -->
-                        <div class="about-box-1 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="about-item-content">
-                                <h3>O EventHub proporcionará:</h3>
-                                {{-- <p>With thousands of successful projects and clients across 30+ countries.</p> --}}
-                            </div>
-                            <div class="about-box-body">
-                                <div class="about-body-content">
-                                    <ul>
-                                        <li>organização na gestão</li>
-                                        <li>acesso às informações</li>
-                                        <li>Automatização de processos</li>
-                                        <li>Segurança e controlo administrativo</li>
-                                    </ul>
-                                    <a href="contact.html" class="btn-default">contacte Nos</a>
-                                </div>
-                                <div class="about-body-image">
-                                    <figure>
-                                        <img src="{{ url('site/images/about-body-image.png') }}" alt="">
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- About Box 1 End -->
-
-                        <!-- About Box 2 Start -->
-                        <div class="about-box-2 wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="review-images">
-                                <div class="review-image">
-                                    <figure class="image-anime">
-                                        <img src="{{ url('site/images/author-1.jpg') }}" alt="">
-                                    </figure>
-                                </div>
-                                <div class="review-image">
-                                    <figure class="image-anime">
-                                        <img src="{{ url('site/images/author-2.jpg') }}" alt="">
-                                    </figure>
-                                </div>
-                                <div class="review-image">
-                                    <figure class="image-anime">
-                                        <img src="{{ url('site/images/author-3.jpg') }}" alt="">
-                                    </figure>
-                                </div>
-                                <div class="review-image">
-                                    <figure class="image-anime">
-                                        <img src="{{ url('site/images/author-4.jpg') }}" alt="">
-                                    </figure>
-                                </div>
-                                <div class="review-image">
-                                    <figure class="image-anime">
-                                        <img src="{{ url('site/images/author-5.jpg') }}" alt="">
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="about-item-content">
-                                <h3>Mais de 15 mil Eventos em todo o mundo.</h3>
-                            </div>
-                        </div>
-                        <!-- About Box 2 End -->
-
-                        <!-- About Box 3 Start -->
-                        <div class="about-box-3 box-bg-shape">
-                            <div class="about-us-counter">
-                                <h2><span class="counter">150</span>+</h2>
-                            </div>
-                            <div class="about-item-content">
-                                <h3>Suporte a vários idiomas</h3>
-                                <p>Se você está explorando a EventHub pela primeira vez..</p>
-                            </div>
-                            <div class="about-us-flags review-images">
-                                <div class="review-image">
-                                    <figure class="image-anime">
-                                        <img src="{{ url('site/images/flag-image-1.png') }}" alt="">
-                                    </figure>
-                                </div>
-                                <div class="review-image">
-                                    <figure class="image-anime">
-                                        <img src="{{ url('site/images/flag-image-2.png') }}" alt="">
-                                    </figure>
-                                </div>
-                                <div class="review-image">
-                                    <figure class="image-anime">
-                                        <img src="{{ url('site/images/flag-image-3.png') }}" alt="">
-                                    </figure>
-                                </div>
-                                <div class="review-image">
-                                    <figure class="image-anime">
-                                        <img src="{{ url('site/images/flag-image-4.png') }}" alt="">
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- About Box 3 End -->
-                    </div>
-                    <!-- About Item List End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About Us Section End -->
-
-    <!-- Our Services Section Start -->
-    <div class="our-services bg-section">
-        <div class="container">
-            <div class="row section-row align-items-center">
-                <div class="col-lg-6">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">Eventos por Categoria</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">As categorias em
-                            <span>destaque</span>
-                        </h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- Section Button Start -->
-                    <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
-                        <a href="services.html" class="btn-default">Todas as Categorias</a>
-                    </div>
-                    <!-- Section Button End -->
-                </div>
-            </div>
-
-            <div class="row">
-                @foreach ($categories as $item)
-                    <div class="col-lg-3 col-md-6">
-                        <!-- Service Item Start -->
-                        <div class="service-item box-bg-shape wow fadeInUp">
-                            <div class="icon-box">
-                                <img src="{{ url('site/images/icon-service-1.svg') }}" alt="">
-                            </div>
-                            <div class="service-item-content">
-                                <h3><a href="service-single.html">{{ $item->name }}</a></h3>
-                                <p>{{ $item->description }}</p>
-                            </div>
-                            <div class="service-readmore-btn">
-                                <a href="service-single.html" class="readmore-btn">Ver Mais</a>
-                            </div>
-                        </div>
-                        <!-- Service Item End -->
-                    </div>
-                @endforeach
-
-                {{-- <div class="col-lg-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item box-bg-shape wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="icon-box">
-                            <img src="{{ url('site/images/icon-service-2.svg') }}" alt="">
-                        </div>
-                        <div class="service-item-content">
-                            <h3><a href="service-single.html">Character Voices</a></h3>
-                            <p>Bring animated characters to lifelike motion.</p>
-                        </div>
-                        <div class="service-readmore-btn">
-                            <a href="service-single.html" class="readmore-btn">read more</a>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item box-bg-shape wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="icon-box">
-                            <img src="{{ url('site/images/icon-service-3.svg') }}" alt="">
-                        </div>
-                        <div class="service-item-content">
-                            <h3><a href="service-single.html">Training Voiceovers</a></h3>
-                            <p>Professional tone for internal videos onboarding.</p>
-                        </div>
-                        <div class="service-readmore-btn">
-                            <a href="service-single.html" class="readmore-btn">read more</a>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item box-bg-shape wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="icon-box">
-                            <img src="{{ url('site/images/icon-service-4.svg') }}" alt="">
-                        </div>
-                        <div class="service-item-content">
-                            <h3><a href="service-single.html">Audio Branding</a></h3>
-                            <p>custom voiceovers for intro, outros, and branding.</p>
-                        </div>
-                        <div class="service-readmore-btn">
-                            <a href="service-single.html" class="readmore-btn">read more</a>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div> --}}
-
-                <div class="col-lg-12">
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text wow fadeInUp" data-wow-delay="0.8s">
-                        <p><span>Free</span>Vamos fazer algo incrível juntos. <a href="contact.html">Ganhe acesso
-                                grátis</a></p>
-                    </div>
-                    <!-- Section Footer Text End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Services Section End -->
-
-    <!-- Why Choose Us Section Start -->
-    {{-- <div class="why-choose-us">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5">
-                    <!-- Why Choose Image Box Start -->
-                    <div class="why-choose-image-box">
-                        <!-- Why Choose Image 1 Start -->
-                        <div class="why-choose-image-1">
-                            <!-- Why Choose Image Start -->
-                            <div class="why-choose-img">
-                                <figure class="image-anime reveal">
-                                    <img src="{{ url('site/images/why-choose-image-1.jpg') }}" alt="">
-                                </figure>
-                            </div>
-                            <!-- Why Choose Image End -->
-                        </div>
-                        <!-- Why Choose Image 1 End -->
-
-                        <!-- Why Choose Image 2 Start -->
-                        <div class="why-choose-image-2">
-                            <!-- Year Experience Box Start -->
-                            <div class="year-experience-box">
-                                <h2><span class="counter">20</span>+</h2>
-                                <p>Years Of Experience</p>
-                            </div>
-                            <!-- Year Experience Box End -->
-
-                            <!-- Why Choose Image Start -->
-                            <div class="why-choose-img">
-                                <figure class="image-anime reveal">
-                                    <img src="{{ url('site/images/why-choose-image-2.jpg') }}" alt="">
-                                </figure>
-                            </div>
-                            <!-- Why Choose Image End -->
-                        </div>
-                        <!-- Why Choose Image 2 End -->
-                    </div>
-                    <!-- Why Choose Image Box End -->
-                </div>
-
-                <div class="col-lg-7">
-                    <!-- Why Choose Content Start -->
-                    <div class="why-choose-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">Why choose us</h3>
-                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">The voice behind
-                                thousands of <span>successful videos</span></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.4s">With a proven track record of delivering
-                                high-quality voiceovers for brands, agencies & creators, we combine expert voice talent,
-                                fast turnaround times & seamless projects.</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Why Choose Body Start -->
-                        <div class="why-choose-body wow fadeInUp" data-wow-delay="0.6s">
-                            <!-- Why Choose Body Item Start -->
-                            <div class="why-choose-body-item">
-                                <div class="icon-box">
-                                    <img src="{{ url('site/images/icon-why-choose-body-1.svg') }}" alt="">
-                                </div>
-                                <div class="why-choose-body-content">
-                                    <h3>Studio-Quality Sound</h3>
-                                    <p>We use professional-grade equip- ments soundproof studios</p>
-                                </div>
-                            </div>
-                            <!-- Why Choose Body Item End -->
-
-                            <!-- Why Choose Body Item Start -->
-                            <div class="why-choose-body-item">
-                                <div class="icon-box">
-                                    <img src="{{ url('site/images/icon-why-choose-body-2.svg') }}" alt="">
-                                </div>
-                                <div class="why-choose-body-content">
-                                    <h3>Unlimited Revisions</h3>
-                                    <p>We deliver most projects within 24 hours and unlimited revision.</p>
-                                </div>
-                            </div>
-                            <!-- Why Choose Body Item End -->
-                        </div>
-                        <!-- Why Choose Body End -->
-
-                        <!-- Why Choose List Start -->
-                        <div class="why-choose-list wow fadeInUp" data-wow-delay="0.8s">
-                            <ul>
-                                <li>We fine-tune until it's just right</li>
-                                <li>15k+ successful project across industry</li>
-                                <li>Most projects delivered within 24 hour</li>
-                                <li>30+ languages and authentic regional</li>
-                            </ul>
-                        </div>
-                        <!-- Why Choose List End -->
-
-                        <!-- Why Choose Button Start -->
-                        <div class="why-choose-btn wow fadeInUp" data-wow-delay="1s">
-                            <a href="contact.html" class="btn-default">learn more</a>
-                        </div>
-                        <!-- Why Choose Button End -->
-                    </div>
-                    <!-- Why Choose Content End -->
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- Why Choose Us Section End -->
-
-    <!-- How It Work Section Start -->
-    {{-- <div class="how-it-work bg-section">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title section-title-center">
-                        <h3 class="wow fadeInUp">How it work</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Getting your voiceover has
-                            never been <span>this easy</span></h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <!-- Work Step Item Start -->
-                    <div class="work-step-item box-bg-shape wow fadeInUp">
-                        <div class="icon-box">
-                            <img src="{{ url('site/images/icon-work-step-1.svg') }}" alt="">
-                        </div>
-                        <div class="work-step-content">
-                            <h3>Send Your Script</h3>
-                            <p>Not ready? We can help you craft or refine it.</p>
-                        </div>
-                        <div class="work-step-no">
-                            <h3>step 01</h3>
-                        </div>
-                    </div>
-                    <!-- Work Step Item End -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Work Step Item Start -->
-                    <div class="work-step-item box-bg-shape wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="work-step-item-body">
-                            <div class="icon-box">
-                                <img src="{{ url('site/images/icon-work-step-2.svg') }}" alt="">
-                            </div>
-                            <div class="work-step-content">
-                                <h3>Choose Your Voice</h3>
-                                <p>Pick from our roster of professional artists.</p>
-                            </div>
-                        </div>
-                        <div class="work-step-no">
-                            <h3>step 02</h3>
-                        </div>
-                    </div>
-                    <!-- Work Step Item End -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Work Step Item Start -->
-                    <div class="work-step-item box-bg-shape wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="work-step-item-body">
-                            <div class="icon-box">
-                                <img src="{{ url('site/images/icon-work-step-3.svg') }}" alt="">
-                            </div>
-                            <div class="work-step-content">
-                                <h3>We Record & Edit</h3>
-                                <p>Our team records your voiceover.</p>
-                            </div>
-                        </div>
-                        <div class="work-step-no">
-                            <h3>step 03</h3>
-                        </div>
-                    </div>
-                    <!-- Work Step Item End -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Work Step Item Start -->
-                    <div class="work-step-item box-bg-shape wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="work-step-item-body">
-                            <div class="icon-box">
-                                <img src="{{ url('site/images/icon-work-step-4.svg') }}" alt="">
-                            </div>
-                            <div class="work-step-content">
-                                <h3>Review & Download</h3>
-                                <p>Get the final audio within 24 - 48 hours.</p>
-                            </div>
-                        </div>
-                        <div class="work-step-no">
-                            <h3>step 04</h3>
-                        </div>
-                    </div>
-                    <!-- Work Step Item End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text wow fadeInUp" data-wow-delay="0.8s">
-                        <p>Let's make something great work together. <a href="contact.html">Get Free Quote</a></p>
-                    </div>
-                    <!-- Section Footer Text End -->
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- How It Work Section End -->
-
-    <!-- Our Projects Section Start -->
-    <div class="our-projects">
-        <div class="container">
-            <div class="row section-row align-items-center">
-                <div class="col-lg-7">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">Eventos em Destaque</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Explore todos eventos de
-                            maior <span>destaque</span></h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-
-                <div class="col-lg-5">
-                    <!-- Section Button Start -->
-                    <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
-                        <a href="{{ route('site.events') }}" class="btn-default">Ver Todos Eventos</a>
-                    </div>
-                    <!-- Section Button End -->
-                </div>
+                <p class="woocommerce-mini-cart__empty-message">
+                    No products in the cart.
+                </p>
             </div>
         </div>
 
-        <div class="container-fluid">
-            <div class="row">
-                @foreach ($detachEvents as $item)
-                    <div class="col-lg-4 col-md-6">
-                        <!-- Project Item Start -->
-                        <div class="project-item wow fadeInUp">
-                            <div class="project-image box-bg-shape box-bg-shape">
-                                <figure class="image-anime">
-                                    <img src="{{ url('storage/' . $item->image) }}" alt="">
-                                </figure>
+        <div class="page-builder-template">
+            <div
+                data-elementor-type="wp-page"
+                data-elementor-id="22"
+                class="elementor elementor-22"
+                data-elementor-post-type="page"
+            >
+                <div
+                    class="elementor-element elementor-element-3eec0a7 e-con-full e-flex e-con e-parent"
+                    data-id="3eec0a7"
+                    data-element_type="container"
+                    data-e-type="container"
+                >
+                    <div
+                        class="elementor-element elementor-element-e66b92a elementor-widget elementor-widget-edplus-banner"
+                        data-id="e66b92a"
+                        data-element_type="widget"
+                        data-e-type="widget"
+                        data-widget_type="edplus-banner.default"
+                    >
+                        <div class="elementor-widget-container">
+                            <!-- Start Home Banner -->
+                            <section
+                                class="home-banner"
+                                style="
+                                    background-image: url({{ url('site/wp-content/uploads/2025/11/slide1.jpg') }});
+                                "
+                            >
+                                <div class="container position-relative">
+                                    <div class="row">
+                                        <div
+                                            class="col-xl-6 col-lg-5 col-12 align-self-center"
+                                        >
+                                            <div class="banner_content">
+                                                <span
+                                                    class="wow fadeInUp"
+                                                    data-wow-delay=".3s"
+                                                    ><img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/themes/edplus/assets/img/icons/graduation-hat-white.svg') }}"
+                                                        alt=""
+                                                    />Keep Learning
+                                                </span>
+                                                <h2
+                                                    class="wow fadeInUp"
+                                                    data-wow-delay=".5s"
+                                                >
+                                                    Best Online Courses <br />
+                                                    From EdPlus
+                                                </h2>
 
-                                <div class="project-btn">
-                                    <a href="{{ route('site.events.details', $item->id) }}">
-                                        <img src="{{ url('site/images/arrow-white.svg') }}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h3>{{ $item->category->name }}</h3>
-                                <h2><a href="{{ route('site.events.details', $item->id) }}">{{ $item->title }}</a></h2>
-                            </div>
-                        </div>
-                        <!-- Project Item End -->
-                    </div>
-                @endforeach
-                {{-- <div class="col-lg-4 col-md-6">
-                    <!-- Project Item Start -->
-                    <div class="project-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="project-image box-bg-shape">
-                            <figure class="image-anime">
-                                <img src="{{ url('site/images/project-2.jpg') }}" alt="">
-                            </figure>
+                                                <p
+                                                    class="wow fadeInUp"
+                                                    data-wow-delay=".7s"
+                                                >
+                                                    Remember to tailor the
+                                                    section names to fit the
+                                                    specific needs and <br />
+                                                    structure of your university
+                                                    website.
+                                                </p>
 
-                            <div class="project-btn">
-                                <a href="project-single.html">
-                                    <img src="{{ url('site/images/arrow-white.svg') }}" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>eLearning / Education</h3>
-                            <h2><a href="project-single.html">Multilingual Course Narration for SkillWise Academy's Online
-                                    Learning Platform</a></h2>
-                        </div>
-                    </div>
-                    <!-- Project Item End -->
-                </div>
+                                                <div
+                                                    class="d-flex gap-4 wow fadeInUp"
+                                                    data-wow-delay=".9s"
+                                                >
+                                                    <a
+                                                        href="courses/index.html"
+                                                        class="blue_btn round_btn"
+                                                        >Find Courses
+                                                        <i
+                                                            class="ph ph-arrow-right"
+                                                        ></i
+                                                    ></a>
 
-                <div class="col-lg-4 col-md-6">
-                    <!-- Project Item Start -->
-                    <div class="project-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="project-image box-bg-shape">
-                            <figure class="image-anime">
-                                <img src="{{ url('site/images/project-3.jpg') }}" alt="">
-                            </figure>
-
-                            <div class="project-btn">
-                                <a href="project-single.html">
-                                    <img src="{{ url('site/images/arrow-white.svg') }}" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Mobile App / Fitness</h3>
-                            <h2><a href="project-single.html">Conversational Voiceover for FitBuddy's Mobile App Onboarding
-                                    Experience</a></h2>
-                        </div>
-                    </div>
-                    <!-- Project Item End -->
-                </div> --}}
-
-                <div class="col-lg-12">
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text wow fadeInUp" data-wow-delay="0.6s"
-                        style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
-                        <p>From first call to full deployment - <a href="contact.html">hear how our AI delivers
-                                results.</a></p>
-                        <ul>
-                            <li>4.9</li>
-                            <li><i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </li>
-                            <li>Over 2000 Reviews</li>
-                        </ul>
-                    </div>
-                    <!-- Section Footer Text End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Projects Section End -->
-
-    <!-- Our Features Section Start -->
-    {{--  <div class="our-features bg-section">
-        <div class="container">
-            <div class="row section-row align-items-center">
-                <div class="col-lg-7">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">Our features</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Features designed to elevate
-                            your <span>audio experience</span></h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-
-                <div class="col-lg-5">
-                    <!-- Section Button Start -->
-                    <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
-                        <a href="contact.html" class="btn-default">contact now</a>
-                    </div>
-                    <!-- Section Button End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <!-- Feature Item Start -->
-                    <div class="feature-item box-bg-shape wow fadeInUp">
-                        <div class="icon-box">
-                            <img src="{{ url('site/images/icon-feature-1.svg') }}" alt="">
-                        </div>
-                        <div class="features-item-content">
-                            <h3>Fast Turnaround</h3>
-                            <p>Most projects delivered within 24 - 48 hours.</p>
-                            <ul>
-                                <li>Real-Time Updates</li>
-                                <li>24-48 Hour Delivery</li>
-                            </ul>
-                        </div>
-                        <div class="features-btn">
-                            <a href="contact.html" class="readmore-btn">read more</a>
-                        </div>
-                    </div>
-                    <!-- Feature Item End -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Feature Item Start -->
-                    <div class="feature-item box-bg-shape wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="icon-box">
-                            <img src="{{ url('site/images/icon-feature-2.svg') }}" alt="">
-                        </div>
-                        <div class="features-item-content">
-                            <h3>Custom Editing</h3>
-                            <p>Polished, ready-to-use audio files with timing.</p>
-                            <ul>
-                                <li>Precise Timing</li>
-                                <li>Noise-Free Audio</li>
-                            </ul>
-                        </div>
-                        <div class="features-btn">
-                            <a href="contact.html" class="readmore-btn">read more</a>
-                        </div>
-                    </div>
-                    <!-- Feature Item End -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Feature Item Start -->
-                    <div class="feature-item box-bg-shape wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="icon-box">
-                            <img src="{{ url('site/images/icon-feature-3.svg') }}" alt="">
-                        </div>
-                        <div class="features-item-content">
-                            <h3>Script Support</h3>
-                            <p>We help craft scripts that sound natural.</p>
-                            <ul>
-                                <li>Creative Input</li>
-                                <li>Polishing & Proofing</li>
-                            </ul>
-                        </div>
-                        <div class="features-btn">
-                            <a href="contact.html" class="readmore-btn">read more</a>
-                        </div>
-                    </div>
-                    <!-- Feature Item End -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Feature Item Start -->
-                    <div class="feature-item box-bg-shape wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="icon-box">
-                            <img src="{{ url('site/images/icon-feature-4.svg') }}" alt="">
-                        </div>
-                        <div class="features-item-content">
-                            <h3>Unlimited Revisions</h3>
-                            <p>We'll fine-tune the voice until it's exactly.</p>
-                            <ul>
-                                <li>No Extra Cost</li>
-                                <li>Voice Adjustments</li>
-                            </ul>
-                        </div>
-                        <div class="features-btn">
-                            <a href="contact.html" class="readmore-btn">read more</a>
-                        </div>
-                    </div>
-                    <!-- Feature Item End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Feature List Start -->
-                    <div class="feature-list wow fadeInUp" data-wow-delay="0.8s">
-                        <ul>
-                            <li>AI UI/UX Design</li>
-                            <li>Chatbot Design</li>
-                            <li>Design Automation</li>
-                            <li>Predictive UX</li>
-                        </ul>
-                    </div>
-                    <!-- Feature List End -->
-
-                    <!-- Section Footer Text Start -->
-                    <div class="section-footer-text wow fadeInUp" data-wow-delay="1s"
-                        style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
-                        <p><span>Free</span>Let's make something great work together. <a href="contact.html">Get Free
-                                Quote</a></p>
-                    </div>
-                    <!-- Section Footer Text End -->
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- Our Features Section End -->
-
-    <!-- What We Do Section Start -->
-    <div class="what-we-do">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <!-- What We Do image Box Start -->
-                    <div class="what-we-do-image-box">
-                        <!-- What We Do image Start -->
-                        <div class="what-we-do-img box-bg-shape">
-                            <figure class="image-anime">
-                                @if ($premiumEvent)
-                                    <img src="{{ url('storage/' . $premiumEvent->image) }}" alt="">
-                                @else
-                                    <img src="{{ url('site/images/what-we-do-image.jpg') }}" alt="">
-                                @endif
-                            </figure>
-                        </div>
-                        <!-- What We Do image End -->
-
-                        <!-- Review Rating Box Start -->
-                        <div class="review-rating-box wow fadeInUp">
-                            <!-- Review Images Start -->
-                            <div class="review-images">
-                                <div class="review-image">
-                                    <figure class="image-anime">
-                                        <img src="{{ url('site/images/author-1.jpg') }}" alt="">
-                                    </figure>
-                                </div>
-                                <div class="review-image">
-                                    <figure class="image-anime">
-                                        <img src="{{ url('site/images/author-2.jpg') }}" alt="">
-                                    </figure>
-                                </div>
-                                <div class="review-image">
-                                    <figure class="image-anime">
-                                        <img src="{{ url('site/images/author-3.jpg') }}" alt="">
-                                    </figure>
-                                </div>
-                                <div class="review-image">
-                                    <figure class="image-anime">
-                                        <img src="{{ url('site/images/author-4.jpg') }}" alt="">
-                                    </figure>
-                                </div>
-                                <div class="review-image add-more">
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                            </div>
-                            <!-- Review Images End -->
-
-                            <!-- Review Content Start -->
-                            <div class="review-content">
-                                <div class="review-rating-star">
-                                    <span class="counter">4.9</span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <div class="review-rating-content">
-                                    <p>Google Rating</p>
-                                </div>
-                            </div>
-                            <!-- Review Content End -->
-                        </div>
-                        <!-- Review Rating Box End -->
-                    </div>
-                    <!-- What We Do image Box End -->
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- What We Do Content Start -->
-                    <div class="what-we-do-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">Evento de maior Destaque</h3>
-                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
-                                {{ $premiumEvent->title ?? 'Evento de Maior destaque' }}</h2>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- What We Do Tab Box Start -->
-                        <div class="what-we-do-tab-box tab-content wow fadeInUp" data-wow-delay="0.4s" id="myTabContent">
-                            <!-- Sidebar What We Do Tab Nav start -->
-                            <div class="what-we-do-nav">
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="voiceovers-tab" data-bs-toggle="tab"
-                                            data-bs-target="#voiceovers" type="button" role="tab"
-                                            aria-selected="true">{{ $premiumEvent->subtitle ?? ' subtitulo ' }}</button>
-                                    </li>
-                                    {{-- <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="script-tab" data-bs-toggle="tab"
-                                            data-bs-target="#script" type="button" role="tab"
-                                            aria-selected="false">Script Help</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="multilingual-tab" data-bs-toggle="tab"
-                                            data-bs-target="#multilingual" type="button" role="tab"
-                                            aria-selected="false">Multilingual</button>
-                                    </li> --}}
-                                </ul>
-                            </div>
-                            <!-- Sidebar What We Do Tab Nav End -->
-
-                            <!-- What We Do Tab Item Start -->
-                            <div class="what-we-do-tab-item tab-pane fade show active" id="voiceovers" role="tabpanel">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <!-- What We Do Tab Content Start -->
-                                        <div class="what-we-do-tab-content">
-                                            {{-- <div class="what-we-do-tab-header">
-                                                <p>{{ $premiumEvent->subtitle ?? ' subtitulo ' }}</p>
-                                            </div> --}}
-
-                                            <div class="what-we-do-tab-body">
-                                                <div class="what-we-do-body-info">
-                                                    <div class="icon-box">
-                                                        <img src="{{ url('site/images/icon-what-we-do-body-1.svg') }}"
-                                                            alt="">
+                                                    <div class="brating d-flex">
+                                                        <img
+                                                            decoding="async"
+                                                            src="{{ url('site/wp-content/themes/edplus/assets/img/icons/trustpilot.svg') }}"
+                                                            class="align-self-center"
+                                                            alt=""
+                                                        />
+                                                        <p
+                                                            class="align-self-center"
+                                                        >
+                                                            <i
+                                                                class="fa-solid fa-star"
+                                                            ></i>
+                                                            4.8 Rating
+                                                        </p>
                                                     </div>
-                                                    <div class="what-we-do-body-title">
-                                                        <h3>Descrição</h3>
-                                                    </div>
-                                                </div>
-                                                <div class="what-we-do-body-content">
-                                                    <p>{{ $premiumEvent->description ?? 'Descrição padrão' }}</p>
-                                                    {{-- <ul>
-                                                        <li>Script-to-Sound Expertise</li>
-                                                        <li>Dedicated Project Management</li>
-                                                    </ul> --}}
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- What We Do Tab Content End -->
+                                        <!-- End Col -->
+
+                                        <div
+                                            class="col-xl-6 col-lg-7 col-12 align-self-center"
+                                        >
+                                            <div class="row">
+                                                <div
+                                                    class="col-lg-5 col-md-4 align-self-center"
+                                                >
+                                                    <div
+                                                        class="badge_wrap wow fadeInUp"
+                                                        data-wow-delay=".5s"
+                                                    >
+                                                        <div class="bbadge">
+                                                            <img
+                                                                decoding="async"
+                                                                src="{{ url('site/wp-content/uploads/2025/03/bbadge-icon.svg') }}"
+                                                                alt=""
+                                                            />
+                                                            <h3>
+                                                                <span>250</span>
+                                                                +
+                                                            </h3>
+                                                            <p>
+                                                                Our Happy
+                                                                Students
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="bbadge two">
+                                                            <img
+                                                                decoding="async"
+                                                                src="{{ url('site/wp-content/uploads/2025/03/bbadge-icon2.svg') }}"
+                                                                alt=""
+                                                            />
+                                                            <h3>
+                                                                <span
+                                                                    >3652</span
+                                                                >
+                                                                +
+                                                            </h3>
+                                                            <p>
+                                                                Finished Session
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Col -->
+
+                                                <div
+                                                    class="col-lg-7 col-md-8 align-self-center wow fadeInUp"
+                                                    data-wow-delay=".9s"
+                                                >
+                                                    <div class="banner_courses">
+                                                        <div
+                                                            class="single_course"
+                                                        >
+                                                            <div
+                                                                class="course_img"
+                                                            >
+                                                                <div
+                                                                    class="ccategory"
+                                                                >
+                                                                    <a
+                                                                        href="course-category/data-science/index3a21.html?tutor-course-filter-category=73"
+                                                                        ><i
+                                                                            class="ph ph-folder-open"
+                                                                        ></i>
+                                                                        Data
+                                                                        Science</a
+                                                                    >
+                                                                </div>
+                                                                <img
+                                                                    fetchpriority="high"
+                                                                    decoding="async"
+                                                                    width="690"
+                                                                    height="430"
+                                                                    src="{{ url('site/wp-content/uploads/2025/03/6.jpg') }}"
+                                                                    class="attachment-edplus_course size-edplus_course wp-post-image"
+                                                                    alt=""
+                                                                    srcset="
+                                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6.jpg         690w,
+                                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-600x374.jpg 600w,
+                                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-300x187.jpg 300w
+                                                                    "
+                                                                    sizes="(max-width: 690px) 100vw, 690px"
+                                                                />
+                                                                <a
+                                                                    href="../../www.youtube.com/watch9a6e.html?v=yGDwk4z9EEg"
+                                                                    class="cvbtn"
+                                                                    data-source="youtube"
+                                                                >
+                                                                    <i
+                                                                        class="ph ph-video-camera"
+                                                                    ></i>
+                                                                </a>
+                                                            </div>
+
+                                                            <div
+                                                                class="course_content"
+                                                            >
+                                                                <div
+                                                                    class="crating_number"
+                                                                >
+                                                                    <i
+                                                                        class="fa-solid fa-star"
+                                                                    ></i>
+                                                                    4.00
+                                                                </div>
+                                                                <h3>
+                                                                    <a
+                                                                        href="courses/interior-design-concepts-masterclass-3/index.html"
+                                                                    >
+                                                                        Interior
+                                                                        design
+                                                                        concepts
+                                                                        Masterclass
+                                                                    </a>
+                                                                </h3>
+
+                                                                <div
+                                                                    class="cmeta d-flex gap-xxl-5 gap-4"
+                                                                >
+                                                                    <div
+                                                                        class="single_meta"
+                                                                    >
+                                                                        <i
+                                                                            class="fa-solid fa-book"
+                                                                        ></i>
+                                                                        0
+                                                                        Lessons
+                                                                    </div>
+
+                                                                    <div
+                                                                        class="single_meta"
+                                                                    >
+                                                                        <i
+                                                                            class="fa-regular fa-clock"
+                                                                        ></i>
+                                                                        02.20
+                                                                        Hours
+                                                                    </div>
+                                                                </div>
+
+                                                                <div
+                                                                    class="cbtm"
+                                                                >
+                                                                    <div
+                                                                        class="c_price float-start"
+                                                                    >
+                                                                        <div
+                                                                            class="price"
+                                                                        >
+                                                                            <del
+                                                                                aria-hidden="true"
+                                                                                ><span
+                                                                                    class="woocommerce-Price-amount amount"
+                                                                                    ><span
+                                                                                        class="woocommerce-Price-currencySymbol"
+                                                                                        >&#036;</span
+                                                                                    >65.00</span
+                                                                                ></del
+                                                                            >
+                                                                            <span
+                                                                                class="screen-reader-text"
+                                                                                >Original
+                                                                                price
+                                                                                was:
+                                                                                &#036;65.00.</span
+                                                                            ><ins
+                                                                                aria-hidden="true"
+                                                                                ><span
+                                                                                    class="woocommerce-Price-amount amount"
+                                                                                    ><span
+                                                                                        class="woocommerce-Price-currencySymbol"
+                                                                                        >&#036;</span
+                                                                                    >55.00</span
+                                                                                ></ins
+                                                                            ><span
+                                                                                class="screen-reader-text"
+                                                                                >Current
+                                                                                price
+                                                                                is:
+                                                                                &#036;55.00.</span
+                                                                            >
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="c_author float-end"
+                                                                    >
+                                                                        <img
+                                                                            alt=""
+                                                                            src="{{ url('site/wp-content/uploads/2025/03/3-4.jpg') }}"
+                                                                            srcset="
+                                                                                https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 2x
+                                                                            "
+                                                                            class="avatar avatar-30 photo"
+                                                                            height="30"
+                                                                            width="30"
+                                                                        />
+                                                                        <a
+                                                                            href="profile/edplus/indexd527.html?view=instructor"
+                                                                            >Masum
+                                                                            Billah</a
+                                                                        >
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Col -->
+                                            </div>
+                                        </div>
+                                        <!-- End Col -->
+                                    </div>
+                                    <img
+                                        decoding="async"
+                                        src="{{ url('site/wp-content/uploads/2025/03/b1.svg') }}"
+                                        alt=""
+                                        class="bshape1 aniupDown position-absolute"
+                                    />
+
+                                    <img
+                                        decoding="async"
+                                        src="{{ url('site/wp-content/uploads/2025/03/b2.svg') }}"
+                                        alt=""
+                                        class="bshape2 position-absolute"
+                                    />
+
+                                    <img
+                                        decoding="async"
+                                        src="{{ url('site/wp-content/uploads/2025/03/b3.svg') }}"
+                                        alt=""
+                                        class="bshape3 aniupDown position-absolute"
+                                    />
+
+                                    <img
+                                        decoding="async"
+                                        src="{{ url('site/wp-content/uploads/2025/03/b4.svg') }}"
+                                        alt=""
+                                        class="bshape4 anileftRight position-absolute"
+                                    />
+                                </div>
+                            </section>
+                            <!-- End Home Banner -->
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="elementor-element elementor-element-741c749 e-con-full e-flex e-con e-parent"
+                    data-id="741c749"
+                    data-element_type="container"
+                    data-e-type="container"
+                >
+                    <div
+                        class="elementor-element elementor-element-bd5a44d elementor-widget elementor-widget-edplus-course-category"
+                        data-id="bd5a44d"
+                        data-element_type="widget"
+                        data-e-type="widget"
+                        data-widget_type="edplus-course-category.default"
+                    >
+                        <div class="elementor-widget-container">
+                            <!-- End Course Category -->
+                            <section class="course-category section-padding">
+                                <div class="container">
+                                    <div
+                                        class="section-title text-center wow fadeInUp"
+                                    >
+                                        <span>
+                                            <span class="ticon">
+                                                <img
+                                                    decoding="async"
+                                                    src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
+                                                    alt=""
+                                                />
+                                            </span>
+                                            Top Category
+                                        </span>
+                                        <h2>Browse Our Top Categories</h2>
+                                        <img
+                                            decoding="async"
+                                            src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
+                                            alt=""
+                                        />
+                                    </div>
+
+                                    <div class="row">
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 wow fadeInUp"
+                                        >
+                                            <div class="category-item">
+                                                <div class="cicon">
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/1-2.svg') }}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <h3>3D Animation</h3>
+                                                <span>2 Courses</span>
+                                                <a
+                                                    href="course-category/3d-animation/index9782.html?tutor-course-filter-category=70"
+                                                    class="cbtn"
+                                                    ><i
+                                                        class="ph ph-arrow-right"
+                                                    ></i
+                                                ></a>
+                                                <div
+                                                    class="cat_img"
+                                                    style="
+                                                        background-image: url(wp-content/uploads/2025/03/1-2.jpg);
+                                                    "
+                                                ></div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col -->
+
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 wow fadeInUp"
+                                        >
+                                            <div class="category-item">
+                                                <div class="cicon">
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/1-2.svg') }}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <h3>Art &amp; Design</h3>
+                                                <span>2 Courses</span>
+                                                <a
+                                                    href="course-category/art-design/index45ab.html?tutor-course-filter-category=77"
+                                                    class="cbtn"
+                                                    ><i
+                                                        class="ph ph-arrow-right"
+                                                    ></i
+                                                ></a>
+                                                <div
+                                                    class="cat_img"
+                                                    style="
+                                                        background-image: url(wp-content/uploads/2025/03/2-4.jpg);
+                                                    "
+                                                ></div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col -->
+
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 wow fadeInUp"
+                                        >
+                                            <div class="category-item">
+                                                <div class="cicon">
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/6.svg') }}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <h3>Data Science</h3>
+                                                <span>8 Courses</span>
+                                                <a
+                                                    href="course-category/data-science/index3a21.html?tutor-course-filter-category=73"
+                                                    class="cbtn"
+                                                    ><i
+                                                        class="ph ph-arrow-right"
+                                                    ></i
+                                                ></a>
+                                                <div
+                                                    class="cat_img"
+                                                    style="
+                                                        background-image: url(wp-content/uploads/2025/03/3-3.jpg);
+                                                    "
+                                                ></div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col -->
+
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 wow fadeInUp"
+                                        >
+                                            <div class="category-item">
+                                                <div class="cicon">
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/3-1.svg') }}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <h3>Finance Account</h3>
+                                                <span>8 Courses</span>
+                                                <a
+                                                    href="course-category/finance-account/index0c9d.html?tutor-course-filter-category=75"
+                                                    class="cbtn"
+                                                    ><i
+                                                        class="ph ph-arrow-right"
+                                                    ></i
+                                                ></a>
+                                                <div
+                                                    class="cat_img"
+                                                    style="
+                                                        background-image: url(wp-content/uploads/2025/03/5-1.jpg);
+                                                    "
+                                                ></div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col -->
+
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 wow fadeInUp"
+                                        >
+                                            <div class="category-item">
+                                                <div class="cicon">
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/8.svg') }}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <h3>Health and Fitness</h3>
+                                                <span>4 Courses</span>
+                                                <a
+                                                    href="course-category/health-and-fitness/indexcbc4.html?tutor-course-filter-category=71"
+                                                    class="cbtn"
+                                                    ><i
+                                                        class="ph ph-arrow-right"
+                                                    ></i
+                                                ></a>
+                                                <div
+                                                    class="cat_img"
+                                                    style="
+                                                        background-image: url(wp-content/uploads/2025/03/4-3.jpg);
+                                                    "
+                                                ></div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col -->
+
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 wow fadeInUp"
+                                        >
+                                            <div class="category-item">
+                                                <div class="cicon">
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/4-1.svg') }}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <h3>Marketing</h3>
+                                                <span>6 Courses</span>
+                                                <a
+                                                    href="course-category/marketing/index737f.html?tutor-course-filter-category=72"
+                                                    class="cbtn"
+                                                    ><i
+                                                        class="ph ph-arrow-right"
+                                                    ></i
+                                                ></a>
+                                                <div
+                                                    class="cat_img"
+                                                    style="
+                                                        background-image: url(wp-content/uploads/2025/03/6-1.jpg);
+                                                    "
+                                                ></div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col -->
+
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 wow fadeInUp"
+                                        >
+                                            <div class="category-item">
+                                                <div class="cicon">
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/5-1.svg') }}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <h3>Mobile Application</h3>
+                                                <span>4 Courses</span>
+                                                <a
+                                                    href="course-category/mobile-application/indexc8a6.html?tutor-course-filter-category=74"
+                                                    class="cbtn"
+                                                    ><i
+                                                        class="ph ph-arrow-right"
+                                                    ></i
+                                                ></a>
+                                                <div
+                                                    class="cat_img"
+                                                    style="
+                                                        background-image: url(wp-content/uploads/2025/03/7.jpg);
+                                                    "
+                                                ></div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col -->
+
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 wow fadeInUp"
+                                        >
+                                            <div class="category-item">
+                                                <div class="cicon">
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/4-1.svg') }}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <h3>SEO</h3>
+                                                <span>2 Courses</span>
+                                                <a
+                                                    href="course-category/seo/index7ef7.html?tutor-course-filter-category=78"
+                                                    class="cbtn"
+                                                    ><i
+                                                        class="ph ph-arrow-right"
+                                                    ></i
+                                                ></a>
+                                                <div
+                                                    class="cat_img"
+                                                    style="
+                                                        background-image: url(wp-content/uploads/2025/03/8.jpg);
+                                                    "
+                                                ></div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col -->
+
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 wow fadeInUp"
+                                        >
+                                            <div class="category-item">
+                                                <div class="cicon">
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/2-2.svg') }}"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <h3>Web Development</h3>
+                                                <span>8 Courses</span>
+                                                <a
+                                                    href="course-category/web-development/index8c92.html?tutor-course-filter-category=76"
+                                                    class="cbtn"
+                                                    ><i
+                                                        class="ph ph-arrow-right"
+                                                    ></i
+                                                ></a>
+                                                <div
+                                                    class="cat_img"
+                                                    style="
+                                                        background-image: url(wp-content/uploads/2025/03/9.jpg);
+                                                    "
+                                                ></div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col -->
+
+                                        <div
+                                            class="col-12 text-center mt-4 wow fadeInUp"
+                                        >
+                                            <a
+                                                class="blue_btn round_btn"
+                                                href="course-categories/index.html"
+                                                >View All Categories
+                                                <i class="ph ph-arrow-right"></i
+                                            ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- End Course Category -->
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="elementor-element elementor-element-9dd6922 e-flex e-con-boxed e-con e-parent"
+                    data-id="9dd6922"
+                    data-element_type="container"
+                    data-e-type="container"
+                    data-settings='{"background_background":"classic"}'
+                >
+                    <div class="e-con-inner">
+                        <div
+                            class="elementor-element elementor-element-924703d e-con-full e-flex e-con e-child"
+                            data-id="924703d"
+                            data-element_type="container"
+                            data-e-type="container"
+                        >
+                            <div
+                                class="elementor-element elementor-element-c2e2fac elementor-widget-mobile__width-inherit elementor-widget elementor-widget-edplus-about-image"
+                                data-id="c2e2fac"
+                                data-element_type="widget"
+                                data-e-type="widget"
+                                data-widget_type="edplus-about-image.default"
+                            >
+                                <div class="elementor-widget-container">
+                                    <div
+                                        class="about-img about-us-two position-relative wow fadeInUp"
+                                    >
+                                        <div class="about_badge2 aniupDown">
+                                            <span class="ab_icon">
+                                                <img
+                                                    decoding="async"
+                                                    src="{{ url('site/wp-content/uploads/2025/03/graduation-hat-white.svg') }}"
+                                                    alt=""
+                                                />
+                                            </span>
+                                            <h4>
+                                                Experience <br />
+                                                Advisor
+                                            </h4>
+                                        </div>
+
+                                        <div
+                                            class="ab_images position-relative z-1"
+                                        >
+                                            <img
+                                                decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/3-1.jpg') }}"
+                                                class="about_img_1"
+                                                alt=""
+                                            />
+                                            <img
+                                                decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/4-1.jpg') }}"
+                                                class="about_img_2"
+                                                alt=""
+                                            />
+                                        </div>
+
+                                        <img
+                                            decoding="async"
+                                            src="{{ url('site/wp-content/uploads/2025/03/ab_wave2.svg') }}"
+                                            class="ab_top_shape aniupDown position-absolute"
+                                            alt=""
+                                        />
+                                        <img
+                                            decoding="async"
+                                            src="{{ url('site/wp-content/uploads/2025/03/ab_dots.svg') }}"
+                                            class="ab_btm_shape position-absolute"
+                                            alt=""
+                                        />
+                                        <img
+                                            decoding="async"
+                                            src="{{ url('site/wp-content/uploads/2025/03/ab_shape.svg') }}"
+                                            class="ab_right_shape anileftRight position-absolute"
+                                            alt=""
+                                        />
                                     </div>
                                 </div>
                             </div>
-                            <!-- What We Do Tab Item End -->
+                        </div>
+                        <div
+                            class="elementor-element elementor-element-cb129b7 e-con-full e-flex e-con e-child"
+                            data-id="cb129b7"
+                            data-element_type="container"
+                            data-e-type="container"
+                        >
+                            <div
+                                class="elementor-element elementor-element-e834c7c elementor-widget elementor-widget-edplus-about-content"
+                                data-id="e834c7c"
+                                data-element_type="widget"
+                                data-e-type="widget"
+                                data-widget_type="edplus-about-content.default"
+                            >
+                                <div class="elementor-widget-container">
+                                    <div
+                                        class="about-content position-relative wow fadeInUp"
+                                    >
+                                        <div
+                                            class="section-title mb30 wow fadeInUp"
+                                        >
+                                            <span>
+                                                <span class="ticon">
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
+                                                        alt=""
+                                                    />
+                                                </span>
+                                                About Our Edplus
+                                            </span>
+                                            <h2>
+                                                We create unique digital media
+                                                experiences.
+                                            </h2>
+                                            <img
+                                                decoding="async"
+                                                src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p class="wow fadeInUp">
+                                            At University Edplus, we are driven
+                                            by the transformative power of
+                                            education and the limitless
+                                            potential within each individual.
+                                            Founded in 1971, we have remained
+                                            steadfast in our commitment to
+                                            nurturing intellectual curiosity,
+                                            promoting academic excellence,
+                                            cultivating a dynamic campus
+                                            community.
+                                        </p>
 
-                            <!-- What We Do Tab Item Start -->
-                            <div class="what-we-do-tab-item tab-pane fade" id="script" role="tabpanel">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <!-- What We Do Tab Content Start -->
-                                        <div class="what-we-do-tab-content">
-                                            <div class="what-we-do-tab-header">
-                                                <p>From life-like voice quality to flexible pricing and powerful
-                                                    customization, we offer everything you need to create professional
-                                                    audio. From life-like voice quality to flexible pricing and powerful
-                                                    customization.</p>
+                                        <div
+                                            class="d-md-flex gap-3 position-relative z-2 wow fadeInUp"
+                                        >
+                                            <ul>
+                                                <li>
+                                                    <i class="ph ph-check"></i>
+                                                    Best Instructors &amp;
+                                                    Courses
+                                                </li>
+                                                <li>
+                                                    <i class="ph ph-check"></i>
+                                                    Trusted by Students
+                                                </li>
+                                                <li>
+                                                    <i class="ph ph-check"></i>
+                                                    100% ISO Certified
+                                                </li>
+                                            </ul>
+
+                                            <ul>
+                                                <li>
+                                                    <i class="ph ph-check"></i>
+                                                    Online Courses
+                                                </li>
+                                                <li>
+                                                    <i class="ph ph-check"></i>
+                                                    Live Classes
+                                                </li>
+                                                <li>
+                                                    <i class="ph ph-check"></i>
+                                                    24 Hours Support
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a
+                                            href="courses/index.html"
+                                            class="blue_btn round_btn wow fadeInUp"
+                                            >View All Program
+                                            <i class="ph ph-arrow-right"></i
+                                        ></a>
+                                        <img
+                                            decoding="async"
+                                            src="{{ url('site/wp-content/uploads/2025/03/ed_cap.svg') }}"
+                                            class="ab_book_shape aniupDown position-absolute"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="elementor-element elementor-element-3fad5e1 e-con-full e-flex e-con e-parent"
+                    data-id="3fad5e1"
+                    data-element_type="container"
+                    data-e-type="container"
+                >
+                    <div
+                        class="elementor-element elementor-element-7295c56 elementor-widget elementor-widget-edplus-counter-up"
+                        data-id="7295c56"
+                        data-element_type="widget"
+                        data-e-type="widget"
+                        data-widget_type="edplus-counter-up.default"
+                    >
+                        <div class="elementor-widget-container">
+                            <!-- Start Counter Up -->
+                            <section class="container">
+                                <div
+                                    class="counter-up"
+                                    style="
+                                        background-image: url(wp-content/uploads/2025/03/counter.svg);
+                                    "
+                                >
+                                    <div class="row gy-5">
+                                        <div
+                                            class="col-xxl-3 col-xl-4 col-md-6 col-12 mx-xl-auto wow fadeInUp"
+                                        >
+                                            <div class="counter-item">
+                                                <div class="coicon">
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/peoples.svg') }}"
+                                                        alt=""
+                                                    />
+                                                </div>
+
+                                                <div class="ccontent">
+                                                    <h3>
+                                                        <span class="count"
+                                                            >118</span
+                                                        >K
+                                                    </h3>
+                                                    <span
+                                                        >Our Happy
+                                                        Students</span
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col -->
+
+                                        <div
+                                            class="col-xxl-3 col-xl-4 col-md-6 col-12 mx-xl-auto wow fadeInUp"
+                                        >
+                                            <div class="counter-item">
+                                                <div class="coicon">
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/graduate-hat.svg') }}"
+                                                        alt=""
+                                                    />
+                                                </div>
+
+                                                <div class="ccontent">
+                                                    <h3>
+                                                        <span class="count"
+                                                            >25</span
+                                                        >K
+                                                    </h3>
+                                                    <span>
+                                                        Enrolled Learner
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col -->
+
+                                        <div
+                                            class="col-xxl-3 col-xl-4 col-md-6 col-12 mx-xl-auto wow fadeInUp"
+                                        >
+                                            <div class="counter-item">
+                                                <div class="coicon">
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/expert.svg') }}"
+                                                        alt=""
+                                                    />
+                                                </div>
+
+                                                <div class="ccontent">
+                                                    <h3>
+                                                        <span class="count"
+                                                            >120</span
+                                                        >K
+                                                    </h3>
+                                                    <span>
+                                                        Expert Instructor
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col -->
+
+                                        <div
+                                            class="col-xxl-3 col-xl-4 col-md-6 col-12 mx-xl-auto wow fadeInUp d-xl-none d-xxl-block"
+                                        >
+                                            <div class="counter-item">
+                                                <div class="coicon">
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/satisfaction.svg') }}"
+                                                        alt=""
+                                                    />
+                                                </div>
+
+                                                <div class="ccontent">
+                                                    <h3>
+                                                        <span class="count"
+                                                            >96</span
+                                                        >%
+                                                    </h3>
+                                                    <span
+                                                        >Satisfaction Rate</span
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col -->
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- End Counter Up -->
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="elementor-element elementor-element-6e9f1fa e-flex e-con-boxed e-con e-parent"
+                    data-id="6e9f1fa"
+                    data-element_type="container"
+                    data-e-type="container"
+                >
+                    <div class="e-con-inner">
+                        <div
+                            class="elementor-element elementor-element-b2a168b e-con-full e-flex e-con e-child"
+                            data-id="b2a168b"
+                            data-element_type="container"
+                            data-e-type="container"
+                        >
+                            <div
+                                class="elementor-element elementor-element-cae2c2d elementor-widget__width-initial elementor-widget elementor-widget-image"
+                                data-id="cae2c2d"
+                                data-element_type="widget"
+                                data-e-type="widget"
+                                data-settings='{"_animation":"none"}'
+                                data-widget_type="image.default"
+                            >
+                                <div class="elementor-widget-container">
+                                    <img
+                                        decoding="async"
+                                        width="879"
+                                        height="436"
+                                        src="{{ url('site/wp-content/uploads/2025/03/1-3.png') }}"
+                                        class="attachment-full size-full wp-image-776"
+                                        alt=""
+                                        srcset="
+                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/1-3.png         879w,
+                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/1-3-600x298.png 600w,
+                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/1-3-300x149.png 300w,
+                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/1-3-768x381.png 768w
+                                        "
+                                        sizes="(max-width: 879px) 100vw, 879px"
+                                    />
+                                </div>
+                            </div>
+                            <div
+                                class="elementor-element elementor-element-0cd6f2a elementor-absolute elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-image"
+                                data-id="0cd6f2a"
+                                data-element_type="widget"
+                                data-e-type="widget"
+                                data-settings='{"_position":"absolute"}'
+                                data-widget_type="image.default"
+                            >
+                                <div class="elementor-widget-container">
+                                    <img
+                                        decoding="async"
+                                        width="35"
+                                        height="150"
+                                        src="{{ url('site/wp-content/uploads/2025/03/live-class.svg') }}"
+                                        class="attachment-full size-full wp-image-924"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="elementor-element elementor-element-927ee69 e-con-full e-flex e-con e-child"
+                            data-id="927ee69"
+                            data-element_type="container"
+                            data-e-type="container"
+                        >
+                            <div
+                                class="elementor-element elementor-element-23bcdb6 elementor-widget elementor-widget-edplus-live-class-content"
+                                data-id="23bcdb6"
+                                data-element_type="widget"
+                                data-e-type="widget"
+                                data-widget_type="edplus-live-class-content.default"
+                            >
+                                <div class="elementor-widget-container">
+                                    <div class="lclass_content">
+                                        <img
+                                            decoding="async"
+                                            src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/wave.svg') }}"
+                                            class="lclass_wave_shape"
+                                            alt=""
+                                        />
+                                        <div class="lc_author">
+                                            <img
+                                                decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/1-2.png') }}"
+                                                alt=""
+                                            />
+                                            <a href="#">Dev. Masum Billah</a>
+                                        </div>
+                                        <h3>
+                                            <a href="#"
+                                                >The complete guide to build
+                                                restful API
+                                            </a>
+                                        </h3>
+                                        <div class="lc_rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>4.8</span>
+                                        </div>
+
+                                        <div class="lc_btm d-md-flex gap-5">
+                                            <div
+                                                class="lc_btm_left align-self-center"
+                                            >
+                                                <span>Online Students</span>
+                                                <img
+                                                    decoding="async"
+                                                    src="{{ url('site/wp-content/uploads/2025/03/avator.png') }}"
+                                                    alt=""
+                                                />
                                             </div>
 
-                                            <div class="what-we-do-tab-body">
-                                                <div class="what-we-do-body-info">
-                                                    <div class="icon-box">
-                                                        <img src="{{ url('site/images/icon-what-we-do-body-2.svg') }}"
-                                                            alt="">
+                                            <div
+                                                class="lc_btm_right align-self-center"
+                                            >
+                                                <a href="#" class="border_btn"
+                                                    ><i
+                                                        class="ph ph-video-camera"
+                                                    ></i>
+                                                    Join Now
+                                                    <i
+                                                        class="ph ph-arrow-right iright"
+                                                    ></i
+                                                ></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="elementor-element elementor-element-dff3f98 e-con-full e-flex e-con e-parent"
+                    data-id="dff3f98"
+                    data-element_type="container"
+                    data-e-type="container"
+                >
+                    <div
+                        class="elementor-element elementor-element-ac34084 elementor-widget elementor-widget-edplus-courses"
+                        data-id="ac34084"
+                        data-element_type="widget"
+                        data-e-type="widget"
+                        data-widget_type="edplus-courses.default"
+                    >
+                        <div class="elementor-widget-container">
+                            <!-- Start Courses -->
+                            <section class="courses">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-5 wow fadeInUp">
+                                            <div class="section-title">
+                                                <span>
+                                                    <span class="ticon">
+                                                        <img
+                                                            decoding="async"
+                                                            src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
+                                                            alt=""
+                                                        />
+                                                    </span>
+                                                    Courses
+                                                </span>
+                                                <h2>Most Popular Courses</h2>
+                                                <img
+                                                    decoding="async"
+                                                    src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="col-lg-7 align-self-center wow fadeInUp"
+                                        >
+                                            <nav class="course_nav text-lg-end">
+                                                <ul>
+                                                    <li data-filter="all">
+                                                        All Courses
+                                                    </li>
+
+                                                    <li
+                                                        data-filter=".data-science"
+                                                    >
+                                                        Data Science
+                                                    </li>
+                                                    <li
+                                                        data-filter=".finance-account"
+                                                    >
+                                                        Finance Account
+                                                    </li>
+                                                    <li
+                                                        data-filter=".mobile-application"
+                                                    >
+                                                        Mobile Application
+                                                    </li>
+                                                    <li
+                                                        data-filter=".web-development"
+                                                    >
+                                                        Web Development
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <!-- End Col-->
+
+                                    <div class="row gy-4 course_item">
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 mix data-science wow fadeInUp"
+                                        >
+                                            <div
+                                                class="single_course course_style2"
+                                            >
+                                                <div class="course_img">
+                                                    <div class="ccategory">
+                                                        <a
+                                                            href="course-category/data-science/index3a21.html?tutor-course-filter-category=73"
+                                                            ><i
+                                                                class="ph ph-folder-open"
+                                                            ></i>
+                                                            Data Science</a
+                                                        >
                                                     </div>
-                                                    <div class="what-we-do-body-title">
-                                                        <h3>End-to-End Support</h3>
+                                                    <img
+                                                        fetchpriority="high"
+                                                        decoding="async"
+                                                        width="690"
+                                                        height="430"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/6.jpg') }}"
+                                                        class="attachment-edplus_course size-edplus_course wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6.jpg         690w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-600x374.jpg 600w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-300x187.jpg 300w
+                                                        "
+                                                        sizes="(max-width: 690px) 100vw, 690px"
+                                                    />
+                                                    <a
+                                                        href="../../www.youtube.com/watch9a6e.html?v=yGDwk4z9EEg"
+                                                        class="cvbtn"
+                                                        data-source="youtube"
+                                                    >
+                                                        <i
+                                                            class="ph ph-video-camera"
+                                                        ></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="course_content">
+                                                    <div class="crating_number">
+                                                        <div
+                                                            class="tutor-ratings-stars"
+                                                        >
+                                                            <i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="1"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="2"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="3"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="4"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-line"
+                                                                data-rating-value="5"
+                                                            ></i>
+                                                        </div>
+                                                        <input
+                                                            type="hidden"
+                                                            name="tutor_rating_gen_input"
+                                                            value="4.00"
+                                                        />
+                                                        <span
+                                                            >(4.00 / 2
+                                                            Ratings)</span
+                                                        >
+                                                    </div>
+                                                    <h3>
+                                                        <a
+                                                            href="courses/interior-design-concepts-masterclass-3/index.html"
+                                                        >
+                                                            Interior design
+                                                            concepts Masterclass
+                                                        </a>
+                                                    </h3>
+
+                                                    <div
+                                                        class="cmeta d-flex gap-5"
+                                                    >
+                                                        <div
+                                                            class="single_meta"
+                                                        >
+                                                            <i
+                                                                class="fa-regular fa-user"
+                                                            ></i>
+                                                            2 Students
+                                                        </div>
+
+                                                        <div
+                                                            class="single_meta"
+                                                        >
+                                                            <i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            0 Lessons
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="cbtm">
+                                                        <div
+                                                            class="c_price float-start"
+                                                        >
+                                                            <div class="price">
+                                                                <del
+                                                                    aria-hidden="true"
+                                                                    ><span
+                                                                        class="woocommerce-Price-amount amount"
+                                                                        ><span
+                                                                            class="woocommerce-Price-currencySymbol"
+                                                                            >&#036;</span
+                                                                        >65.00</span
+                                                                    ></del
+                                                                >
+                                                                <span
+                                                                    class="screen-reader-text"
+                                                                    >Original
+                                                                    price was:
+                                                                    &#036;65.00.</span
+                                                                ><ins
+                                                                    aria-hidden="true"
+                                                                    ><span
+                                                                        class="woocommerce-Price-amount amount"
+                                                                        ><span
+                                                                            class="woocommerce-Price-currencySymbol"
+                                                                            >&#036;</span
+                                                                        >55.00</span
+                                                                    ></ins
+                                                                ><span
+                                                                    class="screen-reader-text"
+                                                                    >Current
+                                                                    price is:
+                                                                    &#036;55.00.</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="c_author float-end"
+                                                        >
+                                                            <img
+                                                                alt=""
+                                                                src="{{ url('site/wp-content/uploads/2025/03/3-4.jpg') }}"
+                                                                srcset="
+                                                                    https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 2x
+                                                                "
+                                                                class="avatar avatar-30 photo"
+                                                                height="30"
+                                                                width="30"
+                                                            />
+                                                            <a
+                                                                href="profile/edplus/indexd527.html?view=instructor"
+                                                                >Masum Billah</a
+                                                            >
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="what-we-do-body-content">
-                                                    <p>We're with you every step of the way - ensuring your voiceover is
-                                                        smooth.</p>
-                                                    <ul>
-                                                        <li>Script-to-Sound Expertise</li>
-                                                        <li>Dedicated Project Management</li>
+                                            </div>
+                                        </div>
+                                        <!-- End Col-->
+
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 mix finance-account wow fadeInUp"
+                                        >
+                                            <div
+                                                class="single_course course_style2"
+                                            >
+                                                <div class="course_img">
+                                                    <div class="ccategory">
+                                                        <a
+                                                            href="course-category/finance-account/index0c9d.html?tutor-course-filter-category=75"
+                                                            ><i
+                                                                class="ph ph-folder-open"
+                                                            ></i>
+                                                            Finance Account</a
+                                                        >
+                                                    </div>
+                                                    <img
+                                                        fetchpriority="high"
+                                                        decoding="async"
+                                                        width="690"
+                                                        height="430"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/6.jpg') }}"
+                                                        class="attachment-edplus_course size-edplus_course wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6.jpg         690w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-600x374.jpg 600w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-300x187.jpg 300w
+                                                        "
+                                                        sizes="(max-width: 690px) 100vw, 690px"
+                                                    />
+                                                    <a
+                                                        href="../../www.youtube.com/watch9a6e.html?v=yGDwk4z9EEg"
+                                                        class="cvbtn"
+                                                        data-source="youtube"
+                                                    >
+                                                        <i
+                                                            class="ph ph-video-camera"
+                                                        ></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="course_content">
+                                                    <div class="crating_number">
+                                                        <div
+                                                            class="tutor-ratings-stars"
+                                                        >
+                                                            <i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="1"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="2"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="3"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="4"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-line"
+                                                                data-rating-value="5"
+                                                            ></i>
+                                                        </div>
+                                                        <input
+                                                            type="hidden"
+                                                            name="tutor_rating_gen_input"
+                                                            value="4.00"
+                                                        />
+                                                        <span
+                                                            >(4.00 / 2
+                                                            Ratings)</span
+                                                        >
+                                                    </div>
+                                                    <h3>
+                                                        <a
+                                                            href="courses/seo-as-the-core-of-your-new-business-venture/index.html"
+                                                        >
+                                                            SEO as the Core of
+                                                            Your New Business
+                                                            Venture
+                                                        </a>
+                                                    </h3>
+
+                                                    <div
+                                                        class="cmeta d-flex gap-5"
+                                                    >
+                                                        <div
+                                                            class="single_meta"
+                                                        >
+                                                            <i
+                                                                class="fa-regular fa-user"
+                                                            ></i>
+                                                            0 Students
+                                                        </div>
+
+                                                        <div
+                                                            class="single_meta"
+                                                        >
+                                                            <i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            15 Lessons
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="cbtm">
+                                                        <div
+                                                            class="c_price float-start"
+                                                        >
+                                                            <div class="price">
+                                                                <del
+                                                                    aria-hidden="true"
+                                                                    ><span
+                                                                        class="woocommerce-Price-amount amount"
+                                                                        ><span
+                                                                            class="woocommerce-Price-currencySymbol"
+                                                                            >&#036;</span
+                                                                        >450.00</span
+                                                                    ></del
+                                                                >
+                                                                <span
+                                                                    class="screen-reader-text"
+                                                                    >Original
+                                                                    price was:
+                                                                    &#036;450.00.</span
+                                                                ><ins
+                                                                    aria-hidden="true"
+                                                                    ><span
+                                                                        class="woocommerce-Price-amount amount"
+                                                                        ><span
+                                                                            class="woocommerce-Price-currencySymbol"
+                                                                            >&#036;</span
+                                                                        >400.00</span
+                                                                    ></ins
+                                                                ><span
+                                                                    class="screen-reader-text"
+                                                                    >Current
+                                                                    price is:
+                                                                    &#036;400.00.</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="c_author float-end"
+                                                        >
+                                                            <img
+                                                                alt=""
+                                                                src="{{ url('site/wp-content/uploads/2025/03/3-4.jpg') }}"
+                                                                srcset="
+                                                                    https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 2x
+                                                                "
+                                                                class="avatar avatar-30 photo"
+                                                                height="30"
+                                                                width="30"
+                                                            />
+                                                            <a
+                                                                href="profile/edplus/indexd527.html?view=instructor"
+                                                                >Masum Billah</a
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col-->
+
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 mix mobile-application wow fadeInUp"
+                                        >
+                                            <div
+                                                class="single_course course_style2"
+                                            >
+                                                <div class="course_img">
+                                                    <div class="ccategory">
+                                                        <a
+                                                            href="course-category/mobile-application/indexc8a6.html?tutor-course-filter-category=74"
+                                                            ><i
+                                                                class="ph ph-folder-open"
+                                                            ></i>
+                                                            Mobile
+                                                            Application</a
+                                                        >
+                                                    </div>
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="690"
+                                                        height="430"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/3-2.jpg') }}"
+                                                        class="attachment-edplus_course size-edplus_course wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-2.jpg         690w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-2-600x374.jpg 600w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-2-300x187.jpg 300w
+                                                        "
+                                                        sizes="(max-width: 690px) 100vw, 690px"
+                                                    />
+                                                    <a
+                                                        href="../../www.youtube.com/watch9a6e.html?v=yGDwk4z9EEg"
+                                                        class="cvbtn"
+                                                        data-source="youtube"
+                                                    >
+                                                        <i
+                                                            class="ph ph-video-camera"
+                                                        ></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="course_content">
+                                                    <div class="crating_number">
+                                                        <div
+                                                            class="tutor-ratings-stars"
+                                                        >
+                                                            <i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="1"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="2"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="3"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="4"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-half-bold"
+                                                                data-rating-value="5"
+                                                            ></i>
+                                                        </div>
+                                                        <input
+                                                            type="hidden"
+                                                            name="tutor_rating_gen_input"
+                                                            value="4.50"
+                                                        />
+                                                        <span
+                                                            >(4.50 / 2
+                                                            Ratings)</span
+                                                        >
+                                                    </div>
+                                                    <h3>
+                                                        <a
+                                                            href="courses/the-ultimate-guide-to-building-a-restful-api-3/index.html"
+                                                        >
+                                                            The Ultimate Guide
+                                                            to Building a
+                                                            RESTful API
+                                                        </a>
+                                                    </h3>
+
+                                                    <div
+                                                        class="cmeta d-flex gap-5"
+                                                    >
+                                                        <div
+                                                            class="single_meta"
+                                                        >
+                                                            <i
+                                                                class="fa-regular fa-user"
+                                                            ></i>
+                                                            0 Students
+                                                        </div>
+
+                                                        <div
+                                                            class="single_meta"
+                                                        >
+                                                            <i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            0 Lessons
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="cbtm">
+                                                        <div
+                                                            class="c_price float-start"
+                                                        >
+                                                            <div class="price">
+                                                                <del
+                                                                    aria-hidden="true"
+                                                                    ><span
+                                                                        class="woocommerce-Price-amount amount"
+                                                                        ><span
+                                                                            class="woocommerce-Price-currencySymbol"
+                                                                            >&#036;</span
+                                                                        >500.00</span
+                                                                    ></del
+                                                                >
+                                                                <span
+                                                                    class="screen-reader-text"
+                                                                    >Original
+                                                                    price was:
+                                                                    &#036;500.00.</span
+                                                                ><ins
+                                                                    aria-hidden="true"
+                                                                    ><span
+                                                                        class="woocommerce-Price-amount amount"
+                                                                        ><span
+                                                                            class="woocommerce-Price-currencySymbol"
+                                                                            >&#036;</span
+                                                                        >430.00</span
+                                                                    ></ins
+                                                                ><span
+                                                                    class="screen-reader-text"
+                                                                    >Current
+                                                                    price is:
+                                                                    &#036;430.00.</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="c_author float-end"
+                                                        >
+                                                            <img
+                                                                alt=""
+                                                                src="{{ url('site/wp-content/uploads/2025/03/3-4.jpg') }}"
+                                                                srcset="
+                                                                    https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 2x
+                                                                "
+                                                                class="avatar avatar-30 photo"
+                                                                height="30"
+                                                                width="30"
+                                                            />
+                                                            <a
+                                                                href="profile/edplus/indexd527.html?view=instructor"
+                                                                >Masum Billah</a
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col-->
+
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 mix web-development wow fadeInUp"
+                                        >
+                                            <div
+                                                class="single_course course_style2"
+                                            >
+                                                <div class="course_img">
+                                                    <div class="ccategory">
+                                                        <a
+                                                            href="course-category/web-development/index8c92.html?tutor-course-filter-category=76"
+                                                            ><i
+                                                                class="ph ph-folder-open"
+                                                            ></i>
+                                                            Web Development</a
+                                                        >
+                                                    </div>
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="690"
+                                                        height="430"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/5.jpg') }}"
+                                                        class="attachment-edplus_course size-edplus_course wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/5.jpg         690w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/5-600x374.jpg 600w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/5-300x187.jpg 300w
+                                                        "
+                                                        sizes="(max-width: 690px) 100vw, 690px"
+                                                    />
+                                                    <a
+                                                        href="../../www.youtube.com/watch9a6e.html?v=yGDwk4z9EEg"
+                                                        class="cvbtn"
+                                                        data-source="youtube"
+                                                    >
+                                                        <i
+                                                            class="ph ph-video-camera"
+                                                        ></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="course_content">
+                                                    <div class="crating_number">
+                                                        <div
+                                                            class="tutor-ratings-stars"
+                                                        >
+                                                            <i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="1"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="2"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="3"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="4"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-half-bold"
+                                                                data-rating-value="5"
+                                                            ></i>
+                                                        </div>
+                                                        <input
+                                                            type="hidden"
+                                                            name="tutor_rating_gen_input"
+                                                            value="4.50"
+                                                        />
+                                                        <span
+                                                            >(4.50 / 2
+                                                            Ratings)</span
+                                                        >
+                                                    </div>
+                                                    <h3>
+                                                        <a
+                                                            href="courses/the-complete-guide-to-build-application-3/index.html"
+                                                        >
+                                                            The complete guide
+                                                            to build application
+                                                        </a>
+                                                    </h3>
+
+                                                    <div
+                                                        class="cmeta d-flex gap-5"
+                                                    >
+                                                        <div
+                                                            class="single_meta"
+                                                        >
+                                                            <i
+                                                                class="fa-regular fa-user"
+                                                            ></i>
+                                                            0 Students
+                                                        </div>
+
+                                                        <div
+                                                            class="single_meta"
+                                                        >
+                                                            <i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            0 Lessons
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="cbtm">
+                                                        <div
+                                                            class="c_price float-start"
+                                                        >
+                                                            <div class="price">
+                                                                <del
+                                                                    aria-hidden="true"
+                                                                    ><span
+                                                                        class="woocommerce-Price-amount amount"
+                                                                        ><span
+                                                                            class="woocommerce-Price-currencySymbol"
+                                                                            >&#036;</span
+                                                                        >400.00</span
+                                                                    ></del
+                                                                >
+                                                                <span
+                                                                    class="screen-reader-text"
+                                                                    >Original
+                                                                    price was:
+                                                                    &#036;400.00.</span
+                                                                ><ins
+                                                                    aria-hidden="true"
+                                                                    ><span
+                                                                        class="woocommerce-Price-amount amount"
+                                                                        ><span
+                                                                            class="woocommerce-Price-currencySymbol"
+                                                                            >&#036;</span
+                                                                        >350.00</span
+                                                                    ></ins
+                                                                ><span
+                                                                    class="screen-reader-text"
+                                                                    >Current
+                                                                    price is:
+                                                                    &#036;350.00.</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="c_author float-end"
+                                                        >
+                                                            <img
+                                                                alt=""
+                                                                src="{{ url('site/wp-content/uploads/2025/03/3-4.jpg') }}"
+                                                                srcset="
+                                                                    https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 2x
+                                                                "
+                                                                class="avatar avatar-30 photo"
+                                                                height="30"
+                                                                width="30"
+                                                            />
+                                                            <a
+                                                                href="profile/edplus/indexd527.html?view=instructor"
+                                                                >Masum Billah</a
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col-->
+
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 mix web-development wow fadeInUp"
+                                        >
+                                            <div
+                                                class="single_course course_style2"
+                                            >
+                                                <div class="course_img">
+                                                    <div class="ccategory">
+                                                        <a
+                                                            href="course-category/web-development/index8c92.html?tutor-course-filter-category=76"
+                                                            ><i
+                                                                class="ph ph-folder-open"
+                                                            ></i>
+                                                            Web Development</a
+                                                        >
+                                                    </div>
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="690"
+                                                        height="430"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/5.jpg') }}"
+                                                        class="attachment-edplus_course size-edplus_course wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/5.jpg         690w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/5-600x374.jpg 600w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/5-300x187.jpg 300w
+                                                        "
+                                                        sizes="(max-width: 690px) 100vw, 690px"
+                                                    />
+                                                    <a
+                                                        href="../../www.youtube.com/watch9a6e.html?v=yGDwk4z9EEg"
+                                                        class="cvbtn"
+                                                        data-source="youtube"
+                                                    >
+                                                        <i
+                                                            class="ph ph-video-camera"
+                                                        ></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="course_content">
+                                                    <div class="crating_number">
+                                                        <div
+                                                            class="tutor-ratings-stars"
+                                                        >
+                                                            <i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="1"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="2"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="3"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="4"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-half-bold"
+                                                                data-rating-value="5"
+                                                            ></i>
+                                                        </div>
+                                                        <input
+                                                            type="hidden"
+                                                            name="tutor_rating_gen_input"
+                                                            value="4.50"
+                                                        />
+                                                        <span
+                                                            >(4.50 / 2
+                                                            Ratings)</span
+                                                        >
+                                                    </div>
+                                                    <h3>
+                                                        <a
+                                                            href="courses/the-complete-guide-to-build-application-2-2/index.html"
+                                                        >
+                                                            The complete guide
+                                                            to build application
+                                                        </a>
+                                                    </h3>
+
+                                                    <div
+                                                        class="cmeta d-flex gap-5"
+                                                    >
+                                                        <div
+                                                            class="single_meta"
+                                                        >
+                                                            <i
+                                                                class="fa-regular fa-user"
+                                                            ></i>
+                                                            0 Students
+                                                        </div>
+
+                                                        <div
+                                                            class="single_meta"
+                                                        >
+                                                            <i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            0 Lessons
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="cbtm">
+                                                        <div
+                                                            class="c_price float-start"
+                                                        >
+                                                            <div class="price">
+                                                                <del
+                                                                    aria-hidden="true"
+                                                                    ><span
+                                                                        class="woocommerce-Price-amount amount"
+                                                                        ><span
+                                                                            class="woocommerce-Price-currencySymbol"
+                                                                            >&#036;</span
+                                                                        >400.00</span
+                                                                    ></del
+                                                                >
+                                                                <span
+                                                                    class="screen-reader-text"
+                                                                    >Original
+                                                                    price was:
+                                                                    &#036;400.00.</span
+                                                                ><ins
+                                                                    aria-hidden="true"
+                                                                    ><span
+                                                                        class="woocommerce-Price-amount amount"
+                                                                        ><span
+                                                                            class="woocommerce-Price-currencySymbol"
+                                                                            >&#036;</span
+                                                                        >350.00</span
+                                                                    ></ins
+                                                                ><span
+                                                                    class="screen-reader-text"
+                                                                    >Current
+                                                                    price is:
+                                                                    &#036;350.00.</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="c_author float-end"
+                                                        >
+                                                            <img
+                                                                alt=""
+                                                                src="{{ url('site/wp-content/uploads/2025/03/3-4.jpg') }}"
+                                                                srcset="
+                                                                    https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 2x
+                                                                "
+                                                                class="avatar avatar-30 photo"
+                                                                height="30"
+                                                                width="30"
+                                                            />
+                                                            <a
+                                                                href="profile/edplus/indexd527.html?view=instructor"
+                                                                >Masum Billah</a
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col-->
+
+                                        <div
+                                            class="col-xl-4 col-md-6 col-12 mix finance-account wow fadeInUp"
+                                        >
+                                            <div
+                                                class="single_course course_style2"
+                                            >
+                                                <div class="course_img">
+                                                    <div class="ccategory">
+                                                        <a
+                                                            href="course-category/finance-account/index0c9d.html?tutor-course-filter-category=75"
+                                                            ><i
+                                                                class="ph ph-folder-open"
+                                                            ></i>
+                                                            Finance Account</a
+                                                        >
+                                                    </div>
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="690"
+                                                        height="430"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/2-3.jpg') }}"
+                                                        class="attachment-edplus_course size-edplus_course wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-3.jpg         690w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-3-600x374.jpg 600w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-3-300x187.jpg 300w
+                                                        "
+                                                        sizes="(max-width: 690px) 100vw, 690px"
+                                                    />
+                                                    <a
+                                                        href="../../www.youtube.com/watch9a6e.html?v=yGDwk4z9EEg"
+                                                        class="cvbtn"
+                                                        data-source="youtube"
+                                                    >
+                                                        <i
+                                                            class="ph ph-video-camera"
+                                                        ></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="course_content">
+                                                    <div class="crating_number">
+                                                        <div
+                                                            class="tutor-ratings-stars"
+                                                        >
+                                                            <i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="1"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="2"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="3"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="4"
+                                                            ></i
+                                                            ><i
+                                                                class="tutor-icon-star-bold"
+                                                                data-rating-value="5"
+                                                            ></i>
+                                                        </div>
+                                                        <input
+                                                            type="hidden"
+                                                            name="tutor_rating_gen_input"
+                                                            value="5.00"
+                                                        />
+                                                        <span
+                                                            >(5.00 / 1
+                                                            Ratings)</span
+                                                        >
+                                                    </div>
+                                                    <h3>
+                                                        <a
+                                                            href="courses/enhance-your-personal-financial-analysis-skills-2-2/index.html"
+                                                        >
+                                                            Enhance Your
+                                                            Personal Financial
+                                                            Analysis Skills
+                                                        </a>
+                                                    </h3>
+
+                                                    <div
+                                                        class="cmeta d-flex gap-5"
+                                                    >
+                                                        <div
+                                                            class="single_meta"
+                                                        >
+                                                            <i
+                                                                class="fa-regular fa-user"
+                                                            ></i>
+                                                            0 Students
+                                                        </div>
+
+                                                        <div
+                                                            class="single_meta"
+                                                        >
+                                                            <i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            0 Lessons
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="cbtm">
+                                                        <div
+                                                            class="c_price float-start"
+                                                        >
+                                                            <div class="price">
+                                                                <span
+                                                                    class="woocommerce-Price-amount amount"
+                                                                    ><span
+                                                                        class="woocommerce-Price-currencySymbol"
+                                                                        >&#036;</span
+                                                                    >600.00</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="c_author float-end"
+                                                        >
+                                                            <img
+                                                                alt=""
+                                                                src="{{ url('site/wp-content/uploads/2025/03/3-4.jpg') }}"
+                                                                srcset="
+                                                                    https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 2x
+                                                                "
+                                                                class="avatar avatar-30 photo"
+                                                                height="30"
+                                                                width="30"
+                                                            />
+                                                            <a
+                                                                href="profile/edplus/indexd527.html?view=instructor"
+                                                                >Masum Billah</a
+                                                            >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col-->
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- End Courses -->
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="elementor-element elementor-element-04c1887 e-con-full e-flex e-con e-parent"
+                    data-id="04c1887"
+                    data-element_type="container"
+                    data-e-type="container"
+                >
+                    <div
+                        class="elementor-element elementor-element-8512ed8 elementor-widget elementor-widget-edplus-video"
+                        data-id="8512ed8"
+                        data-element_type="widget"
+                        data-e-type="widget"
+                        data-widget_type="edplus-video.default"
+                    >
+                        <div class="elementor-widget-container">
+                            <!-- Start Working Area -->
+                            <section class="working-area">
+                                <div class="container">
+                                    <div
+                                        class="section-title text-center wow fadeInUp"
+                                    >
+                                        <span>
+                                            <span class="ticon">
+                                                <img
+                                                    decoding="async"
+                                                    src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
+                                                    alt=""
+                                                />
+                                            </span>
+                                            Working Process
+                                        </span>
+                                        <h2>How It Work</h2>
+                                        <img
+                                            decoding="async"
+                                            src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
+                                            alt=""
+                                        />
+                                    </div>
+
+                                    <div
+                                        class="video_area"
+                                        style="
+                                            background-image: url({{ url('site/wp-content/uploads/2025/03/video-scaled.jpg') }});
+                                        "
+                                    >
+                                        <div class="row wow fadeInUp">
+                                            <div
+                                                class="col-lg-6 col-md-7 align-self-center text-center"
+                                            >
+                                                <h2>
+                                                    Intro <br />
+                                                    Video
+                                                </h2>
+                                            </div>
+
+                                            <div
+                                                class="col-lg-6 col-md-5 align-self-center text-center"
+                                            >
+                                                <a
+                                                    href="../../www.youtube.com/watchc260.html?v=qmqjJLzoxks"
+                                                    class="vplay_btn"
+                                                    ><i class="ph ph-play"></i
+                                                ></a>
+                                            </div>
+                                        </div>
+                                        <img
+                                            decoding="async"
+                                            src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/dots.svg') }}"
+                                            alt=""
+                                            class="dot_shape anileftRight"
+                                        />
+                                        <img
+                                            decoding="async"
+                                            src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/multiarrow.svg') }}"
+                                            alt=""
+                                            class="marrow_shape aniupDown"
+                                        />
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- End Working Area -->
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="elementor-element elementor-element-a5b2dba e-con-full e-flex e-con e-parent"
+                    data-id="a5b2dba"
+                    data-element_type="container"
+                    data-e-type="container"
+                >
+                    <div
+                        class="elementor-element elementor-element-d11b5d8 elementor-widget elementor-widget-edplus-testimonials"
+                        data-id="d11b5d8"
+                        data-element_type="widget"
+                        data-e-type="widget"
+                        data-widget_type="edplus-testimonials.default"
+                    >
+                        <div class="elementor-widget-container">
+                            <!-- Start Testimonials Two -->
+                            <section
+                                class="testimonials-two section-padding position-relative"
+                                style="
+                                    background-image: url(wp-content/uploads/2025/03/testimonials-2.svg);
+                                "
+                            >
+                                <div class="container">
+                                    <div class="row">
+                                        <div
+                                            class="col-xl-6 col-12 wow fadeInUp"
+                                        >
+                                            <div class="section-title">
+                                                <span>
+                                                    <span class="ticon">
+                                                        <img
+                                                            decoding="async"
+                                                            src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
+                                                            alt=""
+                                                        />
+                                                    </span>
+                                                    Testimonials
+                                                </span>
+                                                <h2>
+                                                    People’s Say About Our
+                                                    <br />
+                                                    Edplus
+                                                </h2>
+                                                <img
+                                                    decoding="async"
+                                                    src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <!-- End Col-->
+                                    </div>
+
+                                    <div class="row">
+                                        <div
+                                            class="col-lg-4 col-12 text-center wow fadeInUp"
+                                        >
+                                            <div
+                                                class="test_badge"
+                                                style="
+                                                    background-image: url({{ url('site/wp-content/uploads/2025/03/testimonials2.jpg') }});
+                                                "
+                                            >
+                                                <h4>4.8</h4>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>5 Star Rating</span>
+                                            </div>
+                                        </div>
+                                        <!-- End Col-->
+
+                                        <div
+                                            class="col-lg-8 col-12 wow fadeInUp"
+                                        >
+                                            <div
+                                                class="testimonial2_slider position-relative owl-carousel"
+                                            >
+                                                <div class="testimonial2_item">
+                                                    <div class="tes_top">
+                                                        <img
+                                                            loading="lazy"
+                                                            decoding="async"
+                                                            width="105"
+                                                            height="105"
+                                                            src="{{ url('site/wp-content/uploads/2025/03/2-1.png') }}"
+                                                            class="attachment-edplus_testi size-edplus_testi wp-post-image"
+                                                            alt=""
+                                                            srcset="
+                                                                https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-1.png         105w,
+                                                                https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-1-100x100.png 100w
+                                                            "
+                                                            sizes="(max-width: 105px) 100vw, 105px"
+                                                        />
+                                                        <div class="tes_tdes">
+                                                            <h4>John Legend</h4>
+                                                            <span
+                                                                >Australia</span
+                                                            >
+                                                        </div>
+                                                    </div>
+
+                                                    <p>
+                                                        Duis rhoncus orci utedn
+                                                        metus rhoncus, non is
+                                                        dictum purus bibendum.
+                                                        Suspendisse id orci sit
+                                                        amet justo.
+                                                    </p>
+
+                                                    <div class="tes_rating">
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                    </div>
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/themes/edplus/assets/img/icons/quote.svg') }}"
+                                                        alt=""
+                                                        class="quote_shape2 position-absolute"
+                                                    />
+                                                </div>
+
+                                                <div class="testimonial2_item">
+                                                    <div class="tes_top">
+                                                        <img
+                                                            loading="lazy"
+                                                            decoding="async"
+                                                            width="105"
+                                                            height="105"
+                                                            src="{{ url('site/wp-content/uploads/2025/03/2-1.png') }}"
+                                                            class="attachment-edplus_testi size-edplus_testi wp-post-image"
+                                                            alt=""
+                                                            srcset="
+                                                                https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-1.png         105w,
+                                                                https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-1-100x100.png 100w
+                                                            "
+                                                            sizes="(max-width: 105px) 100vw, 105px"
+                                                        />
+                                                        <div class="tes_tdes">
+                                                            <h4>John Legend</h4>
+                                                            <span
+                                                                >Australia</span
+                                                            >
+                                                        </div>
+                                                    </div>
+
+                                                    <p>
+                                                        Duis rhoncus orci utedn
+                                                        metus rhoncus, non is
+                                                        dictum purus bibendum.
+                                                        Suspendisse id orci sit
+                                                        amet justo.
+                                                    </p>
+
+                                                    <div class="tes_rating">
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                    </div>
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/themes/edplus/assets/img/icons/quote.svg') }}"
+                                                        alt=""
+                                                        class="quote_shape2 position-absolute"
+                                                    />
+                                                </div>
+
+                                                <div class="testimonial2_item">
+                                                    <div class="tes_top">
+                                                        <img
+                                                            loading="lazy"
+                                                            decoding="async"
+                                                            width="105"
+                                                            height="105"
+                                                            src="{{ url('site/wp-content/uploads/2025/03/2-1.png') }}"
+                                                            class="attachment-edplus_testi size-edplus_testi wp-post-image"
+                                                            alt=""
+                                                            srcset="
+                                                                https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-1.png         105w,
+                                                                https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-1-100x100.png 100w
+                                                            "
+                                                            sizes="(max-width: 105px) 100vw, 105px"
+                                                        />
+                                                        <div class="tes_tdes">
+                                                            <h4>John Doe</h4>
+                                                            <span
+                                                                >Australia</span
+                                                            >
+                                                        </div>
+                                                    </div>
+
+                                                    <p>
+                                                        Duis rhoncus orci utedn
+                                                        metus rhoncus, non is
+                                                        dictum purus bibendum
+                                                        Suspendisse id interdum.
+                                                    </p>
+
+                                                    <div class="tes_rating">
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                    </div>
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/themes/edplus/assets/img/icons/quote.svg') }}"
+                                                        alt=""
+                                                        class="quote_shape2 position-absolute"
+                                                    />
+                                                </div>
+
+                                                <div class="testimonial2_item">
+                                                    <div class="tes_top">
+                                                        <img
+                                                            loading="lazy"
+                                                            decoding="async"
+                                                            width="105"
+                                                            height="105"
+                                                            src="{{ url('site/wp-content/uploads/2025/03/2-1.png') }}"
+                                                            class="attachment-edplus_testi size-edplus_testi wp-post-image"
+                                                            alt=""
+                                                            srcset="
+                                                                https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-1.png         105w,
+                                                                https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-1-100x100.png 100w
+                                                            "
+                                                            sizes="(max-width: 105px) 100vw, 105px"
+                                                        />
+                                                        <div class="tes_tdes">
+                                                            <h4>John Doe</h4>
+                                                            <span
+                                                                >Australia</span
+                                                            >
+                                                        </div>
+                                                    </div>
+
+                                                    <p>
+                                                        Duis rhoncus orci utedn
+                                                        metus rhoncus, non is
+                                                        dictum purus bibendum
+                                                        Suspendisse id interdum.
+                                                    </p>
+
+                                                    <div class="tes_rating">
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                    </div>
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/themes/edplus/assets/img/icons/quote.svg') }}"
+                                                        alt=""
+                                                        class="quote_shape2 position-absolute"
+                                                    />
+                                                </div>
+
+                                                <div class="testimonial2_item">
+                                                    <div class="tes_top">
+                                                        <img
+                                                            loading="lazy"
+                                                            decoding="async"
+                                                            width="104"
+                                                            height="104"
+                                                            src="{{ url('site/wp-content/uploads/2025/03/1-1.png') }}"
+                                                            class="attachment-edplus_testi size-edplus_testi wp-post-image"
+                                                            alt=""
+                                                            srcset="
+                                                                https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/1-1.png         104w,
+                                                                https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/1-1-100x100.png 100w
+                                                            "
+                                                            sizes="(max-width: 104px) 100vw, 104px"
+                                                        />
+                                                        <div class="tes_tdes">
+                                                            <h4>John Smith</h4>
+                                                            <span
+                                                                >Australia</span
+                                                            >
+                                                        </div>
+                                                    </div>
+
+                                                    <p>
+                                                        Duis rhoncus orci utedn
+                                                        metus rhoncus, non is
+                                                        dictum purus bibendum
+                                                        Suspendisse id interdum.
+                                                    </p>
+
+                                                    <div class="tes_rating">
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                    </div>
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/themes/edplus/assets/img/icons/quote.svg') }}"
+                                                        alt=""
+                                                        class="quote_shape2 position-absolute"
+                                                    />
+                                                </div>
+
+                                                <div class="testimonial2_item">
+                                                    <div class="tes_top">
+                                                        <img
+                                                            loading="lazy"
+                                                            decoding="async"
+                                                            width="104"
+                                                            height="104"
+                                                            src="{{ url('site/wp-content/uploads/2025/03/1-1.png') }}"
+                                                            class="attachment-edplus_testi size-edplus_testi wp-post-image"
+                                                            alt=""
+                                                            srcset="
+                                                                https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/1-1.png         104w,
+                                                                https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/1-1-100x100.png 100w
+                                                            "
+                                                            sizes="(max-width: 104px) 100vw, 104px"
+                                                        />
+                                                        <div class="tes_tdes">
+                                                            <h4>John Smith</h4>
+                                                            <span
+                                                                >Australia</span
+                                                            >
+                                                        </div>
+                                                    </div>
+
+                                                    <p>
+                                                        Duis rhoncus orci utedn
+                                                        metus rhoncus, non is
+                                                        dictum purus bibendum
+                                                        Suspendisse id interdum.
+                                                    </p>
+
+                                                    <div class="tes_rating">
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                        <i
+                                                            class="fa-solid fa-star"
+                                                        ></i>
+                                                    </div>
+                                                    <img
+                                                        decoding="async"
+                                                        src="{{ url('site/wp-content/themes/edplus/assets/img/icons/quote.svg') }}"
+                                                        alt=""
+                                                        class="quote_shape2 position-absolute"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Col-->
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- End Testimonials Two -->
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="elementor-element elementor-element-9331882 e-con-full e-flex e-con e-parent"
+                    data-id="9331882"
+                    data-element_type="container"
+                    data-e-type="container"
+                >
+                    <div
+                        class="elementor-element elementor-element-3f2610e elementor-widget elementor-widget-edplus-title"
+                        data-id="3f2610e"
+                        data-element_type="widget"
+                        data-e-type="widget"
+                        data-widget_type="edplus-title.default"
+                    >
+                        <div class="elementor-widget-container">
+                            <div class="section-title text-center wow fadeInUp">
+                                <span>
+                                    <span class="ticon">
+                                        <img
+                                            decoding="async"
+                                            src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
+                                            alt=""
+                                        />
+                                    </span>
+                                    Instructors
+                                </span>
+                                <h2>Our Expert Instructors</h2>
+                                <img
+                                    decoding="async"
+                                    src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="elementor-element elementor-element-349b845 elementor-widget elementor-widget-edplus-instructors"
+                        data-id="349b845"
+                        data-element_type="widget"
+                        data-e-type="widget"
+                        data-widget_type="edplus-instructors.default"
+                    >
+                        <div class="elementor-widget-container">
+                            <!-- Start Teacher -->
+                            <section class="instructors">
+                                <div class="container">
+                                    <div class="row">
+                                        <div
+                                            class="instructor-slider position-relative owl-carousel col-12 wow fadeInUp"
+                                        >
+                                            <div class="teacher_item">
+                                                <div class="teacher_image">
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="360"
+                                                        height="316"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/4-1.png') }}"
+                                                        class="attachment-edplus_instructor_img size-edplus_instructor_img wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/4-1.png         361w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/4-1-300x263.png 300w
+                                                        "
+                                                        sizes="(max-width: 360px) 100vw, 360px"
+                                                    />
+                                                    <ul class="tsocial_links">
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-facebook"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-x-twitter"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-youtube"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
                                                     </ul>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <!-- What We Do Tab Content End -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- What We Do Tab Item End -->
 
-                            <!-- What We Do Tab Item Start -->
-                            <div class="what-we-do-tab-item tab-pane fade" id="multilingual" role="tabpanel">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <!-- What We Do Tab Content Start -->
-                                        <div class="what-we-do-tab-content">
-                                            <div class="what-we-do-tab-header">
-                                                <p>From life-like voice quality to flexible pricing and powerful
-                                                    customization, we offer everything you need to create professional
-                                                    audio. From life-like voice quality to flexible pricing and powerful
-                                                    customization.</p>
-                                            </div>
-
-                                            <div class="what-we-do-tab-body">
-                                                <div class="what-we-do-body-info">
-                                                    <div class="icon-box">
-                                                        <img src="{{ url('site/images/icon-what-we-do-body-3.svg') }}"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="what-we-do-body-title">
-                                                        <h3>End-to-End Support</h3>
+                                                <div class="teacher_content">
+                                                    <h4>
+                                                        <a
+                                                            href="profile/edplus/indexd527.html?view=instructor"
+                                                            >MD. Masum Billah</a
+                                                        >
+                                                    </h4>
+                                                    <span
+                                                        >Software Engineer</span
+                                                    >
+                                                    <div class="ins_meta">
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            36 Courses</span
+                                                        >
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-graduation-cap"
+                                                            ></i>
+                                                            196 Students</span
+                                                        >
                                                     </div>
                                                 </div>
-                                                <div class="what-we-do-body-content">
-                                                    <p>We're with you every step of the way - ensuring your voiceover is
-                                                        smooth.</p>
-                                                    <ul>
-                                                        <li>Script-to-Sound Expertise</li>
-                                                        <li>Dedicated Project Management</li>
+                                            </div>
+                                            <!-- End instructor_item -->
+                                            <div class="teacher_item">
+                                                <div class="teacher_image">
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="360"
+                                                        height="316"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/4-1.png') }}"
+                                                        class="attachment-edplus_instructor_img size-edplus_instructor_img wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/4-1.png         361w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/4-1-300x263.png 300w
+                                                        "
+                                                        sizes="(max-width: 360px) 100vw, 360px"
+                                                    />
+                                                    <ul class="tsocial_links">
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-facebook"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-x-twitter"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-youtube"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
                                                     </ul>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <!-- What We Do Tab Content End -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- What We Do Tab Item End -->
-                        </div>
-                        <!-- What We Do Tab Box End -->
 
-                        <!-- What We Do Button Start -->
-                        <div class="what-we-do-btn wow fadeInUp" data-wow-delay="0.6s">
-                            <a href="contact.html" class="btn-default">Ver Mais</a>
-                        </div>
-                        <!-- What We Do Button End -->
-                    </div>
-                    <!-- What We Do Content End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- What We Do Section End -->
-
-    <!-- Language Examples Section Start -->
-    {{-- <div class="language-examples bg-section">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title section-title-center">
-                        <h3 class="wow fadeInUp">Multiple language</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Connect with audiences in
-                            their <span>native tongue</span></h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Language Examples Box Start -->
-                    <div class="language-examples-box">
-                        <!-- Language Examples List Start -->
-                        <div class="language-example-list wow fadeInUp" data-wow-delay="0.4s">
-                            <ul>
-                                <li><img src="{{ url('site/images/flag-image-1.png') }}" alt="">Argentina</li>
-                                <li><img src="{{ url('site/images/flag-image-2.png') }}" alt="">Belgium</li>
-                                <li><img src="{{ url('site/images/flag-image-3.png') }}" alt="">Portugal</li>
-                                <li><img src="{{ url('site/images/flag-image-4.png') }}" alt="">Austria</li>
-                                <li><img src="{{ url('site/images/flag-image-5.png') }}" alt="">Finland</li>
-                                <li><img src="{{ url('site/images/flag-image-6.png') }}" alt="">Ukraine</li>
-                                <li><img src="{{ url('site/images/flag-image-7.png') }}" alt="">Greece</li>
-                                <li><img src="{{ url('site/images/flag-image-14.png') }}" alt="">India</li>
-                                <li><img src="{{ url('site/images/flag-image-9.png') }}" alt="">Italy</li>
-                                <li><img src="{{ url('site/images/flag-image-10.png') }}" alt="">United Kingdom</li>
-                                <li><img src="{{ url('site/images/flag-image-11.png') }}" alt="">England</li>
-                                <li><img src="{{ url('site/images/flag-image-12.png') }}" alt="">Sweden</li>
-                                <li><img src="{{ url('site/images/flag-image-13.png') }}" alt="">Liechtenstein</li>
-                                <li><img src="{{ url('site/images/flag-image-8.png') }}" alt="">Chile</li>
-                                <li><img src="{{ url('site/images/flag-image-15.png') }}" alt="">Central African</li>
-                                <li><img src="{{ url('site/images/flag-image-16.png') }}" alt="">Serbia</li>
-                            </ul>
-                        </div>
-                        <!-- Language Examples List End -->
-
-                        <!-- Section Footer Text Start -->
-                        <div class="section-footer-text wow fadeInUp" data-wow-delay="0.6s">
-                            <p>Where words meet voice - <a href="contact.html">and your story comes alive</a></p>
-                        </div>
-                        <!-- Section Footer Text End -->
-                    </div>
-                    <!-- Language Examples Box End -->
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- Language Examples Section End -->
-
-    <!-- Our Pricing Section Start -->
-    {{-- <div class="our-pricing">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title section-title-center">
-                        <h3 class="wow fadeInUp">Pricing Plan</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Choose the right voiceover
-                            plan for <span>your project</span></h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Our Pricing Box Start -->
-                    <div class="our-pricing-box wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="our-pricing-swich form-check form-switch">
-                            <label class="form-check-label" for="planToggle" id="toggleLabelMonthly">Monthly</label>
-                            <span><input class="form-check-input" type="checkbox" id="planToggle"></span>
-                            <label class="form-check-label" for="planToggle" id="toggleLabelAnnually">Annually</label>
-                        </div>
-                        <!-- Sidebar Our Pricing Nav End -->
-
-                        <!-- Pricing Tab Item Start -->
-                        <div class="pricing-tab-item" id="monthly">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6">
-                                    <!-- Pricing Box Start -->
-                                    <div class="pricing-item">
-                                        <!-- Pricing Header Start -->
-                                        <div class="pricing-header">
-                                            <h3>Starter Plan</h3>
-                                            <h2>$39.00<sub>/Monthly</sub></h2>
-                                        </div>
-                                        <!-- Pricing Header End -->
-
-                                        <!-- Pricing Item Content Start -->
-                                        <div class="pricing-item-content">
-                                            <p>Perfect for short videos, ads, or social media content.</p>
-                                        </div>
-                                        <!-- Pricing Item Content End -->
-
-                                        <!-- Pricing body Start -->
-                                        <div class="pricing-body">
-                                            <h3>What's Included:</h3>
-                                            <ul>
-                                                <li>1 free revision</li>
-                                                <li>Up to 150 words</li>
-                                                <li>1 voice talent option</li>
-                                            </ul>
-                                        </div>
-                                        <!-- Pricing body End -->
-
-                                        <!-- Pricing Button Start -->
-                                        <div class="pricing-btn">
-                                            <a href="contact.html" class="btn-default">get started now</a>
-                                        </div>
-                                        <!-- Pricing Button End -->
-                                    </div>
-                                    <!-- Pricing Box End -->
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <!-- Pricing Box Start -->
-                                    <div class="pricing-item highlighted-box box-bg-shape">
-                                        <!-- Pricing Header Start -->
-                                        <div class="pricing-header">
-                                            <h3>Growth Plan</h3>
-                                            <h2>$59.00<sub>/Monthly</sub></h2>
-                                        </div>
-                                        <!-- Pricing Header End -->
-
-                                        <!-- Pricing Item Content Start -->
-                                        <div class="pricing-item-content">
-                                            <p>Great for product videos, presentations, or training content.</p>
-                                        </div>
-                                        <!-- Pricing Item Content End -->
-
-                                        <!-- Pricing body Start -->
-                                        <div class="pricing-body">
-                                            <h3>What's Included:</h3>
-                                            <ul>
-                                                <li>Up to 500 words</li>
-                                                <li>Unlimited revisions</li>
-                                                <li>1 premium voice talent option</li>
-                                            </ul>
-                                        </div>
-                                        <!-- Pricing body End -->
-
-                                        <!-- Pricing Button Start -->
-                                        <div class="pricing-btn">
-                                            <a href="contact.html" class="btn-default">get started now</a>
-                                        </div>
-                                        <!-- Pricing Button End -->
-                                    </div>
-                                    <!-- Pricing Box End -->
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <!-- Pricing Box Start -->
-                                    <div class="pricing-item">
-                                        <!-- Pricing Header Start -->
-                                        <div class="pricing-header">
-                                            <h3>Enterprise Plan</h3>
-                                            <h2>$99.00<sub>/Monthly</sub></h2>
-                                        </div>
-                                        <!-- Pricing Header End -->
-
-                                        <!-- Pricing Item Content Start -->
-                                        <div class="pricing-item-content">
-                                            <p>For ongoing, multi-language, or large-scale projects.</p>
-                                        </div>
-                                        <!-- Pricing Item Content End -->
-
-                                        <!-- Pricing body Start -->
-                                        <div class="pricing-body">
-                                            <h3>What's Included:</h3>
-                                            <ul>
-                                                <li>Unlimited word count</li>
-                                                <li>Dedicated project manager</li>
-                                                <li>Multiple voice talent options</li>
-                                            </ul>
-                                        </div>
-                                        <!-- Pricing body End -->
-
-                                        <!-- Pricing Button Start -->
-                                        <div class="pricing-btn">
-                                            <a href="contact.html" class="btn-default">get started now</a>
-                                        </div>
-                                        <!-- Pricing Button End -->
-                                    </div>
-                                    <!-- Pricing Box End -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Pricing Tab Item End -->
-
-                        <!-- Pricing Tab Item Start -->
-                        <div class="pricing-tab-item d-none" id="annually">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6">
-                                    <!-- Pricing Box Start -->
-                                    <div class="pricing-item">
-                                        <!-- Pricing Header Start -->
-                                        <div class="pricing-header">
-                                            <h3>Starter Plan</h3>
-                                            <h2>$139.00<sub>/Annually</sub></h2>
-                                        </div>
-                                        <!-- Pricing Header End -->
-
-                                        <!-- Pricing Item Content Start -->
-                                        <div class="pricing-item-content">
-                                            <p>Perfect for short videos, ads, or social media content.</p>
-                                        </div>
-                                        <!-- Pricing Item Content End -->
-
-                                        <!-- Pricing body Start -->
-                                        <div class="pricing-body">
-                                            <h3>What's Included:</h3>
-                                            <ul>
-                                                <li>2 free revision</li>
-                                                <li>Up to 250 words</li>
-                                                <li>2 voice talent option</li>
-                                            </ul>
-                                        </div>
-                                        <!-- Pricing body End -->
-
-                                        <!-- Pricing Button Start -->
-                                        <div class="pricing-btn">
-                                            <a href="contact.html" class="btn-default">get started now</a>
-                                        </div>
-                                        <!-- Pricing Button End -->
-                                    </div>
-                                    <!-- Pricing Box End -->
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <!-- Pricing Box Start -->
-                                    <div class="pricing-item highlighted-box box-bg-shape">
-                                        <!-- Pricing Header Start -->
-                                        <div class="pricing-header">
-                                            <h3>Growth Plan</h3>
-                                            <h2>$159.00<sub>/Annually</sub></h2>
-                                        </div>
-                                        <!-- Pricing Header End -->
-
-                                        <!-- Pricing Item Content Start -->
-                                        <div class="pricing-item-content">
-                                            <p>Great for product videos, presentations, or training content.</p>
-                                        </div>
-                                        <!-- Pricing Item Content End -->
-
-                                        <!-- Pricing body Start -->
-                                        <div class="pricing-body">
-                                            <h3>What's Included:</h3>
-                                            <ul>
-                                                <li>Up to 1000 words</li>
-                                                <li>Unlimited revisions</li>
-                                                <li>2 premium voice talent option</li>
-                                            </ul>
-                                        </div>
-                                        <!-- Pricing body End -->
-
-                                        <!-- Pricing Button Start -->
-                                        <div class="pricing-btn">
-                                            <a href="contact.html" class="btn-default">get started now</a>
-                                        </div>
-                                        <!-- Pricing Button End -->
-                                    </div>
-                                    <!-- Pricing Box End -->
-                                </div>
-
-                                <div class="col-lg-4 col-md-6">
-                                    <!-- Pricing Box Start -->
-                                    <div class="pricing-item">
-                                        <!-- Pricing Header Start -->
-                                        <div class="pricing-header">
-                                            <h3>Enterprise Plan</h3>
-                                            <h2>$199.00<sub>/Annually</sub></h2>
-                                        </div>
-                                        <!-- Pricing Header End -->
-
-                                        <!-- Pricing Item Content Start -->
-                                        <div class="pricing-item-content">
-                                            <p>For ongoing, multi-language, or large-scale projects.</p>
-                                        </div>
-                                        <!-- Pricing Item Content End -->
-
-                                        <!-- Pricing body Start -->
-                                        <div class="pricing-body">
-                                            <h3>What's Included:</h3>
-                                            <ul>
-                                                <li>Unlimited word count</li>
-                                                <li>Dedicated project manager</li>
-                                                <li>Multiple voice talent options</li>
-                                            </ul>
-                                        </div>
-                                        <!-- Pricing body End -->
-
-                                        <!-- Pricing Button Start -->
-                                        <div class="pricing-btn">
-                                            <a href="contact.html" class="btn-default">get started now</a>
-                                        </div>
-                                        <!-- Pricing Button End -->
-                                    </div>
-                                    <!-- Pricing Box End -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Pricing Tab Item End -->
-                    </div>
-
-                    <!-- Pricing Benifit List Start -->
-                    <div class="pricing-benefit-list wow fadeInUp" data-wow-delay="0.6s">
-                        <ul>
-                            <li><img src="{{ url('site/images/icon-pricing-benefit-1.svg') }}" alt="">Get 30 day free trial</li>
-                            <li><img src="{{ url('site/images/icon-pricing-benefit-2.svg') }}" alt="">No any hidden fee pay</li>
-                            <li><img src="{{ url('site/images/icon-pricing-benefit-3.svg') }}" alt="">You can cancel anytime </li>
-                        </ul>
-                    </div>
-                    <!-- Pricing Benifit List End -->
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- Our Pricing Section End -->
-
-    <!-- Our Testimonials Section Start -->
-    <div class="our-testimonials">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <!-- Testimonials Content Box Start -->
-                    <div class="testimonials-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">Testemunhos e Coentários</h3>
-                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Ouça o que nossos
-                                clientes satisfeitos <span>têm a dizer.</span></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.4s">Desde qualidade de dos serviços até a
-                                flexibilidade e poderosas opções de personalização, oferecemos tudo o que você precisa para
-                                criar o seu evento profissional — de forma rápida e simples.</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Testimonial Button Start -->
-                        <div class="testimonial-btn wow fadeInUp" data-wow-delay="0.6s">
-                            <a href="testimonials.html" class="btn-default">Ver Mais</a>
-                        </div>
-                        <!-- Testimonial Button End -->
-
-                        <!-- Testimonial Slider Start -->
-                        <div class="testimonial-slider">
-                            <div class="swiper">
-                                <div class="swiper-wrapper" data-cursor-text="Drag">
-                                    <!-- Testimonial Slide Start -->
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
-                                            <div class="testimonial-quote">
-                                                <img src="{{ url('site/images/testimonial-quote.svg') }}" alt="">
-                                            </div>
-                                            <div class="testimonial-item-content">
-                                                <p>I integrated the API into our mobile app with ease. now users enjoy
-                                                    seamless, natural voice interactions no extra recording needed</p>
-                                            </div>
-                                            <div class="testimonial-author">
-                                                <div class="author-content">
-                                                    <h3>Leslie Alexander</h3>
-                                                    <p>CEO, Tech Startup</p>
+                                                <div class="teacher_content">
+                                                    <h4>
+                                                        <a
+                                                            href="profile/edplus/indexd527.html?view=instructor"
+                                                            >MD. Masum Billah</a
+                                                        >
+                                                    </h4>
+                                                    <span
+                                                        >Software Engineer</span
+                                                    >
+                                                    <div class="ins_meta">
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            36 Courses</span
+                                                        >
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-graduation-cap"
+                                                            ></i>
+                                                            196 Students</span
+                                                        >
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Slide End -->
+                                            <!-- End instructor_item -->
+                                            <div class="teacher_item">
+                                                <div class="teacher_image">
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="360"
+                                                        height="316"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/3-1.png') }}"
+                                                        class="attachment-edplus_instructor_img size-edplus_instructor_img wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-1.png         361w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-1-300x263.png 300w
+                                                        "
+                                                        sizes="(max-width: 360px) 100vw, 360px"
+                                                    />
+                                                    <ul class="tsocial_links">
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-facebook"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-x-twitter"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-youtube"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                    <!-- Testimonial Slide Start -->
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
-                                            <div class="testimonial-quote">
-                                                <img src="{{ url('site/images/testimonial-quote.svg') }}" alt="">
-                                            </div>
-                                            <div class="testimonial-item-content">
-                                                <p>I integrated the API into our mobile app with ease. now users enjoy
-                                                    seamless, natural voice interactions no extra recording needed</p>
-                                            </div>
-                                            <div class="testimonial-author">
-                                                <div class="author-content">
-                                                    <h3>Darlene Robertson</h3>
-                                                    <p>co.Founder</p>
+                                                <div class="teacher_content">
+                                                    <h4>
+                                                        <a
+                                                            href="profile/edplus/indexd527.html?view=instructor"
+                                                            >MD. Motasim
+                                                            Billah</a
+                                                        >
+                                                    </h4>
+                                                    <span>SEO Expert</span>
+                                                    <div class="ins_meta">
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            40 Courses</span
+                                                        >
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-graduation-cap"
+                                                            ></i>
+                                                            200 Students</span
+                                                        >
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Slide End -->
+                                            <!-- End instructor_item -->
+                                            <div class="teacher_item">
+                                                <div class="teacher_image">
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="360"
+                                                        height="316"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/3-1.png') }}"
+                                                        class="attachment-edplus_instructor_img size-edplus_instructor_img wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-1.png         361w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-1-300x263.png 300w
+                                                        "
+                                                        sizes="(max-width: 360px) 100vw, 360px"
+                                                    />
+                                                    <ul class="tsocial_links">
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-facebook"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-x-twitter"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-youtube"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                    <!-- Testimonial Slide Start -->
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
-                                            <div class="testimonial-quote">
-                                                <img src="{{ url('site/images/testimonial-quote.svg') }}" alt="">
-                                            </div>
-                                            <div class="testimonial-item-content">
-                                                <p>I integrated the API into our mobile app with ease. now users enjoy
-                                                    seamless, natural voice interactions no extra recording needed</p>
-                                            </div>
-                                            <div class="testimonial-author">
-                                                <div class="author-content">
-                                                    <h3>Ethan Parker</h3>
-                                                    <p>Research Assistant</p>
+                                                <div class="teacher_content">
+                                                    <h4>
+                                                        <a
+                                                            href="profile/edplus/indexd527.html?view=instructor"
+                                                            >MD. Motasim
+                                                            Billah</a
+                                                        >
+                                                    </h4>
+                                                    <span>SEO Expert</span>
+                                                    <div class="ins_meta">
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            40 Courses</span
+                                                        >
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-graduation-cap"
+                                                            ></i>
+                                                            200 Students</span
+                                                        >
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <!-- End instructor_item -->
+                                            <div class="teacher_item">
+                                                <div class="teacher_image">
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="360"
+                                                        height="316"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/2-2.png') }}"
+                                                        class="attachment-edplus_instructor_img size-edplus_instructor_img wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-2.png         361w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-2-300x263.png 300w
+                                                        "
+                                                        sizes="(max-width: 360px) 100vw, 360px"
+                                                    />
+                                                    <ul class="tsocial_links">
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-facebook"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-x-twitter"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-youtube"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="teacher_content">
+                                                    <h4>
+                                                        <a
+                                                            href="profile/edplus/indexd527.html?view=instructor"
+                                                            >MD. Muntasir
+                                                            Billah</a
+                                                        >
+                                                    </h4>
+                                                    <span>UI Designer</span>
+                                                    <div class="ins_meta">
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            35 Courses</span
+                                                        >
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-graduation-cap"
+                                                            ></i>
+                                                            150 Students</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End instructor_item -->
+                                            <div class="teacher_item">
+                                                <div class="teacher_image">
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="360"
+                                                        height="316"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/2-2.png') }}"
+                                                        class="attachment-edplus_instructor_img size-edplus_instructor_img wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-2.png         361w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/2-2-300x263.png 300w
+                                                        "
+                                                        sizes="(max-width: 360px) 100vw, 360px"
+                                                    />
+                                                    <ul class="tsocial_links">
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-facebook"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-x-twitter"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-youtube"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="teacher_content">
+                                                    <h4>
+                                                        <a
+                                                            href="profile/edplus/indexd527.html?view=instructor"
+                                                            >MD. Muntasir
+                                                            Billah</a
+                                                        >
+                                                    </h4>
+                                                    <span>UI Designer</span>
+                                                    <div class="ins_meta">
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            35 Courses</span
+                                                        >
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-graduation-cap"
+                                                            ></i>
+                                                            150 Students</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End instructor_item -->
+                                            <div class="teacher_item">
+                                                <div class="teacher_image">
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="360"
+                                                        height="316"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/1-4.png') }}"
+                                                        class="attachment-edplus_instructor_img size-edplus_instructor_img wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/1-4.png         361w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/1-4-300x263.png 300w
+                                                        "
+                                                        sizes="(max-width: 360px) 100vw, 360px"
+                                                    />
+                                                    <ul class="tsocial_links">
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-facebook"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-x-twitter"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-youtube"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="teacher_content">
+                                                    <h4>
+                                                        <a
+                                                            href="profile/edplus/indexd527.html?view=instructor"
+                                                            >MD. Monaym
+                                                            Billah</a
+                                                        >
+                                                    </h4>
+                                                    <span>Web Developer</span>
+                                                    <div class="ins_meta">
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            30 Courses</span
+                                                        >
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-graduation-cap"
+                                                            ></i>
+                                                            120 Students</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End instructor_item -->
+                                            <div class="teacher_item">
+                                                <div class="teacher_image">
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="360"
+                                                        height="316"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/1-4.png') }}"
+                                                        class="attachment-edplus_instructor_img size-edplus_instructor_img wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/1-4.png         361w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/1-4-300x263.png 300w
+                                                        "
+                                                        sizes="(max-width: 360px) 100vw, 360px"
+                                                    />
+                                                    <ul class="tsocial_links">
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-facebook"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-x-twitter"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-youtube"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="teacher_content">
+                                                    <h4>
+                                                        <a
+                                                            href="profile/edplus/indexd527.html?view=instructor"
+                                                            >MD. Monaym
+                                                            Billah</a
+                                                        >
+                                                    </h4>
+                                                    <span>Web Developer</span>
+                                                    <div class="ins_meta">
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            30 Courses</span
+                                                        >
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-graduation-cap"
+                                                            ></i>
+                                                            120 Students</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End instructor_item -->
+                                            <div class="teacher_item">
+                                                <div class="teacher_image">
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="360"
+                                                        height="316"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/4-1.png') }}"
+                                                        class="attachment-edplus_instructor_img size-edplus_instructor_img wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/4-1.png         361w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/4-1-300x263.png 300w
+                                                        "
+                                                        sizes="(max-width: 360px) 100vw, 360px"
+                                                    />
+                                                    <ul class="tsocial_links">
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-facebook"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-x-twitter"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-youtube"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="teacher_content">
+                                                    <h4>
+                                                        <a
+                                                            href="profile/edplus/indexd527.html?view=instructor"
+                                                            >MD. Monaym
+                                                            Billah</a
+                                                        >
+                                                    </h4>
+                                                    <span>Web Developer</span>
+                                                    <div class="ins_meta">
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            25 Courses</span
+                                                        >
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-graduation-cap"
+                                                            ></i>
+                                                            100 Students</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End instructor_item -->
+                                            <div class="teacher_item">
+                                                <div class="teacher_image">
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        width="360"
+                                                        height="316"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/4-1.png') }}"
+                                                        class="attachment-edplus_instructor_img size-edplus_instructor_img wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/4-1.png         361w,
+                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/4-1-300x263.png 300w
+                                                        "
+                                                        sizes="(max-width: 360px) 100vw, 360px"
+                                                    />
+                                                    <ul class="tsocial_links">
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-facebook"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-x-twitter"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"
+                                                                ><i
+                                                                    class="fa-brands fa-youtube"
+                                                                ></i
+                                                            ></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="teacher_content">
+                                                    <h4>
+                                                        <a
+                                                            href="profile/edplus/indexd527.html?view=instructor"
+                                                            >MD. Monaym
+                                                            Billah</a
+                                                        >
+                                                    </h4>
+                                                    <span>Web Developer</span>
+                                                    <div class="ins_meta">
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-book"
+                                                            ></i>
+                                                            25 Courses</span
+                                                        >
+                                                        <span
+                                                            ><i
+                                                                class="fa-solid fa-graduation-cap"
+                                                            ></i>
+                                                            100 Students</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End instructor_item -->
                                         </div>
+                                        <!-- End Col -->
                                     </div>
-                                    <!-- Testimonial Slide End -->
+                                </div>
+                            </section>
+                            <!-- End Teacher -->
+
+                            <svg class="clippy">
+                                <defs>
+                                    <clipPath
+                                        id="clip-teacher"
+                                        clipPathUnits="objectBoundingBox"
+                                    >
+                                        <path
+                                            d="M0 0.0211625C0 0.00947477 0.00992167 0 0.0221607 0H0.792244C0.815192 0 0.833795 0.0177652 0.833795 0.0396796V0.283048V0.468717C0.833795 0.488236 0.84866 0.504856 0.868848 0.507909L0.964947 0.522439C0.985135 0.525491 1 0.542112 1 0.56163V0.815965C1 0.824911 0.994109 0.832891 0.985286 0.835897L0.507279 0.998769C0.502566 1.00038 0.497422 1.00041 0.492685 0.998869L0.0150135 0.843448C0.00603581 0.840527 0 0.832473 0 0.823416V0.0211625Z"
+                                            fill="#222222"
+                                        />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            <svg class="clippy">
+                                <defs>
+                                    <clipPath
+                                        id="clip-instructor"
+                                        clipPathUnits="objectBoundingBox"
+                                    >
+                                        <path
+                                            d="M0 0.0252417C0 0.0113011 0.00992167 0 0.0221607 0H0.792244C0.815192 0 0.833795 0.0211896 0.833795 0.0473283V0.337608V0.559067C0.833795 0.582348 0.84866 0.602172 0.868848 0.605813L0.964947 0.623144C0.985135 0.626785 1 0.646609 1 0.66989V0.966005C1 0.979866 0.990187 0.991134 0.978018 0.991246L0.0223388 0.999999C0.0100306 1.00011 0 0.988778 0 0.974758V0.0252417Z"
+                                            fill="#222222"
+                                        />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="elementor-element elementor-element-763ada1 e-con-full e-flex e-con e-parent"
+                    data-id="763ada1"
+                    data-element_type="container"
+                    data-e-type="container"
+                >
+                    <div
+                        class="elementor-element elementor-element-7c73090 elementor-widget elementor-widget-edplus-clients"
+                        data-id="7c73090"
+                        data-element_type="widget"
+                        data-e-type="widget"
+                        data-widget_type="edplus-clients.default"
+                    >
+                        <div class="elementor-widget-container">
+                            <!-- Start Client two -->
+                            <div class="client-two">
+                                <div class="container">
+                                    <div
+                                        class="client_slider2 position-relative owl-carousel wow fadeInUp"
+                                    >
+                                        <a href="#"
+                                            ><img
+                                                decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/5.svg') }}"
+                                                alt="image"
+                                        /></a>
+
+                                        <a href="#"
+                                            ><img
+                                                decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/4.svg') }}"
+                                                alt="image"
+                                        /></a>
+
+                                        <a href="#"
+                                            ><img
+                                                decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/3.svg') }}"
+                                                alt="image"
+                                        /></a>
+
+                                        <a href="#"
+                                            ><img
+                                                decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/2.svg') }}"
+                                                alt="image"
+                                        /></a>
+
+                                        <a href="#"
+                                            ><img
+                                                decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/1.svg') }}"
+                                                alt="image"
+                                        /></a>
+
+                                        <a href="#"
+                                            ><img
+                                                decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/3.svg') }}"
+                                                alt="image"
+                                        /></a>
+
+                                        <a href="#"
+                                            ><img
+                                                decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/4.svg') }}"
+                                                alt="image"
+                                        /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Client -->
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="elementor-element elementor-element-c85d15a e-con-full e-flex e-con e-parent"
+                    data-id="c85d15a"
+                    data-element_type="container"
+                    data-e-type="container"
+                >
+                    <div
+                        class="elementor-element elementor-element-675904c elementor-widget elementor-widget-edplus-blog"
+                        data-id="675904c"
+                        data-element_type="widget"
+                        data-e-type="widget"
+                        data-widget_type="edplus-blog.default"
+                    >
+                        <div class="elementor-widget-container">
+                            <!-- Start Blog -->
+                            <section class="blog">
+                                <div class="container">
+                                    <div
+                                        class="section-title text-center wow fadeInUp"
+                                    >
+                                        <span>
+                                            <span class="ticon">
+                                                <img
+                                                    decoding="async"
+                                                    src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
+                                                    alt=""
+                                                />
+                                            </span>
+                                            Blog
+                                        </span>
+                                        <h2>Latest News From our Blog</h2>
+                                        <img
+                                            decoding="async"
+                                            src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
+                                            alt=""
+                                        />
+                                    </div>
+
+                                    <div
+                                        class="blog_slider owl-carousel wow fadeInUp"
+                                    >
+                                        <div class="blog_item">
+                                            <div class="blog_img">
+                                                <img
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                    width="978"
+                                                    height="714"
+                                                    src="{{ url('site/wp-content/uploads/2025/03/b3.jpg') }}"
+                                                    class="attachment-edplus_blog size-edplus_blog wp-post-image"
+                                                    alt=""
+                                                    srcset="
+                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/b3.jpg         978w,
+                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/b3-600x438.jpg 600w,
+                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/b3-300x219.jpg 300w,
+                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/b3-768x561.jpg 768w
+                                                    "
+                                                    sizes="(max-width: 978px) 100vw, 978px"
+                                                />
+                                                <span class="b_cat">
+                                                    <i class="ph ph-file"></i>
+                                                    <a
+                                                        href="category/web-design/index.html"
+                                                        >Web Design</a
+                                                    >
+                                                </span>
+                                            </div>
+
+                                            <div class="blog_content">
+                                                <div class="blog_meta">
+                                                    <span
+                                                        ><i
+                                                            class="ph ph-user"
+                                                        ></i>
+                                                        Masum Billah</span
+                                                    >
+                                                    <span
+                                                        ><i
+                                                            class="ph ph-clock"
+                                                        ></i>
+                                                        Oct 30, 2025
+                                                    </span>
+                                                </div>
+                                                <h3>
+                                                    <a
+                                                        href="leverage-agile-frameworks-to-provide/index.html"
+                                                        >Leverage agile
+                                                        frameworks to provide</a
+                                                    >
+                                                </h3>
+                                                <a
+                                                    href="leverage-agile-frameworks-to-provide/index.html"
+                                                    class="blog_btn2"
+                                                    ><i
+                                                        class="ph ph-arrow-right"
+                                                    ></i
+                                                ></a>
+                                            </div>
+                                        </div>
+                                        <!-- End blog_item -->
+
+                                        <div class="blog_item">
+                                            <div class="blog_img">
+                                                <img
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                    width="978"
+                                                    height="714"
+                                                    src="{{ url('site/wp-content/uploads/2025/03/b2.jpg') }}"
+                                                    class="attachment-edplus_blog size-edplus_blog wp-post-image"
+                                                    alt=""
+                                                    srcset="
+                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/b2.jpg         978w,
+                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/b2-600x438.jpg 600w,
+                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/b2-300x219.jpg 300w,
+                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/b2-768x561.jpg 768w
+                                                    "
+                                                    sizes="(max-width: 978px) 100vw, 978px"
+                                                />
+                                                <span class="b_cat">
+                                                    <i class="ph ph-file"></i>
+                                                    <a
+                                                        href="category/wordpress/index.html"
+                                                        >WordPress</a
+                                                    >
+                                                </span>
+                                            </div>
+
+                                            <div class="blog_content">
+                                                <div class="blog_meta">
+                                                    <span
+                                                        ><i
+                                                            class="ph ph-user"
+                                                        ></i>
+                                                        Masum Billah</span
+                                                    >
+                                                    <span
+                                                        ><i
+                                                            class="ph ph-clock"
+                                                        ></i>
+                                                        Oct 28, 2025
+                                                    </span>
+                                                </div>
+                                                <h3>
+                                                    <a
+                                                        href="student-learning-through-an-online-computer/index.html"
+                                                        >Student Learning
+                                                        Through an Online
+                                                        Computer</a
+                                                    >
+                                                </h3>
+                                                <a
+                                                    href="student-learning-through-an-online-computer/index.html"
+                                                    class="blog_btn2"
+                                                    ><i
+                                                        class="ph ph-arrow-right"
+                                                    ></i
+                                                ></a>
+                                            </div>
+                                        </div>
+                                        <!-- End blog_item -->
+
+                                        <div class="blog_item">
+                                            <div class="blog_img">
+                                                <img
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                    width="978"
+                                                    height="726"
+                                                    src="{{ url('site/wp-content/uploads/2025/03/b1.jpg') }}"
+                                                    class="attachment-edplus_blog size-edplus_blog wp-post-image"
+                                                    alt=""
+                                                    srcset="
+                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/b1.jpg         978w,
+                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/b1-600x445.jpg 600w,
+                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/b1-300x223.jpg 300w,
+                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/b1-768x570.jpg 768w
+                                                    "
+                                                    sizes="(max-width: 978px) 100vw, 978px"
+                                                />
+                                                <span class="b_cat">
+                                                    <i class="ph ph-file"></i>
+                                                    <a
+                                                        href="category/web-design/index.html"
+                                                        >Web Design</a
+                                                    >
+                                                </span>
+                                            </div>
+
+                                            <div class="blog_content">
+                                                <div class="blog_meta">
+                                                    <span
+                                                        ><i
+                                                            class="ph ph-user"
+                                                        ></i>
+                                                        Masum Billah</span
+                                                    >
+                                                    <span
+                                                        ><i
+                                                            class="ph ph-clock"
+                                                        ></i>
+                                                        Oct 26, 2025
+                                                    </span>
+                                                </div>
+                                                <h3>
+                                                    <a
+                                                        href="online-learning-program-for-students-2/index.html"
+                                                        >Online Learning Program
+                                                        for Students</a
+                                                    >
+                                                </h3>
+                                                <a
+                                                    href="online-learning-program-for-students-2/index.html"
+                                                    class="blog_btn2"
+                                                    ><i
+                                                        class="ph ph-arrow-right"
+                                                    ></i
+                                                ></a>
+                                            </div>
+                                        </div>
+                                        <!-- End blog_item -->
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- End Blog -->
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="elementor-element elementor-element-95b4bb1 e-grid e-con-boxed e-con e-parent"
+                    data-id="95b4bb1"
+                    data-element_type="container"
+                    data-e-type="container"
+                >
+                    <div class="e-con-inner">
+                        <div
+                            class="elementor-element elementor-element-58ea98b cta2_content1 elementor-widget elementor-widget-edplus-cta"
+                            data-id="58ea98b"
+                            data-element_type="widget"
+                            data-e-type="widget"
+                            data-widget_type="edplus-cta.default"
+                        >
+                            <div class="elementor-widget-container">
+                                <div
+                                    class="cta2"
+                                    style="
+                                        background-image: url(wp-content/uploads/2025/03/cta1.svg);
+                                    "
+                                >
+                                    <div class="cta-content wow fadeInUp">
+                                        <h2>
+                                            Get Free <span>Courses</span>
+                                            <img
+                                                decoding="async"
+                                                src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/cta_line.svg') }}"
+                                                class="ctitle_shape"
+                                                alt=""
+                                            />
+                                        </h2>
+
+                                        <p>
+                                            Top instructors from around the
+                                            world teach <br />
+                                            Millions student on EduPlus
+                                        </p>
+                                        <a
+                                            href="student-registration/index.html"
+                                            class="white_btn round_btn"
+                                            >Apply Now</a
+                                        >
+                                    </div>
+                                    <img
+                                        decoding="async"
+                                        src="{{ url('site/wp-content/uploads/2025/03/1-5.png') }}"
+                                        class="cta_img"
+                                        alt=""
+                                    />
+                                    <img
+                                        decoding="async"
+                                        src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/ccircle.svg') }}"
+                                        class="ccircle_shape"
+                                        alt=""
+                                    />
                                 </div>
                             </div>
                         </div>
-                        <!-- Testimonial Slider End -->
-                    </div>
-                    <!-- Testimonial Content Box End -->
-                </div>
+                        <div
+                            class="elementor-element elementor-element-f183977 elementor-widget elementor-widget-edplus-cta"
+                            data-id="f183977"
+                            data-element_type="widget"
+                            data-e-type="widget"
+                            data-widget_type="edplus-cta.default"
+                        >
+                            <div class="elementor-widget-container">
+                                <div
+                                    class="cta2 color_green"
+                                    style="
+                                        background-image: url(wp-content/uploads/2025/03/cta2.svg);
+                                    "
+                                >
+                                    <div class="cta-content wow fadeInUp">
+                                        <h2>
+                                            Become a <span>Tutor</span>
+                                            <img
+                                                decoding="async"
+                                                src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/cta_line.svg') }}"
+                                                class="ctitle_shape"
+                                                alt=""
+                                            />
+                                        </h2>
 
-                <div class="col-lg-6">
-                    <!-- Testimonial Image Start -->
-                    <div class="testimonial-image">
-                        <figure class="image-anime reveal">
-                            <img src="{{ url('site/images/testimonial-image.jpg') }}" alt="">
-                        </figure>
+                                        <p>
+                                            Top instructors from around the
+                                            world teach <br />
+                                            Millions student on EduPlus
+                                        </p>
+                                        <a
+                                            href="instructor-registration/index.html"
+                                            class="white_btn round_btn"
+                                            >Apply Now</a
+                                        >
+                                    </div>
+                                    <img
+                                        decoding="async"
+                                        src="{{ url('site/wp-content/uploads/2025/03/2-3.png') }}"
+                                        class="cta_img"
+                                        alt=""
+                                    />
+                                    <img
+                                        decoding="async"
+                                        src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/ccircle.svg') }}"
+                                        class="ccircle_shape"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Testimonial Image End -->
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Our Testimonials Section End -->
-
-    <!-- Our Faqs Section Start -->
-    <div class="our-faqs bg-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <!-- Faqs Content Start -->
-                    <div class="faqs-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">FAQ's</h3>
-                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Respostas para ajudar
-                                <span>você a começar</span>
-                            </h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.4s">Seja você um iniciante ou um criador experiente,
-                                reunimos as perguntas mais frequentes.</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Faqs Button Start -->
-                        <div class="faqs-btn wow fadeInUp" data-wow-delay="0.6s">
-                            <a href="faqs.html" class="btn-default">Ver todos FAQs</a>
-                        </div>
-                        <!-- Faqs Button End -->
-                    </div>
-                    <!-- Faqs Content End -->
-                </div>
-
-                <div class="col-lg-7">
-                    <!-- FAQ Accordion Start -->
-                    <div class="faq-accordion" id="accordion">
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp">
-                            <h2 class="accordion-header" id="heading1">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                    1. O que é o EventHub?
-                                </button>
-                            </h2>
-                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
-                                data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>O EventHub é uma plataforma web de gestão de eventos desenvolvida para facilitar a
-                                        criação, divulgação, organização e participação em eventos, permitindo interação
-                                        entre administradores, organizadores e participantes.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
-                            <h2 class="accordion-header" id="heading2">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                    2. Qual é o principal objetivo do sistema?
-                                </button>
-                            </h2>
-                            <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2"
-                                data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>O principal objetivo do EventHub é centralizar e automatizar o processo de gestão de
-                                        eventos, tornando-o mais organizado, seguro e eficiente.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
-                            <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                    3. Quem pode utilizar o EventHub?
-                                </button>
-                            </h2>
-                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
-                                data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>O sistema pode ser utilizado por qualquer pessoa ou instituição interessada em criar,
-                                        divulgar ou participar de eventos, como:
-                                    <ul>
-                                        <li>Instituições de ensino;</li>
-                                        <li>Empresas;</li>
-                                        <li>Organizações culturais</li>
-                                    </ul>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
-                            <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    4. É necessário criar uma conta para utilizar a plataforma?
-                                </button>
-                            </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
-                                data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>Não para visualizar eventos públicos. No entanto, para:
-                                    <ul>
-                                        <li>Participar em eventos;</li>
-                                        <li>Criar eventos;</li>
-                                        <li>Gerir publicações;</li>
-                                    </ul>
-                                    é necessário realizar cadastro e efetuar login na plataforma.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
-                            <h2 class="accordion-header" id="heading5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                    5. Como funciona a publicação de eventos?
-                                </button>
-                            </h2>
-                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
-                                data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>Após criar uma conta, o utilizador pode submeter um evento através do sistema.Depois
-                                        disso, o evento entra em análise administrativa e só será publicado após
-                                        aprovação do administrador.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-                    </div>
-                    <!-- FAQ Accordion End -->
-                </div>
-
-                {{-- <div class="col-lg-12">
-                    <!-- Comapany Support Slider Start -->
-                    <div class="company-slider-box">
-                        <!-- Comapany Support Content Start -->
-                        <div class="company-supports-content wow fadeInUp" data-wow-delay="0.2s">
-                            <hr>
-                            <h3>Helping 5,000+ Brands Sound Their Best</h3>
-                            <hr>
-                        </div>
-                        <!-- Comapany Support Content End -->
-
-                        <div class="swiper">
-                            <div class="swiper-wrapper">
-                                <!-- Company Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-supports-logo">
-                                        <img src="{{ url('site/images/company-supports-logo-1.svg') }}" alt="">
-                                    </div>
-                                </div>
-                                <!-- Comapany Support Logo End -->
-
-                                <!-- Company Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-supports-logo">
-                                        <img src="{{ url('site/images/company-supports-logo-2.svg') }}" alt="">
-                                    </div>
-                                </div>
-                                <!-- Comapany Support Logo End -->
-
-                                <!-- Company Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-supports-logo">
-                                        <img src="{{ url('site/images/company-supports-logo-3.svg') }}" alt="">
-                                    </div>
-                                </div>
-                                <!-- Comapany Support Logo End -->
-
-                                <!-- Company Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-supports-logo">
-                                        <img src="{{ url('site/images/company-supports-logo-4.svg') }}" alt="">
-                                    </div>
-                                </div>
-                                <!-- Comapany Support Logo End -->
-
-                                <!-- Company Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-supports-logo">
-                                        <img src="{{ url('site/images/company-supports-logo-5.svg') }}" alt="">
-                                    </div>
-                                </div>
-                                <!-- Comapany Support Logo End -->
-
-                                <!-- Company Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-supports-logo">
-                                        <img src="{{ url('site/images/company-supports-logo-1.svg') }}" alt="">
-                                    </div>
-                                </div>
-                                <!-- Comapany Support Logo End -->
-
-                                <!-- Company Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-supports-logo">
-                                        <img src="{{ url('site/images/company-supports-logo-2.svg') }}" alt="">
-                                    </div>
-                                </div>
-                                <!-- Comapany Support Logo End -->
-
-                                <!-- Company Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-supports-logo">
-                                        <img src="{{ url('site/images/company-supports-logo-3.svg') }}" alt="">
-                                    </div>
-                                </div>
-                                <!-- Comapany Support Logo End -->
-
-                                <!-- Company Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-supports-logo">
-                                        <img src="{{ url('site/images/company-supports-logo-4.svg') }}" alt="">
-                                    </div>
-                                </div>
-                                <!-- Comapany Support Logo End -->
-
-                                <!-- Company Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-supports-logo">
-                                        <img src="{{ url('site/images/company-supports-logo-5.svg') }}" alt="">
-                                    </div>
-                                </div>
-                                <!-- Comapany Support Logo End -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Comapany Support Slider End -->
-                </div> --}}
-            </div>
-        </div>
-    </div>
-    <!-- Our Faqs Section End -->
-
-    <!-- Our Blog Section Start -->
-    <div class="our-blog">
-        <div class="container">
-            <div class="row section-row align-items-center">
-                <div class="col-lg-6">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">Últimos Eventos</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Eventos mais Recentes
-                            <span>Recentes</span>
-                        </h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-
-                {{-- <div class="col-lg-6">
-                    <!-- Section Content Button Start -->
-                    <div class="section-content-btn">
-                        <!-- Section Title Content Start -->
-                        <div class="section-title-content wow fadeInUp" data-wow-delay="0.4s">
-                            <p>From lifelike voice quality to flexible pricing and powerful customization, we offer
-                                everything you need to create professional audio - fast, simple.</p>
-                        </div>
-                        <!-- Section Title Content End -->
-
-                        <!-- Section Button Start -->
-                        <div class="section-btn wow fadeInUp" data-wow-delay="0.6s">
-                            <a href="blog.html" class="btn-default">view all blogs</a>
-                        </div>
-                        <!-- Section Button End -->
-                    </div>
-                    <!-- Section Content Button End -->
-                </div> --}}
-            </div>
-
-            <div class="row">
-                @foreach ($lastestEvents as $item)
-                    <div class="col-lg-4 col-md-6">
-                        <!-- Post Item Start -->
-                        <div class="post-item wow fadeInUp">
-                            <!-- Post Featured Image Start-->
-                            <div class="post-featured-image box-bg-shape">
-                                <a href="{{ route('site.events.details', ['id' => $item->id]) }}" data-cursor-text="View">
-                                    <figure class="image-anime">
-                                        <img src="{{ url('storage/' . $item->image) }}" alt="">
-                                    </figure>
-                                </a>
-                            </div>
-                            <!-- Post Featured Image End -->
-
-                            <!-- Post Item Body Start -->
-                            <div class="post-item-body">
-                                <!-- Post Item Content Start -->
-                                <div class="post-item-content">
-                                    <h2><a href="{{ route('site.events.details', ['id' => $item->id]) }}">{{ $item->title }}</a></h2>
-                                </div>
-                                <!-- Post Item Content End -->
-
-                                <!-- Post Item Readmore Button Start-->
-                                <div class="post-item-btn">
-                                    <a href="{{ route('site.events.details', ['id' => $item->id]) }}" class="readmore-btn">Ver Mais</a>
-                                </div>
-                                <!-- Post Item Readmore Button End-->
-                            </div>
-                            <!-- Post Item Body End -->
-                        </div>
-                        <!-- Post Item End -->
-                    </div>
-                @endforeach
-
-                {{-- <div class="col-lg-4 col-md-6">
-                    <!-- Post Item Start -->
-                    <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
-                        <!-- Post Featured Image Start-->
-                        <div class="post-featured-image box-bg-shape">
-                            <a href="blog-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="{{ url('site/images/post-2.jpg') }}" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Post Featured Image End -->
-
-                        <!-- Post Item Body Start -->
-                        <div class="post-item-body">
-                            <!-- Post Item Content Start -->
-                            <div class="post-item-content">
-                                <h2><a href="blog-single.html">Voiceover vs. AI Voice: What Works Best for Your
-                                        Project?</a></h2>
-                            </div>
-                            <!-- Post Item Content End -->
-
-                            <!-- Post Item Readmore Button Start-->
-                            <div class="post-item-btn">
-                                <a href="blog-single.html" class="readmore-btn">read more</a>
-                            </div>
-                            <!-- Post Item Readmore Button End-->
-                        </div>
-                        <!-- Post Item Body End -->
-                    </div>
-                    <!-- Post Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Post Item Start -->
-                    <div class="post-item wow fadeInUp" data-wow-delay="0.4s">
-                        <!-- Post Featured Image Start-->
-                        <div class="post-featured-image box-bg-shape">
-                            <a href="blog-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="{{ url('site/images/post-3.jpg') }}" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Post Featured Image End -->
-
-                        <!-- Post Item Body Start -->
-                        <div class="post-item-body">
-                            <!-- Post Item Content Start -->
-                            <div class="post-item-content">
-                                <h2><a href="blog-single.html">A Beginner's Guide to Writing Voiceover Scripts That
-                                        Work</a></h2>
-                            </div>
-                            <!-- Post Item Content End -->
-
-                            <!-- Post Item Readmore Button Start-->
-                            <div class="post-item-btn">
-                                <a href="blog-single.html" class="readmore-btn">read more</a>
-                            </div>
-                            <!-- Post Item Readmore Button End-->
-                        </div>
-                        <!-- Post Item Body End -->
-                    </div>
-                    <!-- Post Item End -->
-                </div> --}}
-            </div>
-        </div>
-    </div>
-    <!-- Our Blog Section End -->
 
 @endsection

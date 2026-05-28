@@ -1,0 +1,566 @@
+/*
+Template Name: Main Scripts
+*/
+
+(function($) {
+	'use strict';
+
+		/*PRELOADER JS*/		
+		$(window).on('load', function() { 
+			$('.preloader_wrap').fadeOut();
+			$('.preloader_wrap').delay(350).fadeOut('slow'); 
+		}); 
+				
+		/*END PRELOADER JS*/
+		
+		jQuery(document).ready(function($) {
+						
+			//Mobile Menu Js Start //
+			$("#main-menu").meanmenu({
+				meanMenuContainer: ".mobile-menu",
+				meanScreenWidth: "1200",
+				meanExpand: ['<i class="far fa-plus"></i>'],
+			});
+
+			// Sidebar Toggle Js Start //
+			$(".offcanvas__close,.offcanvas__overlay").on("click", function () {
+				$(".offcanvas__info").removeClass("info-open");
+				$(".offcanvas__overlay").removeClass("overlay-open");
+			});
+			$(".sidebar__toggle").on("click", function () {
+				$(".offcanvas__info").addClass("info-open");
+				$(".offcanvas__overlay").addClass("overlay-open");
+			});
+
+			// Body Overlay Js Start //
+			$(".body-overlay").on("click", function () {
+				$(".offcanvas__area").removeClass("offcanvas-opened");
+				$(".df-search-area").removeClass("opened");
+				$(".body-overlay").removeClass("opened");
+			});
+
+			/*Counter */
+			$('.counter-up').on('inview', function(event, visible, visiblePartX, visiblePartY) {
+				if (visible) {
+					$(this).find('.count').each(function () {
+						var $this = $(this);
+						$({ Counter: 0 }).animate({ Counter: $this.text() }, {
+							duration: 2000,
+							easing: 'swing',
+							step: function () {
+								$this.text(Math.ceil(this.Counter));
+							}
+						});
+					});
+					$(this).unbind('inview');
+				}
+			});	
+			
+						
+		});
+		
+
+		/*START Mini Cart JS*/
+
+		$('.mcart_icon').on('click', function(){
+			var menu = $(this).attr('data-menu');
+			$(menu).toggleClass('min_cart_active');			
+		});
+
+		$('.min_cart_wrapper').on('click', function(event){	
+			if ( $(event.target).hasClass('min_cart_wrapper') ) {
+				 $('.min_cart_active').removeClass('min_cart_active');
+			}
+		});
+	
+		$('.cart_close').on('click', function(event){	
+			$('.min_cart_active').removeClass('min_cart_active');			
+		});
+
+  	
+		/*END Mini Cart JS*/		
+		
+		/*START Popup Searchbox JS*/
+
+		$('.search_btn').on('click', function(){
+			var menu = $(this).attr('data-menu');
+			$(menu).toggleClass('popupsbox_active');			
+		});
+
+		$('.popup_searchbox_wrapper').on('click', function(event){	
+			if ( $(event.target).hasClass('popup_searchbox_wrapper') ) {
+				 $('.popupsbox_active').removeClass('popupsbox_active');
+			}
+		});
+	
+		$('.popup_close').on('click', function(event){	
+			$('.popupsbox_active').removeClass('popupsbox_active');			
+		});
+
+  	
+		/*END Popup Searchbox JS*/
+  
+		
+		/* Image Popup */
+		 $('.popbtn').magnificPopup({
+			 type:'image',
+			 gallery:{
+				enabled:true
+			  }
+		});		
+		
+		var is_rtl = jQuery('body').hasClass('rtl');
+		
+		 /*START Home Slider*/	
+		$('.active-hslider').owlCarousel({
+			items : 1,
+			loop: true,
+			nav: true,
+			rtl: is_rtl,
+			navText: ["<i class='ph ph-caret-left'></i>" ,"<i class='ph ph-caret-right'></i>"],
+			dots: false,
+			margin: 0,
+			responsive:{
+				0:{
+					items:1,
+					nav: false,
+					
+				},
+				575:{
+					items:1,
+					nav: false,
+				},
+				768:{
+					items:1,
+					nav: false,
+					
+				},
+				1000:{
+					items:1,
+					nav: true,
+			
+				},
+				1200:{
+					items:1,
+					nav: true,
+				}
+			}
+		});
+		
+		/*END Features*/		
+
+		/*START Features*/	
+		$('.feature_slider').owlCarousel({
+			items : 4,
+			loop: true,
+			nav: false,
+			dots: true,
+			rtl: is_rtl,
+			margin: 30,
+			responsive:{
+				0:{
+					items:1,
+					nav: false,
+					
+				},
+				575:{
+					items:1,
+					nav: false,
+				},
+				768:{
+					items:2,
+					nav: false,
+					
+				},
+				1000:{
+					items:3,
+					nav: false,
+			
+				},
+				1200:{
+					items:3,
+					nav: false,
+				},				
+				1400:{
+					items:4,
+					nav: false,
+				}
+			}
+		});
+		
+		/*END Features*/		 		
+		
+		/*START PARTNER LOGO*/
+		$('.client_slider1').owlCarousel({
+			margin: 60,
+			autoPlay: 5000, //Set AutoPlay to 3 seconds
+			items : 6,			
+			nav: false,
+			dots: false,
+			loop: true,
+			rtl: is_rtl,
+			responsive:{
+				0:{
+					items:2,
+					
+				},
+				575:{
+					items:3,
+					
+				},
+				768:{
+					items:4,
+					
+				},
+				1000:{
+					items:5,
+			
+				},
+				1200:{
+					items:6,
+			
+				}
+			}
+		});
+		/*END PARTNER LOGO*/		
+		
+		/*START PARTNER Two */
+		$('.client_slider2').owlCarousel({
+			margin: 60,
+			autoPlay: 5000,
+			items : 6,			
+			nav: true,
+			navText: ["<i class='ph ph-arrow-left'></i>" ,"<i class='ph ph-arrow-right'></i>"],
+			dots: false,
+			rtl: is_rtl,
+			loop: true,
+			responsive:{
+				0:{
+					items:2,
+					nav: true,
+				},
+				575:{
+					items:3,
+					nav: true,
+				},
+				768:{
+					items:4,
+					nav: true,
+				},
+				1000:{
+					items:5,
+					nav: true,
+				},
+				1200:{
+					items:6,
+					nav: true,
+				}
+			}
+		});
+		/*END PARTNER Two*/		
+		
+		/*Start Techers*/
+		$('.teacher_slider').owlCarousel({
+			items : 4,
+			margin: 30,
+			loop: true,
+			nav: false,
+			rtl: is_rtl,
+			navText: ["<i class='ph ph-arrow-left'></i>" ,"<i class='ph ph-arrow-right'></i>"],
+			dots: false,
+			responsive:{
+				0:{
+					items:1,
+					nav: false,
+					
+				},
+				575:{
+					items:1,
+					nav: false,
+				},
+				768:{
+					items:2,
+					nav: false,
+					
+				},
+				1000:{
+					items:3,
+					nav: false,
+			
+				},
+				1200:{
+					items:3,
+					nav: true,
+				},
+				1400:{
+					items:4,
+					nav: false,
+				}				
+			}
+		});		
+		/*END Teacher*/		
+		
+		/*Start Instructor*/
+		$('.instructor-slider').owlCarousel({
+			items : 4,
+			margin: 30,
+			loop: true,
+			nav: false,
+			rtl: is_rtl,
+			dots: true,
+			responsive:{
+				0:{
+					items:1,
+					nav: false,
+					
+				},
+				575:{
+					items:1,
+					nav: false,
+				},
+				768:{
+					items:2,
+					nav: false,
+					
+				},
+				1000:{
+					items:3,
+					nav: false,
+			
+				},
+				1300:{
+					items:3,
+					nav: false,
+				},
+				1400:{
+					items:4,
+					nav: false,
+				}
+			}
+		});		
+		/*END Instructor*/
+		
+		/*START Testimonials */			
+		$('.testimonial_slider').owlCarousel({
+			margin: 30,
+			autoPlay: 5000, //Set AutoPlay to 3 seconds
+			items : 1,			
+			nav: true,
+			rtl: is_rtl,
+			navText: ["<i class='ph ph-arrow-left'></i>" ,"<i class='ph ph-arrow-right'></i>"],
+			dots: false,
+			loop: true,
+			responsive:{
+				0:{
+					items:1,
+					nav: false,
+					
+				},
+				575:{
+					items:1,
+					nav: false,
+					
+				},
+				768:{
+					items:1,
+					
+				},
+				1000:{
+					items:1,
+			
+				},
+				1200:{
+					items:1,
+			
+				}
+			}
+		});			
+		/*END Testimonials*/		
+		
+		/*START Testimonials 2 */			
+		$('.testimonial2_slider').owlCarousel({
+			margin: 30,
+			autoPlay: 5000, //Set AutoPlay to 3 seconds
+			items : 2,			
+			nav: true,
+			rtl: is_rtl,
+			navText: ["<i class='ph ph-arrow-left'></i>" ,"<i class='ph ph-arrow-right'></i>"],
+			dots: false,
+			loop: true,
+			responsive:{
+				0:{
+					items:1,
+					nav: false,
+				},
+				575:{
+					items:1,
+					nav: false,
+				},
+				768:{
+					items:2,
+					nav: false,
+					
+				},
+				1000:{
+					items:2,
+			
+				},
+				1200:{
+					items:2,
+			
+				}
+			}
+		});			
+		/*END Testimonials 2 */			
+		
+		/*START Blog */
+		$('.blog_slider').owlCarousel({
+			margin: 30,
+			autoPlay: 5000, //Set AutoPlay to 3 seconds
+			items : 3,			
+			nav: false,
+			rtl: is_rtl,
+			dots: true,
+			loop: true,
+			responsive:{
+				0:{
+					items:1,
+					
+				},
+				575:{
+					items:1,
+					
+				},
+				768:{
+					items:2,
+					
+				},
+				1000:{
+					items:2,
+			
+				},
+				1200:{
+					items:3,
+			
+				}
+			}
+		});
+		/*END Blog*/		
+		
+		/*START Related Course */
+		$('.relcourse_slider').owlCarousel({
+			margin: 30,
+			autoPlay: 5000, //Set AutoPlay to 3 seconds
+			items : 3,			
+			nav: true,
+			rtl: is_rtl,
+			navText: ["<i class='ph ph-arrow-left'></i>" ,"<i class='ph ph-arrow-right'></i>"],
+			dots: false,
+			loop: true,
+			responsive:{
+				0:{
+					items:1,
+					nav: false,
+				},
+				575:{
+					items:1,
+					nav: false,
+				},
+				768:{
+					items:2,
+					nav: false,					
+				},
+				1000:{
+					items:2,
+			
+				},
+				1200:{
+					items:3,
+			
+				}
+			}
+		});		
+		
+		
+		$('.relcourse_slider5').owlCarousel({
+			margin: 30,
+			autoPlay: 5000, //Set AutoPlay to 3 seconds
+			items : 2,			
+			nav: true,
+			rtl: is_rtl,
+			navText: ["<i class='ph ph-arrow-left'></i>" ,"<i class='ph ph-arrow-right'></i>"],
+			dots: false,
+			loop: true,
+			responsive:{
+				0:{
+					items:1,
+					nav: false,
+				},
+				575:{
+					items:1,
+					nav: false,
+				},
+				768:{
+					items:1,
+					nav: false,					
+				},
+				1000:{
+					items:2,
+			
+				},
+				1200:{
+					items:2,
+			
+				}
+			}
+		});
+		/*END Blog*/
+
+		//------------- DETAIL ADD - MINUS COUNT ORDER -------------//
+		$(".btn-number").on("click", function () {
+
+			var $button = $(this);
+			var oldValue = $button.closest('.quantity_option').find("input.quntity-input").val();
+
+			if ($button.text() == "+") {
+				var newVal = parseFloat(oldValue) + 1;
+			} else {
+				// Don't allow decrementing below zero
+				if (oldValue > 0) {
+					var newVal = parseFloat(oldValue) - 1;
+				} else {
+					newVal = 0;
+				}
+			}
+
+			$button.closest('.quantity_option').find("input.quntity-input").val(newVal);
+
+		});
+
+		 $('.cvbtn, .vplay_btn').magnificPopup({
+				type: 'iframe',
+				mainClass: 'mfp-fade',
+				preloader: true,
+				removalDelay: 300,
+				fixedContentPos: false,
+
+				callbacks: {
+					elementParse: function (item) {
+						let source = item.el.data('source');
+
+						// Custom MP4 / external video
+						if (source === 'external_url' || source === 'html5') {
+							item.type = 'inline';
+							item.src =
+								'<video controls autoplay style="width:100%;height:auto">' +
+								'<source src="' + item.el.attr('href') + '">' +
+								'</video>';
+						}
+					}
+				}
+			});
+	
+		/* WOW */
+		new WOW().init();
+
+})(jQuery);
