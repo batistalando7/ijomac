@@ -6,7 +6,7 @@
                 <div class="col-lg-6 col-md-12 text-center htleft d-lg-flex align-self-center">
                     <p class="align-self-center">
                         <i class="fa-regular fa-user"></i>
-                        <a href="student-registration/index.html">Register / Login</a>
+                        <a href="{{ route('login') }}">Register / Login</a>
                     </p>
                     <ul class="align-self-center text-center">
                         <li>
@@ -150,7 +150,7 @@
                                     <ul class="sub-menu">
                                         <li id="menu-item-1202"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1202">
-                                            <a href="about/index.html" onClick="return true">About</a>
+                                            <a href="{{ route('site.about') }}" onClick="return true">About</a>
                                         </li>
                                         <li id="menu-item-1659"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1659">
@@ -236,7 +236,7 @@
                                 </li>
                                 <li id="menu-item-1088"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1088">
-                                    <a href="contact/index.html" onClick="return true">Contact</a>
+                                    <a href="{{ route('site.contacts') }}" onClick="return true">Contact</a>
                                 </li>
                             </ul>
                         </nav>
