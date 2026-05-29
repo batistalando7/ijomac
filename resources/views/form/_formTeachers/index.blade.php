@@ -1,6 +1,6 @@
 <div class="row">
     {{-- Nome --}}
-    <div class="col-lg-4 mb-4">
+    <div class="col-lg-8 mb-4">
         <label class="form-label">Nome do Formador</label>
         <input type="text" name="name" class="form-control" value="{{ old('name', $teacher->name ?? '') }}">
     </div>
@@ -30,7 +30,7 @@
     </div>
 
     {{-- photo --}}
-    <div class="col-lg-4 mb-4">
+    <div class="col-lg-12 mb-4">
         <label class="form-label">Foto do Formador</label>
         <input type="file" name="photo" class="form-control" value="{{ old('photo', $teacher->photo ?? '') }}">
     </div>
