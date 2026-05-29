@@ -2,159 +2,174 @@
 @section('title', 'Contacte Nos')
 @section('content')
 
-    <!-- Page Header Start -->
-    <div class="page-header bg-section parallaxie">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Page Header Box Start -->
-                    <div class="page-header-box">
-                        <h1 class="wow fadeInUp" data-cursor="-opaque">Contacte <span>Nos</span></h1>
+<!-- Start Main Banner -->
+<section class="main-banner" style="background-image: url({{ url('site/wp-content/themes/edplus/assets/img/bg/main-banner.jpg') }});">
+	<div class="container text-center">
+		<div class="mbanner_content">
+			<h2>Contact			</h2>
+			<p><a href="{{ route('site.home') }}">Home</a> <i class="ph ph-caret-right"></i> Contact</p>
+		</div>
+	</div>
+				<img src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/blshape.svg') }}" alt="" class="blshape">
+					<img src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/brshape.svg') }}" alt="" class="brshape">
+		</section>
+<!-- End Main Banner -->
+
+    <div class="page-builder-template">
+        <div data-elementor-type="wp-page" data-elementor-id="1074" class="elementor elementor-1074"
+            data-elementor-post-type="page">
+            <div class="elementor-element elementor-element-8a2ddfb e-flex e-con-boxed e-con e-parent" data-id="8a2ddfb"
+                data-element_type="container" data-e-type="container">
+                <div class="e-con-inner">
+                    <div class="elementor-element elementor-element-e229234 e-con-full e-flex e-con e-child"
+                        data-id="e229234" data-element_type="container" data-e-type="container">
+                        <div class="elementor-element elementor-element-9043313 elementor-widget elementor-widget-edplus-title"
+                            data-id="9043313" data-element_type="widget" data-e-type="widget"
+                            data-widget_type="edplus-title.default">
+                            <div class="elementor-widget-container">
+                                <div class="section-title  text-start wow fadeInUp">
+                                    <span>
+
+                                    </span>
+                                    <h2>We’re always excited to hear <br> from you!</h2>
+                                    <img decoding="async" src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
+                                        alt="">
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-f44caa0 elementor-widget elementor-widget-edplus-contact-info"
+                            data-id="f44caa0" data-element_type="widget" data-e-type="widget"
+                            data-widget_type="edplus-contact-info.default">
+                            <div class="elementor-widget-container">
+                                <div class="contact-item">
+                                    <div class="cont_icon">
+                                        <i class="ph ph-map-pin"></i>
+                                    </div>
+
+                                    <div class="cont_content">
+                                        <h4>Address</h4>
+                                        <p>
+                                            Studio 89D, Riley Ford, North Michael Harber <br> District, CFTE A65 </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-75f1741 elementor-widget elementor-widget-edplus-contact-info"
+                            data-id="75f1741" data-element_type="widget" data-e-type="widget"
+                            data-widget_type="edplus-contact-info.default">
+                            <div class="elementor-widget-container">
+                                <div class="contact-item">
+                                    <div class="cont_icon">
+                                        <i class="ph ph-envelope-simple"></i>
+                                    </div>
+
+                                    <div class="cont_content">
+                                        <h4>Email Address </h4>
+                                        <p>
+                                            <a href="mailto:support@example.com">Support @example.com</a><br>
+                                            <a href="mailto:support@example.com">Info@example.com</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-b79bbed elementor-widget elementor-widget-edplus-contact-info"
+                            data-id="b79bbed" data-element_type="widget" data-e-type="widget"
+                            data-widget_type="edplus-contact-info.default">
+                            <div class="elementor-widget-container">
+                                <div class="contact-item">
+                                    <div class="cont_icon">
+                                        <i class="ph ph-phone-call"></i>
+                                    </div>
+
+                                    <div class="cont_content">
+                                        <h4>Phone Number</h4>
+                                        <p>
+                                            <a href="tel:support@example.com">+9902145698745</a><br>
+                                            <a href="tel:support@example.com">+9902148746845</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                    <!-- Page Header Box End -->
+                    <div class="elementor-element elementor-element-b8a3612 e-con-full e-flex e-con e-child"
+                        data-id="b8a3612" data-element_type="container" data-e-type="container">
+                        <div class="elementor-element elementor-element-081a00e elementor-widget elementor-widget-edplus-contact-form"
+                            data-id="081a00e" data-element_type="widget" data-e-type="widget"
+                            data-widget_type="edplus-contact-form.default">
+                            <div class="elementor-widget-container">
+
+                                <div class="contact-form"
+                                    style="background-image: url({{ url('site/wp-content/uploads/2025/03/contact.png') }});">
+                                    <div class="cf_title wow fadeInUp"
+                                        style="visibility: visible; animation-name: fadeInUp;">
+                                        <h4>Get in Touch</h4>
+                                        <p>
+                                            Feel free to contact with us, we don’t span your email </p>
+                                    </div>
+
+                                    <div class="wow fadeInUp">
+
+                                        <div class="wpcf7 no-js" id="wpcf7-f1097-p1074-o1" lang="en-US" dir="ltr"
+                                            data-wpcf7-id="1097">
+                                            <div class="screen-reader-response">
+                                                <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                                <ul></ul>
+                                            </div>
+                                            <form action="https://wpdemothemes.com/edplus/contact/#wpcf7-f1097-p1074-o1"
+                                                method="post" class="wpcf7-form init" aria-label="Contact form"
+                                                novalidate="novalidate" data-status="init">
+                                                <fieldset class="hidden-fields-container"><input type="hidden"
+                                                        name="_wpcf7" value="1097" /><input type="hidden"
+                                                        name="_wpcf7_version" value="6.1.6" /><input type="hidden"
+                                                        name="_wpcf7_locale" value="en_US" /><input type="hidden"
+                                                        name="_wpcf7_unit_tag" value="wpcf7-f1097-p1074-o1" /><input
+                                                        type="hidden" name="_wpcf7_container_post"
+                                                        value="1074" /><input type="hidden"
+                                                        name="_wpcf7_posted_data_hash" value="" />
+                                                </fieldset>
+                                                <p><input type="text" placeholder="Full Name*" /><br />
+                                                    <input type="email" placeholder="Email Address*" /><br />
+                                                    <input type="text" placeholder="Subject *" /><br />
+                                                    <textarea placeholder="Your Message*"></textarea><br />
+                                                    <button type="submit" class="fbtn"> Send Message <i
+                                                            class="ph ph-arrow-right"></i></button>
+                                                </p>
+                                                <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elementor-element elementor-element-733c405 e-con-full e-flex e-con e-parent" data-id="733c405"
+                data-element_type="container" data-e-type="container">
+                <div class="elementor-element elementor-element-891dcdb elementor-widget elementor-widget-google_maps"
+                    data-id="891dcdb" data-element_type="widget" data-e-type="widget"
+                    data-widget_type="google_maps.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-custom-embed">
+                            <iframe loading="lazy"
+                                src="https://maps.google.com/maps?q=TemplateMonster&amp;t=m&amp;z=20&amp;output=embed&amp;iwloc=near"
+                                title="TemplateMonster" aria-label="TemplateMonster"></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
-    <!-- Page Header End -->
 
-    <!-- Page Contact Us Start -->
-    <div class="page-contact-us">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <!-- Contact Us Content Start -->
-                    <div class="contact-us-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">contacte Nos</h3>
-                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Tem uma dúvida? Vamos conversar <span>e criar juntos</span></h2>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Contact Form Start -->
-                        <div class="contact-us-form wow fadeInUp" data-wow-delay="0.4s">
-                            <form id="contactForm" action="#" method="POST" data-toggle="validator"
-                                class="wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="row">
-                                    <div class="form-group col-md-12 mb-4">
-                                        <label class="form-label">Nome</label>
-                                        <input type="text" name="fname" class="form-control" id="fname"
-                                            placeholder="Digite o seu nome" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-6 mb-4">
-                                        <label class="form-label">email </label>
-                                        <input type="email" name ="email" class="form-control" id="email"
-                                            placeholder="Digite o seu email" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-6 mb-4">
-                                        <label class="form-label">Telefone</label>
-                                        <input type="text" name="phone" class="form-control" id="phone"
-                                            placeholder="Digite o seu Telefone" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-12 mb-5">
-                                        <label class="form-label">mensagem</label>
-                                        <textarea name="message" class="form-control" id="message" rows="4" placeholder="Digite a sua mensagem"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <button type="submit" class="btn-default"><span>Enviar mensagem</span></button>
-                                        <div id="msgSubmit" class="h3 hidden"></div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Contact Form End -->
-                    </div>
-                    <!-- Contact Us Content End -->
-                </div>
-
-                <div class="col-lg-5">
-                    <!-- Contact Info Box Start -->
-                    <div class="contact-info-box">
-                        <!-- Contact info Title Start -->
-                        <div class="contact-info-title">
-                            <h3 class="wow fadeInUp">Contacte-nos</h3>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Tem um Evento em mente ou está apenas a explorar opções?
-                                Adoraríamos ouvir de si</p>
-                        </div>
-                        <!-- Contact info Title End -->
-
-                        <!-- Contact Info List Start -->
-                        <div class="contact-info-list">
-
-                            <!-- Contact Info Item Start -->
-                            <div class="contact-info-item wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="icon-box">
-                                    <img src="{{ url('site/images/icon-mail.svg') }}" alt="">
-                                </div>
-                                <div class="contact-info-content">
-                                    <h3>Email</h3>
-                                    <p><a href="mailto:info@eventhub.com">info@eventhub.com</a></p>
-                                </div>
-                            </div>
-                            <!-- Contact Info Item End -->
-
-                            <!-- Contact Info Item Start -->
-                            <div class="contact-info-item wow fadeInUp" data-wow-delay="0.6s">
-                                <div class="icon-box">
-                                    <img src="{{ url('site/images/icon-phone.svg') }}" alt="">
-                                </div>
-                                <div class="contact-info-content">
-                                    <h3>Telefone</h3>
-                                    <p><a href="tel:123456789">+123 456 7890</a></p>
-                                </div>
-                            </div>
-                            <!-- Contact Info Item End -->
-
-                            <!-- Contact Info Item Start -->
-                            <div class="contact-info-item wow fadeInUp" data-wow-delay="0.8s">
-                                <div class="icon-box">
-                                    <img src="{{ url('site/images/icon-location.svg') }}" alt="">
-                                </div>
-                                <div class="contact-info-content">
-                                    <h3>Nosso Endereço</h3>
-                                    <p>6391 Elgin St. Celina 10299</p>
-                                </div>
-                            </div>
-                            <!-- Contact Info Item End -->
-                        </div>
-                        <!-- Contact Info List End -->
-
-                        <!-- Contact Social List Start -->
-                        <div class="contact-social-list wow fadeInUp" data-wow-delay="1s">
-                            <h3>Redes Sociais:</h3>
-                            <ul>
-                                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                        <!-- Contact Social List End -->
-                    </div>
-                    <!-- Contact Info Box End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Google Map IFrame Start -->
-                    <div class="google-map-iframe">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1706.1472376724166!2d13.242054986160278!3d-8.841988751664886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2sao!4v1778667352244!5m2!1spt-PT!2sao"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <!-- Google Map IFrame End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Page Contact Us End -->
 
 @endsection
