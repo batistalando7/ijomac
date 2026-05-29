@@ -19,7 +19,7 @@ use App\Http\Controllers\Admin\AlertsController;
 use App\Http\Controllers\Admin\ActivityLogController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\RelatorioController;
-
+use App\Http\Controllers\Admin\TeacherController;
 /* end admin controllers */
 
 /* auth controllers */
@@ -96,6 +96,17 @@ Route::group([
         Route::get('edit/{course}', [CourseController::class, 'edit'])->name('course.edit');
         Route::put('update/{course}', [CourseController::class, 'update'])->name('course.update');
         Route::get('delete/{course}', [CourseController::class, 'destroy'])->name('course.delete');
+    });
+    
+    /*Formadores routes*/
+    Route::prefix('admin.teachers')->name('admin.')->group(function () {
+        Route::get('list', [TeacherController::class, 'index'])->name('teacher.index');
+        Route::get('create', [TeacherController::class, 'create'])->name('teacher.create');
+        Route::post('store', [TeacherController::class, 'store'])->name('teacher.store');
+        Route::get('details/{teacher}', [TeacherController::class, 'show'])->name('teacher.show');
+        Route::get('edit/{teacher}', [TeacherController::class, 'edit'])->name('teacher.edit');
+        Route::put('update/{teacher}', [TeacherController::class, 'update'])->name('teacher.update');
+        Route::get('delete/{teacher}', [TeacherController::class, 'destroy'])->name('teacher.delete');
     });
 
     Route::post('/notifications/mark-all-read', [AlertsController::class, 'markAllRead'])->name('notifications.markAllRead');

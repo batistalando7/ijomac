@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'IJOMAC - Editar Curso')
+@section('title', 'IJOMAC - Adicionar Formador')
 @section('content')
 
     <!-- [ Craete Form ] -->
@@ -8,11 +8,10 @@
         <div class="page-header">
             <div class="page-header-left d-flex align-items-center">
                 <div class="page-header-title">
-                    <h5 class="m-b-10">Curso</h5>
+                    <h5 class="m-b-10">Formador</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                    <li class="breadcrumb-item">Editar</li>
+                    <li class="breadcrumb-item">Adicionar Formador</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">
@@ -28,9 +27,9 @@
                             <i class="feather-layers me-2"></i>
                             <span>Save as Draft</span>
                         </a> --}}
-                        <a href="{{ route('admin.courses.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.teacher.index') }}" class="btn btn-danger">
                             <i class="feather-chevron-left me-2"></i>
-                            <span>Voltar</span>
+                            <span>Visualizar</span>
                         </a>
                     </div>
                 </div>
@@ -50,19 +49,18 @@
                         <div class="card-body lead-status">
                             <div class="mb-5 d-flex align-items-center justify-content-between">
                                 <h5 class="fw-bold mb-0 me-4">
-                                    <span class="d-block mb-2">Editando o Curso :</span>
+                                    <span class="d-block mb-2">Adicionando Formador :</span>
                                     <span class="fs-12 fw-normal text-muted text-truncate-1-line">Normalmente se refere a
-                                        editar/atualizar uma nova Categoria</span>
+                                        adicionar um novo Formador</span>
                                 </h5>
-                                <a href="{{ route('admin.courses.index') }}" class="btn btn-sm btn-light-brand">Listar
-                                    Cursos</a>
+                                <a href="{{ route('admin.teacher.index') }}" class="btn btn-sm btn-light-brand">Listar
+                                    Formador</a>
                             </div>
-                            <form action="{{ route('admin.course.update', ['course' => $course->id]) }}"
-                                method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('admin.teacher.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                @method('PUT')
+                                @method('POST')
                                 {{-- aqui o formulário --}}
-                                @include('form._formCourses.index')
+                                @include('form._formTeachers.index')
                                 {{-- fim do formulário --}}
                             </form>
                         </div>

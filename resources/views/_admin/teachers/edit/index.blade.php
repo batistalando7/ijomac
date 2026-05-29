@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'IJOMAC - Editar Curso')
+@section('title', 'IJOMAC - Editar Formador')
 @section('content')
 
     <!-- [ Craete Form ] -->
@@ -8,7 +8,7 @@
         <div class="page-header">
             <div class="page-header-left d-flex align-items-center">
                 <div class="page-header-title">
-                    <h5 class="m-b-10">Curso</h5>
+                    <h5 class="m-b-10">Formador</h5>
                 </div>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/admin">Home</a></li>
@@ -28,7 +28,7 @@
                             <i class="feather-layers me-2"></i>
                             <span>Save as Draft</span>
                         </a> --}}
-                        <a href="{{ route('admin.courses.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.teacher.index') }}" class="btn btn-danger">
                             <i class="feather-chevron-left me-2"></i>
                             <span>Voltar</span>
                         </a>
@@ -50,19 +50,19 @@
                         <div class="card-body lead-status">
                             <div class="mb-5 d-flex align-items-center justify-content-between">
                                 <h5 class="fw-bold mb-0 me-4">
-                                    <span class="d-block mb-2">Editando o Curso :</span>
+                                    <span class="d-block mb-2">Editando o Formador :</span>
                                     <span class="fs-12 fw-normal text-muted text-truncate-1-line">Normalmente se refere a
-                                        editar/atualizar uma nova Categoria</span>
+                                        editar/atualizar um novo Formador</span>
                                 </h5>
-                                <a href="{{ route('admin.courses.index') }}" class="btn btn-sm btn-light-brand">Listar
-                                    Cursos</a>
+                                <a href="{{ route('admin.teacher.index') }}" class="btn btn-sm btn-light-brand">Listar
+                                    Formador</a>
                             </div>
-                            <form action="{{ route('admin.course.update', ['course' => $course->id]) }}"
+                            <form action="{{ route('admin.teacher.update', ['teacher' => $teacher->id]) }}"
                                 method="POST" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
                                 {{-- aqui o formulário --}}
-                                @include('form._formCourses.index')
+                                @include('form._formTeacher.index')
                                 {{-- fim do formulário --}}
                             </form>
                         </div>

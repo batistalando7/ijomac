@@ -9,7 +9,7 @@
                 {{-- <img src="{{ url('site/images/favicon.png') }}" alt="SOS" class="logo logo-lg"
                     style="heigth:10rem; width:12rem;"> --}}
 
-                <h1 class="logo logo-lg">EventHub </h1>
+                <h1 class="logo logo-lg">IJOMAC </h1>
                 <img src="{{ url('site/images/favicon.png') }}" alt="" class="logo logo-sm">
             </a>
         </div>
@@ -79,6 +79,21 @@
                     </ul>
                 </li>
 
+                {{-- Menu Formadores --}}
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="javascript:void(0);" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-facebook"></i></span>
+                        <span class="nxl-mtext">Formadores</span><span class="nxl-arrow"><i
+                                class="feather-chevron-right"></i></span>
+                    </a>
+                    <ul class="nxl-submenu">
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.teacher.index') }}">Lista
+                                de Formadores</a></li>
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.teacher.create') }}">Novo
+                                Formador</a></li>
+                    </ul>
+                </li>
+                
                 {{-- Menu Types Categories --}}
                 {{-- <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">
