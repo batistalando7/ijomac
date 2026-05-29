@@ -62,9 +62,25 @@
                         </li>
                     </ul>
                 </li>
+                
+                {{-- Menu Curso --}}
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="javascript:void(0);" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-file-text"></i></span>
+                        <span class="nxl-mtext">Cursos</span><span class="nxl-arrow"><i
+                                class="feather-chevron-right"></i></span>
+                    </a>
+                    <ul class="nxl-submenu">
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.courses.index') }}">Lista de
+                                Cursos</a></li>
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.course.create') }}">Criar
+                                Curso</a>
+                        </li>
+                    </ul>
+                </li>
 
                 {{-- Menu Types Categories --}}
-                <li class="nxl-item nxl-hasmenu">
+                {{-- <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-list"></i></span>
                         <span class="nxl-mtext">Subcategorias</span><span class="nxl-arrow"><i
@@ -76,7 +92,7 @@
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.typeCategory.create') }}">Nova
                                 Subcategoria</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
                 {{-- Menu Tags --}}
                 <li class="nxl-item nxl-hasmenu">

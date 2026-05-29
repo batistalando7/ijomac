@@ -2,42 +2,9 @@
 @section('title', 'Sobre Nós')
 @section('content')
 
-<style type="text/css">		
-			
-			.pgsfw-slider-for .slick-prev.slick-arrow{
-				left:35px;			}
-			.pgsfw-slider-for .slick-next.slick-arrow{
-				right:35px;			}		
-			
-			.pgsfw-slider-for .slick-arrow{
-				background:;border-color:;width:;height:;line-height:;				}
-			
-		#pgsfw-gallery .slick-arrow {
-				background:;border-color:;width:;height:;line-height:;				}			
-			
-			.pgsfw-slider-for .slick-arrow:hover,
-			.pgsfw-slider-for .slick-arrow:focus,
-			#pgsfw-gallery .slick-arrow:hover,
-			#pgsfw-gallery .slick-arrow:focus{
-				background:;border-color:;			}
-			.pgsfw-slider-for .slick-prev::before,
-			.pgsfw-slider-for .slick-next::before,
-			#pgsfw-gallery .slick-prev::before, 
-			#pgsfw-gallery .slick-next::before{
-				color:;				
-			}
-			
-			.pgsfw-slider-for .slick-prev:hover:before,
-			.pgsfw-slider-for .slick-next:hover:before,
-			#pgsfw-gallery .slick-prev:hover:before, 
-			#pgsfw-gallery .slick-next:hover:before{
-				color:;				
-			}
-		
-		</style>
-        
     <!-- Start Main Banner -->
-    <section class="main-banner" style="background-image: url({{ url('site/wp-content/themes/edplus/assets/img/bg/main-banner.jpg') }});">
+    <section class="main-banner"
+        style="background-image: url({{ url('site/wp-content/themes/edplus/assets/img/bg/main-banner.jpg') }});">
         <div class="container text-center">
             <div class="mbanner_content">
                 <h2>About </h2>
@@ -66,8 +33,8 @@
 
                                     <div class="feature_item">
                                         <div class="ficon">
-                                            <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/clock.svg') }}"
-                                                alt="">
+                                            <img decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/clock.svg') }}" alt="">
                                         </div>
                                         <h3>Why Study At Eduplus</h3>
                                         <p>Aliquam arcu mauris, consequat ut ante sit amet, iaculis suscipit ipsum. Praesent
@@ -77,7 +44,8 @@
 
                                     <div class="feature_item">
                                         <div class="ficon">
-                                            <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/certificate.svg') }}"
+                                            <img decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/certificate.svg') }}"
                                                 alt="">
                                         </div>
                                         <h3>Certification Guarantee</h3>
@@ -88,7 +56,8 @@
 
                                     <div class="feature_item">
                                         <div class="ficon">
-                                            <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/graduation-hat.svg') }}"
+                                            <img decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/graduation-hat.svg') }}"
                                                 alt="">
                                         </div>
                                         <h3>Graduate Admission</h3>
@@ -99,7 +68,8 @@
 
                                     <div class="feature_item">
                                         <div class="ficon">
-                                            <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/teacher.svg') }}"
+                                            <img decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/teacher.svg') }}"
                                                 alt="">
                                         </div>
                                         <h3>Skilled Lecturers</h3>
@@ -110,7 +80,8 @@
 
                                     <div class="feature_item">
                                         <div class="ficon">
-                                            <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/graduation-hat.svg') }}"
+                                            <img decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/graduation-hat.svg') }}"
                                                 alt="">
                                         </div>
                                         <h3>Graduate Admission</h3>
@@ -145,15 +116,15 @@
                             <div class="elementor-widget-container">
                                 <div class="about-img position-relative wow fadeInUp">
                                     <div class="about_badge">
-                                        <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/graduate.svg') }}"
-                                            alt="">
+                                        <img decoding="async"
+                                            src="{{ url('site/wp-content/uploads/2025/03/graduate.svg') }}" alt="">
                                         <h4>Experience Advisor</h4>
                                     </div>
 
-                                    <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/a1.jpg') }}" class="about_img_1"
-                                        alt="">
-                                    <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/2-2.jpg') }}" class="about_img_2"
-                                        alt="">
+                                    <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/a1.jpg') }}"
+                                        class="about_img_1" alt="">
+                                    <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/2-2.jpg') }}"
+                                        class="about_img_2" alt="">
                                     <h2 class="ab_wmark">EST 1950</h2>
 
                                     <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/ab_wave.svg') }}"
@@ -189,7 +160,8 @@
 
                                         <h2>We create unique digital media experiences.</h2>
                                         <img decoding="async"
-                                            src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}" alt="">
+                                            src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
+                                            alt="">
                                     </div>
 
                                     <p>
@@ -200,7 +172,8 @@
 
                                     <div class="d-md-flex gap-4 aitem_wrap mb-4">
                                         <div class="about_item">
-                                            <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/1-1.svg') }}"
+                                            <img decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/1-1.svg') }}"
                                                 alt="">
                                             <h4>Our Mission</h4>
                                             <p>
@@ -208,7 +181,8 @@
                                                 ipsum. </p>
                                         </div>
                                         <div class="about_item">
-                                            <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/2-1.svg') }}"
+                                            <img decoding="async"
+                                                src="{{ url('site/wp-content/uploads/2025/03/2-1.svg') }}"
                                                 alt="">
                                             <h4>Our Vision</h4>
                                             <p>
@@ -240,13 +214,14 @@
                         <!-- Start Counter Up -->
                         <section class="container">
                             <div class="counter-up"
-                                style="background-image: url({{ url('site/wp-content/uploads/2025/03/counter.svg')  }});">
+                                style="background-image: url({{ url('site/wp-content/uploads/2025/03/counter.svg') }});">
                                 <div class="row gy-5">
 
                                     <div class="col-xxl-3 col-xl-4 col-md-6 col-12 mx-xl-auto wow fadeInUp ">
                                         <div class="counter-item">
                                             <div class="coicon">
-                                                <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/peoples.svg') }}"
+                                                <img decoding="async"
+                                                    src="{{ url('site/wp-content/uploads/2025/03/peoples.svg') }}"
                                                     alt="">
                                             </div>
 
@@ -260,7 +235,8 @@
                                     <div class="col-xxl-3 col-xl-4 col-md-6 col-12 mx-xl-auto wow fadeInUp ">
                                         <div class="counter-item">
                                             <div class="coicon">
-                                                <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/graduate-hat.svg') }}"
+                                                <img decoding="async"
+                                                    src="{{ url('site/wp-content/uploads/2025/03/graduate-hat.svg') }}"
                                                     alt="">
                                             </div>
 
@@ -274,7 +250,8 @@
                                     <div class="col-xxl-3 col-xl-4 col-md-6 col-12 mx-xl-auto wow fadeInUp ">
                                         <div class="counter-item">
                                             <div class="coicon">
-                                                <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/expert.svg') }}"
+                                                <img decoding="async"
+                                                    src="{{ url('site/wp-content/uploads/2025/03/expert.svg') }}"
                                                     alt="">
                                             </div>
 
@@ -289,7 +266,8 @@
                                         class="col-xxl-3 col-xl-4 col-md-6 col-12 mx-xl-auto wow fadeInUp d-xl-none d-xxl-block">
                                         <div class="counter-item">
                                             <div class="coicon">
-                                                <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/satisfaction.svg') }}"
+                                                <img decoding="async"
+                                                    src="{{ url('site/wp-content/uploads/2025/03/satisfaction.svg') }}"
                                                     alt="">
                                             </div>
 
@@ -326,13 +304,14 @@
                                         </span>
                                         Working Process </span>
                                     <h2>How It Work</h2>
-                                    <img decoding="async" src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
+                                    <img decoding="async"
+                                        src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
                                         alt="">
                                 </div>
 
 
                                 <div class="video_area"
-                                    style="background-image: url({{ url('site/wp-content/uploads/2025/03/video-scaled.jpg')  }});">
+                                    style="background-image: url({{ url('site/wp-content/uploads/2025/03/video-scaled.jpg') }});">
                                     <div class="row wow fadeInUp">
                                         <div class="col-lg-6 col-md-7 align-self-center text-center">
                                             <h2>Intro <br> Video</h2>
@@ -343,11 +322,12 @@
                                                 class="vplay_btn"><i class="ph ph-play"></i></a>
                                         </div>
                                     </div>
-                                    <img decoding="async" src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/dots.svg') }}"
+                                    <img decoding="async"
+                                        src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/dots.svg') }}"
                                         alt="" class="dot_shape anileftRight">
                                     <img decoding="async"
-                                        src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/multiarrow.svg') }}" alt=""
-                                        class="marrow_shape aniupDown">
+                                        src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/multiarrow.svg') }}"
+                                        alt="" class="marrow_shape aniupDown">
                                 </div>
 
                             </div>
@@ -364,7 +344,7 @@
                     <div class="elementor-widget-container">
                         <!-- Start Testimonials Two -->
                         <section class="testimonials-two section-padding position-relative"
-                            style="background-image:url(' {{ url('site/wp-content/uploads/2025/03/testimonials-2.svg')  }});">
+                            style="background-image:url(' {{ url('site/wp-content/uploads/2025/03/testimonials-2.svg') }});">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-xl-6 col-12 wow fadeInUp">
@@ -615,12 +595,14 @@
                             <span>
                                 <span class="ticon">
                                     <img decoding="async"
-                                        src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}" alt="">
+                                        src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
+                                        alt="">
                                 </span>
                                 Instructors
                             </span>
                             <h2>Our Expert Instructors</h2>
-                            <img decoding="async" src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
+                            <img decoding="async"
+                                src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
                                 alt="">
 
                         </div>
@@ -951,26 +933,26 @@
                             <div class="container">
                                 <div class="client_slider2 position-relative owl-carousel wow fadeInUp">
 
-                                    <a href="#"><img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/5.svg') }}"
-                                            alt="image"></a>
+                                    <a href="#"><img decoding="async"
+                                            src="{{ url('site/wp-content/uploads/2025/03/5.svg') }}" alt="image"></a>
 
-                                    <a href="#"><img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/4.svg') }}"
-                                            alt="image"></a>
+                                    <a href="#"><img decoding="async"
+                                            src="{{ url('site/wp-content/uploads/2025/03/4.svg') }}" alt="image"></a>
 
-                                    <a href="#"><img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/3.svg') }}"
-                                            alt="image"></a>
+                                    <a href="#"><img decoding="async"
+                                            src="{{ url('site/wp-content/uploads/2025/03/3.svg') }}" alt="image"></a>
 
-                                    <a href="#"><img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/2.svg') }}"
-                                            alt="image"></a>
+                                    <a href="#"><img decoding="async"
+                                            src="{{ url('site/wp-content/uploads/2025/03/2.svg') }}" alt="image"></a>
 
-                                    <a href="#"><img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/1.svg') }}"
-                                            alt="image"></a>
+                                    <a href="#"><img decoding="async"
+                                            src="{{ url('site/wp-content/uploads/2025/03/1.svg') }}" alt="image"></a>
 
-                                    <a href="#"><img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/3.svg') }}"
-                                            alt="image"></a>
+                                    <a href="#"><img decoding="async"
+                                            src="{{ url('site/wp-content/uploads/2025/03/3.svg') }}" alt="image"></a>
 
-                                    <a href="#"><img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/4.svg') }}"
-                                            alt="image"></a>
+                                    <a href="#"><img decoding="async"
+                                            src="{{ url('site/wp-content/uploads/2025/03/4.svg') }}" alt="image"></a>
                                 </div>
                             </div>
                         </div>
@@ -999,9 +981,10 @@
                                         Top instructors from around the world teach <br> Millions student on EduPlus </p>
                                     <a href="#" class="white_btn round_btn">Apply Now</a>
                                 </div>
-                                <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/1-5.png') }}" class="cta_img"
-                                    alt="">
-                                <img decoding="async" src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/ccircle.svg') }}"
+                                <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/1-5.png') }}"
+                                    class="cta_img" alt="">
+                                <img decoding="async"
+                                    src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/ccircle.svg') }}"
                                     class="ccircle_shape" alt="">
                             </div>
                         </div>
@@ -1011,7 +994,7 @@
                         data-widget_type="edplus-cta.default">
                         <div class="elementor-widget-container">
                             <div class="cta2 color_green"
-                                style="background-image: url({{ url('site/wp-content/uploads/2025/03/cta2.svg')  }});">
+                                style="background-image: url({{ url('site/wp-content/uploads/2025/03/cta2.svg') }});">
                                 <div class="cta-content wow fadeInUp">
                                     <h2>
                                         Become a <span>Tutor</span> <img decoding="async"
@@ -1023,9 +1006,10 @@
                                         Top instructors from around the world teach <br> Millions student on EduPlus </p>
                                     <a href="#" class="white_btn round_btn">Apply Now</a>
                                 </div>
-                                <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/2-3.png') }}" class="cta_img"
-                                    alt="">
-                                <img decoding="async" src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/ccircle.svg') }}"
+                                <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/2-3.png') }}"
+                                    class="cta_img" alt="">
+                                <img decoding="async"
+                                    src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/ccircle.svg') }}"
                                     class="ccircle_shape" alt="">
                             </div>
                         </div>

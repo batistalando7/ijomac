@@ -589,7 +589,7 @@
     <link rel="https://api.w.org/" href="{{ url('site/wp-json/index.html') }}" />
     <link rel="alternate" title="JSON" type="application/json"
         href="{{ url('site/wp-json/wp/v2/pages/22.json') }}" />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="{{ url('site/xmlrpc0db0.php?rsd') }}" />
     <meta name="generator" content="WordPress 7.0" />
     <meta name="generator" content="TutorLMS 3.9.7" />
     <meta name="generator" content="WooCommerce 10.7.0" />

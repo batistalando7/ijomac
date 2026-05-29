@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Auth\SocialAuthController;
 use App\Http\Controllers\Admin\AlertsController;
 use App\Http\Controllers\Admin\ActivityLogController;
+use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\RelatorioController;
 
 /* end admin controllers */
@@ -84,6 +85,17 @@ Route::group([
         Route::get('edit/{category}', [CategoryController::class, 'edit'])->name('category.edit');
         Route::put('update/{category}', [CategoryController::class, 'update'])->name('category.update');
         Route::get('delete/{category}', [CategoryController::class, 'destroy'])->name('category.delete');
+    });
+    
+    /*Curso routes*/
+    Route::prefix('admin.courses')->name('admin.')->group(function () {
+        Route::get('list', [CourseController::class, 'index'])->name('courses.index');
+        Route::get('create', [CourseController::class, 'create'])->name('course.create');
+        Route::post('store', [CourseController::class, 'store'])->name('courses.store');
+        Route::get('details/{course}', [CourseController::class, 'show'])->name('course.show');
+        Route::get('edit/{course}', [CourseController::class, 'edit'])->name('course.edit');
+        Route::put('update/{course}', [CourseController::class, 'update'])->name('course.update');
+        Route::get('delete/{course}', [CourseController::class, 'destroy'])->name('course.delete');
     });
 
     Route::post('/notifications/mark-all-read', [AlertsController::class, 'markAllRead'])->name('notifications.markAllRead');

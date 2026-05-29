@@ -18,7 +18,7 @@ class UserTableSeeder extends Seeder
                 'slug' => 'admin',
                 'email' => 'admin@admin.com',
                 'email_verified_at' => NULL,
-                'password' => '$2y$10$5k7Wl/31ZBhDroct352HC.ag7n7xb/sG852PpbgOpiElxt9j1DdEu',
+                'password' => Hash::make('admin123'),
                 'role' => 'admin',
                 'image' => '3f0551ddc8444d97be18eed935967f2c',
                 'provider' => NULL,
