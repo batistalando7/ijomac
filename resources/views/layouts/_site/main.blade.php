@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <!-- Mirrored from wpdemothemes.com/edplus/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 May 2026 08:33:33 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
@@ -10,7 +10,7 @@
     <link rel="profile" href="{{ url('site/gmpg.org/xfn/11.html') }}" />
 
     <title>
-        Edplus &#8211; University and Online Courses WordPress Theme
+        @yield('title')
     </title>
     <meta name="robots" content="max-image-preview:large" />
     <link rel="dns-prefetch" href="{{ url('site/cdn.jsdelivr.net/index.html') }}" />
@@ -589,7 +589,7 @@
     <link rel="https://api.w.org/" href="{{ url('site/wp-json/index.html') }}" />
     <link rel="alternate" title="JSON" type="application/json"
         href="{{ url('site/wp-json/wp/v2/pages/22.json') }}" />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="{{ url('site/xmlrpc0db0.php?rsd') }}" />
     <meta name="generator" content="WordPress 7.0" />
     <meta name="generator" content="TutorLMS 3.9.7" />
     <meta name="generator" content="WooCommerce 10.7.0" />

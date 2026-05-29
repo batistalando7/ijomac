@@ -1,5 +1,5 @@
 @extends('layouts._site.main')
-@section('title', 'Home | EventHub')
+@section('title', 'Home | IJOMAC')
 @section('content')
 
     <div id="mini_cart" class="min_cart_wrapper">

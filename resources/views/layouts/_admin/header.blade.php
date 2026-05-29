@@ -70,55 +70,58 @@
                             <i class="feather-sun"></i>
                         </a>
                     </div>
-                    {{-- Notificações - Alerts --}}
-                    <div class="dropdown nxl-h-item">
-                        <a class="nxl-head-link me-3" data-bs-toggle="dropdown" href="#" role="button"
-                            data-bs-auto-close="outside">
-                            <i class="feather-bell"></i>
-                            @if ($unreadCount > 0)
-                                <span class="badge bg-danger nxl-h-badge">{{ $unreadCount }}</span>
-                            @endif
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-notifications-menu">
-                            <div class="d-flex justify-content-between align-items-center notifications-head">
-                                <h6 class="fw-bold text-dark mb-0">Notificações</h6>
+                    @if (isset($notifications) && $notifications->count() > 0)
+                        {{-- Notificações - Alerts --}}
+                        <div class="dropdown nxl-h-item">
+                            <a class="nxl-head-link me-3" data-bs-toggle="dropdown" href="#" role="button"
+                                data-bs-auto-close="outside">
+                                <i class="feather-bell"></i>
                                 @if ($unreadCount > 0)
-                                    <form action="{{ route('notifications.markAllRead') }}" method="POST">
-                                        @csrf
-                                        <button class="btn btn-link fs-11 text-success p-0">Marcar todas como
-                                            lidas</button>
-                                    </form>
+                                    <span class="badge bg-danger nxl-h-badge">{{ $unreadCount }}</span>
                                 @endif
-                            </div>
+                            </a>
 
-                            @forelse($notifications->take(3) as $notif)
-                                <div class="notifications-item">
-                                   
-                                    <div class="notifications-desc">
-                                        <a href="{{ route('admin.news.view', $notif->data['id']) }}" class="font-body">
-                                            {!! $notif->data['message'] !!}
-                                        </a>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div
-                                                class="notifications-date text-muted border-bottom border-bottom-dashed">
-                                                {{ $notif->created_at->diffForHumans() }}
+                            <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-notifications-menu">
+                                <div class="d-flex justify-content-between align-items-center notifications-head">
+                                    <h6 class="fw-bold text-dark mb-0">Notificações</h6>
+                                    @if ($unreadCount > 0)
+                                        <form action="{{ route('notifications.markAllRead') }}" method="POST">
+                                            @csrf
+                                            <button class="btn btn-link fs-11 text-success p-0">Marcar todas como
+                                                lidas</button>
+                                        </form>
+                                    @endif
+                                </div>
+
+                                @forelse($notifications->take(3) as $notif)
+                                    <div class="notifications-item">
+
+                                        <div class="notifications-desc">
+                                            <a href="{{ route('admin.news.view', $notif->data['id']) }}"
+                                                class="font-body">
+                                                {!! $notif->data['message'] !!}
+                                            </a>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div
+                                                    class="notifications-date text-muted border-bottom border-bottom-dashed">
+                                                    {{ $notif->created_at->diffForHumans() }}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            @empty
-                                <div class="text-center text-muted p-3">Sem notificações.</div>
-                            @endforelse
+                                @empty
+                                    <div class="text-center text-muted p-3">Sem notificações.</div>
+                                @endforelse
 
-                            <div class="text-center notifications-footer">
-                                <a href="{{ route('admin.newsArchived.index') }}"
-                                    class="fs-13 fw-semibold text-dark">Ver
-                                    todas</a>
+                                <div class="text-center notifications-footer">
+                                    <a href="{{ route('admin.newsArchived.index') }}"
+                                        class="fs-13 fw-semibold text-dark">Ver
+                                        todas</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    {{-- Fim de Alerts --}}
+                        {{-- Fim de Alerts --}}
+                    @endif
 
                     <ul class="dropdown nxl-h-item">
                         <!-- Authentication Links -->

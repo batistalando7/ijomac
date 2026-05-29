@@ -6,7 +6,7 @@
                 <div class="col-lg-6 col-md-12 text-center htleft d-lg-flex align-self-center">
                     <p class="align-self-center">
                         <i class="fa-regular fa-user"></i>
-                        <a href="{{ route('login') }}">Register / Login</a>
+                        <a href="{{ route('login') }}">Registrar-se / Entrar</a>
                     </p>
                     <ul class="align-self-center text-center">
                         <li>
@@ -48,7 +48,7 @@
                 <div class="col-xl-2 col-md-3 col-4 align-self-center">
                     <div class="header-left d-flex justify-content-start">
                         <div class="site-logo">
-                            <a href="index.html"><img src="{{ url('site/wp-content/themes/edplus/assets/img/logo.svg') }}"
+                            <a href="{{ route('site.home') }}"><img src="{{ url('site/wp-content/themes/edplus/assets/img/logo.svg') }}"
                                     alt="Edplus" /></a>
                         </div>
                     </div>
@@ -60,9 +60,9 @@
                         <nav id="main-menu">
                             <ul id="menu-main-menu" class=" ">
                                 <li id="menu-item-1468"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-22 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1468">
-                                    <a href="index.html" aria-current="page" onClick="return true">Home</a>
-                                    <ul class="sub-menu">
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-22 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor">
+                                    <a href="{{ route('site.home') }}" aria-current="page" onClick="return true">Home</a>
+                                    {{-- <ul class="sub-menu">
                                         <li id="menu-item-1011"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-22 current_page_item menu-item-1011">
                                             <a href="index.html" aria-current="page" onClick="return true">Online
@@ -80,7 +80,7 @@
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1818">
                                             <a href="rtl/index.html" onClick="return true">RTL Homepage</a>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </li>
                                 <li id="menu-item-1071"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1071">
