@@ -2,8 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <!-- Mirrored from wpdemothemes.com/edplus/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 May 2026 08:33:33 GMT -->
 <!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack --> 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,6 +19,9 @@
         href="{{ url('site/feed/index.html') }}" />
     <link rel="alternate" type="application/rss+xml" title="Edplus &raquo; Comments Feed"
         href="{{ url('site/comments/feed/index.html') }}" />
+        <!--! BEGIN: Favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url('site/logo/cute.png') }}">
+    
     <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
         href="{{ url('site/wp-json/oembed/1.0/embedc90c.json?url=https%3A%2F%2Fwpdemothemes.com%2Fedplus%2F') }}" />
     <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"

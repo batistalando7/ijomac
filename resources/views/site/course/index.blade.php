@@ -1,5 +1,5 @@
 @extends('layouts._site.main')
-@section('title', 'Todos Eventos')
+@section('title', 'Todos Cursos')
 @section('content')
 
     <!-- Start Main Banner -->
@@ -98,17 +98,17 @@
 
                                         </div>
 
-                                        {{-- <div class="cbtm">
+                                        <div class="cbtm">
                                             <div class="c_price float-start">
                                                 <div class="price">
                                                     <del aria-hidden="true"><span
                                                             class="woocommerce-Price-amount amount"><span
-                                                                class="woocommerce-Price-currencySymbol">&#036;</span>65.00</span></del>
+                                                                class="woocommerce-Price-currencySymbol">kz</span>{{ $item->price + ($item->price * 0.15) }}</span></del>
                                                     <span class="screen-reader-text">Original price was:
-                                                        &#036;65.00.</span><ins aria-hidden="true"><span
+                                                        kz65.00.</span><ins aria-hidden="true"><span
                                                             class="woocommerce-Price-amount amount"><span
-                                                                class="woocommerce-Price-currencySymbol">&#036;</span>55.00</span></ins><span
-                                                        class="screen-reader-text">Current price is: &#036;55.00.</span>
+                                                                class="woocommerce-Price-currencySymbol">kz</span>{{ $item->price }}</span></ins><span
+                                                        class="screen-reader-text">Current price is: kz55.00.</span>
                                                 </div>
 
                                             </div>
@@ -119,7 +119,7 @@
                                                     decoding='async' /> <a
                                                     href="../profile/edplus/indexd527.html?view=instructor">Masum Billah</a>
                                             </div>
-                                        </div> --}}
+                                        </div>
                                     </div>
                                 </div>
 

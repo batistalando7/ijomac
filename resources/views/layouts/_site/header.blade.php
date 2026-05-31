@@ -48,7 +48,7 @@
                 <div class="col-xl-2 col-md-3 col-4 align-self-center">
                     <div class="header-left d-flex justify-content-start">
                         <div class="site-logo">
-                            <a href="{{ route('site.home') }}"><img src="{{ url('site/wp-content/themes/edplus/assets/img/logo.svg') }}"
+                            <a href="{{ route('site.home') }}"><img src="{{ url('site/logo/logo.png') }}"
                                     alt="Edplus" /></a>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 @extends('layouts._site.main')
-@section('title', 'Home | IJOMAC')
+@section('title', 'Página Inicial | IJOMAC')
 @section('content')
 
     <div id="mini_cart" class="min_cart_wrapper">
@@ -36,26 +36,26 @@
                                         <div class="banner_content">
                                             <span class="wow fadeInUp" data-wow-delay=".3s"><img decoding="async"
                                                     src="{{ url('site/wp-content/themes/edplus/assets/img/icons/graduation-hat-white.svg') }}"
-                                                    alt="" />Keep Learning
+                                                    alt="" />Continue Aprendendo
                                             </span>
                                             <h2 class="wow fadeInUp" data-wow-delay=".5s">
-                                                Best Online Courses <br />
-                                                From EdPlus
+                                                Gestão Segura. Ambiente Sustentável.
                                             </h2>
 
                                             <p class="wow fadeInUp" data-wow-delay=".7s">
-                                                Remember to tailor the
-                                                section names to fit the
-                                                specific needs and <br />
-                                                structure of your university
-                                                website.
+                                                A IJOMAC é uma empresa angolana especializada em soluções de Higiene,
+                                                Segurança e Saúde no Trabalho (HST), Gestão Ambiental, Controlo da Qualidade
+                                                e Formação Profissional. <br />
+                                                Ajudamos organizações a criar ambientes de trabalho mais seguros, produtivos
+                                                e sustentáveis, garantindo conformidade legal, redução de riscos e melhoria
+                                                contínua dos seus processos.
                                             </p>
 
                                             <div class="d-flex gap-4 wow fadeInUp" data-wow-delay=".9s">
-                                                <a href="courses/index.html" class="blue_btn round_btn">Find Courses
+                                                <a href="courses/index.html" class="blue_btn round_btn">Nossos serviços
                                                     <i class="ph ph-arrow-right"></i></a>
 
-                                                <div class="brating d-flex">
+                                                {{-- <div class="brating d-flex">
                                                     <img decoding="async"
                                                         src="{{ url('site/wp-content/themes/edplus/assets/img/icons/trustpilot.svg') }}"
                                                         class="align-self-center" alt="" />
@@ -63,7 +63,7 @@
                                                         <i class="fa-solid fa-star"></i>
                                                         4.8 Rating
                                                     </p>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -170,8 +170,7 @@
                                                                         <span class="screen-reader-text">Original
                                                                             price
                                                                             was:
-                                                                            &#036;65.00.</span><ins
-                                                                            aria-hidden="true"><span
+                                                                            &#036;65.00.</span><ins aria-hidden="true"><span
                                                                                 class="woocommerce-Price-amount amount"><span
                                                                                     class="woocommerce-Price-currencySymbol">&#036;</span>55.00</span></ins><span
                                                                             class="screen-reader-text">Current
@@ -235,9 +234,9 @@
                                                 src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
                                                 alt="" />
                                         </span>
-                                        Top Category
+                                        Serviços
                                     </span>
-                                    <h2>Browse Our Top Categories</h2>
+                                    <h2>Nossos Serviços</h2>
                                     <img decoding="async"
                                         src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
                                         alt="" />
@@ -251,7 +250,7 @@
                                                     src="{{ url('site/wp-content/uploads/2025/03/1-2.svg') }}"
                                                     alt="" />
                                             </div>
-                                            <h3>3D Animation</h3>
+                                            <h3>Higiene e Segurança no Trabalho</h3>
                                             <span>2 Courses</span>
                                             <a href="course-category/3d-animation/index9782.html?tutor-course-filter-category=70"
                                                 class="cbtn"><i class="ph ph-arrow-right"></i></a>
@@ -271,7 +270,7 @@
                                                     src="{{ url('site/wp-content/uploads/2025/03/1-2.svg') }}"
                                                     alt="" />
                                             </div>
-                                            <h3>Art &amp; Design</h3>
+                                            <h3>Controlo da Qualidade</h3>
                                             <span>2 Courses</span>
                                             <a href="course-category/art-design/index45ab.html?tutor-course-filter-category=77"
                                                 class="cbtn"><i class="ph ph-arrow-right"></i></a>
@@ -288,30 +287,10 @@
                                         <div class="category-item">
                                             <div class="cicon">
                                                 <img decoding="async"
-                                                    src="{{ url('site/wp-content/uploads/2025/03/6.svg') }}"
-                                                    alt="" />
-                                            </div>
-                                            <h3>Data Science</h3>
-                                            <span>8 Courses</span>
-                                            <a href="course-category/data-science/index3a21.html?tutor-course-filter-category=73"
-                                                class="cbtn"><i class="ph ph-arrow-right"></i></a>
-                                            <div class="cat_img"
-                                                style="
-                                                        background-image: url({{ url('site/wp-content/uploads/2025/03/3-3.jpg') }});
-                                                    ">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Col -->
-
-                                    <div class="col-xl-4 col-md-6 col-12 wow fadeInUp">
-                                        <div class="category-item">
-                                            <div class="cicon">
-                                                <img decoding="async"
                                                     src="{{ url('site/wp-content/uploads/2025/03/3-1.svg') }}"
                                                     alt="" />
                                             </div>
-                                            <h3>Finance Account</h3>
+                                            <h3>Formação e Capacitação</h3>
                                             <span>8 Courses</span>
                                             <a href="course-category/finance-account/index0c9d.html?tutor-course-filter-category=75"
                                                 class="cbtn"><i class="ph ph-arrow-right"></i></a>
@@ -324,14 +303,34 @@
                                     </div>
                                     <!-- End Col -->
 
-                                    <div class="col-xl-4 col-md-6 col-12 wow fadeInUp">
+                                    <div class="col-xl-6 col-md-6 col-12 wow fadeInUp">
+                                        <div class="category-item">
+                                            <div class="cicon">
+                                                <img decoding="async"
+                                                    src="{{ url('site/wp-content/uploads/2025/03/6.svg') }}"
+                                                    alt="" />
+                                            </div>
+                                            <h3>Gestão Ambiental</h3>
+                                            <span>8 Courses</span>
+                                            <a href="course-category/data-science/index3a21.html?tutor-course-filter-category=73"
+                                                class="cbtn"><i class="ph ph-arrow-right"></i></a>
+                                            <div class="cat_img"
+                                                style="
+                                                        background-image: url({{ url('site/wp-content/uploads/2025/03/3-3.jpg') }});
+                                                    ">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Col -->
+
+                                    <div class="col-xl-6 col-md-6 col-12 wow fadeInUp">
                                         <div class="category-item">
                                             <div class="cicon">
                                                 <img decoding="async"
                                                     src="{{ url('site/wp-content/uploads/2025/03/8.svg') }}"
                                                     alt="" />
                                             </div>
-                                            <h3>Health and Fitness</h3>
+                                            <h3>Consultoria Técnica Especializada</h3>
                                             <span>4 Courses</span>
                                             <a href="course-category/health-and-fitness/indexcbc4.html?tutor-course-filter-category=71"
                                                 class="cbtn"><i class="ph ph-arrow-right"></i></a>
@@ -344,7 +343,7 @@
                                     </div>
                                     <!-- End Col -->
 
-                                    <div class="col-xl-4 col-md-6 col-12 wow fadeInUp">
+                                    {{-- <div class="col-xl-4 col-md-6 col-12 wow fadeInUp">
                                         <div class="category-item">
                                             <div class="cicon">
                                                 <img decoding="async"
@@ -422,11 +421,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- End Col -->
+                                    <!-- End Col --> --}}
 
                                     <div class="col-12 text-center mt-4 wow fadeInUp">
-                                        <a class="blue_btn round_btn" href="course-categories/index.html">View All
-                                            Categories
+                                        <a class="blue_btn round_btn" href="course-categories/index.html">Todos
+                                            Serviços
                                             <i class="ph ph-arrow-right"></i></a>
                                     </div>
                                 </div>
@@ -490,62 +489,58 @@
                                                     src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
                                                     alt="" />
                                             </span>
-                                            About Our Edplus
+                                            Sobre Nós IJOMAC
                                         </span>
                                         <h2>
-                                            We create unique digital media
-                                            experiences.
+                                            Quem somos?
                                         </h2>
                                         <img decoding="async"
                                             src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
                                             alt="" />
                                     </div>
                                     <p class="wow fadeInUp">
-                                        At University Edplus, we are driven
-                                        by the transformative power of
-                                        education and the limitless
-                                        potential within each individual.
-                                        Founded in 1971, we have remained
-                                        steadfast in our commitment to
-                                        nurturing intellectual curiosity,
-                                        promoting academic excellence,
-                                        cultivating a dynamic campus
-                                        community.
+                                        A IJOMAC é uma empresa angolana dedicada à prestação de serviços de Higiene,
+                                        Segurança e Saúde no Trabalho (HST), Gestão Ambiental e Controlo da Qualidade.
+                                    </p>
+                                    <p class="wow fadeInUp">
+                                        Trabalhamos para apoiar organizações de diferentes setores na implementação de boas
+                                        práticas operacionais, promovendo ambientes de trabalho mais seguros, maior
+                                        eficiência operacional e o cumprimento dos requisitos legais e normativos.
                                     </p>
 
                                     <div class="d-md-flex gap-3 position-relative z-2 wow fadeInUp">
                                         <ul>
                                             <li>
                                                 <i class="ph ph-check"></i>
-                                                Best Instructors &amp;
-                                                Courses
+                                                Melhores Formadores &amp;
+                                                Cursos
                                             </li>
                                             <li>
                                                 <i class="ph ph-check"></i>
-                                                Trusted by Students
+                                                Serviço de Qualidade
                                             </li>
                                             <li>
                                                 <i class="ph ph-check"></i>
-                                                100% ISO Certified
+                                                Certificado de Válido
                                             </li>
                                         </ul>
 
                                         <ul>
                                             <li>
                                                 <i class="ph ph-check"></i>
-                                                Online Courses
+                                                Formações Profissionais
                                             </li>
                                             <li>
                                                 <i class="ph ph-check"></i>
-                                                Live Classes
+                                                Aulas ao Vivo
                                             </li>
                                             <li>
                                                 <i class="ph ph-check"></i>
-                                                24 Hours Support
+                                                Suporte 24 horas
                                             </li>
                                         </ul>
                                     </div>
-                                    <a href="courses/index.html" class="blue_btn round_btn wow fadeInUp">View All Program
+                                    <a href="{{ route('site.about') }}" class="blue_btn round_btn wow fadeInUp">ver mais
                                         <i class="ph ph-arrow-right"></i></a>
                                     <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/ed_cap.svg') }}"
                                         class="ab_book_shape aniupDown position-absolute" alt="" />
@@ -580,8 +575,7 @@
                                                 <h3>
                                                     <span class="count">118</span>K
                                                 </h3>
-                                                <span>Our Happy
-                                                    Students</span>
+                                                <span>Clientes Satisfeitos</span>
                                             </div>
                                         </div>
                                     </div>
@@ -600,7 +594,7 @@
                                                     <span class="count">25</span>K
                                                 </h3>
                                                 <span>
-                                                    Enrolled Learner
+                                                    Formados
                                                 </span>
                                             </div>
                                         </div>
@@ -620,7 +614,7 @@
                                                     <span class="count">120</span>K
                                                 </h3>
                                                 <span>
-                                                    Expert Instructor
+                                                    Proficionais
                                                 </span>
                                             </div>
                                         </div>
@@ -640,7 +634,7 @@
                                                 <h3>
                                                     <span class="count">96</span>%
                                                 </h3>
-                                                <span>Satisfaction Rate</span>
+                                                <span>Taxa de Satisfação</span>
                                             </div>
                                         </div>
                                     </div>
@@ -652,7 +646,7 @@
                     </div>
                 </div>
             </div>
-            <div class="elementor-element elementor-element-6e9f1fa e-flex e-con-boxed e-con e-parent" data-id="6e9f1fa"
+            {{-- <div class="elementor-element elementor-element-6e9f1fa e-flex e-con-boxed e-con e-parent" data-id="6e9f1fa"
                 data-element_type="container" data-e-type="container">
                 <div class="e-con-inner">
                     <div class="elementor-element elementor-element-b2a168b e-con-full e-flex e-con e-child"
@@ -731,7 +725,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="elementor-element elementor-element-dff3f98 e-con-full e-flex e-con e-parent" data-id="dff3f98"
                 data-element_type="container" data-e-type="container">
                 <div class="elementor-element elementor-element-ac34084 elementor-widget elementor-widget-edplus-courses"
@@ -750,16 +744,16 @@
                                                         src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
                                                         alt="" />
                                                 </span>
-                                                Courses
+                                                Cursos
                                             </span>
-                                            <h2>Most Popular Courses</h2>
+                                            <h2>Os cursos mais populares</h2>
                                             <img decoding="async"
                                                 src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
                                                 alt="" />
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-7 align-self-center wow fadeInUp">
+                                    {{-- <div class="col-lg-7 align-self-center wow fadeInUp">
                                         <nav class="course_nav text-lg-end">
                                             <ul>
                                                 <li data-filter="all">
@@ -780,102 +774,103 @@
                                                 </li>
                                             </ul>
                                         </nav>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <!-- End Col-->
 
                                 <div class="row gy-4 course_item">
-                                    <div class="col-xl-4 col-md-6 col-12 mix data-science wow fadeInUp">
-                                        <div class="single_course course_style2">
-                                            <div class="course_img">
-                                                <div class="ccategory">
-                                                    <a
-                                                        href="course-category/data-science/index3a21.html?tutor-course-filter-category=73"><i
-                                                            class="ph ph-folder-open"></i>
-                                                        Data Science</a>
-                                                </div>
-                                                <img fetchpriority="high" decoding="async" width="690" height="430"
-                                                    src="{{ url('site/wp-content/uploads/2025/03/6.jpg') }}"
-                                                    class="attachment-edplus_course size-edplus_course wp-post-image"
-                                                    alt=""
-                                                    srcset="
-                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6.jpg         690w,
-                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-600x374.jpg 600w,
-                                                            https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-300x187.jpg 300w
+                                    @foreach ($courses as $item)
+                                        <div class="col-xl-4 col-md-6 col-12 mix data-science wow fadeInUp">
+                                            <div class="single_course course_style2">
+                                                <div class="course_img">
+                                                    <div class="ccategory">
+                                                        <a
+                                                            href="course-category/data-science/index3a21.html?tutor-course-filter-category=73"><i
+                                                                class="ph ph-folder-open"></i>
+                                                            {{ $item->category->name }}</a>
+                                                    </div>
+                                                    <img fetchpriority="high" decoding="async" width="690"
+                                                        height="430" src="{{ asset('storage/' . $item->image) }}"
+                                                        class="attachment-edplus_course size-edplus_course wp-post-image"
+                                                        alt=""
+                                                        srcset="
+                                                            {{ asset('storage/' . $item->image) }}
                                                         "
-                                                    sizes="(max-width: 690px) 100vw, 690px" />
-                                                <a href="../../www.youtube.com/watch9a6e.html?v=yGDwk4z9EEg"
-                                                    class="cvbtn" data-source="youtube">
-                                                    <i class="ph ph-video-camera"></i>
-                                                </a>
-                                            </div>
-
-                                            <div class="course_content">
-                                                <div class="crating_number">
-                                                    <div class="tutor-ratings-stars">
-                                                        <i class="tutor-icon-star-bold" data-rating-value="1"></i><i
-                                                            class="tutor-icon-star-bold" data-rating-value="2"></i><i
-                                                            class="tutor-icon-star-bold" data-rating-value="3"></i><i
-                                                            class="tutor-icon-star-bold" data-rating-value="4"></i><i
-                                                            class="tutor-icon-star-line" data-rating-value="5"></i>
-                                                    </div>
-                                                    <input type="hidden" name="tutor_rating_gen_input" value="4.00" />
-                                                    <span>(4.00 / 2
-                                                        Ratings)</span>
-                                                </div>
-                                                <h3>
-                                                    <a href="courses/interior-design-concepts-masterclass-3/index.html">
-                                                        Interior design
-                                                        concepts Masterclass
+                                                        sizes="(max-width: 690px) 100vw, 690px" />
+                                                    <a href="{{ route('site.courses.details', ['course' => $item->slug]) }}"
+                                                        class="cvbtn" data-source="youtube">
+                                                        <i class="ph ph-video-camera"></i>
                                                     </a>
-                                                </h3>
-
-                                                <div class="cmeta d-flex gap-5">
-                                                    <div class="single_meta">
-                                                        <i class="fa-regular fa-user"></i>
-                                                        2 Students
-                                                    </div>
-
-                                                    <div class="single_meta">
-                                                        <i class="fa-solid fa-book"></i>
-                                                        0 Lessons
-                                                    </div>
                                                 </div>
 
-                                                <div class="cbtm">
-                                                    <div class="c_price float-start">
-                                                        <div class="price">
-                                                            <del aria-hidden="true"><span
-                                                                    class="woocommerce-Price-amount amount"><span
-                                                                        class="woocommerce-Price-currencySymbol">&#036;</span>65.00</span></del>
-                                                            <span class="screen-reader-text">Original
-                                                                price was:
-                                                                &#036;65.00.</span><ins aria-hidden="true"><span
-                                                                    class="woocommerce-Price-amount amount"><span
-                                                                        class="woocommerce-Price-currencySymbol">&#036;</span>55.00</span></ins><span
-                                                                class="screen-reader-text">Current
-                                                                price is:
-                                                                &#036;55.00.</span>
+                                                <div class="course_content">
+                                                    <div class="crating_number">
+                                                        <div class="tutor-ratings-stars">
+                                                            <i class="tutor-icon-star-bold" data-rating-value="1"></i><i
+                                                                class="tutor-icon-star-bold" data-rating-value="2"></i><i
+                                                                class="tutor-icon-star-bold" data-rating-value="3"></i><i
+                                                                class="tutor-icon-star-bold" data-rating-value="4"></i><i
+                                                                class="tutor-icon-star-line" data-rating-value="5"></i>
+                                                        </div>
+                                                        <input type="hidden" name="tutor_rating_gen_input"
+                                                            value="4.00" />
+                                                        <span>(4.00 / 2
+                                                            Ratings)</span>
+                                                    </div>
+                                                    <h3>
+                                                        <a
+                                                            href="{{ route('site.courses.details', ['course' => $item->slug]) }}">
+                                                            {{ $item->name }}
+                                                        </a>
+                                                    </h3>
+
+                                                    <div class="cmeta d-flex gap-5">
+                                                        <div class="single_meta">
+                                                            <i class="fa-regular fa-user"></i>
+                                                            2 Students
+                                                        </div>
+
+                                                        <div class="single_meta">
+                                                            <i class="fa-solid fa-book"></i>
+                                                            0 Lessons
                                                         </div>
                                                     </div>
-                                                    <div class="c_author float-end">
-                                                        <img alt=""
-                                                            src="{{ url('site/wp-content/uploads/2025/03/3-4.jpg') }}"
-                                                            srcset="
+
+                                                    <div class="cbtm">
+                                                        <div class="c_price float-start">
+                                                            <div class="price">
+                                                                <del aria-hidden="true"><span
+                                                                        class="woocommerce-Price-amount amount"><span
+                                                                            class="woocommerce-Price-currencySymbol">kz</span>{{ $item->price + $item->price * 0.19 }}</span></del>
+                                                                <span class="screen-reader-text">Original
+                                                                    price was:
+                                                                    kz65.00.</span><ins aria-hidden="true"><span
+                                                                        class="woocommerce-Price-amount amount"><span
+                                                                            class="woocommerce-Price-currencySymbol">kz</span>{{ $item->price }}</span></ins><span
+                                                                    class="screen-reader-text">Current
+                                                                    price is:
+                                                                    kz55.00.</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="c_author float-end">
+                                                            <img alt=""
+                                                                src="{{ url('site/wp-content/uploads/2025/03/3-4.jpg') }}"
+                                                                srcset="
                                                                     https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 2x
                                                                 "
-                                                            class="avatar avatar-30 photo" height="30"
-                                                            width="30" />
-                                                        <a href="profile/edplus/indexd527.html?view=instructor">Masum
-                                                            Billah</a>
+                                                                class="avatar avatar-30 photo" height="30"
+                                                                width="30" />
+                                                            <a href="profile/edplus/indexd527.html?view=instructor">Masum
+                                                                Billah</a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- End Col-->
+                                        <!-- End Col-->
+                                    @endforeach
 
-                                    <div class="col-xl-4 col-md-6 col-12 mix finance-account wow fadeInUp">
+                                    {{-- <div class="col-xl-4 col-md-6 col-12 mix finance-account wow fadeInUp">
                                         <div class="single_course course_style2">
                                             <div class="course_img">
                                                 <div class="ccategory">
@@ -1322,7 +1317,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- End Col-->
+                                    <!-- End Col--> --}}
                                 </div>
                             </div>
                         </section>
@@ -1337,7 +1332,7 @@
                     data-widget_type="edplus-video.default">
                     <div class="elementor-widget-container">
                         <!-- Start Working Area -->
-                        <section class="working-area">
+                        {{--  <section class="working-area">
                             <div class="container">
                                 <div class="section-title text-center wow fadeInUp">
                                     <span>
@@ -1379,7 +1374,7 @@
                                         alt="" class="marrow_shape aniupDown" />
                                 </div>
                             </div>
-                        </section>
+                        </section> --}}
                         <!-- End Working Area -->
                     </div>
                 </div>
@@ -1405,12 +1400,12 @@
                                                         src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
                                                         alt="" />
                                                 </span>
-                                                Testimonials
+                                                Testemunhos
                                             </span>
                                             <h2>
-                                                People’s Say About Our
+                                                O que as pessoas dizem sobre
                                                 <br />
-                                                Edplus
+                                                IJOMAC
                                             </h2>
                                             <img decoding="async"
                                                 src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
@@ -1623,8 +1618,7 @@
 
                                             <div class="testimonial2_item">
                                                 <div class="tes_top">
-                                                    <img loading="lazy" decoding="async" width="104"
-                                                        height="104"
+                                                    <img loading="lazy" decoding="async" width="104" height="104"
                                                         src="{{ url('site/wp-content/uploads/2025/03/1-1.png') }}"
                                                         class="attachment-edplus_testi size-edplus_testi wp-post-image"
                                                         alt=""
@@ -1680,9 +1674,9 @@
                                         src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
                                         alt="" />
                                 </span>
-                                Instructors
+                                Formadores
                             </span>
-                            <h2>Our Expert Instructors</h2>
+                            <h2>Profissionais experiêntes</h2>
                             <img decoding="async"
                                 src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
                                 alt="" />
@@ -1698,46 +1692,47 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="instructor-slider position-relative owl-carousel col-12 wow fadeInUp">
-                                        <div class="teacher_item">
-                                            <div class="teacher_image">
-                                                <img loading="lazy" decoding="async" width="360" height="316"
-                                                    src="{{ url('site/wp-content/uploads/2025/03/4-1.png') }}"
-                                                    class="attachment-edplus_instructor_img size-edplus_instructor_img wp-post-image"
-                                                    alt=""
-                                                    srcset="
+                                        @foreach ($teachers as $item)
+                                            <div class="teacher_item">
+                                                <div class="teacher_image">
+                                                    <img loading="lazy" decoding="async" width="360" height="316"
+                                                        src="{{ url('site/wp-content/uploads/2025/03/4-1.png') }}"
+                                                        class="attachment-edplus_instructor_img size-edplus_instructor_img wp-post-image"
+                                                        alt=""
+                                                        srcset="
                                                             https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/4-1.png         361w,
                                                             https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/4-1-300x263.png 300w
                                                         "
-                                                    sizes="(max-width: 360px) 100vw, 360px" />
-                                                <ul class="tsocial_links">
-                                                    <li>
-                                                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                        sizes="(max-width: 360px) 100vw, 360px" />
+                                                    <ul class="tsocial_links">
+                                                        <li>
+                                                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                            <div class="teacher_content">
-                                                <h4>
-                                                    <a href="profile/edplus/indexd527.html?view=instructor">MD. Masum
-                                                        Billah</a>
-                                                </h4>
-                                                <span>Software Engineer</span>
-                                                <div class="ins_meta">
-                                                    <span><i class="fa-solid fa-book"></i>
-                                                        36 Courses</span>
-                                                    <span><i class="fa-solid fa-graduation-cap"></i>
-                                                        196 Students</span>
+                                                <div class="teacher_content">
+                                                    <h4>
+                                                        <a href="profile/edplus/indexd527.html?view=instructor">{{ $item->name}}</a>
+                                                    </h4>
+                                                    <span>Software Engineer</span>
+                                                    <div class="ins_meta">
+                                                        <span><i class="fa-solid fa-book"></i>
+                                                            36 Courses</span>
+                                                        <span><i class="fa-solid fa-graduation-cap"></i>
+                                                            196 Students</span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        @endforeach
                                         <!-- End instructor_item -->
-                                        <div class="teacher_item">
+                                        {{-- <div class="teacher_item">
                                             <div class="teacher_image">
                                                 <img loading="lazy" decoding="async" width="360" height="316"
                                                     src="{{ url('site/wp-content/uploads/2025/03/4-1.png') }}"
@@ -2086,7 +2081,7 @@
                                                         100 Students</span>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                         <!-- End instructor_item -->
                                     </div>
                                     <!-- End Col -->
@@ -2168,7 +2163,7 @@
                     data-widget_type="edplus-blog.default">
                     <div class="elementor-widget-container">
                         <!-- Start Blog -->
-                        <section class="blog">
+                       {{--  <section class="blog">
                             <div class="container">
                                 <div class="section-title text-center wow fadeInUp">
                                     <span>
@@ -2217,8 +2212,8 @@
                                                 <a href="leverage-agile-frameworks-to-provide/index.html">Leverage agile
                                                     frameworks to provide</a>
                                             </h3>
-                                            <a href="leverage-agile-frameworks-to-provide/index.html"
-                                                class="blog_btn2"><i class="ph ph-arrow-right"></i></a>
+                                            <a href="leverage-agile-frameworks-to-provide/index.html" class="blog_btn2"><i
+                                                    class="ph ph-arrow-right"></i></a>
                                         </div>
                                     </div>
                                     <!-- End blog_item -->
@@ -2301,12 +2296,12 @@
                                     <!-- End blog_item -->
                                 </div>
                             </div>
-                        </section>
+                        </section> --}}
                         <!-- End Blog -->
                     </div>
                 </div>
             </div>
-            <div class="elementor-element elementor-element-95b4bb1 e-grid e-con-boxed e-con e-parent" data-id="95b4bb1"
+            {{-- <div class="elementor-element elementor-element-95b4bb1 e-grid e-con-boxed e-con e-parent" data-id="95b4bb1"
                 data-element_type="container" data-e-type="container">
                 <div class="e-con-inner">
                     <div class="elementor-element elementor-element-58ea98b cta2_content1 elementor-widget elementor-widget-edplus-cta"
@@ -2373,7 +2368,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 
