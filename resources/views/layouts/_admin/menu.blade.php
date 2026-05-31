@@ -110,7 +110,7 @@
                 </li>
 
                 {{-- Menu Tags --}}
-                <li class="nxl-item nxl-hasmenu">
+                {{-- <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-tag"></i></span>
                         <span class="nxl-mtext">Tags</span><span class="nxl-arrow"><i
@@ -122,10 +122,10 @@
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.tag.create') }}">Nova Tag</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 
                 {{-- Menu News --}}
-                <li class="nxl-item nxl-hasmenu">
+                {{-- <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-send"></i></span>
                         <span class="nxl-mtext">Eventos</span><span class="nxl-arrow"><i
@@ -136,13 +136,11 @@
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.news.index') }}">Todos
                             </a></li>
                         @can('is-editor')
-                            {{-- Noticias Arquivadas --}}
                             <li class="nxl-item">
                                 <a href="{{ route('admin.newsArchived.index') }}" class="nxl-link">
                                     <span class="nxl-mtext">Arquivados</span>
                                 </a>
                             </li>
-                            {{-- Noticias em Rascunho --}}
                             <li class="nxl-item">
                                 <a href="{{ route('admin.newsDraft.index') }}" class="nxl-link">
                                     <span class="nxl-mtext">Rascunho</span>
@@ -150,15 +148,15 @@
                             </li>
                         @endcan
                     </ul>
-                </li>
+                </li> --}}
 
                 {{-- Menu Comentários --}}
-                <li class="nxl-item">
+                {{-- <li class="nxl-item">
                     <a href="{{ route('admin.comments.index') }}"class="nxl-link">
                         <span class="nxl-micon"><i class="feather-message-square"></i></span>
                         <span class="nxl-mtext">Comentários</span>
                     </a>
-                </li>
+                </li> --}}
 
                 <li class="nxl-item nxl-caption">
                     <label>Multimedia</label>

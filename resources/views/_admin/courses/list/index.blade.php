@@ -34,9 +34,9 @@
                                 </a>
                             </div>
                         </div>
-                        <a href="{{ route('admin.category.create') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.course.create') }}" class="btn btn-danger">
                             <i class="feather-plus me-2"></i>
-                            <span>Nova Categoria</span>
+                            <span>Adicionar Curso</span>
                         </a>
                     </div>
                 </div>
