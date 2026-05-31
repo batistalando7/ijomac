@@ -94,20 +94,20 @@
                     </ul>
                 </li>
                 
-                {{-- Menu Types Categories --}}
-                {{-- <li class="nxl-item nxl-hasmenu">
+                {{-- Menu services --}}
+                <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-list"></i></span>
-                        <span class="nxl-mtext">Subcategorias</span><span class="nxl-arrow"><i
+                        <span class="nxl-mtext">Serviços</span><span class="nxl-arrow"><i
                                 class="feather-chevron-right"></i></span>
                     </a>
                     <ul class="nxl-submenu">
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.typeCategories.index') }}">Lista
-                                de Subcategorias</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.typeCategory.create') }}">Nova
-                                Subcategoria</a></li>
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.service.index') }}">Lista
+                                de Serviços</a></li>
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.service.create') }}">Novo
+                                Serviço</a></li>
                     </ul>
-                </li> --}}
+                </li>
 
                 {{-- Menu Tags --}}
                 <li class="nxl-item nxl-hasmenu">

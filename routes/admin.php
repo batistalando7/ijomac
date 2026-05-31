@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\ActivityLogController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\RelatorioController;
 use App\Http\Controllers\Admin\TeacherController;
+use App\Http\Controllers\Admin\ServiceController;
 /* end admin controllers */
 
 /* auth controllers */
@@ -107,6 +108,17 @@ Route::group([
         Route::get('edit/{teacher}', [TeacherController::class, 'edit'])->name('teacher.edit');
         Route::put('update/{teacher}', [TeacherController::class, 'update'])->name('teacher.update');
         Route::get('delete/{teacher}', [TeacherController::class, 'destroy'])->name('teacher.delete');
+    });
+
+    /*services routes*/
+    Route::prefix('admin.services')->name('admin.')->group(function () {
+        Route::get('list', [ServiceController::class, 'index'])->name('service.index');
+        Route::get('create', [ServiceController::class, 'create'])->name('service.create');
+        Route::post('store', [ServiceController::class, 'store'])->name('service.store');
+        Route::get('details/{service}', [ServiceController::class, 'show'])->name('service.show');
+        Route::get('edit/{service}', [ServiceController::class, 'edit'])->name('service.edit');
+        Route::put('update/{service}', [ServiceController::class, 'update'])->name('service.update');
+        Route::get('delete/{service}', [ServiceController::class, 'destroy'])->name('service.delete');
     });
 
     Route::post('/notifications/mark-all-read', [AlertsController::class, 'markAllRead'])->name('notifications.markAllRead');

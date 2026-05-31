@@ -1,6 +1,6 @@
 {{-- @extends('._admin.dashboard.crm.graficos') --}}
 @extends('layouts._admin.main')
-@section('title', 'EventHub- Visão Geral')
+@section('title', 'IJOMAC - Visão Geral')
 @section('content')
 
     <div class="nxl-content">

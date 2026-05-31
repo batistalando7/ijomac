@@ -15,6 +15,12 @@ class CreateServicesTable extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->string('image')->nullable();
+            $table->enum('status', ['published', 'draft'])->default('published');
+            $table->string('slug')->unique();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
