@@ -7,46 +7,19 @@ use App\Models\News;
 use App\Models\Category;
 use App\Models\Advertisement;
 use App\Models\Video;
+use App\Models\Course;
+use App\Models\Teacher;
 
 class HomeController extends Controller
 {
     public function home()
     {
 
-        /* Noticia da Categoria Politica com mais destaques */
-        $response['detachEvents'] = News::where('detach', 'destaque')->where('status', 'publicado')// apenas notícias destaque
-            ->orderByDesc('id') // pega a mais recente
-            ->take(3)
-            ->get();
-        /* fim */
-        
-        /* os ultimos */
-        $response['lastestEvents'] = News::where('status', 'publicado')
-            ->orderByDesc('id')
-            ->take(3)
-            ->get();
-        /* fim */
-        
-        /* evento com mais destaques */
-        $response['premiumEvent'] = News::where('detach', 'premium')->where('status', 'publicado')
-            ->orderByDesc('id')
-            ->first();
-        /* fim */
-
-        /* Sessão Noticia por Categoria - Puxando a noticia mais recente de cada categoria */
-        $response['news'] = News::where('status', 'publicado')
-            ->whereIn('id', function ($query) {
-                $query->selectRaw('MAX(id)')
-                    ->from('news')
-                    ->where('status', 'publicado')
-                    ->groupBy('category_id');
-            })
-            ->orderBy('created_at', 'desc')
-            ->take(6) // limita a 6 categorias no máximo
-            ->get();
-        /* fim */
-
         $response['categories'] = Category::take(4)->get();
+
+        $response['courses'] = Course::where('status', 'published')->orderByDesc('id')->take(3)->get();
+
+        $response['teachers'] = Teacher::orderByDesc('id')->take(3)->get();
 
         /* Modal de Subscrição */
         $response['subscription'] = News::where('status', 'publicado')->where('detach', 'destaque')->orderByDesc('id')->first();

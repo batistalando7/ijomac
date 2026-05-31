@@ -200,7 +200,7 @@
              <div class="row">
                  <div class="col-md-6 col-12 align-self-center text-md-start text-center">
                      <a href="index.html" class="foot_logo">
-                         <img src="{{ url('site/wp-content/themes/edplus/assets/img/logo.svg') }}" alt="" />
+                         <img src="{{ url('site/logo/cute.png') }}" width="150" alt="" />
                      </a>
                  </div>
                  <!-- End Col -->
