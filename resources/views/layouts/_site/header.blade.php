@@ -61,7 +61,7 @@
                             <ul id="menu-main-menu" class=" ">
                                 <li id="menu-item-1468"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-22 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor">
-                                    <a href="{{ route('site.home') }}" aria-current="page" onClick="return true">Home</a>
+                                    <a href="{{ route('site.home') }}" aria-current="page" onClick="return true">Página Inicial</a>
                                     {{-- <ul class="sub-menu">
                                         <li id="menu-item-1011"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-22 current_page_item menu-item-1011">
@@ -83,9 +83,9 @@
                                     </ul> --}}
                                 </li>
                                 <li id="menu-item-1071"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1071">
-                                    <a href="courses/index.html" onClick="return true">Courses</a>
-                                    <ul class="sub-menu">
+                                    class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-1071">
+                                    <a href="{{ route('site.courses') }}" onClick="return true">Cursos</a>
+                                    {{-- <ul class="sub-menu">
                                         <li id="menu-item-1160"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1160">
                                             <a href="courses/index.html" onClick="return true">Courses</a>
@@ -142,26 +142,26 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </li>
                                 <li id="menu-item-1149"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1149">
-                                    <a href="#" onClick="return true">Pages</a>
+                                    <a href="#" onClick="return true">Sobre Nós</a>
                                     <ul class="sub-menu">
                                         <li id="menu-item-1202"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1202">
-                                            <a href="{{ route('site.about') }}" onClick="return true">About</a>
+                                            <a href="{{ route('site.about') }}" onClick="return true">Quem Somos</a>
                                         </li>
-                                        <li id="menu-item-1659"
+                                        {{-- <li id="menu-item-1659"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1659">
                                             <a href="all-events/index.html" onClick="return true">Events</a>
-                                        </li>
+                                        </li> --}}
                                         <li id="menu-item-1155"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1155">
                                             <a href="teachers-and-instructors/index.html"
-                                                onClick="return true">Teachers</a>
+                                                onClick="return true">Formadores</a>
                                         </li>
-                                        <li id="menu-item-1660"
+                                        {{-- <li id="menu-item-1660"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1660">
                                             <a href="profile/edplus/indexd527.html?view=instructor"
                                                 onClick="return true">Instructor Details</a>
@@ -200,21 +200,21 @@
                                                         onClick="return true">Blog Details</a>
                                                 </li>
                                             </ul>
-                                        </li>
+                                        </li> --}}
                                         <li id="menu-item-1151"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1151">
                                             <a href="faq/index.html" onClick="return true">FAQ</a>
                                         </li>
-                                        <li id="menu-item-1156"
+                                        {{-- <li id="menu-item-1156"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1156">
                                             <a href="404.html" onClick="return true">404</a>
-                                        </li>
+                                        </li> --}}
                                     </ul>
                                 </li>
                                 <li id="menu-item-1970"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1970">
-                                    <a href="#" onClick="return true">Shop</a>
-                                    <ul class="sub-menu">
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1970">
+                                    <a href="#" onClick="return true">Serviços</a>
+                                    {{-- <ul class="sub-menu">
                                         <li id="menu-item-1921"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1921">
                                             <a href="shop/index.html" onClick="return true">Product List</a>
@@ -232,11 +232,11 @@
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1157">
                                             <a href="checkout/index.html" onClick="return true">Checkout</a>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </li>
                                 <li id="menu-item-1088"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1088">
-                                    <a href="{{ route('site.contacts') }}" onClick="return true">Contact</a>
+                                    <a href="{{ route('site.contacts') }}" onClick="return true">Contactos</a>
                                 </li>
                             </ul>
                         </nav>

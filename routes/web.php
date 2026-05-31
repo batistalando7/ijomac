@@ -26,9 +26,9 @@ Route::redirect('/', 'portal/home');
 
 Route::get('portal/home', [HomeController::class, 'home'])->name('site.home');
 Route::get('portal/contactos', ['as' => 'site.contacts', 'uses' => 'Site\ContactController@index']);
-Route::get('portal/eventos', ['as' => 'site.events', 'uses' => 'Site\EventsController@index']);
-Route::get('portal/eventos/{id}', ['as' => 'site.events.details', 'uses' => 'Site\EventsController@show']);
-Route::get('portal/eventos/{id}/participar', ['as' => 'site.events.participate', 'uses' => 'Site\EventsController@participate']);
+Route::get('portal/cursos', ['as' => 'site.courses', 'uses' => 'Site\CourseController@index']);
+Route::get('portal/cursos/{course:slug}', ['as' => 'site.courses.details', 'uses' => 'Site\CourseController@show']);
+Route::get('portal/cursos/{course:slug}/participar', ['as' => 'site.courses.participate', 'uses' => 'Site\CourseController@participate']);
 Route::get('portal/quem-somos', ['as' => 'site.about', 'uses' => 'Site\AboutController@index']);
 
 /* Rota de Comentarios */

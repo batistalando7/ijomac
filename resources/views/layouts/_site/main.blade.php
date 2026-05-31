@@ -684,7 +684,7 @@
 <body
     class="home wp-singular page-template page-template-page-builder page-template-page-builder-php page page-id-22 wp-embed-responsive wp-theme-edplus theme-edplus tutor-lms woocommerce-no-js elementor-default elementor-kit-12 elementor-page elementor-page-22">
 
-    <!-- Preloader -->
+   {{--  <!-- Preloader -->
     <div class="preloader_wrap">
         <img src="{{ url('site/wp-content/themes/edplus/assets/img/pre_logo.svg') }}" class="pre_logo"
             alt="" />
@@ -753,7 +753,7 @@
         </div>
     </div>
 
-    <div class="offcanvas__overlay"></div>
+    <div class="offcanvas__overlay"></div> --}}
 
 
     {{-- header --}}
