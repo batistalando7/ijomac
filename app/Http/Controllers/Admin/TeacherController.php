@@ -53,7 +53,7 @@ class TeacherController extends Controller
         if($request->hasFile('photo')) {
             $image = $request->file('photo');
             $imageName = time() . '_' . $request->file('photo')->getClientOriginalName();
-            $path = $image->storeAs('public/teachers', $imageName);
+            $path = $image->storeAs('public/teachers', $imageName, 'public');
             $teacher->photo = $path;
         }
 

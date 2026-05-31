@@ -62,7 +62,7 @@
                                 @csrf
                                 @method('PUT')
                                 {{-- aqui o formulário --}}
-                                @include('form._formTeacher.index')
+                                @include('form._formTeachers.index')
                                 {{-- fim do formulário --}}
                             </form>
                         </div>
