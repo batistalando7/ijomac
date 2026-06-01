@@ -609,7 +609,9 @@
 
                     </div>
                 </div>
-                <div class="elementor-element elementor-element-e5f20c4 elementor-widget elementor-widget-edplus-instructors"
+                {{-- formadores --}}
+                @include('components.formadores')
+                {{-- <div class="elementor-element elementor-element-e5f20c4 elementor-widget elementor-widget-edplus-instructors"
                     data-id="e5f20c4" data-element_type="widget" data-e-type="widget"
                     data-widget_type="edplus-instructors.default">
                     <div class="elementor-widget-container">
@@ -920,7 +922,7 @@
                             </defs>
                         </svg>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="elementor-element elementor-element-e27138f e-con-full e-flex e-con e-parent" data-id="e27138f"
                 data-element_type="container" data-e-type="container">
@@ -962,7 +964,7 @@
                     </div>
                 </div>
             </div>
-            <div class="elementor-element elementor-element-cbff98d e-grid e-con-boxed e-con e-parent" data-id="cbff98d"
+            {{-- <div class="elementor-element elementor-element-cbff98d e-grid e-con-boxed e-con e-parent" data-id="cbff98d"
                 data-element_type="container" data-e-type="container">
                 <div class="e-con-inner">
                     <div class="elementor-element elementor-element-1120df4 cta2_content1 elementor-widget elementor-widget-edplus-cta"
@@ -1015,7 +1017,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
 
     </div>
