@@ -11,7 +11,6 @@
                     <h5 class="m-b-10">Visão Geral</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/admin">Home</a></li>
                     <li class="breadcrumb-item">Visão Geral</li>
                 </ul>
             </div>
@@ -48,9 +47,8 @@
                                     </div>
                                     <div>
                                         <div class="fs-4 fw-bold text-dark"><span
-                                                class="counter">{{ $publicNews ?? '' }}</span>/<span
-                                                class="counter">{{ $qtdNews ?? '' }}</span></div>
-                                        <h3 class="fs-13 fw-semibold text-truncate-1-line">Notícias Publicadas</h3>
+                                                class="counter">{{ $coursesTotal ?? '' }}</span></div>
+                                        <h3 class="fs-13 fw-semibold text-truncate-1-line">Total de cursos</h3>
                                     </div>
                                 </div>
                                 <a href="javascript:void(0);" class="">
@@ -60,15 +58,15 @@
                             <div class="pt-4">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <a href="javascript:void(0);"
-                                        class="fs-12 fw-medium text-muted text-truncate-1-line">Notícias Publicadas </a>
+                                        class="fs-12 fw-medium text-muted text-truncate-1-line">Total de Cursos </a>
                                     <div class="w-100 text-end">
-                                        <span class="fs-12 text-dark">{{ $publicNews ?? '' }} Completadas</span>
-                                        <span class="fs-11 text-muted">({{ $publicNewsPrecent ?? '10' }}%)</span>
+                                        <span class="fs-12 text-dark">Cursos</span>
+                                        <span class="fs-11 text-muted">(100%)</span>
                                     </div>
                                 </div>
                                 <div class="progress mt-2 ht-3">
                                     <div class="progress-bar bg-success" role="progressbar"
-                                        style="width: {{ $publicNewsPrecent ?? '10' }}%"></div>
+                                        style="width: 100%"></div>
                                 </div>
                             </div>
                         </div>
@@ -86,9 +84,8 @@
                                     </div>
                                     <div>
                                         <div class="fs-4 fw-bold text-dark"><span
-                                                class="counter">{{ $filedNews ?? '' }}</span>/<span
-                                                class="counter">{{ $qtdNews ?? '' }}</span></div>
-                                        <h3 class="fs-13 fw-semibold text-truncate-1-line">Notícias Arquivadas</h3>
+                                                class="counter">{{ $servicesTotal ?? '' }}</span></div>
+                                        <h3 class="fs-13 fw-semibold text-truncate-1-line">Total de Serviços</h3>
                                     </div>
                                 </div>
                                 <a href="javascript:void(0);" class="">
@@ -98,15 +95,15 @@
                             <div class="pt-4">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <a href="javascript:void(0);"
-                                        class="fs-12 fw-medium text-muted text-truncate-1-line">Notícias Arquivadas </a>
+                                        class="fs-12 fw-medium text-muted text-truncate-1-line">Total de Serviços</a>
                                     <div class="w-100 text-end">
-                                        <span class="fs-12 text-dark">{{ $filedNews ?? '' }} Completadas</span>
-                                        <span class="fs-11 text-muted">({{ $filedNewsPrecent ?? '' }}%)</span>
+                                        <span class="fs-12 text-dark">Total de Serviços</span>
+                                        <span class="fs-11 text-muted">(100%)</span>
                                     </div>
                                 </div>
                                 <div class="progress mt-2 ht-3">
                                     <div class="progress-bar bg-secondary" role="progressbar"
-                                        style="width: {{ $filedNewsPrecent ?? '63' }}%"></div>
+                                        style="width: 100%"></div>
                                 </div>
                             </div>
                         </div>
