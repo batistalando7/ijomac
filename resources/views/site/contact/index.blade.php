@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="profile" href="{{ url('site/gmpg.org/xfn/11.html') }}" />
 
-        <title>Contact &#8211; Edplus</title>
+        <title>Contactos</title>
         <meta name="robots" content="max-image-preview:large" />
         <link rel="dns-prefetch" href="{{ url('site/cdn.jsdelivr.net/index.html') }}" />
         <link
@@ -849,7 +849,7 @@
         class="wp-singular page-template page-template-page-builder page-template-page-builder-php page page-id-1074 wp-embed-responsive wp-theme-edplus theme-edplus tutor-lms woocommerce-no-js elementor-default elementor-kit-12 elementor-page elementor-page-1074"
     >
         <!-- Preloader -->
-       {{--  <div class="preloader_wrap">
+        <div class="preloader_wrap">
             <img
                 src="{{ url('site/wp-content/themes/edplus/assets/img/pre_logo.svg') }}"
                 class="pre_logo"
@@ -943,507 +943,10 @@
             </div>
         </div>
 
-        <div class="offcanvas__overlay"></div> --}}
+        <div class="offcanvas__overlay"></div>
 
         <!-- Start Header -->
-        <header id="navigation" class="header_2">
-            <div class="header-top">
-                <div class="container">
-                    <div class="row">
-                        <div
-                            class="col-lg-6 col-md-12 text-center htleft d-lg-flex align-self-center"
-                        >
-                            <p class="align-self-center">
-                                <i class="fa-regular fa-user"></i>
-                                <a href="../student-registration/index.html"
-                                    >Register / Login</a
-                                >
-                            </p>
-                            <ul class="align-self-center text-center">
-                                <li>
-                                    <a href="#"
-                                        ><i class="fa-brands fa-facebook-f"></i
-                                    ></a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        ><i class="fa-brands fa-x-twitter"></i
-                                    ></a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        ><i class="fa-brands fa-linkedin-in"></i
-                                    ></a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        ><i class="fa-brands fa-youtube"></i
-                                    ></a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div
-                            class="col-lg-6 col-md-12 text-center htright d-lg-flex justify-content-end"
-                        >
-                            <p class="align-self-center">
-                                <i class="fa-solid fa-headset"></i>
-                                <span>Call Us:</span>
-                                <a href="tel:+99925476854">+99925476854</a>
-                            </p>
-
-                            <p class="align-self-center">
-                                <i class="fa-regular fa-envelope"></i>
-                                <span>Email:</span>
-                                <a href="mailto:support@example.com"
-                                    >support@example.com</a
-                                >
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Header Top -->
-
-            <div class="main-header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-2 col-md-3 col-4 align-self-center">
-                            <div
-                                class="header-left d-flex justify-content-start"
-                            >
-                                <div class="site-logo">
-                                    <a href="../index.html"
-                                        ><img
-                                            src="{{ url('site/wp-content/themes/edplus/assets/img/logo.svg') }}"
-                                            alt="Edplus"
-                                    /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End site-logo -->
-
-                        <div class="col-xl-10 col-md-9 col-8 align-self-center">
-                            <div
-                                class="header_right d-flex gap-4 justify-content-end"
-                            >
-                                <nav id="main-menu">
-                                    <ul id="menu-main-menu" class=" ">
-                                        <li
-                                            id="menu-item-1468"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-1468"
-                                        >
-                                            <a
-                                                href="../index.html"
-                                                onClick="return true"
-                                                >Home</a
-                                            >
-                                            <ul class="sub-menu">
-                                                <li
-                                                    id="menu-item-1011"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1011"
-                                                >
-                                                    <a
-                                                        href="../index.html"
-                                                        onClick="return true"
-                                                        >Online Course</a
-                                                    >
-                                                </li>
-                                                <li
-                                                    id="menu-item-1010"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1010"
-                                                >
-                                                    <a
-                                                        href="../university/index.html"
-                                                        onClick="return true"
-                                                        >University</a
-                                                    >
-                                                </li>
-                                                <li
-                                                    id="menu-item-1740"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1740"
-                                                >
-                                                    <a
-                                                        href="../distance/index.html"
-                                                        onClick="return true"
-                                                        >Distance</a
-                                                    >
-                                                </li>
-                                                <li
-                                                    id="menu-item-1818"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1818"
-                                                >
-                                                    <a
-                                                        href="../rtl/index.html"
-                                                        onClick="return true"
-                                                        >RTL Homepage</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li
-                                            id="menu-item-1071"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1071"
-                                        >
-                                            <a
-                                                href="../courses/index.html"
-                                                onClick="return true"
-                                                >Courses</a
-                                            >
-                                            <ul class="sub-menu">
-                                                <li
-                                                    id="menu-item-1160"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1160"
-                                                >
-                                                    <a
-                                                        href="../courses/index.html"
-                                                        onClick="return true"
-                                                        >Courses</a
-                                                    >
-                                                    <ul class="sub-menu">
-                                                        <li
-                                                            id="menu-item-1808"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1808"
-                                                        >
-                                                            <a
-                                                                href="../courses/index.html"
-                                                                onClick="return true"
-                                                                >Course Style
-                                                                1</a
-                                                            >
-                                                        </li>
-                                                        <li
-                                                            id="menu-item-1809"
-                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1809"
-                                                        >
-                                                            <a
-                                                                href="../courses/index8738.html?course_style=2"
-                                                                onClick="return true"
-                                                                >Course Style
-                                                                2</a
-                                                            >
-                                                        </li>
-                                                        <li
-                                                            id="menu-item-1810"
-                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810"
-                                                        >
-                                                            <a
-                                                                href="../courses/index20fd.html?course_style=3"
-                                                                onClick="return true"
-                                                                >Course Style
-                                                                3</a
-                                                            >
-                                                        </li>
-                                                        <li
-                                                            id="menu-item-1823"
-                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1823"
-                                                        >
-                                                            <a
-                                                                href="../courses/indexff98.html?course_style=4"
-                                                                onClick="return true"
-                                                                >Course Style
-                                                                4</a
-                                                            >
-                                                        </li>
-                                                        <li
-                                                            id="menu-item-1824"
-                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1824"
-                                                        >
-                                                            <a
-                                                                href="../courses/index54c4.html?course_style=5"
-                                                                onClick="return true"
-                                                                >Course Style
-                                                                5</a
-                                                            >
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li
-                                                    id="menu-item-1356"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1356"
-                                                >
-                                                    <a
-                                                        href="#"
-                                                        onClick="return true"
-                                                        >Course Details</a
-                                                    >
-                                                    <ul class="sub-menu">
-                                                        <li
-                                                            id="menu-item-1353"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-courses menu-item-1353"
-                                                        >
-                                                            <a
-                                                                href="../courses/the-ultimate-guide-to-building-a-restful-api/index.html"
-                                                                onClick="return true"
-                                                                >Style 1</a
-                                                            >
-                                                        </li>
-                                                        <li
-                                                            id="menu-item-1354"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-courses menu-item-1354"
-                                                        >
-                                                            <a
-                                                                href="../courses/enhance-your-personal-financial-analysis-skills/index.html"
-                                                                onClick="return true"
-                                                                >Style 2</a
-                                                            >
-                                                        </li>
-                                                        <li
-                                                            id="menu-item-1355"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-courses menu-item-1355"
-                                                        >
-                                                            <a
-                                                                href="../courses/seo-as-the-core-of-your-new-business-venture/index.html"
-                                                                onClick="return true"
-                                                                >Style 3</a
-                                                            >
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li
-                                            id="menu-item-1149"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1149"
-                                        >
-                                            <a href="#" onClick="return true"
-                                                >Pages</a
-                                            >
-                                            <ul class="sub-menu">
-                                                <li
-                                                    id="menu-item-1202"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1202"
-                                                >
-                                                    <a
-                                                        href="../about/index.html"
-                                                        onClick="return true"
-                                                        >About</a
-                                                    >
-                                                </li>
-                                                <li
-                                                    id="menu-item-1659"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1659"
-                                                >
-                                                    <a
-                                                        href="../all-events/index.html"
-                                                        onClick="return true"
-                                                        >Events</a
-                                                    >
-                                                </li>
-                                                <li
-                                                    id="menu-item-1155"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1155"
-                                                >
-                                                    <a
-                                                        href="../teachers-and-instructors/index.html"
-                                                        onClick="return true"
-                                                        >Teachers</a
-                                                    >
-                                                </li>
-                                                <li
-                                                    id="menu-item-1660"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1660"
-                                                >
-                                                    <a
-                                                        href="../profile/edplus/indexd527.html?view=instructor"
-                                                        onClick="return true"
-                                                        >Instructor Details</a
-                                                    >
-                                                </li>
-                                                <li
-                                                    id="menu-item-1153"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1153"
-                                                >
-                                                    <a
-                                                        href="../instructor-registration/index.html"
-                                                        onClick="return true"
-                                                        >Instructor
-                                                        Registration</a
-                                                    >
-                                                </li>
-                                                <li
-                                                    id="menu-item-1154"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1154"
-                                                >
-                                                    <a
-                                                        href="../student-registration/index.html"
-                                                        onClick="return true"
-                                                        >Student Registration</a
-                                                    >
-                                                </li>
-                                                <li
-                                                    id="menu-item-1150"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1150"
-                                                >
-                                                    <a
-                                                        href="../dashboard/index.html"
-                                                        onClick="return true"
-                                                        >Dashboard</a
-                                                    >
-                                                </li>
-                                                <li
-                                                    id="menu-item-1013"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1013"
-                                                >
-                                                    <a
-                                                        href="../blog/index.html"
-                                                        onClick="return true"
-                                                        >Blog</a
-                                                    >
-                                                    <ul class="sub-menu">
-                                                        <li
-                                                            id="menu-item-1152"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1152"
-                                                        >
-                                                            <a
-                                                                href="../grid-blog/index.html"
-                                                                onClick="return true"
-                                                                >Grid Blog</a
-                                                            >
-                                                        </li>
-                                                        <li
-                                                            id="menu-item-1159"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1159"
-                                                        >
-                                                            <a
-                                                                href="../blog/index.html"
-                                                                onClick="return true"
-                                                                >Standard
-                                                                Blog</a
-                                                            >
-                                                        </li>
-                                                        <li
-                                                            id="menu-item-1203"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1203"
-                                                        >
-                                                            <a
-                                                                href="../online-learning-program-for-students/index.html"
-                                                                onClick="return true"
-                                                                >Blog Details</a
-                                                            >
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li
-                                                    id="menu-item-1151"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1151"
-                                                >
-                                                    <a
-                                                        href="../faq/index.html"
-                                                        onClick="return true"
-                                                        >FAQ</a
-                                                    >
-                                                </li>
-                                                <li
-                                                    id="menu-item-1156"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1156"
-                                                >
-                                                    <a
-                                                        href="../404.html"
-                                                        onClick="return true"
-                                                        >404</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li
-                                            id="menu-item-1970"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1970"
-                                        >
-                                            <a href="#" onClick="return true"
-                                                >Shop</a
-                                            >
-                                            <ul class="sub-menu">
-                                                <li
-                                                    id="menu-item-1921"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1921"
-                                                >
-                                                    <a
-                                                        href="../shop/index.html"
-                                                        onClick="return true"
-                                                        >Product List</a
-                                                    >
-                                                </li>
-                                                <li
-                                                    id="menu-item-1988"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-product menu-item-1988"
-                                                >
-                                                    <a
-                                                        href="../product/advanced-spanish/index.html"
-                                                        onClick="return true"
-                                                        >Single Product</a
-                                                    >
-                                                </li>
-                                                <li
-                                                    id="menu-item-1158"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1158"
-                                                >
-                                                    <a
-                                                        href="../cart/index.html"
-                                                        onClick="return true"
-                                                        >Cart</a
-                                                    >
-                                                </li>
-                                                <li
-                                                    id="menu-item-1157"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1157"
-                                                >
-                                                    <a
-                                                        href="../checkout/index.html"
-                                                        onClick="return true"
-                                                        >Checkout</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li
-                                            id="menu-item-1088"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1074 current_page_item menu-item-1088"
-                                        >
-                                            <a
-                                                href="index.html"
-                                                aria-current="page"
-                                                onClick="return true"
-                                                >Contact</a
-                                            >
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <!-- End Main Menu -->
-
-                                <a
-                                    class="search_btn align-self-center"
-                                    data-menu="#popup_searchbox"
-                                    href="#"
-                                    ><i class="ph ph-magnifying-glass"></i
-                                ></a>
-                                <a
-                                    class="cart_btn mcart_icon align-self-center"
-                                    data-menu="#mini_cart"
-                                    href="#"
-                                    ><i class="ph ph-shopping-cart"></i>
-                                    <span>0</span></a
-                                >
-                                <a
-                                    href="../student-registration/index.html"
-                                    class="blue_btn round_btn align-self-center"
-                                    >Enroll Now</a
-                                >
-
-                                <a
-                                    class="menu_btn sidebar__toggle align-self-center"
-                                    href="#"
-                                    ><img
-                                        src="../wp-content/themes/edplus/assets/img/menu.svg"
-                                        alt=""
-                                /></a>
-                            </div>
-                        </div>
-                        <!-- End Header Right -->
-                    </div>
-                </div>
-            </div>
-        </header>
+        @include('layouts._site.header')
         <!-- End Header -->
 
         <!-- Start Popup Search Box -->
@@ -1502,10 +1005,10 @@
         >
             <div class="container text-center">
                 <div class="mbanner_content">
-                    <h2>Contact</h2>
+                    <h2>Contactos</h2>
                     <p>
-                        <a href="../index.html">Home</a>
-                        <i class="ph ph-caret-right"></i> Contact
+                        <a href="../index.html">Página Inicial</a>
+                        <i class="ph ph-caret-right"></i> Contactos
                     </p>
                 </div>
             </div>
@@ -1555,8 +1058,7 @@
                                     >
                                         <span> </span>
                                         <h2>
-                                            We’re always excited to hear <br />
-                                            from you!
+                                            Estamos sempre animados para<br> receber  notícias suas!
                                         </h2>
                                         <img
                                             decoding="async"
@@ -1580,7 +1082,7 @@
                                         </div>
 
                                         <div class="cont_content">
-                                            <h4>Address</h4>
+                                            <h4>Endereço</h4>
                                             <p>
                                                 Studio 89D, Riley Ford, North
                                                 Michael Harber <br />
@@ -1668,7 +1170,7 @@
                                     <div
                                         class="contact-form"
                                         style="
-                                            background-image: url(../wp-content/uploads/2025/03/contact.png);
+                                            background-image: url({{ url('site/wp-content/uploads/2025/03/contact.png') }});
                                         "
                                     >
                                         <div
@@ -1678,10 +1180,9 @@
                                                 animation-name: fadeInUp;
                                             "
                                         >
-                                            <h4>Get in Touch</h4>
+                                            <h4>Entre em contato</h4>
                                             <p>
-                                                Feel free to contact with us, we
-                                                don’t span your email
+                                                Fique à vontade para entrar em contato conosco, não divulgamos seu e-mail.
                                             </p>
                                         </div>
 
@@ -1704,13 +1205,15 @@
                                                     <ul></ul>
                                                 </div>
                                                 <form
-                                                    action="https://wpdemothemes.com/edplus/contact/#wpcf7-f1097-p1074-o1"
+                                                   
                                                     method="post"
                                                     class="wpcf7-form init"
                                                     aria-label="Contact form"
                                                     novalidate="novalidate"
                                                     data-status="init"
+                                                    data-url="{{ route('site.message') }}"
                                                 >
+                                                @csrf
                                                     <fieldset
                                                         class="hidden-fields-container"
                                                     >
@@ -1743,25 +1246,25 @@
                                                     <p>
                                                         <input
                                                             type="text"
-                                                            placeholder="Full Name*"
+                                                            placeholder="Nome Completo*"
                                                         /><br />
                                                         <input
                                                             type="email"
-                                                            placeholder="Email Address*"
+                                                            placeholder="Endereço de Email*"
                                                         /><br />
                                                         <input
                                                             type="text"
-                                                            placeholder="Subject *"
+                                                            placeholder="Assunto *"
                                                         /><br />
                                                         <textarea
-                                                            placeholder="Your Message*"
+                                                            placeholder="Sua Mensagem*"
                                                         ></textarea
                                                         ><br />
                                                         <button
                                                             type="submit"
                                                             class="fbtn"
                                                         >
-                                                            Send Message
+                                                            Enviar Mensagem
                                                             <i
                                                                 class="ph ph-arrow-right"
                                                             ></i>
@@ -1809,364 +1312,7 @@
         </div>
 
         <!-- Start Footer -->
-        <footer
-            class="footer-area fstyle-two"
-            style="
-                background-image: url({{ url('site/wp-content/themes/edplus/assets/img/bg/footer2.svg') }});
-            "
-        >
-            <div class="container">
-                <div class="row">
-                    <div
-                        class="col-lg-3 col-md-6 col-12 align-self-center wow fadeIn"
-                    >
-                        <div
-                            id="edplus-footer-contact-info-2"
-                            class="footer-widget widget_edplus-footer-contact-info"
-                        >
-                            <h4 class="ftitle">About Us</h4>
-                            <div class="about-widget">
-                                <p>
-                                    Duis aute irure dolor in reprehenderit in
-                                    volupta velit esse cillum dolore eu fugiat
-                                    nulla pariatur. excepteur sint occaecat
-                                </p>
-                                <ul>
-                                    <li>
-                                        <span>Email:</span>
-                                        <a href="mailto:support@example.com"
-                                            >support@example.com</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <span>Phone:</span>
-                                        <a href="tel:+9801736895478"
-                                            >+9801736895478</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <span>Location:</span> 3500 Lenox Road ,
-                                        USA
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-12 wow fadeIn">
-                        <div
-                            id="nav_menu-2"
-                            class="footer-widget widget_nav_menu"
-                        >
-                            <h4 class="ftitle">Company</h4>
-                            <div class="menu-company-container">
-                                <ul id="menu-company" class="menu">
-                                    <li
-                                        id="menu-item-1170"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1170"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >About</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1171"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1171"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Course</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1172"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1172"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Instructor</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1173"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1173"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Events</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1174"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1174"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Instructor Details</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1175"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1175"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Purchase Guide</a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-12 wow fadeIn">
-                        <div
-                            id="nav_menu-3"
-                            class="footer-widget widget_nav_menu"
-                        >
-                            <h4 class="ftitle">Useful Links</h4>
-                            <div class="menu-useful-links-container">
-                                <ul id="menu-useful-links" class="menu">
-                                    <li
-                                        id="menu-item-1176"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1176"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Contact Us</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1177"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1177"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Technology</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1178"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1178"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Teachers</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1179"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1179"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Pricing</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1180"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1180"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Service</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1181"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1181"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Privacy Policy</a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-12 wow fadeIn">
-                        <div
-                            id="nav_menu-4"
-                            class="footer-widget widget_nav_menu"
-                        >
-                            <h4 class="ftitle">Explore</h4>
-                            <div class="menu-explore-container">
-                                <ul id="menu-explore" class="menu">
-                                    <li
-                                        id="menu-item-1182"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1182"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Students</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1183"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1183"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Media Relations</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1184"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1184"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Teachers</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1185"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1185"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Admission</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1186"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1186"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Department</a
-                                        >
-                                    </li>
-                                    <li
-                                        id="menu-item-1187"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1187"
-                                    >
-                                        <a href="#" onClick="return true"
-                                            >Contact Us</a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 wow fadeIn">
-                        <div id="text-3" class="widget_text">
-                            <h4 class="ftitle">Get Newsletter</h4>
-                            <div class="textwidget">
-                                <p>
-                                    Duis aute irure dolor in reprehenderit in
-                                    volupta velit esse cillum dolore eu fugiat
-                                    nulla.
-                                </p>
-                                <script>
-                                    (function () {
-                                        window.mc4wp = window.mc4wp || {
-                                            listeners: [],
-                                            forms: {
-                                                on: function (evt, cb) {
-                                                    window.mc4wp.listeners.push(
-                                                        {
-                                                            event: evt,
-                                                            callback: cb,
-                                                        },
-                                                    );
-                                                },
-                                            },
-                                        };
-                                    })();
-                                </script>
-                                <!-- Mailchimp for WordPress v4.12.5 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
-                                <form
-                                    id="mc4wp-form-1"
-                                    class="mc4wp-form mc4wp-form-1188"
-                                    method="post"
-                                    data-id="1188"
-                                    data-name="Main Form"
-                                >
-                                    <div class="mc4wp-form-fields">
-                                        <div
-                                            class="news_form position-relative"
-                                        >
-                                            <input
-                                                type="email"
-                                                name="EMAIL"
-                                                placeholder="Enter Email Address"
-                                            />
-                                            <button type="submit">
-                                                <i
-                                                    class="ph ph-paper-plane-right"
-                                                ></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <label style="display: none !important"
-                                        >Leave this field empty if you're human:
-                                        <input
-                                            type="text"
-                                            name="_mc4wp_honeypot"
-                                            value=""
-                                            tabindex="-1"
-                                            autocomplete="off" /></label
-                                    ><input
-                                        type="hidden"
-                                        name="_mc4wp_timestamp"
-                                        value="1779957073"
-                                    /><input
-                                        type="hidden"
-                                        name="_mc4wp_form_id"
-                                        value="1188"
-                                    /><input
-                                        type="hidden"
-                                        name="_mc4wp_form_element_id"
-                                        value="mc4wp-form-1"
-                                    />
-                                    <div class="mc4wp-response"></div>
-                                </form>
-                                <!-- / Mailchimp for WordPress Plugin -->
-                                <ul class="fsocial-option2 mt-3">
-                                    <li><span>Follow on: </span></li>
-                                    <li>
-                                        <a href="#"
-                                            ><i
-                                                class="fa-brands fa-facebook-f"
-                                            ></i
-                                        ></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            ><i
-                                                class="fa-brands fa-x-twitter"
-                                            ></i
-                                        ></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            ><i
-                                                class="fa-brands fa-linkedin-in"
-                                            ></i
-                                        ></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            ><i class="fa-brands fa-youtube"></i
-                                        ></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="copyright">
-                <div class="container">
-                    <div class="row">
-                        <div
-                            class="col-md-6 col-12 align-self-center text-md-start text-center"
-                        >
-                            <a href="../index.html" class="foot_logo">
-                                <img
-                                    src="{{ url('site/wp-content/themes/edplus/assets/img/logo.svg') }}"
-                                    alt=""
-                                />
-                            </a>
-                        </div>
-                        <!-- End Col -->
-
-                        <div
-                            class="col-md-6 col-12 align-self-center text-md-end text-center"
-                        >
-                            <p>Copyright © 2026 edplus. All Rights Reserved.</p>
-                        </div>
-                        <!-- End Col -->
-                    </div>
-                </div>
-            </div>
-            <!-- End copyright -->
-        </footer>
+        @include('layouts._site.footer')
         <!-- End Footer -->
         <!-- Start progress-wrap -->
         <div class="progress-wrap">

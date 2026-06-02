@@ -7,32 +7,20 @@ use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\News;
 use App\Models\User;
+use App\Models\Teacher;
 
 class HomeController extends Controller
 {
     //
     public function management()
     {
-        $response['publicNews'] = News::where('status', 'publicado')->count();//número de notícias publicadas
-        $response['filedNews'] = News::where('status', 'arquivado')->count();//número de notícias arquivadas
-        $response['draftNews'] = News::where('status', 'rascunho')->count();//número de notícias em rascunho
-        $response['premiumNews'] = News::where('detach', 'premium')->count();//número de notícias premium
-
-        $response['qtdNews'] = News::count();//número total de notícias
-
-        /* Criação de uma função para o calculo de percentagem */
-        function percent($part, $total)
-        {
-            return $total > 0 ? number_format((100 * $part) / $total, 1) : 0;
-        }
-
-        $response['publicNewsPrecent'] = percent(($response['publicNews']),$response['qtdNews']);//porcentagem de notícias publicadas
-        $response['filedNewsPrecent'] = percent(($response['filedNews']),$response['qtdNews']);//porcentagem de notícias arquivadas
-        $response['draftNewsPrecent'] = percent(($response['draftNews']),$response['qtdNews']);//porcentagem de notícias em rascunho
-        $response['premiumNewsPrecent'] = percent(($response['premiumNews']),$response['qtdNews']);//porcentagem de notícias premium
 
         $response['coursesTotal'] = Course::count();//número total de cursos
         $response['servicesTotal'] = Course::count();//número total de serviços
+        $response['usersTotal'] = User::count();//número total de usuários
+        $response['teachersTotal'] = Teacher::count();//número total de professores
+
+        $response['categoryCourses'] = Course::with('category')->get();
 
         $response['users'] = User::paginate(5);//bucando ustilizadores
 
