@@ -14,6 +14,8 @@ Route::get('portal/cursos', ['as' => 'site.courses', 'uses' => 'Site\CourseContr
 Route::get('portal/cursos/{course:slug}', ['as' => 'site.courses.details', 'uses' => 'Site\CourseController@show']);
 Route::get('portal/cursos/{course:slug}/participar', ['as' => 'site.courses.participate', 'uses' => 'Site\CourseController@participate']);
 Route::get('portal/quem-somos', ['as' => 'site.about', 'uses' => 'Site\AboutController@index']);
+Route::get('portal/servicos', ['as' => 'site.services', 'uses' => 'Site\ServiceController@index']);
+Route::get('portal/about/faqs', ['as' => 'site.about.faq', 'uses' => 'Site\AboutController@faqs']);
 
 /* Rota de Comentarios */
 /* Route::post('/comment/store/{news}', [CommentController::class, 'store'])->name('site.comment.store'); */

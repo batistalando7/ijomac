@@ -26,14 +26,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('site.layout.header', function ($view) {
-            $headerNews = News::where('detach', 'destaque')
-                ->orderBy('created_at', 'desc')
-                ->take(5)
-                ->get();
-
-            $view->with('headerNews', $headerNews);
-        });
         Carbon::setLocale('pt');
     }
 }

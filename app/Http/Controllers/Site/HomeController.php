@@ -12,7 +12,7 @@ use App\Models\Teacher;
 
 class HomeController extends Controller
 {
-    public function home()
+    public function index()
     {
 
         $response['categories'] = Category::take(4)->get();

@@ -52,7 +52,7 @@
                                 <h5 class="fw-bold mb-0 me-4">
                                     <span class="d-block mb-2">Editando o Curso :</span>
                                     <span class="fs-12 fw-normal text-muted text-truncate-1-line">Normalmente se refere a
-                                        editar/atualizar uma nova Categoria</span>
+                                        editar um Curso</span>
                                 </h5>
                                 <a href="{{ route('admin.courses.index') }}" class="btn btn-sm btn-light-brand">Listar
                                     Cursos</a>

@@ -1,15 +1,14 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte- Listar Categorias')
+@section('title', 'IJOMAC- Listar Categorias')
 @section('content')
     <div class="nxl-content">
         <!-- [ page-header ] start -->
         <div class="page-header">
             <div class="page-header-left d-flex align-items-center">
                 <div class="page-header-title">
-                    <h5 class="m-b-10">Categories</h5>
+                    <h5 class="m-b-10">Categorias</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/admin">Home</a></li>
                     <li class="breadcrumb-item">Listagem</li>
                 </ul>
             </div>

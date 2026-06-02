@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte - Listar Autores')
+@section('title', 'IJOMAC - Listar Autores')
 @section('content')
 
     <div class="nxl-content">

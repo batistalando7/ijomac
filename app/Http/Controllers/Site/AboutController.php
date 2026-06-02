@@ -13,4 +13,9 @@ class AboutController extends Controller
         $response['teachers'] = Teacher::orderByDesc('id')->get();
         return view('site.about.index', $response);
     }
+
+    public function faqs()
+    {
+        return view('site.faqs.index');
+    }
 }

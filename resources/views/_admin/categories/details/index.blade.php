@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte- Visualizar Categoria')
+@section('title', 'IJOMAC - Visualizar Categoria')
 @section('content')
 
     <div class="nxl-content">
@@ -10,8 +10,7 @@
                     <h5 class="m-b-10">Categoria</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                    <li class="breadcrumb-item">Vizualização</li>
+                    <li class="breadcrumb-item">Visualização</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">

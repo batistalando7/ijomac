@@ -1,26 +1,13 @@
 <?php
 
- use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route;
 
 /* Admin controllers */
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\Admin\NewsController;
-use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\TagController;
-use App\Http\Controllers\Admin\TypeCategoryController;
-use App\Http\Controllers\Admin\PublicationController;
-use App\Http\Controllers\Admin\VideoController;
-use App\Http\Controllers\Admin\GaleryController;
-use App\Http\Controllers\Admin\AdvertisementController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Auth\SocialAuthController;
 use App\Http\Controllers\Admin\AlertsController;
 use App\Http\Controllers\Admin\ActivityLogController;
-use App\Http\Controllers\Admin\CourseController;
-use App\Http\Controllers\Admin\RelatorioController;
-use App\Http\Controllers\Admin\TeacherController;
-use App\Http\Controllers\Admin\ServiceController;
 /* end admin controllers */
 
 /* auth controllers */
@@ -38,350 +25,132 @@ route::get('/analytics', function () {
 Auth::routes(['verify' => true]);
 
 /* Routas de admin */
-Route::group([
-    'middleware' => ['auth', 'role:admin', \App\Http\Middleware\LogUserActivity::class]
-], function () {
 
-    /* Dashboard */
-    Route::redirect('/admin', 'admin/dashboard')->name('dashboard');
-    Route::get('/admin/dashboard', [HomeController::class, 'management'])->name('admin.dashboard');
+/* Dashboard */
+Route::redirect('/admin', 'admin/dashboard')->name('dashboard');
+Route::get('/admin/dashboard', [HomeController::class, 'management'])->name('admin.dashboard');
 
-    /* Rota de Logging (página de visualização de logs) */
-    Route::get('/admin/activity-logs', [ActivityLogController::class, 'index'])->name('activity.logs');
+/* Rota de Logging (página de visualização de logs) */
+Route::get('/admin/activity-logs', [ActivityLogController::class, 'index'])->name('activity.logs');
 
-    /* Users routes */
-    Route::prefix('admin.users')->name('admin.')->group(function () {
-        Route::get('user', [UserController::class, 'index'])->name('user.index');
-        Route::get('create', [UserController::class, 'create'])->name('user.create');
-        Route::post('userStore', [UserController::class, 'store'])->name('user.store');
-        Route::get('details/{user:slug}', [UserController::class, 'show'])->name('user.show');
-        Route::get('edit/{user:slug}', [UserController::class, 'edit'])->name('user.edit');
-        Route::put('userUpdate/{user:slug}', [UserController::class, 'update'])->name('user.update');
-        Route::get('userDelete/{user:slug}', [UserController::class, 'destroy'])->name('user.delete');
-    });
-    /* end users routes */
+/* Users routes */
+Route::prefix('admin.users')->name('admin.')->group(function () {
+    Route::get('user', ['as' => 'user.index', 'uses' => 'Admin\UserController@index']);
+    Route::get('create', ['as' => 'user.create', 'uses' => 'Admin\UserController@create']);
+    Route::post('userStore', ['as' => 'user.store', 'uses' => 'Admin\UserController@store']);
+    Route::get('details/{user:slug}', ['as' => 'user.show', 'uses' => 'Admin\UserController@show']);
+    Route::get('edit/{user:slug}', ['as' => 'user.edit', 'uses' => 'Admin\UserController@edit']);
+    Route::put('userUpdate/{user:slug}', ['as' => 'user.update', 'uses' => 'Admin\UserController@update']);
+    Route::get('userDelete/{user:slug}', ['as' => 'user.delete', 'uses' => 'Admin\UserController@destroy']);
+});
+/* end users routes */
 
+/*Category routes*/
+Route::prefix('admin.categories')->name('admin.')->group(function () {
+    Route::get('list', ['as' => 'categories.index', 'uses' => 'Admin\CategoryController@index']);
+    Route::get('create', ['as' => 'category.create', 'uses' => 'Admin\CategoryController@create']);
+    Route::post('store', ['as' => 'categories.store', 'uses' => 'Admin\CategoryController@store']);
+    Route::get('details/{category}', ['as' => 'category.show', 'uses' => 'Admin\CategoryController@show']);
+    Route::get('edit/{category}', ['as' => 'category.edit', 'uses' => 'Admin\CategoryController@edit']);
+    Route::put('update/{category}', ['as' => 'category.update', 'uses' => 'Admin\CategoryController@update']);
+    Route::get('delete/{category}', ['as' => 'category.delete', 'uses' => 'Admin\CategoryController@destroy']);
 });
 
+/*Curso routes*/
+Route::prefix('admin.courses')->name('admin.')->group(function () {
+    Route::get('list', ['as' => 'courses.index', 'uses' => 'Admin\CourseController@index']);
+    Route::get('create', ['as' => 'course.create', 'uses' => 'Admin\CourseController@create']);
+    Route::post('store', ['as' => 'courses.store', 'uses' => 'Admin\CourseController@store']);
+    Route::get('details/{course}', ['as' => 'course.show', 'uses' => 'Admin\CourseController@show']);
+    Route::get('edit/{course}', ['as' => 'course.edit', 'uses' => 'Admin\CourseController@edit']);
+    Route::put('update/{course}', ['as' => 'course.update', 'uses' => 'Admin\CourseController@update']);
+    Route::get('delete/{course}', ['as' => 'course.delete', 'uses' => 'Admin\CourseController@destroy']);
+});
 
-/* Routas Editor */
-Route::group([
-    'middleware' => ['auth', 'role:admin,editor', \App\Http\Middleware\LogUserActivity::class]
-], function () {
+/*Formadores routes*/
+Route::prefix('admin.teachers')->name('admin.')->group(function () {
+    Route::get('list', ['as' => 'teacher.index', 'uses' => 'Admin\TeacherController@index']);
+    Route::get('create', ['as' => 'teacher.create', 'uses' => 'Admin\TeacherController@create']);
+    Route::post('store', ['as' => 'teacher.store', 'uses' => 'Admin\TeacherController@store']);
+    Route::get('details/{teacher}', ['as' => 'teacher.show', 'uses' => 'Admin\TeacherController@show']);
+    Route::get('edit/{teacher}', ['as' => 'teacher.edit', 'uses' => 'Admin\TeacherController@edit']);
+    Route::put('update/{teacher}', ['as' => 'teacher.update', 'uses' => 'Admin\TeacherController@update']);
+    Route::get('delete/{teacher}', ['as' => 'teacher.delete', 'uses' => 'Admin\TeacherController@destroy']);
+});
 
-    /* Users Route - Profile */
-    Route::prefix('admin.users')->name('admin.')->group(function () {
-        Route::get('details/{user:slug}', [UserController::class, 'show'])->name('user.show');
-        Route::get('edit/{user:slug}', [UserController::class, 'edit'])->name('user.edit');
-        Route::put('userUpdate/{user:slug}', [UserController::class, 'update'])->name('user.update');
-    });
-    /* end users routes */
+/*services routes*/
+Route::prefix('admin.services')->name('admin.')->group(function () {
+    Route::get('list', ['as' => 'service.index', 'uses' => 'Admin\ServiceController@index']);
+    Route::get('create', ['as' => 'service.create', 'uses' => 'Admin\ServiceController@create']);
+    Route::post('store', ['as' => 'service.store', 'uses' => 'Admin\ServiceController@store']);
+    Route::get('details/{service}', ['as' => 'service.show', 'uses' => 'Admin\ServiceController@show']);
+    Route::get('edit/{service}', ['as' => 'service.edit', 'uses' => 'Admin\ServiceController@edit']);
+    Route::put('update/{service}', ['as' => 'service.update', 'uses' => 'Admin\ServiceController@update']);
+    Route::get('delete/{service}', ['as' => 'service.delete', 'uses' => 'Admin\ServiceController@destroy']);
+});
 
-    /*Category routes*/
-    Route::prefix('admin.categories')->name('admin.')->group(function () {
-        Route::get('list', [CategoryController::class, 'index'])->name('categories.index');
-        Route::get('create', [CategoryController::class, 'create'])->name('category.create');
-        Route::post('store', [CategoryController::class, 'store'])->name('categories.store');
-        Route::get('details/{category}', [CategoryController::class, 'show'])->name('category.show');
-        Route::get('edit/{category}', [CategoryController::class, 'edit'])->name('category.edit');
-        Route::put('update/{category}', [CategoryController::class, 'update'])->name('category.update');
-        Route::get('delete/{category}', [CategoryController::class, 'destroy'])->name('category.delete');
-    });
-    
-    /*Curso routes*/
-    Route::prefix('admin.courses')->name('admin.')->group(function () {
-        Route::get('list', [CourseController::class, 'index'])->name('courses.index');
-        Route::get('create', [CourseController::class, 'create'])->name('course.create');
-        Route::post('store', [CourseController::class, 'store'])->name('courses.store');
-        Route::get('details/{course}', [CourseController::class, 'show'])->name('course.show');
-        Route::get('edit/{course}', [CourseController::class, 'edit'])->name('course.edit');
-        Route::put('update/{course}', [CourseController::class, 'update'])->name('course.update');
-        Route::get('delete/{course}', [CourseController::class, 'destroy'])->name('course.delete');
-    });
-    
-    /*Formadores routes*/
-    Route::prefix('admin.teachers')->name('admin.')->group(function () {
-        Route::get('list', [TeacherController::class, 'index'])->name('teacher.index');
-        Route::get('create', [TeacherController::class, 'create'])->name('teacher.create');
-        Route::post('store', [TeacherController::class, 'store'])->name('teacher.store');
-        Route::get('details/{teacher}', [TeacherController::class, 'show'])->name('teacher.show');
-        Route::get('edit/{teacher}', [TeacherController::class, 'edit'])->name('teacher.edit');
-        Route::put('update/{teacher}', [TeacherController::class, 'update'])->name('teacher.update');
-        Route::get('delete/{teacher}', [TeacherController::class, 'destroy'])->name('teacher.delete');
-    });
+Route::post('/notifications/mark-all-read', [AlertsController::class, 'markAllRead'])->name('notifications.markAllRead');
+Route::get('/notifications', [AlertsController::class, 'index'])->name('notifications.all');
 
-    /*services routes*/
-    Route::prefix('admin.services')->name('admin.')->group(function () {
-        Route::get('list', [ServiceController::class, 'index'])->name('service.index');
-        Route::get('create', [ServiceController::class, 'create'])->name('service.create');
-        Route::post('store', [ServiceController::class, 'store'])->name('service.store');
-        Route::get('details/{service}', [ServiceController::class, 'show'])->name('service.show');
-        Route::get('edit/{service}', [ServiceController::class, 'edit'])->name('service.edit');
-        Route::put('update/{service}', [ServiceController::class, 'update'])->name('service.update');
-        Route::get('delete/{service}', [ServiceController::class, 'destroy'])->name('service.delete');
-    });
+/* news routes */
+Route::prefix('admin.news')->name('admin.')->group(function () {
+    Route::get('news', ['as' => 'news.index', 'uses' => 'Admin\NewsController@index']);
+    Route::get('newsArchived', ['as' => 'newsArchived.index', 'uses' => 'Admin\NewsController@arquivadas']);
+    Route::get('newsDraft', ['as' => 'newsDraft.index', 'uses' => 'Admin\NewsController@rascunho']);
+    Route::get('create', ['as' => 'news.create', 'uses' => 'Admin\NewsController@create']);
+    Route::post('newsStore', ['as' => 'news.store', 'uses' => 'Admin\NewsController@store']);
+    Route::get('edit/{news}', ['as' => 'news.edit', 'uses' => 'Admin\NewsController@edit']);
+    Route::put('newsUpdate/{news}', ['as' => 'news.update', 'uses' => 'Admin\NewsController@update']);
+    Route::get('details/{news}', ['as' => 'news.view', 'uses' => 'Admin\NewsController@show']);
+    Route::get('newsDelete/{news}', ['as' => 'news.delete', 'uses' => 'Admin\NewsController@destroy']);
+    Route::resource('tags', TagController::class);
+    Route::post('news/upload-image', ['as' => 'news.uploadImage', 'uses' => 'Admin\NewsController@uploadImage']);
+});
 
-    Route::post('/notifications/mark-all-read', [AlertsController::class, 'markAllRead'])->name('notifications.markAllRead');
-    Route::get('/notifications', [AlertsController::class, 'index'])->name('notifications.all');
-
-    /* news routes */
-    Route::prefix('admin.news')->name('admin.')->group(function () {
-        Route::get('news', [NewsController::class, 'index'])->name('news.index');
-        Route::get('newsArchived', [NewsController::class, 'arquivadas'])->name('newsArchived.index');
-        Route::get('newsDraft', [NewsController::class, 'rascunho'])->name('newsDraft.index');
-        Route::get('create', [NewsController::class, 'create'])->name('news.create');
-        Route::post('newsStore', [NewsController::class, 'store'])->name('news.store');
-        Route::get('edit/{news}', [NewsController::class, 'edit'])->name('news.edit');
-        Route::put('newsUpdate/{news}', [NewsController::class, 'update'])->name('news.update');
-        Route::get('details/{news}', [NewsController::class, 'show'])->name('news.view');
-        Route::get('newsDelete/{news}', [NewsController::class, 'destroy'])->name('news.delete');
-        Route::resource('tags', TagController::class);
-        Route::post('news/upload-image', [NewsController::class, 'uploadImage'])->name('news.uploadImage');
-    });
-
-    /* Gerar Relatorio */
-    /* Route::get('formulario/relatorio', [RelatorioController::class, 'formReports'])->name('form.reports');
+/* Gerar Relatorio */
+/* Route::get('formulario/relatorio', [RelatorioController::class, 'formReports'])->name('form.reports');
     Route::get('relatorio', [RelatorioController::class, 'noticia'])->name('relatorio.noticia'); */
 
 
-    /* comments routes */
-    Route::prefix('admin/comments')->name('admin.')->group(function () {
-        Route::get('comment', [CommentController::class, 'index'])->name('comments.index');
-        Route::get('create', [CommentController::class, 'create'])->name('comment.create');
-        Route::post('commentStore', [CommentController::class, 'store'])->name('comment.store');
-        Route::get('edit/{comment}', [CommentController::class, 'edit'])->name('comment.edit');
-        Route::put('commentUpdate/{comment}', [CommentController::class, 'update'])->name('comment.update');
-        Route::get('details/{comment}', [CommentController::class, 'show'])->name('comment.view');
-        Route::get('commentDelete/{comment}', [CommentController::class, 'destroy'])->name('comment.delete');
-    });
-    /* tags routes */
-    Route::prefix('admin.tags')->name('admin.')->group(function () {
-        Route::get('tags', [TagController::class, 'index'])->name('tags.index');
-        Route::get('create', [TagController::class, 'create'])->name('tag.create');
-        Route::post('tagStore', [TagController::class, 'store'])->name('tag.store');
-        Route::get('edit/{tag}', [TagController::class, 'edit'])->name('tag.edit');
-        Route::put('tagUpdate/{tag}', [TagController::class, 'update'])->name('tag.update');
-        Route::get('tagView/{tag}', [TagController::class, 'show'])->name('tag.view');
-        Route::get('tagDelete/{tag}', [TagController::class, 'destroy'])->name('tag.delete');
-    });
-
-    /* typeCategory routes */
-    Route::prefix('admin.typeCategories')->name('admin.')->group(function () {
-        Route::get('typeCategory', [TypeCategoryController::class, 'index'])->name('typeCategories.index');
-        Route::get('create', [TypeCategoryController::class, 'create'])->name('typeCategory.create');
-        Route::post('typeCategories', [TypeCategoryController::class, 'store'])->name('typeCategories.store');
-        Route::get('typeview/{typeCategory}', [TypeCategoryController::class, 'show'])->name('typeCategory.show');
-        Route::get('typeedit/{typeCategory}', [TypeCategoryController::class, 'edit'])->name('typeCategory.edit');
-        Route::put('typeCategoryUpdate/{typeCategory}', [TypeCategoryController::class, 'update'])->name('typeCategory.update');
-        Route::get('typeCategoryDelete/{typeCategory}', [TypeCategoryController::class, 'destroy'])->name('typeCategory.delete');
-    });
-    /* publications routes */
-   /*  Route::prefix('admin/publications')->name('admin.')->group(function () {
-        Route::get('publication', [PublicationController::class, 'index'])->name('publication.index');
-        Route::get('create', [PublicationController::class, 'create'])->name('publication.create');
-        Route::post('publicationStore', [PublicationController::class, 'store'])->name('publication.store');
-        Route::get('edit/{publication}', [PublicationController::class, 'edit'])->name('publication.edit');
-        Route::put('publicationUpdate/{publication}', [PublicationController::class, 'update'])->name('publication.update');
-        Route::get('details/{publication}', [PublicationController::class, 'show'])->name('publication.view');
-        Route::get('publicationDelete/{publication}', [PublicationController::class, 'destroy'])->name('publication.delete');
-    }); */
-    /* videos routes */
-    /* Route::prefix('admin/videos')->name('admin.')->group(function () {
-        Route::get('video', [VideoController::class, 'index'])->name('video.index');
-        Route::get('create', [VideoController::class, 'create'])->name('video.create');
-        Route::post('videoStore', [VideoController::class, 'store'])->name('video.store');
-        Route::get('edit/{video}', [videoController::class, 'edit'])->name('video.edit');
-        Route::put('videoUpdate/{video}', [videoController::class, 'update'])->name('video.update');
-        Route::get('details/{video}', [videoController::class, 'show'])->name('video.view');
-        Route::get('videoDelete/{video}', [videoController::class, 'destroy'])->name('video.delete');
-    }); */
-    /* galery routes */
-    /* Route::prefix('admin/galeries')->name('admin.')->group(function () {
-        Route::get('galery', [GaleryController::class, 'index'])->name('galery.index');
-        Route::get('create', [GaleryController::class, 'create'])->name('galery.create');
-        Route::post('galeryStore', [GaleryController::class, 'store'])->name('galery.store');
-        Route::get('edit/{galery}', [GaleryController::class, 'edit'])->name('galery.edit');
-        Route::put('galeryUpdate/{galery}', [GaleryController::class, 'update'])->name('galery.update');
-        Route::get('details/{galery}', [GaleryController::class, 'show'])->name('galery.view');
-        Route::get('galeryDelete/{galery}', [GaleryController::class, 'destroy'])->name('galery.delete');
-    }); */
-
+/* comments routes */
+Route::prefix('admin/comments')->name('admin.')->group(function () {
+    Route::get('comment', ['as' => 'comments.index', 'uses' => 'Admin\CommentController@index']);
+    Route::get('create', ['as' => 'comment.create', 'uses' => 'Admin\CommentController@create']);
+    Route::post('commentStore', ['as' => 'comment.store', 'uses' => 'Admin\CommentController@store']);
+    Route::get('edit/{comment}', ['as' => 'comment.edit', 'uses' => 'Admin\CommentController@edit']);
+    Route::put('commentUpdate/{comment}', ['as' => 'comment.update', 'uses' => 'Admin\CommentController@update']);
+    Route::get('details/{comment}', ['as' => 'comment.view', 'uses' => 'Admin\CommentController@show']);
+    Route::get('commentDelete/{comment}', ['as' => 'comment.delete', 'uses' => 'Admin\CommentController@destroy']);
+});
+/* tags routes */
+Route::prefix('admin.tags')->name('admin.')->group(function () {
+    Route::get('tags', ['as' => 'tags.index', 'uses' => 'Admin\TagController@index']);
+    Route::get('create', ['as' => 'tag.create', 'uses' => 'Admin\TagController@create']);
+    Route::post('tagStore', ['as' => 'tag.store', 'uses' => 'Admin\TagController@store']);
+    Route::get('edit/{tag}', ['as' => 'tag.edit', 'uses' => 'Admin\TagController@edit']);
+    Route::put('tagUpdate/{tag}', ['as' => 'tag.update', 'uses' => 'Admin\TagController@update']);
+    Route::get('tagView/{tag}', ['as' => 'tag.view', 'uses' => 'Admin\TagController@show']);
+    Route::get('tagDelete/{tag}', ['as' => 'tag.delete', 'uses' => 'Admin\TagController@destroy']);
 });
 
-
-/* Routas Jornalista*/
-Route::group([
-    'middleware' => ['auth', 'role:admin,editor,jornalista', \App\Http\Middleware\LogUserActivity::class]
-], function () {
-
-    /* Users Route - Profile */
-    Route::prefix('admin.users')->name('admin.')->group(function () {
-        Route::get('details/{user:slug}', [UserController::class, 'show'])->name('user.show');
-        Route::get('edit/{user:slug}', [UserController::class, 'edit'])->name('user.edit');
-        Route::put('userUpdate/{user:slug}', [UserController::class, 'update'])->name('user.update');
-    });
-    /* end users routes */
-
-    /*Category routes*/
-    Route::prefix('admin.categories')->name('admin.')->group(function () {
-        Route::get('list', [CategoryController::class, 'index'])->name('categories.index');
-        Route::get('create', [CategoryController::class, 'create'])->name('category.create');
-        Route::post('store', [CategoryController::class, 'store'])->name('categories.store');
-        Route::get('details/{category}', [CategoryController::class, 'show'])->name('category.show');
-        Route::get('edit/{category}', [CategoryController::class, 'edit'])->name('category.edit');
-        Route::put('update/{category}', [CategoryController::class, 'update'])->name('category.update');
-        Route::get('delete/{category}', [CategoryController::class, 'destroy'])->name('category.delete');
-    });
-
-    /* tags routes */
-    Route::prefix('admin.tags')->name('admin.')->group(function () {
-        Route::get('tags', [TagController::class, 'index'])->name('tags.index');
-        Route::get('create', [TagController::class, 'create'])->name('tag.create');
-        Route::post('tagStore', [TagController::class, 'store'])->name('tag.store');
-        Route::get('edit/{tag}', [TagController::class, 'edit'])->name('tag.edit');
-        Route::put('tagUpdate/{tag}', [TagController::class, 'update'])->name('tag.update');
-        Route::get('tagView/{tag}', [TagController::class, 'show'])->name('tag.view');
-        Route::get('tagDelete/{tag}', [TagController::class, 'destroy'])->name('tag.delete');
-    });
-
-    /* typeCategory routes */
-    Route::prefix('admin.typeCategories')->name('admin.')->group(function () {
-        Route::get('typeCategory', [TypeCategoryController::class, 'index'])->name('typeCategories.index');
-        Route::get('create', [TypeCategoryController::class, 'create'])->name('typeCategory.create');
-        Route::post('typeCategories', [TypeCategoryController::class, 'store'])->name('typeCategories.store');
-        Route::get('typeview/{typeCategory}', [TypeCategoryController::class, 'show'])->name('typeCategory.show');
-        Route::get('typeedit/{typeCategory}', [TypeCategoryController::class, 'edit'])->name('typeCategory.edit');
-        Route::put('typeCategoryUpdate/{typeCategory}', [TypeCategoryController::class, 'update'])->name('typeCategory.update');
-        Route::get('typeCategoryDelete/{typeCategory}', [TypeCategoryController::class, 'destroy'])->name('typeCategory.delete');
-    });
-
-    /* news routes */
-    Route::prefix('admin.news')->name('admin.')->group(function () {
-        Route::get('news', [NewsController::class, 'index'])->name('news.index');
-        Route::get('create', [NewsController::class, 'create'])->name('news.create');
-        Route::post('newsStore', [NewsController::class, 'store'])->name('news.store');
-        Route::get('edit/{news}', [NewsController::class, 'edit'])->name('news.edit');
-        Route::put('newsUpdate/{news}', [NewsController::class, 'update'])->name('news.update');
-        Route::get('details/{news}', [NewsController::class, 'show'])->name('news.view');
-        Route::get('newsDelete/{news}', [NewsController::class, 'destroy'])->name('news.delete');
-        Route::resource('tags', TagController::class);
-        Route::post('news/upload-image', [NewsController::class, 'uploadImage'])->name('news.uploadImage');
-    });
-    /* comments routes */
-    Route::prefix('admin/comments')->name('admin.')->group(function () {
-        Route::get('comment', [CommentController::class, 'index'])->name('comments.index');
-        Route::get('create', [CommentController::class, 'create'])->name('comment.create');
-        Route::post('commentStore', [CommentController::class, 'store'])->name('comment.store');
-        Route::get('edit/{comment}', [CommentController::class, 'edit'])->name('comment.edit');
-        Route::put('commentUpdate/{comment}', [CommentController::class, 'update'])->name('comment.update');
-        Route::get('details/{comment}', [CommentController::class, 'show'])->name('comment.view');
-        Route::get('commentDelete/{comment}', [CommentController::class, 'destroy'])->name('comment.delete');
-    });
-    /* publications routes */
-   /*  Route::prefix('admin/publications')->name('admin.')->group(function () {
-        Route::get('publication', [PublicationController::class, 'index'])->name('publication.index');
-        Route::get('create', [PublicationController::class, 'create'])->name('publication.create');
-        Route::post('publicationStore', [PublicationController::class, 'store'])->name('publication.store');
-        Route::get('edit/{publication}', [PublicationController::class, 'edit'])->name('publication.edit');
-        Route::put('publicationUpdate/{publication}', [PublicationController::class, 'update'])->name('publication.update');
-        Route::get('details/{publication}', [PublicationController::class, 'show'])->name('publication.view');
-        Route::get('publicationDelete/{publication}', [PublicationController::class, 'destroy'])->name('publication.delete');
-    }); */
-    /* videos routes */
-    /* Route::prefix('admin/videos')->name('admin.')->group(function () {
-        Route::get('video', [VideoController::class, 'index'])->name('video.index');
-        Route::get('create', [VideoController::class, 'create'])->name('video.create');
-        Route::post('videoStore', [VideoController::class, 'store'])->name('video.store');
-        Route::get('edit/{video}', [videoController::class, 'edit'])->name('video.edit');
-        Route::put('videoUpdate/{video}', [videoController::class, 'update'])->name('video.update');
-        Route::get('details/{video}', [videoController::class, 'show'])->name('video.view');
-        Route::get('videoDelete/{video}', [videoController::class, 'destroy'])->name('video.delete');
-    }); */
-    /* galery routes */
-    /* Route::prefix('admin/galeries')->name('admin.')->group(function () {
-        Route::get('galery', [GaleryController::class, 'index'])->name('galery.index');
-        Route::get('create', [GaleryController::class, 'create'])->name('galery.create');
-        Route::post('galeryStore', [GaleryController::class, 'store'])->name('galery.store');
-        Route::get('edit/{galery}', [GaleryController::class, 'edit'])->name('galery.edit');
-        Route::put('galeryUpdate/{galery}', [GaleryController::class, 'update'])->name('galery.update');
-        Route::get('details/{galery}', [GaleryController::class, 'show'])->name('galery.view');
-        Route::get('galeryDelete/{galery}', [GaleryController::class, 'destroy'])->name('galery.delete');
-    }); */
-});
-/* Routas Assinante */
-Route::group(['middleware' => ['auth', 'role:assinante']], function () {
-/* Users Route - Profile */
-    Route::prefix('admin.users')->name('admin.')->group(function () {
-        Route::get('details/{user:slug}', [UserController::class, 'show'])->name('user.show');
-        Route::get('edit/{user:slug}', [UserController::class, 'edit'])->name('user.edit');
-        Route::put('userUpdate/{user:slug}', [UserController::class, 'update'])->name('user.update');
-    });
-    /* end users routes */
-
-    /*Category routes*/
-    Route::prefix('admin.categories')->name('admin.')->group(function () {
-        Route::get('list', [CategoryController::class, 'index'])->name('categories.index');
-        Route::get('create', [CategoryController::class, 'create'])->name('category.create');
-        Route::post('store', [CategoryController::class, 'store'])->name('categories.store');
-        Route::get('details/{category}', [CategoryController::class, 'show'])->name('category.show');
-        Route::get('edit/{category}', [CategoryController::class, 'edit'])->name('category.edit');
-        Route::put('update/{category}', [CategoryController::class, 'update'])->name('category.update');
-        Route::get('delete/{category}', [CategoryController::class, 'destroy'])->name('category.delete');
-    });
-
-    /* tags routes */
-    Route::prefix('admin.tags')->name('admin.')->group(function () {
-        Route::get('tags', [TagController::class, 'index'])->name('tags.index');
-        Route::get('create', [TagController::class, 'create'])->name('tag.create');
-        Route::post('tagStore', [TagController::class, 'store'])->name('tag.store');
-        Route::get('edit/{tag}', [TagController::class, 'edit'])->name('tag.edit');
-        Route::put('tagUpdate/{tag}', [TagController::class, 'update'])->name('tag.update');
-        Route::get('tagView/{tag}', [TagController::class, 'show'])->name('tag.view');
-        Route::get('tagDelete/{tag}', [TagController::class, 'destroy'])->name('tag.delete');
-    });
-
-    /* typeCategory routes */
-    Route::prefix('admin.typeCategories')->name('admin.')->group(function () {
-        Route::get('typeCategory', [TypeCategoryController::class, 'index'])->name('typeCategories.index');
-        Route::get('create', [TypeCategoryController::class, 'create'])->name('typeCategory.create');
-        Route::post('typeCategories', [TypeCategoryController::class, 'store'])->name('typeCategories.store');
-        Route::get('typeview/{typeCategory}', [TypeCategoryController::class, 'show'])->name('typeCategory.show');
-        Route::get('typeedit/{typeCategory}', [TypeCategoryController::class, 'edit'])->name('typeCategory.edit');
-        Route::put('typeCategoryUpdate/{typeCategory}', [TypeCategoryController::class, 'update'])->name('typeCategory.update');
-        Route::get('typeCategoryDelete/{typeCategory}', [TypeCategoryController::class, 'destroy'])->name('typeCategory.delete');
-    });
-
-    /* news routes */
-    Route::prefix('admin.news')->name('admin.')->group(function () {
-        Route::get('news', [NewsController::class, 'index'])->name('news.index');
-        Route::get('create', [NewsController::class, 'create'])->name('news.create');
-        Route::post('newsStore', [NewsController::class, 'store'])->name('news.store');
-        Route::get('edit/{news}', [NewsController::class, 'edit'])->name('news.edit');
-        Route::put('newsUpdate/{news}', [NewsController::class, 'update'])->name('news.update');
-        Route::get('details/{news}', [NewsController::class, 'show'])->name('news.view');
-        Route::get('newsDelete/{news}', [NewsController::class, 'destroy'])->name('news.delete');
-        Route::resource('tags', TagController::class);
-        Route::post('news/upload-image', [NewsController::class, 'uploadImage'])->name('news.uploadImage');
-    });
-    /* comments routes */
-    Route::prefix('admin/comments')->name('admin.')->group(function () {
-        Route::get('comment', [CommentController::class, 'index'])->name('comments.index');
-        Route::get('create', [CommentController::class, 'create'])->name('comment.create');
-        Route::post('commentStore', [CommentController::class, 'store'])->name('comment.store');
-        Route::get('edit/{comment}', [CommentController::class, 'edit'])->name('comment.edit');
-        Route::put('commentUpdate/{comment}', [CommentController::class, 'update'])->name('comment.update');
-        Route::get('details/{comment}', [CommentController::class, 'show'])->name('comment.view');
-        Route::get('commentDelete/{comment}', [CommentController::class, 'destroy'])->name('comment.delete');
-    });
+/* typeCategory routes */
+Route::prefix('admin.typeCategories')->name('admin.')->group(function () {
+    Route::get('typeCategory', ['as' => 'typeCategories.index', 'uses' => 'Admin\TypeCategoryController@index']);
+    Route::get('create', ['as' => 'typeCategory.create', 'uses' => 'Admin\TypeCategoryController@create']);
+    Route::post('typeCategories', ['as' => 'typeCategories.store', 'uses' => 'Admin\TypeCategoryController@store']);
+    Route::get('typeview/{typeCategory}', ['as' => 'typeCategory.show', 'uses' => 'Admin\TypeCategoryController@show']);
+    Route::get('typeedit/{typeCategory}', ['as' => 'typeCategory.edit', 'uses' => 'Admin\TypeCategoryController@edit']);
+    Route::put('typeCategoryUpdate/{typeCategory}', ['as' => 'typeCategory.update', 'uses' => 'Admin\TypeCategoryController@update']);
+    Route::get('typeCategoryDelete/{typeCategory}', ['as' => 'typeCategory.delete', 'uses' => 'Admin\TypeCategoryController@destroy']);
 });
 
 /*-------------------------------------------------------
                     Ads routes
 -------------------------------------------------------*/
 Route::prefix('admin.ads')->name('admin.')->group(function () {
-    Route::get('ads', [AdvertisementController::class, 'index'])->name('ads.index')->middleware('auth');
-    Route::get('create', [AdvertisementController::class, 'create'])->name('ads.create')->middleware('auth');
-    Route::post('ads', [AdvertisementController::class, 'store'])->name('ads.store')->middleware('auth');
+    Route::get('ads', ['as' => 'ads.index', 'uses' => 'Admin\AdvertisementController@index']);
+    Route::get('create', ['as' => 'ads.create', 'uses' => 'Admin\AdvertisementController@create']);
+    Route::post('ads', ['as' => 'ads.store', 'uses' => 'Admin\AdvertisementController@store']);
 });
 
 /*-------------------------------------------------------

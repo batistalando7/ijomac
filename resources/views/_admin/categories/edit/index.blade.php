@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte- Editar Categoria')
+@section('title', 'IJOMAC - Editar Categoria')
 @section('content')
 
     <!-- [ Craete Form ] -->
@@ -11,7 +11,6 @@
                     <h5 class="m-b-10">Categoria</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/admin">Home</a></li>
                     <li class="breadcrumb-item">Editar</li>
                 </ul>
             </div>

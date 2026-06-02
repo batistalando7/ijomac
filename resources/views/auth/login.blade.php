@@ -72,10 +72,10 @@
                             </a>
                         </div>
                     </div> --}}
-                    <div class="mt-5 text-muted">
+                    {{-- <div class="mt-5 text-muted">
                         <span> Não tem uma conta?</span>
                         <a href="/register" class="fw-bold">Criar Conta</a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
