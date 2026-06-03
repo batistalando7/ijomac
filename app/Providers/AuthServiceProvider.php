@@ -18,16 +18,8 @@ class AuthServiceProvider extends ServiceProvider
             return $user->role === 'admin';
         });
 
-        Gate::define('is-editor', function ($user) {
-            return in_array($user->role, ['admin', 'editor']);
-        });
-
-        Gate::define('is-jornalista', function ($user) {
-            return in_array($user->role, ['admin', 'editor', 'jornalista']);
-        });
-
-        Gate::define('is-assinante', function ($user) {
-            return $user->role === 'assinante';
+        Gate::define('is-user', function ($user) {
+            return $user->role === 'user';
         });
         
     }

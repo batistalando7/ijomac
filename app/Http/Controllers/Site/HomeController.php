@@ -21,17 +21,12 @@ class HomeController extends Controller
 
         $response['teachers'] = Teacher::orderByDesc('id')->take(3)->get();
 
-        /* Modal de Subscrição */
-        $response['subscription'] = News::where('status', 'publicado')->where('detach', 'destaque')->orderByDesc('id')->first();
-
         /* --------- Sessão da Categoria de Notícias (algumas categorias) ----------------- */
         $response['footerCategory'] = Category::select('name')
             ->distinct()
             ->take(5)
             ->get();
 
-        /* Posts Recentes no Footer */
-        $response['Recent'] = News::where('status', 'publicado')->orderBy('updated_at', 'desc')->take(2)->get();
 
         $response['ads'] = Advertisement::orderByDesc('id')->take(1)->get();
 
