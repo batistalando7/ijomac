@@ -26,7 +26,7 @@
                         <i class="feather-layers me-2"></i>
                         <span>Save & Send</span>
                     </a> --}}
-                        <a href="{{ route('admin.categories.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.category.index') }}" class="btn btn-danger">
                             <i class="feather-chevron-left me-2"></i>
                             Voltar</a>
                     </div>
@@ -47,7 +47,7 @@
                                 <span class="d-block mb-2">Informação Geral :</span>
                                 <span class="fs-12 fw-normal text-muted d-block">Informação geral da Categoria</span>
                             </h5>
-                            <a href="{{ route('admin.categories.index') }}" class="btn btn-sm btn-light-brand">Listar
+                            <a href="{{ route('admin.category.index') }}" class="btn btn-sm btn-light-brand">Listar
                                 Categoria</a>
                         </div>
                         <div class="row mb-4">

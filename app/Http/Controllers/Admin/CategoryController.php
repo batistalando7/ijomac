@@ -97,7 +97,7 @@ class CategoryController extends Controller
             'description' => $request->description,
         ]);
 
-        return redirect()->route('admin.categories.index')->with('success', 'Categória criada com sucesso!');
+        return redirect()->route('admin.category.index')->with('success', 'Categória criada com sucesso!');
     }
 
     /**
@@ -193,7 +193,7 @@ class CategoryController extends Controller
             'typecategory_id.exists' => 'O tipo de categoria selecionada é inválida.',
         ]);
 
-        return redirect()->route('admin.categories.index')->with('success', 'Categória atualizada com sucesso!');
+        return redirect()->route('admin.category.index')->with('success', 'Categória atualizada com sucesso!');
         return redirect()->back()->with('error', 'Ocorreu um erro ao atualizar Categória!');
     }
 
@@ -217,6 +217,6 @@ class CategoryController extends Controller
         // Exclui a categoria do banco de dados
 
         $category->delete();
-        return redirect()->route('admin.categories.index')->with('success', 'Categoria apagado com sucesso!');
+        return redirect()->route('admin.category.index')->with('success', 'Categoria apagado com sucesso!');
     }
 }

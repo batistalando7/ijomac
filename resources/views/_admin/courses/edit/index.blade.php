@@ -28,7 +28,7 @@
                             <i class="feather-layers me-2"></i>
                             <span>Save as Draft</span>
                         </a> --}}
-                        <a href="{{ route('admin.courses.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.course.index') }}" class="btn btn-danger">
                             <i class="feather-chevron-left me-2"></i>
                             <span>Voltar</span>
                         </a>
@@ -54,7 +54,7 @@
                                     <span class="fs-12 fw-normal text-muted text-truncate-1-line">Normalmente se refere a
                                         editar um Curso</span>
                                 </h5>
-                                <a href="{{ route('admin.courses.index') }}" class="btn btn-sm btn-light-brand">Listar
+                                <a href="{{ route('admin.course.index') }}" class="btn btn-sm btn-light-brand">Listar
                                     Cursos</a>
                             </div>
                             <form action="{{ route('admin.course.update', ['course' => $course->id]) }}"

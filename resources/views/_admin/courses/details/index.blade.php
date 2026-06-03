@@ -47,7 +47,7 @@
                                 <span class="d-block mb-2">Informação Geral :</span>
                                 <span class="fs-12 fw-normal text-muted d-block">Informação geral do Curso</span>
                             </h5>
-                            <a href="{{ route('admin.courses.index') }}" class="btn btn-sm btn-light-brand">Listar
+                            <a href="{{ route('admin.course.index') }}" class="btn btn-sm btn-light-brand">Listar
                                 Cursos</a>
                         </div>
                         <div class="row mb-4">

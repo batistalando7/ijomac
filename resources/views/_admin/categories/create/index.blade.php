@@ -27,7 +27,7 @@
                             <i class="feather-layers me-2"></i>
                             <span>Save as Draft</span>
                         </a> --}}
-                        <a href="{{ route('admin.categories.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.category.index') }}" class="btn btn-danger">
                             <i class="feather-chevron-left me-2"></i>
                             <span>Visualizar</span>
                         </a>
@@ -53,10 +53,10 @@
                                     <span class="fs-12 fw-normal text-muted text-truncate-1-line">Normalmente se refere a
                                         adicionar uma nova Categoria</span>
                                 </h5>
-                                <a href="{{ route('admin.categories.index') }}" class="btn btn-sm btn-light-brand">Listar
+                                <a href="{{ route('admin.category.index') }}" class="btn btn-sm btn-light-brand">Listar
                                     Categoria</a>
                             </div>
-                            <form action="{{ route('admin.categories.store') }}" method="POST">
+                            <form action="{{ route('admin.category.store') }}" method="POST">
                                 @csrf
                                 @method('POST')
                                 {{-- aqui o formulário --}}

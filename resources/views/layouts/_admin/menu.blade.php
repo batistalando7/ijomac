@@ -55,7 +55,7 @@
                                 class="feather-chevron-right"></i></span>
                     </a>
                     <ul class="nxl-submenu">
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.categories.index') }}">Lista de
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.category.index') }}">Lista de
                                 Categoria</a></li>
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.category.create') }}">Criar
                                 Categoria</a>
@@ -71,7 +71,7 @@
                                 class="feather-chevron-right"></i></span>
                     </a>
                     <ul class="nxl-submenu">
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.courses.index') }}">Lista de
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.course.index') }}">Lista de
                                 Cursos</a></li>
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.course.create') }}">Criar
                                 Curso</a>

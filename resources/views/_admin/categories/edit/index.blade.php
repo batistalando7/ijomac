@@ -27,7 +27,7 @@
                             <i class="feather-layers me-2"></i>
                             <span>Save as Draft</span>
                         </a> --}}
-                        <a href="{{ route('admin.categories.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.category.index') }}" class="btn btn-danger">
                             <i class="feather-chevron-left me-2"></i>
                             <span>Voltar</span>
                         </a>
@@ -53,7 +53,7 @@
                                     <span class="fs-12 fw-normal text-muted text-truncate-1-line">Normalmente se refere a
                                         editar/atualizar uma nova Categoria</span>
                                 </h5>
-                                <a href="{{ route('admin.categories.index') }}" class="btn btn-sm btn-light-brand">Listar
+                                <a href="{{ route('admin.category.index') }}" class="btn btn-sm btn-light-brand">Listar
                                     Categoria</a>
                             </div>
                             <form action="{{ route('admin.category.update', ['category' => $category->id]) }}"

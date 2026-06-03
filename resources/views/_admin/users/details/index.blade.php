@@ -29,11 +29,13 @@
                         <a href="javascript:void(0);" class="btn btn-icon btn-light-brand">
                             <i class="feather-printer"></i>
                         </a>
-                        <a href="{{ route('admin.user.edit', ['user' => $user->slug]) }}" class="btn btn-icon btn-light-brand">
+                        <a href="{{ route('admin.user.edit', ['user' => $user->slug]) }}"
+                            class="btn btn-icon btn-light-brand">
                             <i class="feather-edit"></i>
                         </a>
                         @can('is-admin')
-                            <a href="{{ route('admin.user.delete', ['user' => $user->slug]) }}" class="btn btn-icon btn-light-brand">
+                            <a href="{{ route('admin.user.delete', ['user' => $user->slug]) }}"
+                                class="btn btn-icon btn-light-brand">
                                 <i class="feather-trash-2"></i>
                             </a>
                         @endcan
@@ -55,46 +57,56 @@
             </div>
         </div>
         <!-- [ page-header ] end -->
-        <div class="main-content">
-            <div class="col-xxl-10">
-                <div class="row">
-                    <div class="col">
-                        <div class="card stretch stretch-full">
-                            <div class="card-body">
-                                <div class="mb-4">
-                                    <div class="wd-150 ht-150">
-                                        <div class="avatar-image wd-150 ht-150 border border-5 border-gray-3">
-                                            @if ($user->id === Auth::user()->id)
-
-                                                <img src="{{ url('img/users/' . Auth::user()->image) }}"
-                                                    alt="foto de {{ $user->name }}" class="img-fluid">
-                                            @else
-                                                <img src="{{ url('img/users/' . $user->image) }}"
-                                                    alt="foto de {{ $user->name }}" class="img-fluid">
-                                            @endif
-                                        </div>
-
-                                    </div>
-                                    <div class="mb-4 profile-detail">
-                                        <a href="javascript:void(0);" class="fs-14 fw-bold d-block">
-                                            Nome: {{ $user->name }}
-                                        </a>
-
-                                        <a href="javascript:void(0);" class="fs-14 fw-bold d-block">
-                                            E-mail: {{ $user->email }}
-                                        </a>
-
-                                        <a href="javascript:void(0);" class="fs-14 fw-bold d-block">
-                                            Função: {{ $user->role }}
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+       <div class="main-content">
+    <div class="row">
+        <div class="col-xxl-4">
+            <div class="card stretch stretch-full">
+                <div class="card-body d-flex justify-content-center align-items-center">
+                    <div class="avatar-image wd-150 ht-150 border border-5 border-gray-3">
+                        @if ($user->id === Auth::user()->id)
+                            <img src="{{ url('img/users/' . Auth::user()->image) }}"
+                                alt="foto de {{ $user->name }}" class="img-fluid">
+                        @else
+                            <img src="{{ url('img/users/' . $user->image) }}" alt="foto de {{ $user->name }}"
+                                class="img-fluid">
+                        @endif
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col-xxl-8">
+            <div class="card stretch stretch-full">
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <tr>
+                            <th class="col-md-3">Nome:</th>
+                            <td class="col-md-9">{{ $user->name }}</td>
+                        </tr>
+                        <tr>
+                            <th class="col-md-3">E-mail:</th>
+                            <td class="col-md-9">{{ $user->email }}</td>
+                        </tr>
+                        <tr>
+                            <th class="col-md-3">Função:</th>
+                            <td class="col-md-9">{{ $user->role }}</td>
+                        </tr>
+                        <tr>
+                            <th class="col-md-3">Criado em:</th>
+                            <td class="col-md-9">
+                                {{ $user->created_at ? $user->created_at->format('d/m/Y H:i') : now() }}</td>
+                        </tr>
+                        <tr>
+                            <th class="col-md-3">Última atualização:</th>
+                            <td class="col-md-9">
+                                {{ $user->updated_at ? $user->updated_at->format('d/m/Y H:i') : now() }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
     </div>
 @endsection

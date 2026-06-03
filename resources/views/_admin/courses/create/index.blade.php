@@ -53,10 +53,10 @@
                                     <span class="fs-12 fw-normal text-muted text-truncate-1-line">Normalmente se refere a
                                         adicionar Curso</span>
                                 </h5>
-                                <a href="{{ route('admin.courses.index') }}" class="btn btn-sm btn-light-brand">Listar
+                                <a href="{{ route('admin.course.index') }}" class="btn btn-sm btn-light-brand">Listar
                                     Cursos</a>
                             </div>
-                            <form action="{{ route('admin.courses.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('admin.course.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 @method('POST')
                                 {{-- aqui o formulário --}}
