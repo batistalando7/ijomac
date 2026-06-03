@@ -20,7 +20,7 @@ class UserTableSeeder extends Seeder
                 'email_verified_at' => NULL,
                 'password' => Hash::make('admin123'),
                 'role' => 'admin',
-                'image' => '3f0551ddc8444d97be18eed935967f2c',
+                'image' => NULL,
                 'provider' => NULL,
                 'provider_id' => NULL,
                 'remember_token' => NULL,

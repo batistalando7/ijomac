@@ -26,7 +26,7 @@ class HomeController extends Controller
 
         /* Alerts */
         $response['admin'] = Auth::user();
-        $response['notifications'] = auth()->user()->notifications()->latest()->get();
+        /* $response['notifications'] = auth()->user()->notifications()->latest()->get();
 
         // Adiciona o usuário autor de cada notificação
         $response['notifications']->each(function ($notif) {
@@ -37,7 +37,7 @@ class HomeController extends Controller
             }
         });          // todas
         $response['unreadNotifications'] = $response['admin']->unreadNotifications; // não lidas
-        $response['unreadCount'] = auth()->user()->unreadNotifications->count();
+        $response['unreadCount'] = auth()->user()->unreadNotifications->count(); */
 
 
 

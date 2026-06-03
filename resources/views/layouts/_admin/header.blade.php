@@ -51,8 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="dropdown nxl-h-item nxl-header-language d-none d-sm-flex">
-                    </div>
+                    <div class="dropdown nxl-h-item nxl-header-language d-none d-sm-flex"></div>
                     <div class="nxl-h-item d-none d-sm-flex">
                         <div class="full-screen-switcher">
                             <a href="javascript:void(0);" class="nxl-head-link me-0"
@@ -124,72 +123,60 @@
                     @endif
 
                     <ul class="dropdown nxl-h-item">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nxl-h-item">
-                                <a class="nxl-h-link me-4" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nxl-h-item me-4">
-                                    <a class="nxl-h-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
+                        <div class="dropdown nxl-h-item">
+                            @if (Auth::user()->image)
+                                <a href="javascript:void(0);" data-bs-toggle="dropdown" role="button"
+                                    data-bs-auto-close="outside">
+                                    <img src="{{ url('storage/' . Auth::user()->image) }}" alt="user-image"
+                                        class="img-fluid user-avtar me-0 "
+                                        style="width: 50px; height: 50px; object-fit: cover;">
+                                </a>
+                            @else
+                                <a href="javascript:void(0);" data-bs-toggle="dropdown" role="button"
+                                    data-bs-auto-close="outside">
+                                    <img src="{{ url('assets/images/user.png') }}" alt="user-image"
+                                        class="img-fluid user-avtar me-0"
+                                        style="width: 40px; height: 40px; object-fit: cover;">
+                                </a>
                             @endif
-                        @else
-                            <div class="dropdown nxl-h-item">
-                                @if (Auth::user()->image)
-                                    <a href="javascript:void(0);" data-bs-toggle="dropdown" role="button"
-                                        data-bs-auto-close="outside">
-                                        <img src="{{ url('img/users/' . Auth::user()->image) }}" alt="user-image"
-                                            class="img-fluid user-avtar me-0 "
-                                            style="width: 50px; height: 50px; object-fit: cover;">
-                                    </a>
-                                @else
-                                    <a href="javascript:void(0);" data-bs-toggle="dropdown" role="button"
-                                        data-bs-auto-close="outside">
-                                        <img src="{{ url('assets/images/user.png') }}" alt="user-image"
-                                            class="img-fluid user-avtar me-0"
-                                            style="width: 40px; height: 40px; object-fit: cover;">
-                                    </a>
-                                @endif
-                                <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-user-dropdown">
-                                    <div class="dropdown-header">
-                                        <div class="d-flex align-items-center">
-                                            <h6 class="text-dark mb-0">
-                                                {{ Auth::user()->name }}
-                                                <span
-                                                    class="badge bg-soft-success text-success ms-1">{{ Auth::user()->role }}</span>
-                                            </h6>
-                                        </div>
-                                        <p class="fs-11 text-muted mb-0">{{ Auth::user()->email }}</p>
+                            <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-user-dropdown">
+                                <div class="dropdown-header">
+                                    <div class="d-flex align-items-center">
+                                        <h6 class="text-dark mb-0">
+                                            {{ Auth::user()->name }}
+                                            <span
+                                                class="badge bg-soft-success text-success ms-1">{{ Auth::user()->role }}</span>
+                                        </h6>
                                     </div>
-                                    <a class="dropdown-item" href="{{ route('admin.user.show', Auth::user()->slug) }}"><i
-                                            class="feather-user"></i>Meu
-                                        Perfil</a>
-                                    @can('is-admin')
-                                        <a class="dropdown-item" href="{{ route('activity.logs') }}"><i
-                                                class="feather-activity"></i>Auditoria de
-                                            Atividades</a>
-                                    @endcan
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/" target="_blank"><i
-                                            class="feather-globe"></i>Website</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/login"
-                                        onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();"><i
-                                            class="feather-log-out"></i>
-                                        {{ __('Termirar Sessão') }}
-                                    </a>
+                                    <p class="fs-11 text-muted mb-0">{{ Auth::user()->email }}</p>
                                 </div>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
+                                <a class="dropdown-item" href="{{ route('admin.user.show', Auth::user()->slug) }}"><i
+                                        class="feather-user"></i>Meu
+                                    Perfil</a>
+                                @can('is-admin')
+                                    <a class="dropdown-item" href="{{ route('activity.logs') }}"><i
+                                            class="feather-activity"></i>Auditoria de
+                                        Atividades</a>
+                                @endcan
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/" target="_blank"><i
+                                        class="feather-globe"></i>Website</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/login"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();"><i
+                                        class="feather-log-out"></i>
+                                    {{ __('Termirar Sessão') }}
+                                </a>
                             </div>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
 
-                    </div>
-                    </li>
                 </div>
-            @endguest
+                </li>
+            </div>
             </ul>
         </div>
         </div>

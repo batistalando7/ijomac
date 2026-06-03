@@ -33,7 +33,7 @@ Route::get('/admin/dashboard', [HomeController::class, 'management'])->name('adm
 /* Rota de Logging (página de visualização de logs) */
 Route::get('/admin/activity-logs', [ActivityLogController::class, 'index'])->name('activity.logs');
 
-Route::middleware('role:admin')->prefix('admin/')->name('admin.')->group(function () {
+Route::middleware(['role:admin', 'auth'])->prefix('admin/')->name('admin.')->group(function () {
     /* Users routes */
     Route::prefix('users')->name('user.')->group(function () {
         Route::get('/', ['as' => 'index', 'uses' => 'Admin\UserController@index']);

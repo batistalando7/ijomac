@@ -63,11 +63,11 @@
             <div class="card stretch stretch-full">
                 <div class="card-body d-flex justify-content-center align-items-center">
                     <div class="avatar-image wd-150 ht-150 border border-5 border-gray-3">
-                        @if ($user->id === Auth::user()->id)
-                            <img src="{{ url('img/users/' . Auth::user()->image) }}"
+                        @if ($user->image)
+                            <img src="{{ url('storage/' . $user->image) }}"
                                 alt="foto de {{ $user->name }}" class="img-fluid">
                         @else
-                            <img src="{{ url('img/users/' . $user->image) }}" alt="foto de {{ $user->name }}"
+                            <img src="{{ url('assets/images/user.png') }}" alt="usuarioa sem foto"
                                 class="img-fluid">
                         @endif
                     </div>
