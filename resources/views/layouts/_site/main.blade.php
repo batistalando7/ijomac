@@ -553,6 +553,22 @@
     <link rel="stylesheet" id="elementor-gf-robotoslab-css"
         href="{{ url('site/fonts.googleapis.com/cssb6c5.css?family=Roboto+Slab:100,100italic,200,200italic,300,300italic,400,40₀ italic,5₀₀ italic,6₀₀ italic,7₀₀ italic,8₀₀ italic,9₀₀ italic&amp;display=swap') }}"
         media="all" />
+
+        {{-- dependencias dos faqs --}}
+        <link
+    rel="stylesheet"
+    id="elementor-post-1110-css"
+    href="{{ url('site/wp-content/uploads/elementor/css/post-1110aa4b.css?ver=1778988713') }}"
+    media="all"
+  />
+
+  {{-- dependencias dos contactos --}}
+  <link
+            rel="stylesheet"
+            id="elementor-post-1074-css"
+            href="{{ url('site/wp-content/uploads/elementor/css/post-10742f8a.css?ver=1778823161') }}"
+            media="all"
+        />
     <script id="jquery-core-js" src="{{ url('site/wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1') }}"></script>
     <script id="jquery-migrate-js" src="{{ url('site/wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1') }}">
     </script>

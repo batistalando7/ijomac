@@ -203,7 +203,7 @@
                                         </li> --}}
                                         <li id="menu-item-1151"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1151">
-                                            <a href="faq/index.html" onClick="return true">FAQ</a>
+                                            <a href="{{ route('site.about.faq') }}" onClick="return true">FAQ</a>
                                         </li>
                                         {{-- <li id="menu-item-1156"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1156">
@@ -244,11 +244,10 @@
 
                         <a class="search_btn align-self-center" data-menu="#popup_searchbox" href="#"><i
                                 class="ph ph-magnifying-glass"></i></a>
-                        <a class="cart_btn mcart_icon align-self-center" data-menu="#mini_cart" href="#"><i
+                        {{-- <a class="cart_btn mcart_icon align-self-center" data-menu="#mini_cart" href="#"><i
                                 class="ph ph-shopping-cart"></i>
-                            <span>0</span></a>
-                        <a href="student-registration/index.html" class="blue_btn round_btn align-self-center">Enroll
-                            Now</a>
+                            <span>0</span></a> --}}
+                        <a href="{{ route('site.contacts') }}" class="blue_btn round_btn align-self-center">Contacte-Nos</a>
 
                         <a class="menu_btn sidebar__toggle align-self-center" href="#"><img
                                 src="{{ url('site/wp-content/themes/edplus/assets/img/menu.svg') }}" alt="" /></a>

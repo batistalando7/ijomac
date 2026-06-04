@@ -10,7 +10,6 @@
                     <h5 class="m-b-10">Serviço</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/admin">Home</a></li>
                     <li class="breadcrumb-item">Detalhes do Serviço</li>
                 </ul>
             </div>
@@ -27,7 +26,7 @@
                         <i class="feather-layers me-2"></i>
                         <span>Save & Send</span>
                     </a> --}}
-                        <a href="{{ route('admin.categories.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.category.index') }}" class="btn btn-danger">
                             <i class="feather-chevron-left me-2"></i>
                             Voltar</a>
                     </div>

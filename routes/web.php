@@ -2,39 +2,24 @@
 
 use Illuminate\Support\Facades\Route;
 
-/* site controllers */
-use App\Http\Controllers\Site\HomeController;
-use App\Http\Controllers\Site\CultureController;
-use App\Http\Controllers\Site\EconomicController;
-use App\Http\Controllers\Site\GaleryController;
-use App\Http\Controllers\Site\NewsController;
-use App\Http\Controllers\Site\PolicyController;
-use App\Http\Controllers\Site\PublicationController;
-use App\Http\Controllers\Site\SocietyController;
-use App\Http\Controllers\Site\TechnologyController;
-use App\Http\Controllers\Site\VideoController;
-use App\Http\Controllers\Site\SubscriptionController;
-use App\Http\Controllers\Site\CommentController;
-use App\Http\Controllers\Site\SportsController;
-
-/* end site controllers */
 /*-------------------------------------------------------
                     Site Routes
 -------------------------------------------------------*/
 
 Route::redirect('/', 'portal/home');
 
-Route::get('portal/home', [HomeController::class, 'home'])->name('site.home');
+Route::get('portal/home', ['as' => 'site.home', 'uses' => 'Site\HomeController@index']);
 Route::get('portal/contactos', ['as' => 'site.contacts', 'uses' => 'Site\ContactController@index']);
 Route::get('portal/cursos', ['as' => 'site.courses', 'uses' => 'Site\CourseController@index']);
 Route::get('portal/cursos/{course:slug}', ['as' => 'site.courses.details', 'uses' => 'Site\CourseController@show']);
 Route::get('portal/cursos/{course:slug}/participar', ['as' => 'site.courses.participate', 'uses' => 'Site\CourseController@participate']);
 Route::get('portal/quem-somos', ['as' => 'site.about', 'uses' => 'Site\AboutController@index']);
+Route::get('portal/servicos', ['as' => 'site.services', 'uses' => 'Site\ServiceController@index']);
+Route::get('portal/about/faqs', ['as' => 'site.about.faq', 'uses' => 'Site\AboutController@faqs']);
 
 /* Rota de Comentarios */
-Route::post('/comment/store/{news}', [CommentController::class, 'store'])->name('site.comment.store');
+/* Route::post('/comment/store/{news}', [CommentController::class, 'store'])->name('site.comment.store'); */
 
-
-
-
+/* Rota de Mensagens */
+Route::post('portal/contactos', ['as' => 'site.message', 'uses' => 'Site\ContactController@store']);
 

@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte - Listar Autores')
+@section('title', 'IJOMAC - Listar Autores')
 @section('content')
 
     <div class="nxl-content">
@@ -246,7 +246,7 @@
                                                             @if ($user->image)
                                                                 <a
                                                                     href="{{ route('admin.user.show', ['user' => $user]) }}"><img
-                                                                        src="{{ asset('img/users/' . $user->image) }}"
+                                                                        src="{{ asset('storage/' . $user->image) }}"
                                                                         alt="user Image" class="img-thumbnail"
                                                                         style="max-width: 50px; max-height: 50px;"></a>
                                                             @else

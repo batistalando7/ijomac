@@ -24,7 +24,7 @@
                         </a>
                     </div>
                     <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">
-                        <a href="{{ route('admin.categories.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.category.index') }}" class="btn btn-danger">
                             <i class="feather-chevron-left me-2"></i>
                             <span>Voltar</span>
                         </a>

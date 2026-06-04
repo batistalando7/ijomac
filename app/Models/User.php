@@ -25,21 +25,6 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    /* funções dos gates */
-    public function isAdmin()
-    {
-        return $this->role === 'admin';
-    }
-
-    public function isEditor()
-    {
-        return in_array($this->role, ['admin', 'editor']);
-    }
-
-    public function isJornalista()
-    {
-        return in_array($this->role, ['admin', 'editor', 'jornalista']);
-    }
 
      public function comment()
     {

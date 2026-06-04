@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte- Visualizar Categoria')
+@section('title', 'IJOMAC - Visualizar Categoria')
 @section('content')
 
     <div class="nxl-content">
@@ -10,8 +10,7 @@
                     <h5 class="m-b-10">Categoria</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                    <li class="breadcrumb-item">Vizualização</li>
+                    <li class="breadcrumb-item">Visualização</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">
@@ -27,7 +26,7 @@
                         <i class="feather-layers me-2"></i>
                         <span>Save & Send</span>
                     </a> --}}
-                        <a href="{{ route('admin.categories.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.category.index') }}" class="btn btn-danger">
                             <i class="feather-chevron-left me-2"></i>
                             Voltar</a>
                     </div>
@@ -48,7 +47,7 @@
                                 <span class="d-block mb-2">Informação Geral :</span>
                                 <span class="fs-12 fw-normal text-muted d-block">Informação geral da Categoria</span>
                             </h5>
-                            <a href="{{ route('admin.categories.index') }}" class="btn btn-sm btn-light-brand">Listar
+                            <a href="{{ route('admin.category.index') }}" class="btn btn-sm btn-light-brand">Listar
                                 Categoria</a>
                         </div>
                         <div class="row mb-4">

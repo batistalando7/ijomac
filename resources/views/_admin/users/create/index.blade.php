@@ -1,6 +1,6 @@
 @extends('layouts._admin.main')
 
-@section('title', 'Assessorarte- Criar Utilizador')
+@section('title', 'IJOMAC - Criar Utilizador')
 
 @section('content')
     <!-- [ Craete Form ] -->

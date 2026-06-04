@@ -49,14 +49,14 @@
                         <div class="card-body lead-status">
                             <div class="mb-5 d-flex align-items-center justify-content-between">
                                 <h5 class="fw-bold mb-0 me-4">
-                                    <span class="d-block mb-2">Criando Categoria :</span>
+                                    <span class="d-block mb-2">Criando Curso :</span>
                                     <span class="fs-12 fw-normal text-muted text-truncate-1-line">Normalmente se refere a
-                                        adicionar uma nova Categoria</span>
+                                        adicionar Curso</span>
                                 </h5>
-                                <a href="{{ route('admin.courses.index') }}" class="btn btn-sm btn-light-brand">Listar
-                                    Categoria</a>
+                                <a href="{{ route('admin.course.index') }}" class="btn btn-sm btn-light-brand">Listar
+                                    Cursos</a>
                             </div>
-                            <form action="{{ route('admin.courses.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('admin.course.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 @method('POST')
                                 {{-- aqui o formulário --}}

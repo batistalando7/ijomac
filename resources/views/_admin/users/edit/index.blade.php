@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte- Editar user')
+@section('title', 'IJOMAC - Editar user')
 @section('content')
     <!--! ================================================================ !-->
     <!--! [Start] Main Content !-->

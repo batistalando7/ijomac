@@ -5,8 +5,8 @@
 		<div class="popup_searchform text-center">
 			<div class="col-lg-7 mx-auto">
 				<form action="https://wpdemothemes.com/edplus/" class="position-relative" method="get">
-					<input type="text" value="" name="s" placeholder="What are you looking For?">
-					<button type="submit"><i class="ph ph-magnifying-glass"></i> <span>Search</span></button>
+					<input type="text" value="" name="s" placeholder="O que você está procurando?">
+					<button type="submit"><i class="ph ph-magnifying-glass"></i> <span>Pesquisar</span></button>
 					<input type="hidden" name="post_type" value="courses" />
 				</form>
 			</div>									

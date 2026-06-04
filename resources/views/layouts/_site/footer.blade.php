@@ -7,12 +7,10 @@
          <div class="row">
              <div class="col-lg-3 col-md-6 col-12 align-self-center wow fadeIn">
                  <div id="edplus-footer-contact-info-2" class="footer-widget widget_edplus-footer-contact-info">
-                     <h4 class="ftitle">About Us</h4>
+                     <h4 class="ftitle">Sobre Nós</h4>
                      <div class="about-widget">
                          <p>
-                             Duis aute irure dolor in reprehenderit in
-                             volupta velit esse cillum dolore eu fugiat
-                             nulla pariatur. excepteur sint occaecat
+                             A IJOMAC é uma empresa angolana especializada em soluções de Higiene, Segurança e Saúde no Trabalho (HST), Gestão Ambiental, Controlo da Qualidade e Formação Profissional.
                          </p>
                          <ul>
                              <li>
@@ -20,35 +18,38 @@
                                  <a href="mailto:support@example.com">support@example.com</a>
                              </li>
                              <li>
-                                 <span>Phone:</span>
-                                 <a href="tel:+9801736895478">+9801736895478</a>
+                                 <span>Telefone:</span>
+                                 <a href="tel:+244 941 991 533">+244 941 991 533</a>
                              </li>
                              <li>
-                                 <span>Location:</span> 3500 Lenox Road ,
-                                 USA
+                                 <span>Location:</span> Luanda, Cacuaco
                              </li>
                          </ul>
                      </div>
                  </div>
              </div>
-             <div class="col-lg-2 col-md-6 col-12 wow fadeIn">
+             <div class="col-lg-3 col-md-6 col-12 wow fadeIn">
                  <div id="nav_menu-2" class="footer-widget widget_nav_menu">
-                     <h4 class="ftitle">Company</h4>
+                     <h4 class="ftitle">Compania</h4>
                      <div class="menu-company-container">
                          <ul id="menu-company" class="menu">
                              <li id="menu-item-1170"
                                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1170">
-                                 <a href="#" onClick="return true">About</a>
+                                 <a href="{{ route('site.home') }}" onClick="return true">Página Inicial</a>
+                             </li>
+                             <li id="menu-item-1170"
+                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1170">
+                                 <a href="{{ route('site.about') }}" onClick="return true">Sobre</a>
                              </li>
                              <li id="menu-item-1171"
                                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1171">
-                                 <a href="#" onClick="return true">Course</a>
+                                 <a href="{{ route('site.courses') }}" onClick="return true">Curso</a>
                              </li>
                              <li id="menu-item-1172"
                                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1172">
-                                 <a href="#" onClick="return true">Instructor</a>
+                                 <a href="#" onClick="return true">Formadores</a>
                              </li>
-                             <li id="menu-item-1173"
+                             {{-- <li id="menu-item-1173"
                                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1173">
                                  <a href="#" onClick="return true">Events</a>
                              </li>
@@ -59,45 +60,37 @@
                              <li id="menu-item-1175"
                                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1175">
                                  <a href="#" onClick="return true">Purchase Guide</a>
-                             </li>
+                             </li> --}}
                          </ul>
                      </div>
                  </div>
              </div>
-             <div class="col-lg-2 col-md-6 col-12 wow fadeIn">
+             <div class="col-lg-3 col-md-6 col-12 wow fadeIn">
                  <div id="nav_menu-3" class="footer-widget widget_nav_menu">
-                     <h4 class="ftitle">Useful Links</h4>
+                     <h4 class="ftitle">Links Úteis</h4>
                      <div class="menu-useful-links-container">
                          <ul id="menu-useful-links" class="menu">
                              <li id="menu-item-1176"
                                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1176">
-                                 <a href="#" onClick="return true">Contact Us</a>
+                                 <a href="{{ route('site.contacts') }}" onClick="return true">Contacte Nos</a>
                              </li>
                              <li id="menu-item-1177"
                                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1177">
-                                 <a href="#" onClick="return true">Technology</a>
-                             </li>
-                             <li id="menu-item-1178"
-                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1178">
-                                 <a href="#" onClick="return true">Teachers</a>
-                             </li>
-                             <li id="menu-item-1179"
-                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1179">
-                                 <a href="#" onClick="return true">Pricing</a>
+                                 <a href="{{ route('site.about.faq') }}" onClick="return true">FAQ</a>
                              </li>
                              <li id="menu-item-1180"
                                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1180">
-                                 <a href="#" onClick="return true">Service</a>
+                                 <a href="{{ route('site.services') }}" onClick="return true">Serviços</a>
                              </li>
                              <li id="menu-item-1181"
                                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1181">
-                                 <a href="#" onClick="return true">Privacy Policy</a>
+                                 <a href="#" onClick="return true">Política de Privacidade</a>
                              </li>
                          </ul>
                      </div>
                  </div>
              </div>
-             <div class="col-lg-2 col-md-6 col-12 wow fadeIn">
+             {{-- <div class="col-lg-2 col-md-6 col-12 wow fadeIn">
                  <div id="nav_menu-4" class="footer-widget widget_nav_menu">
                      <h4 class="ftitle">Explore</h4>
                      <div class="menu-explore-container">
@@ -129,16 +122,16 @@
                          </ul>
                      </div>
                  </div>
-             </div>
+             </div> --}}
              <div class="col-lg-3 col-md-6 col-12 wow fadeIn">
                  <div id="text-3" class="widget_text">
-                     <h4 class="ftitle">Get Newsletter</h4>
+                     <h4 class="ftitle">Receba boletim informativo</h4>
                      <div class="textwidget">
-                         <p>
+                         {{-- <p>
                              Duis aute irure dolor in reprehenderit in
                              volupta velit esse cillum dolore eu fugiat
                              nulla.
-                         </p>
+                         </p> --}}
                          <script>
                              (function() {
                                  window.mc4wp = window.mc4wp || {
@@ -159,7 +152,7 @@
                              data-name="Main Form">
                              <div class="mc4wp-form-fields">
                                  <div class="news_form position-relative">
-                                     <input type="email" name="EMAIL" placeholder="Enter Email Address" />
+                                     <input type="email" name="EMAIL" placeholder="Inserir Email" />
                                      <button type="submit">
                                          <i class="ph ph-paper-plane-right"></i>
                                      </button>
@@ -175,7 +168,7 @@
                          </form>
                          <!-- / Mailchimp for WordPress Plugin -->
                          <ul class="fsocial-option2 mt-3">
-                             <li><span>Follow on: </span></li>
+                             <li><span>Siga-Nos: </span></li>
                              <li>
                                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                              </li>
@@ -199,14 +192,14 @@
          <div class="container">
              <div class="row">
                  <div class="col-md-6 col-12 align-self-center text-md-start text-center">
-                     <a href="index.html" class="foot_logo">
+                     <a href="{{ route('site.home') }}" class="foot_logo">
                          <img src="{{ url('site/logo/cute.png') }}" width="150" alt="" />
                      </a>
                  </div>
                  <!-- End Col -->
 
                  <div class="col-md-6 col-12 align-self-center text-md-end text-center">
-                     <p>Copyright © 2026 edplus. All Rights Reserved.</p>
+                     <p>Copyright © {{ now()->format('Y') }} IJOMAC. Todos os direitos reservados.</p>
                  </div>
                  <!-- End Col -->
              </div>

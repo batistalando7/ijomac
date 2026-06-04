@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -84,8 +85,8 @@ class UserController extends Controller
             $image = $request->file('image');
             $extension = $image->extension();
             $imageName = md5($image->getClientOriginalName() . strtotime('now')) . '.' . $extension;
-            $image->move(public_path('img/users'), $imageName);
-            $dados['image'] = $imageName;
+            $path = $image->storeAs('img/users', $imageName, 'public');
+            $dados['image'] = $path;
         }
 
         $senha = Hash::make($request->password);
@@ -166,13 +167,13 @@ class UserController extends Controller
         if($request->hasFile('image') && $request->file('image')){
             //verificar se existe uma imagem e apagar o registro
             if ($user->image && file_exists(public_path('img/users/' . $user->image))) {
-                unlink(public_path('img/users/' . $user->image));
+                Storage::delete('img/users/' . $user->image);
             }
             $image = $request->file('image');
             $extension = $image->extension();
             $imageName = md5($image->getClientoriginalName() . strtotime('now') . '.' . $extension );
-            $image->move(public_path('img/users'), $imageName );
-            $dados['image'] = $imageName;
+            $path = $image->storeAs('img/users', $imageName, 'public');
+            $dados['image'] = $path;
 
         }
         $user->update($dados);
