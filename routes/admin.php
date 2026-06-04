@@ -16,22 +16,22 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 /* end auth controllers */
 
-
+/* 
 route::get('/analytics', function () {
     return view('_admin.dashboard.analytics.index');
 });
-
+ */
 /* Rota de verificação de e-mail */
 Auth::routes(['verify' => true]);
 
 /* Routas de admin */
 
-/* Dashboard */
-Route::redirect('/admin', 'admin/dashboard')->name('dashboard');
-Route::get('/admin/dashboard', [HomeController::class, 'management'])->name('admin.dashboard');
 
 /* Rota de Logging (página de visualização de logs) */
 Route::get('/admin/activity-logs', [ActivityLogController::class, 'index'])->name('activity.logs');
+/* Dashboard */
+Route::redirect('/admin', 'admin/dashboard')->name('dashboard');
+Route::get('/admin/dashboard', [HomeController::class, 'management'])->name('admin.dashboard')->middleware(['auth', 'role:admin']);
 
 Route::middleware(['role:admin', 'auth'])->prefix('admin/')->name('admin.')->group(function () {
     /* Users routes */
