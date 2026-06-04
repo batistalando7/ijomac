@@ -148,7 +148,7 @@
                                 small application the you will be able to download to help you practice PHP. To top it off,
                                 we will build and awesome CMS like WordPress, Joomla or Drupal.</p> --}}
 
-                            <div
+                            {{-- <div
                                 class="tutor-course-details-widget tutor-course-details-widget-col-2 tutor-mt-lg-50 tutor-mt-32">
                                 <h3
                                     class="tutor-course-details-widget-title tutor-fs-5 tutor-fw-bold tutor-color-black tutor-mb-16">
@@ -187,9 +187,7 @@
                                         <span>Downloadable lectures, code and design assets for all projects</span>
                                     </li>
                                 </ul>
-                            </div>
-
-
+                            </div> --}}
                         </div>
 
                         <div class="tab-pane fade" id="nav-curriculum" role="tabpanel"
@@ -563,7 +561,7 @@
                                             <span class="tutor-icon-level tutor-color-black tutor-mt-4 tutor-mr-12"
                                                 aria-labelledby="Level"></span>
                                             <span class="tutor-fs-6 tutor-color-secondary">
-                                                Intermediate </span>
+                                                {{ $course->level }} </span>
                                         </li>
                                         <li class="tutor-d-flex tutor-mt-12 ">
                                             <span class="tutor-icon-mortarboard tutor-color-black tutor-mt-4 tutor-mr-12"
@@ -575,23 +573,23 @@
                                             <span class="tutor-icon-clock-line tutor-color-black tutor-mt-4 tutor-mr-12"
                                                 aria-labelledby="Duration"></span>
                                             <span class="tutor-fs-6 tutor-color-secondary">
-                                                <span class="tutor-meta-level"> 18</span><span
+                                                <span class="tutor-meta-level"> {{ $course->duration }} </span>{{-- <span
                                                     class="tutor-meta-value tutor-color-secondary tutor-mr-4">
                                                     hours</span><span class="tutor-meta-level"> 20</span><span
                                                     class="tutor-meta-value tutor-color-secondary tutor-mr-4">
-                                                    minutes</span> Duration </span>
+                                                    minutes</span> Duration </span> --}}
                                         </li>
                                         <li class="tutor-d-flex tutor-mt-12 ">
                                             <span class="tutor-icon-refresh-o tutor-color-black tutor-mt-4 tutor-mr-12"
                                                 aria-labelledby="Last Updated"></span>
                                             <span class="tutor-fs-6 tutor-color-secondary">
-                                                December 2, 2025 Last Updated </span>
+                                                {{ $course->updated_at->format('M d, Y') }} última actualização </span>
                                         </li>
                                         <li class="tutor-d-flex tutor-mt-12 tutor-course-certificate-meta">
                                             <span class="tutor-icon-ribbon-o tutor-color-black tutor-mt-4 tutor-mr-12"
                                                 aria-labelledby="Certificate"></span>
                                             <span class="tutor-fs-6 tutor-color-secondary">
-                                                Certificate of completion </span>
+                                                Certificado de conclusão </span>
                                         </li>
                                     </ul>
                                 </div>
@@ -690,7 +688,7 @@
 
                         </div>
 
-                        <div class="tutor-course-details-widget">
+                        {{-- <div class="tutor-course-details-widget">
                             <h3
                                 class="tutor-course-details-widget-title tutor-fs-5 tutor-color-black tutor-fw-bold tutor-mb-16">
                                 Material Includes </h3>
@@ -846,9 +844,9 @@
                                         JavaScript is a great language to learn how to code.</span>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
 
-                        <div class="text-center">
+                       {{--  <div class="text-center">
 
 
                             <a data-tutor-modal-target="tutor-course-share-opener" href="#" class="cshare_btn">
@@ -892,7 +890,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                     </div>
                 </div>

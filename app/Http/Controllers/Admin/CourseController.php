@@ -50,6 +50,8 @@ class CourseController extends Controller
             'price' => 'required|numeric|min:0',
             'status' => 'required|in:published,draft',
             'category_id' => 'required|exists:categories,id',
+            'duration' => 'nullable|string|max:255',
+            'level' => 'required|in:beginner,intermediate,advanced',
         ]);
 
         $course = new Course();
@@ -59,7 +61,8 @@ class CourseController extends Controller
         $course->price = $request->price;
         $course->status = $request->status;
         $course->category_id = $request->category_id;
-
+        $course->duration = $request->duration;
+        $course->level = $request->level;
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time() . '_' . $image->getClientOriginalName();
@@ -112,6 +115,8 @@ class CourseController extends Controller
             'price' => 'required|numeric|min:0',
             'status' => 'required|in:published,draft',
             'category_id' => 'required|exists:categories,id',
+            'duration' => 'nullable|string|max:255',
+            'level' => 'required|in:beginner,intermediate,advanced',
         ]);
 
         $course->name = $request->name;
@@ -120,6 +125,8 @@ class CourseController extends Controller
         $course->price = $request->price;
         $course->status = $request->status;
         $course->category_id = $request->category_id;
+        $course->duration = $request->duration;
+        $course->level = $request->level;
 
         if ($request->hasFile('image')) {
             // Exclui a imagem antiga se existir

@@ -32,6 +32,18 @@
         <input type="number" name="price" class="form-control" value="{{ old('price', $course->price ?? '5000.00') }}" step="0.01">
     </div>
     <div class="col-lg-4 mb-4">
+        <label class="form-label">Nível</label>
+        <select name="level" class="form-control">
+            <option value="beginner" {{ old('level', $course->level ?? 'beginner') == 'beginner' ? 'selected' : '' }}>Iniciante</option>
+            <option value="intermediate" {{ old('level', $course->level ?? 'intermediate') == 'intermediate' ? 'selected' : '' }}>Intermediário</option>
+            <option value="advanced" {{ old('level', $course->level ?? 'advanced') == 'advanced' ? 'selected' : '' }}>Avançado</option>
+        </select>
+    </div>
+    <div class="col-lg-4 mb-4">
+        <label class="form-label">Duração</label>
+        <input type="text" name="duration" class="form-control" value="{{ old('duration', $course->duration ?? '') }}" placeholder="Ex: 10 horas">
+    </div>
+    <div class="col-lg-8 mb-4">
         <label class="form-label">Imagem (opcional) </label>
         <input type="file" name="image" class="form-control">
     </div>

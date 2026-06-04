@@ -21,6 +21,8 @@ class CreateCoursesTable extends Migration
             $table->string('image')->nullable();
             $table->decimal('price', 8, 2)->default(0);
             $table->enum('status', ['published', 'draft'])->default('draft');
+            $table->string('duration')->nullable();
+            $table->enum('level', ['beginner', 'intermediate', 'advanced'])->default('beginner');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->softDeletes();

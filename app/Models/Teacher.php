@@ -12,4 +12,5 @@ class Teacher extends Model
      protected $table = 'teachers';
 
      protected $guarder = ['id'];
+     
 }
