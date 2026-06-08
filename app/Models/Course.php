@@ -14,9 +14,16 @@ class Course extends Model
 
     protected $guarded = ['id'];
 
+    //relacionamento com categorias
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    //relacionamento com formadores
+    public function teacher()
+    {
+        return $this->belongsTo(Teacher::class);
     }
 
     /* Função de Slug */

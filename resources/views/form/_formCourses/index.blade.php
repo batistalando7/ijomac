@@ -1,6 +1,6 @@
 <div class="row">
     {{-- Campo dos Nomes das categorias --}}
-    <div class="col-lg-8 mb-4">
+    <div class="col-lg-4 mb-4">
         <label class="form-label">Nome</label>
         <input type="text" name="name" class="form-control" value="{{ old('name', $course->name ?? '') }}"
             placeholder="">
@@ -14,6 +14,21 @@
             <option value="">Selecione uma categoria</option>
             @foreach($categories as $item)
                 <option value="{{ $item->id }}" {{ old('category_id') == $item->id ? 'selected' : '' }}>
+                    {{ $item->name }}
+                </option>
+            @endforeach
+            @endif
+        </select>
+    </div>
+    <div class="col-lg-4 mb-4">
+        <label class="form-label">Formador</label>
+        <select name="teacher_id" class="form-control">
+            @if(isset($teacher))
+                <option value="{{ $teacher->id }}" selected>{{ $teacher->name }}</option>
+            @else
+            <option value="">Selecione um formador</option>
+            @foreach($teachers as $item)
+                <option value="{{ $item->id }}" {{ old('teacher_id') == $item->id ? 'selected' : '' }}>
                     {{ $item->name }}
                 </option>
             @endforeach

@@ -13,4 +13,9 @@ class Teacher extends Model
 
      protected $guarder = ['id'];
      
+     //relacionamento com os cursos
+     public function courses()
+     {
+         return $this->hasMany(Course::class);
+     }
 }

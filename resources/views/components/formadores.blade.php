@@ -57,13 +57,13 @@
                                                     <h4>
                                                         <a href="profile/edplus/indexd527.html?view=instructor">{{ $item->name}}</a>
                                                     </h4>
-                                                    <span>Software Engineer</span>
-                                                    <div class="ins_meta">
+                                                    <span>{{ $item->qualification }}</span>
+                                                    {{-- <div class="ins_meta">
                                                         <span><i class="fa-solid fa-book"></i>
                                                             36 Courses</span>
                                                         <span><i class="fa-solid fa-graduation-cap"></i>
                                                             196 Students</span>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                         @endforeach

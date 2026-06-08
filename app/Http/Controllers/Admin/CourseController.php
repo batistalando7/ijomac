@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Course;
+use App\Models\Teacher;
 use Illuminate\Support\Facades\Storage;
 
 class CourseController extends Controller
@@ -30,8 +31,11 @@ class CourseController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        return view('_admin.courses.create.index', compact('categories'));
+        $response = [
+            'categories' => Category::all(),
+            'teachers' => Teacher::all(),
+        ];
+        return view('_admin.courses.create.index', $response);
     }
 
     /**
@@ -44,7 +48,6 @@ class CourseController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            /* 'slug' => 'required|string|max:255|unique:courses', */
             'description' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'price' => 'required|numeric|min:0',
@@ -52,6 +55,7 @@ class CourseController extends Controller
             'category_id' => 'required|exists:categories,id',
             'duration' => 'nullable|string|max:255',
             'level' => 'required|in:beginner,intermediate,advanced',
+            'teacher_id' => 'nullable|exists:teachers,id',
         ]);
 
         $course = new Course();
@@ -63,6 +67,7 @@ class CourseController extends Controller
         $course->category_id = $request->category_id;
         $course->duration = $request->duration;
         $course->level = $request->level;
+        $course->teacher_id = $request->teacher_id;
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time() . '_' . $image->getClientOriginalName();
@@ -94,8 +99,12 @@ class CourseController extends Controller
      */
     public function edit(Course $course)
     {
-        $categories = Category::all();
-        return view('_admin.courses.edit.index', compact('course', 'categories'));
+        $response = [
+            'course' => $course,
+            'categories' => Category::all(),
+            'teachers' => Teacher::all(),
+        ];
+        return view('_admin.courses.edit.index', $response);
     }
 
     /**
@@ -117,6 +126,7 @@ class CourseController extends Controller
             'category_id' => 'required|exists:categories,id',
             'duration' => 'nullable|string|max:255',
             'level' => 'required|in:beginner,intermediate,advanced',
+            'teacher_id' => 'nullable|exists:teachers,id',
         ]);
 
         $course->name = $request->name;
@@ -127,7 +137,8 @@ class CourseController extends Controller
         $course->category_id = $request->category_id;
         $course->duration = $request->duration;
         $course->level = $request->level;
-
+        $course->teacher_id = $request->teacher_id;
+        
         if ($request->hasFile('image')) {
             // Exclui a imagem antiga se existir
             if ($course->image) {

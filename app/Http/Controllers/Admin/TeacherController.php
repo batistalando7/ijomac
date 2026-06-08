@@ -46,6 +46,7 @@ class TeacherController extends Controller
             'address' => 'nullable',
             'entries_date' => 'nullable|date',
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'qualification' => 'nullable|string|max:255',
         ]);
 
         $teacher = new Teacher();
@@ -62,6 +63,7 @@ class TeacherController extends Controller
         $teacher->phone = $request->phone;
         $teacher->address = $request->address;
         $teacher->entries_date = Carbon::parse($request->entries_date)->format('Y-m-d');
+        $teacher->qualification = $request->qualification;
         $teacher->save();
 
         return redirect()->route('admin.teacher.index')->with('success', 'Formador criado com sucesso.');
@@ -104,6 +106,7 @@ class TeacherController extends Controller
             'phone' => 'nullable',
             'address' => 'nullable',
             'entries_date' => 'nullable|date',
+            'qualification' => 'nullable|string|max:255',
         ]);
 
        if($request->hasFile('photo')) {
@@ -120,6 +123,7 @@ class TeacherController extends Controller
         $teacher->phone = $request->phone;
         $teacher->address = $request->address;
         $teacher->entries_date = Carbon::parse($request->entries_date)->format('Y-m-d');
+        $teacher->qualification = $request->qualification;
         $teacher->save();
 
         return redirect()->route('admin.teacher.index')->with('success', 'Formador atualizado com sucesso.');

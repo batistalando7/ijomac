@@ -25,6 +25,8 @@ class CreateCoursesTable extends Migration
             $table->enum('level', ['beginner', 'intermediate', 'advanced'])->default('beginner');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->unsignedBigInteger('teacher_id')->nullable();
+            $table->foreign('teacher_id')->references('id')->on('teachers')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
         });

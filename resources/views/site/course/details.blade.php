@@ -13,7 +13,7 @@
             <p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
         </div>
     </div>
-    
+
     <!-- Start Main Banner -->
     <section class="main-banner"
         style="background-image: url({{ url('site/wp-content/themes/edplus/assets/img/bg/main-banner.jpg') }});">
@@ -54,13 +54,15 @@
                                 <div class="smeta">
                                     <div class="tutor-avatar">
                                         <div class="tutor-ratio tutor-ratio-1x1"><img
-                                                src="{{ url('site/wp-content/uploads/2025/03/3-4-150x150.jpg') }}" alt="Masum Billah" />
+                                                src="{{ asset('storage/' . $course->teacher->photo) }}"
+                                                alt="{{ $course->teacher->name }}" />
                                         </div>
                                     </div>
                                     <div class="smeta_text">
                                         <span>Formador:</span>
                                         <p>
-                                            <a href="../../profile/edplus/indexd527.html?view=instructor">Masum Billah</a>
+                                            <a
+                                                href="../../profile/edplus/indexd527.html?view=instructor">{{ $course->teacher->name }}</a>
                                         </p>
                                     </div>
                                 </div>
@@ -85,7 +87,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-3 col-sm-6">
+                            {{--  <div class="col-lg-3 col-sm-6">
                                 <div class="smeta smrating">
                                     <p>
                                     <div class="tutor-course-details-ratings">
@@ -99,7 +101,7 @@
                                     </div>
                                     </p>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div><!-- End Meta -->
 
@@ -110,15 +112,15 @@
                             <button class="nav-link active" id="nav-overview-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-overview" type="button" role="tab" aria-controls="nav-overview"
                                 aria-selected="true">Descrição</button>
-                            <button class="nav-link" id="nav-curriculum-tab" data-bs-toggle="tab"
+                            {{-- <button class="nav-link" id="nav-curriculum-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-curriculum" type="button" role="tab" aria-controls="nav-profile"
                                 aria-selected="false">Curriculum</button>
-                            <button class="nav-link" id="nav-review-tab" data-bs-toggle="tab" data-bs-target="#nav-review"
+                             <button class="nav-link" id="nav-review-tab" data-bs-toggle="tab" data-bs-target="#nav-review"
                                 type="button" role="tab" aria-controls="nav-review"
-                                aria-selected="false">Avaliação</button>
+                                aria-selected="false">Avaliação</button> 
                             <button class="nav-link" id="nav-instructor-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-instructor" type="button" role="tab" aria-controls="nav-disabled"
-                                aria-selected="false">Formador</button>
+                                aria-selected="false">Formador</button> --}}
                         </div>
                     </nav>
 
@@ -190,8 +192,8 @@
                             </div> --}}
                         </div>
 
-                        <div class="tab-pane fade" id="nav-curriculum" role="tabpanel"
-                            aria-labelledby="nav-curriculum-tab" tabindex="0">
+                        <div class="tab-pane fade" id="nav-curriculum" role="tabpanel" aria-labelledby="nav-curriculum-tab"
+                            tabindex="0">
                             <div class="cd_curriculum">
                                 <div class="courser_topics">
                                 </div>
@@ -199,7 +201,7 @@
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab"
+                        {{-- <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab"
                             tabindex="0">
                             <div class="cd_rating">
 
@@ -471,7 +473,7 @@
 
 
                             </div>
-                        </div>
+                        </div> 
                         <div class="tab-pane fade" id="nav-instructor" role="tabpanel"
                             aria-labelledby="nav-instructor-tab" tabindex="0">
                             <h3 class="tutor-fs-5 tutor-fw-bold tutor-color-black tutor-mb-24">
@@ -482,7 +484,7 @@
 
                                     <img width="361" height="377" src="../../wp-content/uploads/2025/03/3-4.jpg"
                                         class="attachment-full size-full" alt="" decoding="async"
-                                        srcset="https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 361w, https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4-287x300.jpg 287w"
+                                        srcset="{{ asset('storage/' . $course->teacher->photo) }}"
                                         sizes="(max-width: 361px) 100vw, 361px" />
                                     <ul>
                                         <li>
@@ -502,9 +504,9 @@
                                 </div>
 
                                 <div class="cdin_content">
-                                    <h4><a href="../../profile/edplus/indexd527.html?view=instructor">Masum Billah</a></h4>
+                                    <h4><a href="../../profile/edplus/indexd527.html?view=instructor">{{ $course->teacher->name }}</a></h4>
                                     <span>
-                                        Web Desinger </span>
+                                        {{ $course->teacher->qualification }} </span>
 
                                     <p>Duis aute irure dolor in reprehenderit in volupta velit esse cillum dolore eu fugiat
                                         nulla.</p>
@@ -518,7 +520,7 @@
                             </div>
 
 
-                        </div>
+                        </div> --}}
                     </div>
 
                 </div>
@@ -552,7 +554,7 @@
                                     </div>
 
                                     <div class="tutor-fs-7 tutor-color-muted tutor-mt-20 tutor-text-center">
-                                         Inscrever-se neste curso </div>
+                                        Inscrever-se neste curso </div>
                                 </div>
                                 <!-- Course Info -->
                                 <div class="tutor-card-footer ">
@@ -563,17 +565,18 @@
                                             <span class="tutor-fs-6 tutor-color-secondary">
                                                 {{ $course->level }} </span>
                                         </li>
-                                        <li class="tutor-d-flex tutor-mt-12 ">
+                                        {{-- <li class="tutor-d-flex tutor-mt-12 ">
                                             <span class="tutor-icon-mortarboard tutor-color-black tutor-mt-4 tutor-mr-12"
                                                 aria-labelledby="Total Enrolled"></span>
                                             <span class="tutor-fs-6 tutor-color-secondary">
                                                 0 Total Enrolled </span>
-                                        </li>
+                                        </li> --}}
                                         <li class="tutor-d-flex tutor-mt-12 ">
                                             <span class="tutor-icon-clock-line tutor-color-black tutor-mt-4 tutor-mr-12"
                                                 aria-labelledby="Duration"></span>
                                             <span class="tutor-fs-6 tutor-color-secondary">
-                                                <span class="tutor-meta-level"> {{ $course->duration }} </span>{{-- <span
+                                                <span class="tutor-meta-level"> {{ $course->duration }}
+                                                </span>{{-- <span
                                                     class="tutor-meta-value tutor-color-secondary tutor-mr-4">
                                                     hours</span><span class="tutor-meta-level"> 20</span><span
                                                     class="tutor-meta-value tutor-color-secondary tutor-mr-4">
@@ -846,7 +849,7 @@
                             </ul>
                         </div> --}}
 
-                       {{--  <div class="text-center">
+                        {{--  <div class="text-center">
 
 
                             <a data-tutor-modal-target="tutor-course-share-opener" href="#" class="cshare_btn">
@@ -901,70 +904,74 @@
                     Cursos relacionados
                 </h3>
                 <div class="relcourse_slider owl-carousel position-relative">
-                    <div class="single_course">
-                        <div class="course_img">
-                            <div class="ccategory">
-                                <a
-                                    href="../../course-category/data-science/index3a21.html?tutor-course-filter-category=73"><i
-                                        class="ph ph-folder-open"></i> Data Science</a>
+                    @foreach ($relatedCourses as $item)
+                        <div class="single_course">
+                            <div class="course_img">
+                                <div class="ccategory">
+                                    <a
+                                        href="../../course-category/data-science/index3a21.html?tutor-course-filter-category=73"><i
+                                            class="ph ph-folder-open"></i> Data Science</a>
 
 
-                            </div>
-                            <img width="690" height="430" src="../../wp-content/uploads/2025/03/6.jpg"
-                                class="attachment-edplus_course size-edplus_course wp-post-image" alt=""
-                                decoding="async"
-                                srcset="https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6.jpg 690w, https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-600x374.jpg 600w, https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-300x187.jpg 300w"
-                                sizes="(max-width: 690px) 100vw, 690px" /> <a
-                                href="../../../../www.youtube.com/watch9a6e.html?v=yGDwk4z9EEg" class="cvbtn"
-                                data-source="youtube">
-                                <i class="ph ph-video-camera"></i>
-                            </a>
-                        </div>
-
-                        <div class="course_content">
-                            <div class="crating_number">
-                                <i class="fa-solid fa-star"></i>
-                                <strong>4.00</strong> (2 Rating)
+                                </div>
+                                <img width="690" height="430" src="../../wp-content/uploads/2025/03/6.jpg"
+                                    class="attachment-edplus_course size-edplus_course wp-post-image" alt=""
+                                    decoding="async"
+                                    srcset="https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6.jpg 690w, https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-600x374.jpg 600w, https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-300x187.jpg 300w"
+                                    sizes="(max-width: 690px) 100vw, 690px" /> <a
+                                    href="../../../../www.youtube.com/watch9a6e.html?v=yGDwk4z9EEg" class="cvbtn"
+                                    data-source="youtube">
+                                    <i class="ph ph-video-camera"></i>
+                                </a>
                             </div>
 
-                            <h3>
-                                <a href="../interior-design-concepts-masterclass-3/index.html">
-                                    Interior design concepts Masterclass </a>
-                            </h3>
-
-                            <div class="cmeta d-flex gap-5">
-                                <div class="single_meta">
-                                    <i class="fa-regular fa-user"></i> 2 Students
+                            <div class="course_content">
+                                <div class="crating_number">
+                                    <i class="fa-solid fa-star"></i>
+                                    <strong>4.00</strong> (2 Rating)
                                 </div>
 
-                                <div class="single_meta">
-                                    <i class="fa-solid fa-book"></i> 0 Lessons
-                                </div>
+                                <h3>
+                                    <a href="../interior-design-concepts-masterclass-3/index.html">
+                                        Interior design concepts Masterclass </a>
+                                </h3>
 
-
-                            </div>
-
-                            <div class="cbtm">
-                                <div class="c_price float-start">
-                                    <div class="price">
-                                        <del aria-hidden="true"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">&#036;</span>65.00</span></del>
-                                        <span class="screen-reader-text">Original price was: &#036;65.00.</span><ins
-                                            aria-hidden="true"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">&#036;</span>55.00</span></ins><span
-                                            class="screen-reader-text">Current price is: &#036;55.00.</span>
+                                <div class="cmeta d-flex gap-5">
+                                    <div class="single_meta">
+                                        <i class="fa-regular fa-user"></i> 2 Students
                                     </div>
 
+                                    <div class="single_meta">
+                                        <i class="fa-solid fa-book"></i> 0 Lessons
+                                    </div>
+
+
                                 </div>
-                                <div class="c_author float-end"><img alt=''
-                                        src='../../wp-content/uploads/2025/03/3-4.jpg'
-                                        srcset='https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 2x'
-                                        class='avatar avatar-30 photo' height='30' width='30' decoding='async' />
-                                    <a href="../../profile/edplus/indexd527.html?view=instructor">Masum Billah</a></div>
+
+                                <div class="cbtm">
+                                    <div class="c_price float-start">
+                                        <div class="price">
+                                            <del aria-hidden="true"><span class="woocommerce-Price-amount amount"><span
+                                                        class="woocommerce-Price-currencySymbol">&#036;</span>65.00</span></del>
+                                            <span class="screen-reader-text">Original price was: &#036;65.00.</span><ins
+                                                aria-hidden="true"><span class="woocommerce-Price-amount amount"><span
+                                                        class="woocommerce-Price-currencySymbol">&#036;</span>55.00</span></ins><span
+                                                class="screen-reader-text">Current price is: &#036;55.00.</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="c_author float-end"><img alt=''
+                                            src='../../wp-content/uploads/2025/03/3-4.jpg'
+                                            srcset='https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 2x'
+                                            class='avatar avatar-30 photo' height='30' width='30'
+                                            decoding='async' />
+                                        <a href="../../profile/edplus/indexd527.html?view=instructor">Masum Billah</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="single_course">
+                    @endforeach
+                    {{-- <div class="single_course">
                         <div class="course_img">
                             <div class="ccategory">
                                 <a
@@ -1152,7 +1159,7 @@
                                     <a href="../../profile/edplus/indexd527.html?view=instructor">Masum Billah</a></div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>

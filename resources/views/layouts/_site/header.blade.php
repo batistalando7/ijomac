@@ -213,7 +213,7 @@
                                 </li>
                                 <li id="menu-item-1970"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1970">
-                                    <a href="#" onClick="return true">Serviços</a>
+                                    <a href="{{ route('site.services') }}" onClick="return true">Serviços</a>
                                     {{-- <ul class="sub-menu">
                                         <li id="menu-item-1921"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1921">

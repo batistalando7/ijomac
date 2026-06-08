@@ -86,7 +86,7 @@
                                                 {{ $item->name }} </a>
                                         </h3>
 
-                                        <div class="cmeta d-flex gap-5">
+                                        {{-- <div class="cmeta d-flex gap-5">
                                             <div class="single_meta">
                                                 <i class="fa-regular fa-user"></i> 2 Students
                                             </div>
@@ -96,7 +96,7 @@
                                             </div>
 
 
-                                        </div>
+                                        </div> --}}
 
                                         <div class="cbtm">
                                             <div class="c_price float-start">
@@ -114,10 +114,10 @@
                                             </div>
                                             <div class="c_author float-end"><img alt=''
                                                     src='{{ url('site/wp-content/uploads/2025/03/3-4.jpg') }}'
-                                                    srcset='https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 2x'
+                                                    srcset='{{ asset('storage/' . $item->teacher->photo) }}'
                                                     class='avatar avatar-30 photo' height='30' width='30'
                                                     decoding='async' /> <a
-                                                    href="../profile/edplus/indexd527.html?view=instructor">Masum Billah</a>
+                                                    href="../profile/edplus/indexd527.html?view=instructor">{{ $item->teacher->name }}</a>
                                             </div>
                                         </div>
                                     </div>
