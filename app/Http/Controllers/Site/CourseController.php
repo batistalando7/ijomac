@@ -15,7 +15,15 @@ class CourseController extends Controller
     }
     
     public function show(Course $course){
-
-        return view('site.course.show', compact('course'));
+        $response = [
+            'course' => $course,
+            'relatedCourses' => Course::where('category_id', $course->category_id)
+                ->where('id', '!=', $course->id)
+                ->where('status', 'published')
+                ->orderByDesc('id')
+                ->take(4)
+                ->get(),
+        ];
+        return view('site.course.details', $response);
     }
 }

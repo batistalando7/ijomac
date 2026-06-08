@@ -73,7 +73,7 @@
                                         <div class="row">
                                             <div class="col-lg-5 col-md-4 align-self-center">
                                                 <div class="badge_wrap wow fadeInUp" data-wow-delay=".5s">
-                                                    <div class="bbadge">
+                                                    {{-- <div class="bbadge">
                                                         <img decoding="async"
                                                             src="{{ url('site/wp-content/uploads/2025/03/bbadge-icon.svg') }}"
                                                             alt="" />
@@ -81,10 +81,7 @@
                                                             <span>250</span>
                                                             +
                                                         </h3>
-                                                        <p>
-                                                            Our Happy
-                                                            Students
-                                                        </p>
+                                                        <p>Nossos Clientes</p>
                                                     </div>
 
                                                     <div class="bbadge two">
@@ -98,7 +95,7 @@
                                                         <p>
                                                             Finished Session
                                                         </p>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                             <!-- End Col -->
@@ -106,94 +103,7 @@
                                             <div class="col-lg-7 col-md-8 align-self-center wow fadeInUp"
                                                 data-wow-delay=".9s">
                                                 <div class="banner_courses">
-                                                    <div class="single_course">
-                                                        <div class="course_img">
-                                                            <div class="ccategory">
-                                                                <a
-                                                                    href="course-category/data-science/index3a21.html?tutor-course-filter-category=73"><i
-                                                                        class="ph ph-folder-open"></i>
-                                                                    Data
-                                                                    Science</a>
-                                                            </div>
-                                                            <img fetchpriority="high" decoding="async" width="690"
-                                                                height="430"
-                                                                src="{{ url('site/wp-content/uploads/2025/03/6.jpg') }}"
-                                                                class="attachment-edplus_course size-edplus_course wp-post-image"
-                                                                alt=""
-                                                                srcset="
-                                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6.jpg         690w,
-                                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-600x374.jpg 600w,
-                                                                        https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-300x187.jpg 300w
-                                                                    "
-                                                                sizes="(max-width: 690px) 100vw, 690px" />
-                                                            <a href="../../www.youtube.com/watch9a6e.html?v=yGDwk4z9EEg"
-                                                                class="cvbtn" data-source="youtube">
-                                                                <i class="ph ph-video-camera"></i>
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="course_content">
-                                                            <div class="crating_number">
-                                                                <i class="fa-solid fa-star"></i>
-                                                                4.00
-                                                            </div>
-                                                            <h3>
-                                                                <a
-                                                                    href="courses/interior-design-concepts-masterclass-3/index.html">
-                                                                    Interior
-                                                                    design
-                                                                    concepts
-                                                                    Masterclass
-                                                                </a>
-                                                            </h3>
-
-                                                            <div class="cmeta d-flex gap-xxl-5 gap-4">
-                                                                <div class="single_meta">
-                                                                    <i class="fa-solid fa-book"></i>
-                                                                    0
-                                                                    Lessons
-                                                                </div>
-
-                                                                <div class="single_meta">
-                                                                    <i class="fa-regular fa-clock"></i>
-                                                                    02.20
-                                                                    Hours
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="cbtm">
-                                                                <div class="c_price float-start">
-                                                                    <div class="price">
-                                                                        <del aria-hidden="true"><span
-                                                                                class="woocommerce-Price-amount amount"><span
-                                                                                    class="woocommerce-Price-currencySymbol">&#036;</span>65.00</span></del>
-                                                                        <span class="screen-reader-text">Original
-                                                                            price
-                                                                            was:
-                                                                            &#036;65.00.</span><ins aria-hidden="true"><span
-                                                                                class="woocommerce-Price-amount amount"><span
-                                                                                    class="woocommerce-Price-currencySymbol">&#036;</span>55.00</span></ins><span
-                                                                            class="screen-reader-text">Current
-                                                                            price
-                                                                            is:
-                                                                            &#036;55.00.</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="c_author float-end">
-                                                                    <img alt=""
-                                                                        src="{{ url('site/wp-content/uploads/2025/03/3-4.jpg') }}"
-                                                                        srcset="
-                                                                                https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 2x
-                                                                            "
-                                                                        class="avatar avatar-30 photo" height="30"
-                                                                        width="30" />
-                                                                    <a
-                                                                        href="profile/edplus/indexd527.html?view=instructor">Masum
-                                                                        Billah</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                   @include('components.singleCourse', ['course' => $bannerCourse])
                                                 </div>
                                             </div>
                                             <!-- End Col -->
@@ -243,7 +153,12 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-xl-4 col-md-6 col-12 wow fadeInUp">
+                                     @foreach ($services as $item)
+                                        <div class="col-xl-4 col-md-6 col-12 wow fadeInUp">
+                                            @include('components.blogItem', ['item' => $item])
+                                        </div>
+                                    @endforeach
+                                    {{--<div class="col-xl-4 col-md-6 col-12 wow fadeInUp">
                                         <div class="category-item">
                                             <div class="cicon">
                                                 <img decoding="async"
@@ -263,7 +178,7 @@
                                     </div>
                                     <!-- End Col -->
 
-                                    <div class="col-xl-4 col-md-6 col-12 wow fadeInUp">
+                                     <div class="col-xl-4 col-md-6 col-12 wow fadeInUp">
                                         <div class="category-item">
                                             <div class="cicon">
                                                 <img decoding="async"
@@ -321,7 +236,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- End Col -->
+                                   <!-- End Col -->
 
                                     <div class="col-xl-6 col-md-6 col-12 wow fadeInUp">
                                         <div class="category-item">
@@ -343,7 +258,7 @@
                                     </div>
                                     <!-- End Col -->
 
-                                    {{-- <div class="col-xl-4 col-md-6 col-12 wow fadeInUp">
+                                     <div class="col-xl-4 col-md-6 col-12 wow fadeInUp">
                                         <div class="category-item">
                                             <div class="cicon">
                                                 <img decoding="async"
@@ -781,91 +696,7 @@
                                 <div class="row gy-4 course_item">
                                     @foreach ($courses as $item)
                                         <div class="col-xl-4 col-md-6 col-12 mix data-science wow fadeInUp">
-                                            <div class="single_course course_style2">
-                                                <div class="course_img">
-                                                    <div class="ccategory">
-                                                        <a
-                                                            href="course-category/data-science/index3a21.html?tutor-course-filter-category=73"><i
-                                                                class="ph ph-folder-open"></i>
-                                                            {{ $item->category->name }}</a>
-                                                    </div>
-                                                    <img fetchpriority="high" decoding="async" width="690"
-                                                        height="430" src="{{ asset('storage/' . $item->image) }}"
-                                                        class="attachment-edplus_course size-edplus_course wp-post-image"
-                                                        alt=""
-                                                        srcset="
-                                                            {{ asset('storage/' . $item->image) }}
-                                                        "
-                                                        sizes="(max-width: 690px) 100vw, 690px" />
-                                                    <a href="{{ route('site.courses.details', ['course' => $item->slug]) }}"
-                                                        class="cvbtn" data-source="youtube">
-                                                        <i class="ph ph-video-camera"></i>
-                                                    </a>
-                                                </div>
-
-                                                <div class="course_content">
-                                                    <div class="crating_number">
-                                                        <div class="tutor-ratings-stars">
-                                                            <i class="tutor-icon-star-bold" data-rating-value="1"></i><i
-                                                                class="tutor-icon-star-bold" data-rating-value="2"></i><i
-                                                                class="tutor-icon-star-bold" data-rating-value="3"></i><i
-                                                                class="tutor-icon-star-bold" data-rating-value="4"></i><i
-                                                                class="tutor-icon-star-line" data-rating-value="5"></i>
-                                                        </div>
-                                                        <input type="hidden" name="tutor_rating_gen_input"
-                                                            value="4.00" />
-                                                        <span>(4.00 / 2
-                                                            Ratings)</span>
-                                                    </div>
-                                                    <h3>
-                                                        <a
-                                                            href="{{ route('site.courses.details', ['course' => $item->slug]) }}">
-                                                            {{ $item->name }}
-                                                        </a>
-                                                    </h3>
-
-                                                    <div class="cmeta d-flex gap-5">
-                                                        <div class="single_meta">
-                                                            <i class="fa-regular fa-user"></i>
-                                                            2 Students
-                                                        </div>
-
-                                                        <div class="single_meta">
-                                                            <i class="fa-solid fa-book"></i>
-                                                            0 Lessons
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="cbtm">
-                                                        <div class="c_price float-start">
-                                                            <div class="price">
-                                                                <del aria-hidden="true"><span
-                                                                        class="woocommerce-Price-amount amount"><span
-                                                                            class="woocommerce-Price-currencySymbol">kz</span>{{ $item->price + $item->price * 0.19 }}</span></del>
-                                                                <span class="screen-reader-text">Original
-                                                                    price was:
-                                                                    kz65.00.</span><ins aria-hidden="true"><span
-                                                                        class="woocommerce-Price-amount amount"><span
-                                                                            class="woocommerce-Price-currencySymbol">kz</span>{{ $item->price }}</span></ins><span
-                                                                    class="screen-reader-text">Current
-                                                                    price is:
-                                                                    kz55.00.</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="c_author float-end">
-                                                            <img alt=""
-                                                                src="{{ url('site/wp-content/uploads/2025/03/3-4.jpg') }}"
-                                                                srcset="
-                                                                    https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 2x
-                                                                "
-                                                                class="avatar avatar-30 photo" height="30"
-                                                                width="30" />
-                                                            <a href="profile/edplus/indexd527.html?view=instructor">Masum
-                                                                Billah</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            @include('components.singleCourse', ['course' => $item])
                                         </div>
                                         <!-- End Col-->
                                     @endforeach

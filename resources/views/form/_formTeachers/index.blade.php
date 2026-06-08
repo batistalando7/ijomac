@@ -1,6 +1,6 @@
 <div class="row">
     {{-- Nome --}}
-    <div class="col-lg-8 mb-4">
+    <div class="col-lg-4 mb-4">
         <label class="form-label">Nome do Formador</label>
         <input type="text" name="name" class="form-control" value="{{ old('name', $teacher->name ?? '') }}">
     </div>
@@ -21,6 +21,12 @@
     <div class="col-lg-4 mb-4">
         <label class="form-label">Endereço do Formador</label>
         <input type="text" name="address" class="form-control" value="{{ old('address', $teacher->address ?? '') }}">
+    </div>
+    
+    {{-- qualificação --}}
+    <div class="col-lg-4 mb-4">
+        <label class="form-label">Qualificação do Formador</label>
+        <input type="text" name="qualification" class="form-control" value="{{ old('qualification', $teacher->qualification ?? '') }}">
     </div>
     
     {{-- data de entrada --}}

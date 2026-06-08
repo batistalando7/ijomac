@@ -3,12 +3,11 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use App\Models\News;
 use App\Models\Category;
 use App\Models\Advertisement;
-use App\Models\Video;
 use App\Models\Course;
 use App\Models\Teacher;
+use App\Models\Service;
 
 class HomeController extends Controller
 {
@@ -17,7 +16,12 @@ class HomeController extends Controller
 
         $response['categories'] = Category::take(4)->get();
 
-        $response['courses'] = Course::where('status', 'published')->orderByDesc('id')->take(3)->get();
+        $bannerCourse = Course::where('status', 'published')->orderByDesc('id')->first();
+        $response['bannerCourse'] = $bannerCourse;
+
+        $response['services'] = Service::orderByDesc('id')->take(3)->get();
+
+        $response['courses'] = Course::where('status', 'published')->where('id', '!=', $bannerCourse->id)->orderByDesc('id')->take(3)->get();
 
         $response['teachers'] = Teacher::orderByDesc('id')->take(3)->get();
 
