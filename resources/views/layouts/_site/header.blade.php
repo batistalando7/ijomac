@@ -27,8 +27,8 @@
                 <div class="col-lg-6 col-md-12 text-center htright d-lg-flex justify-content-end">
                     <p class="align-self-center">
                         <i class="fa-solid fa-headset"></i>
-                        <span>Call Us:</span>
-                        <a href="tel:+99925476854">+99925476854</a>
+                        <span>Ligar Nos:</span>
+                        <a href="tel:+244941991533">+244941991533</a>
                     </p>
 
                     <p class="align-self-center">

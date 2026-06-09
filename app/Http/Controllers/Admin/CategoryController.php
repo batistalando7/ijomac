@@ -217,6 +217,6 @@ class CategoryController extends Controller
         // Exclui a categoria do banco de dados
 
         $category->delete();
-        return redirect()->route('admin.category.index')->with('success', 'Categoria apagado com sucesso!');
+        return redirect()->route('admin.category.index')->with('success', 'Categoria apagada com sucesso!');
     }
 }

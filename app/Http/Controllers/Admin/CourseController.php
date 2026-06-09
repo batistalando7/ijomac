@@ -139,7 +139,7 @@ class CourseController extends Controller
         $course->level = $request->level;
         $course->teacher_id = $request->teacher_id;
         
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
             // Exclui a imagem antiga se existir
             if ($course->image) {
                 Storage::disk('public')->delete($course->image);
