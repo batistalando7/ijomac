@@ -24,7 +24,7 @@ class HomeController extends Controller
 
             $bannerCourse = Course::where('status', 'published')->orderByDesc('id')->first();
             $response['bannerCourse'] = $bannerCourse;
-            $response['courses'] = Course::where('status', 'published')->where('id', '!=', $bannerCourse->id)->orderByDesc('id')->take(3)->get();
+            $response['courses'] = Course::where('status', 'published')->where('id', '!=', $bannerCourse->id)->orderByDesc('id')->take(6)->get();
 
         }
         $response['services'] = Service::orderByDesc('id')->take(3)->get();

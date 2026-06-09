@@ -410,14 +410,14 @@
                         data-tutor_pagination_ajax="{&quot;loading_container&quot;:&quot;.tutor-course-filter-loop-container&quot;,&quot;action&quot;:&quot;tutor_course_filter_ajax&quot;,&quot;course_per_page&quot;:&quot;6&quot;,&quot;column_per_row&quot;:&quot;3&quot;}"
                         data-push_state_link="index24ac.html?supported_filters%5Bsearch%5D=search&amp;supported_filters%5Bcategory%5D=category&amp;supported_filters%5Btag%5D=tag&amp;supported_filters%5Bdifficulty_level%5D=difficulty_level&amp;supported_filters%5Bprice_type%5D=price_type&amp;column_per_row=3&amp;course_per_page=6&amp;show_pagination=1">
                         <div class="tutor-pagination-hints">
-                            <div class="tutor-fs-7 tutor-color-black-60">
+                            {{-- <div class="tutor-fs-7 tutor-color-black-60">
                                 Page
                                 <span class="tutor-fs-7 tutor-fw-medium tutor-color-black">
                                     1 </span>
                                 of
                                 <span class="tutor-fs-7 tutor-fw-medium tutor-color-black">
                                     6 </span>
-                            </div>
+                            </div> --}}
                         </div>
                         <ul class="tutor-pagination-numbers">
                             {{ $courses->links() }}

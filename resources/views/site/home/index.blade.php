@@ -1213,7 +1213,7 @@
                 </div>
             </div>
            {{-- testemunhos --}}
-           @include('components.testemunhos')
+           {{-- @include('components.testemunhos') --}}
            
             {{-- formadores --}}
             @include('components.formadores')
