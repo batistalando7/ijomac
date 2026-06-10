@@ -138,8 +138,7 @@
                                     </div>
                                 </div>
                                 <div class="progress mt-2 ht-3">
-                                    <div class="progress-bar bg-primary" role="progressbar"
-                                        style="width: 100%"></div>
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 100%"></div>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +158,7 @@
                                     <div>
                                         <div class="fs-4 fw-bold text-dark"><span
                                                 class="counter">{{ $usersTotal ?? '' }}</span>
-                                            </div>
+                                        </div>
                                         <h3 class="fs-13 fw-semibold text-truncate-1-line">Total de Utilizadores</h3>
                                     </div>
                                 </div>
@@ -177,8 +176,7 @@
                                     </div>
                                 </div>
                                 <div class="progress mt-2 ht-3">
-                                    <div class="progress-bar bg-warning" role="progressbar"
-                                        style="width: 100%"></div>
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 100%"></div>
                                 </div>
                             </div>
                         </div>
@@ -217,52 +215,20 @@
                         </div>
                         <div class="card-footer">
                             <div class="row g-4">
-                                @foreach($categoryCourses as $item)
-                                <div class="col-lg-3">
-                                    <div class="p-3 border border-dashed rounded">
-                                        <div class="fs-12 text-muted mb-1">{{ $item->category->name ?? 'Sem Categoria' }}</div>
-                                        <h6 class="fw-bold text-dark">{{ $item->count() ?? '0' }}</h6>
-                                        <div class="progress mt-2 ht-3">
-                                            <div class="progress-bar bg-primary" role="progressbar"
-                                                style="width: {{ $item->count() > 0 ? 100 : 0 }}%">
+                                @foreach ($categoryCourses as $item)
+                                    <div class="col-lg-3">
+                                        <div class="p-3 border border-dashed rounded">
+                                            <div class="fs-12 text-muted mb-1">
+                                                {{ $item->name ?? 'Sem Categoria' }}</div>
+                                            <h6 class="fw-bold text-dark">{{ $item->course->count() ?? '0' }}</h6>
+                                            <div class="progress mt-2 ht-3">
+                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                    style="width: {{ $item->course->count() > 0 ? 100 : 0 }}%">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 @endforeach
-                                {{-- <div class="col-lg-3">
-                                    <div class="p-3 border border-dashed rounded">
-                                        <div class="fs-12 text-muted mb-1">Política</div>
-                                        <h6 class="fw-bold text-dark">{{ $politicsNews ?? '10' }}</h6>
-                                        <div class="progress mt-2 ht-3">
-                                            <div class="progress-bar bg-success" role="progressbar"
-                                                style="width: {{ $politicsNewsPercent ?? 10 }}%">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="p-3 border border-dashed rounded">
-                                        <div class="fs-12 text-muted mb-1">Sociedade</div>
-                                        <h6 class="fw-bold text-dark">{{ $socialNews ?? '10' }}</h6>
-                                        <div class="progress mt-2 ht-3">
-                                            <div class="progress-bar bg-danger" role="progressbar"
-                                                style="width: {{ $socialNewsPercent ?? 10 }}%">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="p-3 border border-dashed rounded">
-                                        <div class="fs-12 text-muted mb-1">Arte e Cultura</div>
-                                        <h6 class="fw-bold text-dark">{{ $cultureNews ?? '10' }}</h6>
-                                        <div class="progress mt-2 ht-3">
-                                            <div class="progress-bar bg-primary" role="progressbar"
-                                                style="width: {{ $cultureNewsPercent ?? 10 }}%">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> --}}
                             </div>
                         </div>
                     </div>

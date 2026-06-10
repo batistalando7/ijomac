@@ -19,26 +19,10 @@ class Category extends Model
     protected $table = 'categories';
     protected $guarded = ['id'];
 
-    public function news()
+    public function course(): HasMany
     {
-        return $this->hasMany(News::class);
+        return $this->hasMany(Course::class, 'category_id');
     }
-
-    public function events()
-    {
-        return $this->hasMany(Event::class);
-    }
-
-    public function typeCategory()
-    {
-        return $this->hasMany(TypeCategory::class, 'category_id');
-    }
-
-    public function latestNews()
-    {
-        return $this->hasOne(News::class)->latestOfMany();
-    }
-
     /* protected static function boot()
     {
         parent::boot();

@@ -5,9 +5,10 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
-use App\Models\News;
+use App\Models\Service;
 use App\Models\User;
 use App\Models\Teacher;
+use App\Models\Category;
 
 class HomeController extends Controller
 {
@@ -16,11 +17,11 @@ class HomeController extends Controller
     {
 
         $response['coursesTotal'] = Course::count();//número total de cursos
-        $response['servicesTotal'] = Course::count();//número total de serviços
+        $response['servicesTotal'] = Service::count();//número total de serviços
         $response['usersTotal'] = User::count();//número total de usuários
         $response['teachersTotal'] = Teacher::count();//número total de professores
 
-        $response['categoryCourses'] = Course::with('category')->get();
+        $response['categoryCourses'] = Category::with('course')->get();
 
         $response['users'] = User::paginate(5);//bucando ustilizadores
 
