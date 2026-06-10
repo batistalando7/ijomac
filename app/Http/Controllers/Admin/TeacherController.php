@@ -44,7 +44,7 @@ class TeacherController extends Controller
             'email' => 'required|email|unique:teachers,email',
             'phone' => 'nullable',
             'address' => 'nullable',
-            'entries_date' => 'nullable|date',
+            'entries_date' => 'nullable|date|under_or_equal:today',
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'qualification' => 'nullable|string|max:255',
         ]);
@@ -105,7 +105,7 @@ class TeacherController extends Controller
             'email' => 'required|email|unique:teachers,email,' . $teacher->id,
             'phone' => 'nullable',
             'address' => 'nullable',
-            'entries_date' => 'nullable|date',
+            'entries_date' => 'nullable|date|under_or_equal:today',
             'qualification' => 'nullable|string|max:255',
         ]);
 

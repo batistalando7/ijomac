@@ -33,11 +33,11 @@
                                             <div class="teacher_item">
                                                 <div class="teacher_image">
                                                     <img loading="lazy" decoding="async" width="360" height="316"
-                                                        src="{{ asset('storage/' . $item->photo) }}"
+                                                        src="{{ isset($item->photo) ? asset('storage/' . $item->photo) : '' }}"
                                                         class="attachment-edplus_instructor_img size-edplus_instructor_img wp-post-image"
                                                         alt=""
                                                         srcset="
-                                                            {{ asset('storage/' . $item->photo) }}
+                                                            {{ isset($item->photo) ? asset('storage/' . $item->photo) : '' }}
                                                         "
                                                         sizes="(max-width: 360px) 100vw, 360px" />
                                                     <ul class="tsocial_links">

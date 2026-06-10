@@ -8,8 +8,8 @@
     <div class="col-lg-4 mb-4">
         <label class="form-label">Categoria</label>
         <select name="category_id" class="form-control">
-            @if(isset($category))
-                <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
+            @if(isset($course->category))
+                <option value="{{ $course->category->id }}" selected>{{ $course->category->name }}</option>
             @else
             <option value="">Selecione uma categoria</option>
             @foreach($categories as $item)

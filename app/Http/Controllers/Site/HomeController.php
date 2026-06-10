@@ -16,12 +16,19 @@ class HomeController extends Controller
 
         $response['categories'] = Category::take(4)->get();
 
-        $bannerCourse = Course::where('status', 'published')->orderByDesc('id')->first();
-        $response['bannerCourse'] = $bannerCourse;
+        $courses = Course::all();
+        $response['courses'] = $courses;
 
+        if ($courses->count() > 0) {
+
+
+            $bannerCourse = Course::where('status', 'published')->orderByDesc('id')->first();
+            $response['bannerCourse'] = $bannerCourse;
+            $response['courses'] = Course::where('status', 'published')->where('id', '!=', $bannerCourse->id)->orderByDesc('id')->take(6)->get();
+
+        }
         $response['services'] = Service::orderByDesc('id')->take(3)->get();
 
-        $response['courses'] = Course::where('status', 'published')->where('id', '!=', $bannerCourse->id)->orderByDesc('id')->take(3)->get();
 
         $response['teachers'] = Teacher::orderByDesc('id')->take(3)->get();
 

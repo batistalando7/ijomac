@@ -103,7 +103,9 @@
                                             <div class="col-lg-7 col-md-8 align-self-center wow fadeInUp"
                                                 data-wow-delay=".9s">
                                                 <div class="banner_courses">
-                                                   @include('components.singleCourse', ['course' => $bannerCourse])
+                                                   @isset ($bannerCourse)
+                                                       @include('components.singleCourse', ['course' => $bannerCourse])
+                                                   @endisset
                                                 </div>
                                             </div>
                                             <!-- End Col -->
@@ -1211,7 +1213,7 @@
                 </div>
             </div>
            {{-- testemunhos --}}
-           @include('components.testemunhos')
+           {{-- @include('components.testemunhos') --}}
            
             {{-- formadores --}}
             @include('components.formadores')

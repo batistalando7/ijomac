@@ -50,23 +50,25 @@
 
                     <div class="scourse_meta">
                         <div class="row">
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="smeta">
-                                    <div class="tutor-avatar">
-                                        <div class="tutor-ratio tutor-ratio-1x1"><img
-                                                src="{{ asset('storage/' . $course->teacher->photo) }}"
-                                                alt="{{ $course->teacher->name }}" />
+                            @isset($course->teacher)
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="smeta">
+                                        <div class="tutor-avatar">
+                                            <div class="tutor-ratio tutor-ratio-1x1"><img
+                                                    src="{{ asset('storage/' . $course->teacher->photo) }}"
+                                                    alt="{{ $course->teacher->name }}" />
+                                            </div>
+                                        </div>
+                                        <div class="smeta_text">
+                                            <span>Formador:</span>
+                                            <p>
+                                                <a
+                                                    href="../../profile/edplus/indexd527.html?view=instructor">{{ $course->teacher->name }}</a>
+                                            </p>
                                         </div>
                                     </div>
-                                    <div class="smeta_text">
-                                        <span>Formador:</span>
-                                        <p>
-                                            <a
-                                                href="../../profile/edplus/indexd527.html?view=instructor">{{ $course->teacher->name }}</a>
-                                        </p>
-                                    </div>
                                 </div>
-                            </div>
+                            @endisset
 
                             <div class="col-lg-3 col-sm-6">
                                 <div class="smeta sm_cat">
@@ -905,71 +907,7 @@
                 </h3>
                 <div class="relcourse_slider owl-carousel position-relative">
                     @foreach ($relatedCourses as $item)
-                        <div class="single_course">
-                            <div class="course_img">
-                                <div class="ccategory">
-                                    <a
-                                        href="../../course-category/data-science/index3a21.html?tutor-course-filter-category=73"><i
-                                            class="ph ph-folder-open"></i> Data Science</a>
-
-
-                                </div>
-                                <img width="690" height="430" src="../../wp-content/uploads/2025/03/6.jpg"
-                                    class="attachment-edplus_course size-edplus_course wp-post-image" alt=""
-                                    decoding="async"
-                                    srcset="https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6.jpg 690w, https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-600x374.jpg 600w, https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/6-300x187.jpg 300w"
-                                    sizes="(max-width: 690px) 100vw, 690px" /> <a
-                                    href="../../../../www.youtube.com/watch9a6e.html?v=yGDwk4z9EEg" class="cvbtn"
-                                    data-source="youtube">
-                                    <i class="ph ph-video-camera"></i>
-                                </a>
-                            </div>
-
-                            <div class="course_content">
-                                <div class="crating_number">
-                                    <i class="fa-solid fa-star"></i>
-                                    <strong>4.00</strong> (2 Rating)
-                                </div>
-
-                                <h3>
-                                    <a href="../interior-design-concepts-masterclass-3/index.html">
-                                        Interior design concepts Masterclass </a>
-                                </h3>
-
-                                <div class="cmeta d-flex gap-5">
-                                    <div class="single_meta">
-                                        <i class="fa-regular fa-user"></i> 2 Students
-                                    </div>
-
-                                    <div class="single_meta">
-                                        <i class="fa-solid fa-book"></i> 0 Lessons
-                                    </div>
-
-
-                                </div>
-
-                                <div class="cbtm">
-                                    <div class="c_price float-start">
-                                        <div class="price">
-                                            <del aria-hidden="true"><span class="woocommerce-Price-amount amount"><span
-                                                        class="woocommerce-Price-currencySymbol">&#036;</span>65.00</span></del>
-                                            <span class="screen-reader-text">Original price was: &#036;65.00.</span><ins
-                                                aria-hidden="true"><span class="woocommerce-Price-amount amount"><span
-                                                        class="woocommerce-Price-currencySymbol">&#036;</span>55.00</span></ins><span
-                                                class="screen-reader-text">Current price is: &#036;55.00.</span>
-                                        </div>
-
-                                    </div>
-                                    <div class="c_author float-end"><img alt=''
-                                            src='../../wp-content/uploads/2025/03/3-4.jpg'
-                                            srcset='https://wpdemothemes.com/edplus/wp-content/uploads/2025/03/3-4.jpg 2x'
-                                            class='avatar avatar-30 photo' height='30' width='30'
-                                            decoding='async' />
-                                        <a href="../../profile/edplus/indexd527.html?view=instructor">Masum Billah</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @include('components.singleCourse', ['course' => $item])
                     @endforeach
                     {{-- <div class="single_course">
                         <div class="course_img">

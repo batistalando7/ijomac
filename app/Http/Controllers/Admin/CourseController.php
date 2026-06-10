@@ -18,9 +18,14 @@ class CourseController extends Controller
      */
     public function index()
     {
-        
+
         $response['courses'] = Course::orderByDesc('id')->get();
-        
+        $response['levels'] = [
+            'beginner' => 'Iniciante',
+            'intermediate' => 'Intermediário',
+            'advanced' => 'Avançado'
+        ];
+
         return view('_admin.courses.list.index', $response);
     }
 
@@ -56,6 +61,20 @@ class CourseController extends Controller
             'duration' => 'nullable|string|max:255',
             'level' => 'required|in:beginner,intermediate,advanced',
             'teacher_id' => 'nullable|exists:teachers,id',
+        ], [
+            'name.required' => 'O campo nome é obrigatório.',
+            'price.required' => 'O campo preço é obrigatório.',
+            'price.numeric' => 'O campo preço deve ser um número.',
+            'price.min' => 'O campo preço deve ser um valor positivo.',
+            'status.required' => 'O campo status é obrigatório.',
+            'status.in' => 'O campo status deve ser "published" ou "draft".',
+            'category_id.required' => 'O campo categoria é obrigatório.',
+            'category_id.exists' => 'A categoria selecionada é inválida.',
+            'duration.string' => 'O campo duração deve ser uma string.',
+            'duration.max' => 'O campo duração deve ter no máximo 255 caracteres.',
+            'level.required' => 'O campo nível é obrigatório.',
+            'level.in' => 'O campo nível deve ser "Iniciante", "Intermediário" ou "Avançado".',
+            'teacher_id.exists' => 'O formador selecionado é inválido.',
         ]);
 
         $course = new Course();
@@ -88,7 +107,15 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        return view('_admin.courses.details.index', compact('course'));
+        $response = [
+            'course' => $course,
+            'levels' => [
+                'beginner' => 'Iniciante',
+                'intermediate' => 'Intermediário',
+                'advanced' => 'Avançado'
+            ]
+        ];
+        return view('_admin.courses.details.index', $response);
     }
 
     /**
@@ -103,6 +130,11 @@ class CourseController extends Controller
             'course' => $course,
             'categories' => Category::all(),
             'teachers' => Teacher::all(),
+            'levels' => [
+                'beginner' => 'Iniciante',
+                'intermediate' => 'Intermediário',
+                'advanced' => 'Avançado'
+            ]
         ];
         return view('_admin.courses.edit.index', $response);
     }
@@ -120,13 +152,28 @@ class CourseController extends Controller
             'name' => 'required|string|max:255',
             /* 'slug' => 'required|string|max:255|unique:courses,slug,' . $course->id, */
             'description' => 'nullable|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
             'price' => 'required|numeric|min:0',
             'status' => 'required|in:published,draft',
             'category_id' => 'required|exists:categories,id',
-            'duration' => 'nullable|string|max:255',
+            'duration' => 'required|string|max:255',
             'level' => 'required|in:beginner,intermediate,advanced',
             'teacher_id' => 'nullable|exists:teachers,id',
+        ], [
+            'name.required' => 'O campo nome é obrigatório.',
+            'price.required' => 'O campo preço é obrigatório.',
+            'price.numeric' => 'O campo preço deve ser um número.',
+            'price.min' => 'O campo preço deve ser um valor positivo.',
+            'status.required' => 'O campo status é obrigatório.',
+            'status.in' => 'O campo status deve ser "published" ou "draft".',
+            'category_id.required' => 'O campo categoria é obrigatório.',
+            'category_id.exists' => 'A categoria selecionada é inválida.',
+            'duration.required' => 'O campo duração é obrigatório.',
+            'duration.string' => 'O campo duração deve ser uma string.',
+            'duration.max' => 'O campo duração deve ter no máximo 255 caracteres.',
+            'level.required' => 'O campo nível é obrigatório.',
+            'level.in' => 'O campo nível deve ser "Iniciante", "Intermediário" ou "Avançado".',
+            'teacher_id.exists' => 'O formador selecionado é inválido.',
         ]);
 
         $course->name = $request->name;
@@ -138,8 +185,8 @@ class CourseController extends Controller
         $course->duration = $request->duration;
         $course->level = $request->level;
         $course->teacher_id = $request->teacher_id;
-        
-        if ($request->hasFile('image')) {
+
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
             // Exclui a imagem antiga se existir
             if ($course->image) {
                 Storage::disk('public')->delete($course->image);
@@ -153,7 +200,7 @@ class CourseController extends Controller
 
         $course->save();
 
-        return redirect()->route('admin.course.index')->with('success', 'Curso atualizado com sucesso!');  
+        return redirect()->route('admin.course.index')->with('success', 'Curso atualizado com sucesso!');
     }
 
     /**

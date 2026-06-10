@@ -55,73 +55,7 @@
                     <div class="tutor-course-list  tutor-grid  tutor-grid-3">
                         @foreach ($courses as $item)
                             <div class="tutor-card tutor-course-card">
-                                <div class="single_course">
-                                    <div class="course_img">
-                                        <div class="ccategory">
-                                            <a href="{{ route('site.courses.details', ['course' => $item->slug]) }}"><i
-                                                    class="ph ph-folder-open"></i> {{ $item->category->name }}</a>
-
-
-                                        </div>
-                                        <img fetchpriority="high" width="690" height="430"
-                                            src="{{ asset('storage/' . $item->image) }}"
-                                            class="attachment-edplus_course size-edplus_course wp-post-image" alt="{{ $item->name }}"
-                                            decoding="async"
-                                            srcset="{{ asset('storage/' . $item->image) }}"
-                                            sizes="(max-width: 690px) 100vw, 690px" />
-                                        <a href="{{ route('site.courses.details', ['course' => $item->slug]) }}" class="cvbtn"
-                                            data-source="youtube">
-                                            <i class="ph ph-video-camera"></i>
-                                        </a>
-                                    </div>
-
-                                    <div class="course_content">
-                                        <div class="crating_number">
-                                            <i class="fa-solid fa-star"></i>
-                                            <strong>4.00</strong> (2 Rating)
-                                        </div>
-
-                                        <h3>
-                                            <a href="{{ route('site.courses.details', ['course' => $item->slug]) }}">
-                                                {{ $item->name }} </a>
-                                        </h3>
-
-                                        {{-- <div class="cmeta d-flex gap-5">
-                                            <div class="single_meta">
-                                                <i class="fa-regular fa-user"></i> 2 Students
-                                            </div>
-
-                                            <div class="single_meta">
-                                                <i class="fa-solid fa-book"></i> 0 Lessons
-                                            </div>
-
-
-                                        </div> --}}
-
-                                        <div class="cbtm">
-                                            <div class="c_price float-start">
-                                                <div class="price">
-                                                    <del aria-hidden="true"><span
-                                                            class="woocommerce-Price-amount amount"><span
-                                                                class="woocommerce-Price-currencySymbol">kz</span>{{ $item->price + ($item->price * 0.15) }}</span></del>
-                                                    <span class="screen-reader-text">Original price was:
-                                                        kz65.00.</span><ins aria-hidden="true"><span
-                                                            class="woocommerce-Price-amount amount"><span
-                                                                class="woocommerce-Price-currencySymbol">kz</span>{{ $item->price }}</span></ins><span
-                                                        class="screen-reader-text">Current price is: kz55.00.</span>
-                                                </div>
-
-                                            </div>
-                                            <div class="c_author float-end"><img alt=''
-                                                    src='{{ url('site/wp-content/uploads/2025/03/3-4.jpg') }}'
-                                                    srcset='{{ asset('storage/' . $item->teacher->photo) }}'
-                                                    class='avatar avatar-30 photo' height='30' width='30'
-                                                    decoding='async' /> <a
-                                                    href="../profile/edplus/indexd527.html?view=instructor">{{ $item->teacher->name }}</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @include('components.singleCourse', ['course' => $item])
 
 
                             </div>
@@ -476,14 +410,14 @@
                         data-tutor_pagination_ajax="{&quot;loading_container&quot;:&quot;.tutor-course-filter-loop-container&quot;,&quot;action&quot;:&quot;tutor_course_filter_ajax&quot;,&quot;course_per_page&quot;:&quot;6&quot;,&quot;column_per_row&quot;:&quot;3&quot;}"
                         data-push_state_link="index24ac.html?supported_filters%5Bsearch%5D=search&amp;supported_filters%5Bcategory%5D=category&amp;supported_filters%5Btag%5D=tag&amp;supported_filters%5Bdifficulty_level%5D=difficulty_level&amp;supported_filters%5Bprice_type%5D=price_type&amp;column_per_row=3&amp;course_per_page=6&amp;show_pagination=1">
                         <div class="tutor-pagination-hints">
-                            <div class="tutor-fs-7 tutor-color-black-60">
+                            {{-- <div class="tutor-fs-7 tutor-color-black-60">
                                 Page
                                 <span class="tutor-fs-7 tutor-fw-medium tutor-color-black">
                                     1 </span>
                                 of
                                 <span class="tutor-fs-7 tutor-fw-medium tutor-color-black">
                                     6 </span>
-                            </div>
+                            </div> --}}
                         </div>
                         <ul class="tutor-pagination-numbers">
                             {{ $courses->links() }}
