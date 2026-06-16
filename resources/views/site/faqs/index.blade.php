@@ -10,17 +10,9 @@
                 <span class="cart_number">
                     0 </span>
             </div>
-
-
-
             <p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
-
-
-
         </div>
     </div>
-
-
 
     <!-- Start Main Banner -->
     <section class="main-banner" style="background-image: url({{ url('site/wp-content/themes/edplus/assets/img/bg/main-banner.jpg') }});">
@@ -34,8 +26,6 @@
         <img src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/brshape.svg') }}" alt="" class="brshape">
     </section>
     <!-- End Main Banner -->
-
-
 
     <div class="page-builder-template">
         <div data-elementor-type="wp-page" data-elementor-id="1110" class="elementor elementor-1110"
@@ -59,9 +49,6 @@
                         <div class="elementor-widget-container">
 
                             <div class="accordion" id="faq_accordion">
-
-
-
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="heading1">
                                         <button class="accordion-button " type="button" data-bs-toggle="collapse"
@@ -76,7 +63,6 @@
                                         </div>
                                     </div>
                                 </div>
-
 
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="heading2">
@@ -93,7 +79,6 @@
                                     </div>
                                 </div>
 
-
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="heading3">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -109,7 +94,6 @@
                                     </div>
                                 </div>
 
-
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="heading4">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -124,14 +108,11 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 @endsection

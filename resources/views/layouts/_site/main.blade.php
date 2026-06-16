@@ -708,7 +708,7 @@
 
     <!-- Preloader -->
     <div class="preloader_wrap">
-        <img src="{{ url('site/wp-content/themes/edplus/assets/img/pre_logo.svg') }}" class="pre_logo"
+        <img src="{{ url('site/logo/cute.png') }}" width="110" class="pre_logo"
             alt="" />
         <span class="preloader"></span>
     </div>
