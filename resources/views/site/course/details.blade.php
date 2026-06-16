@@ -155,7 +155,8 @@
                                             <span class="tutor-icon-level tutor-color-black tutor-mt-4 tutor-mr-12"
                                                 aria-labelledby="Level"></span>
                                             <span class="tutor-fs-6 tutor-color-secondary">
-                                                {{ $course->level }} </span>
+                                                {{ $levels[$course->level] ?? $course->level }}
+                                            </span>
                                         </li>
                                         <li class="tutor-d-flex tutor-mt-12 ">
                                             <span class="tutor-icon-clock-line tutor-color-black tutor-mt-4 tutor-mr-12"
