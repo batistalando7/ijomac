@@ -10,7 +10,8 @@
                      <h4 class="ftitle">Sobre Nós</h4>
                      <div class="about-widget">
                          <p>
-                             A IJOMAC é uma empresa angolana especializada em soluções de Higiene, Segurança e Saúde no Trabalho (HST), Gestão Ambiental, Controlo da Qualidade e Formação Profissional.
+                             A IJOMAC é uma empresa angolana especializada em soluções de Higiene, Segurança e Saúde no
+                             Trabalho (HST), Gestão Ambiental, Controlo da Qualidade e Formação Profissional.
                          </p>
                          <ul>
                              <li>
