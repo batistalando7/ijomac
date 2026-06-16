@@ -34,6 +34,10 @@
 
         /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
     </style>
+    
+    {{-- alpine --}}
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <style id="wp-emoji-styles-inline-css">
         img.wp-smiley,
         img.emoji {
@@ -704,7 +708,7 @@
 
     <!-- Preloader -->
     <div class="preloader_wrap">
-        <img src="{{ url('site/wp-content/themes/edplus/assets/img/pre_logo.svg') }}" class="pre_logo"
+        <img src="{{ url('site/logo/cute.png') }}" width="110" class="pre_logo"
             alt="" />
         <span class="preloader"></span>
     </div>
