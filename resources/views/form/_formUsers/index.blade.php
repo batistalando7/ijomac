@@ -30,8 +30,6 @@
                         <select class="form-control" name="role" id="role">
                             <option value="{{ old('role', $user->role ?? '') }}" selected>{{ 'Selecione' ?? $user->role }}
                             </option>
-                            <option value="assinante">Assinante</option>
-                            <option value="jornalista">Jornalista</option>
                             <option value="editor">Editor</option>
                             <option value="admin">Admin</option>
                         </select>

@@ -118,7 +118,7 @@
 
                                             <h2>Criamos experiências de Trabalho únicas.</h2>
                                             <img decoding="async"
-                                                src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
+                                                src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/linha-laranja.png') }}"
                                                 alt="">
                                         </div>
 

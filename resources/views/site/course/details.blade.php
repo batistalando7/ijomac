@@ -140,7 +140,7 @@
                                             <input type="hidden" name="tutor_course_action"
                                                 value="_tutor_course_enroll_now">
                                             <button type="submit"
-                                                class="tutor-btn tutor-btn-primary tutor-btn-lg tutor-btn-block tutor-mt-24 tutor-enroll-course-button ">
+                                                class="tutor-btn blue_btn tutor-btn-lg tutor-btn-block tutor-mt-24 tutor-enroll-course-button ">
                                                 Aplicar </button>
                                         </form>
                                     </div>

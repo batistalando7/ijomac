@@ -54,7 +54,7 @@
                                     Estamos sempre animados para<br> receber notícias suas!
                                 </h2>
                                 <img decoding="async"
-                                    src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/title.svg') }}"
+                                    src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/linha-laranja.png') }}"
                                     alt="" />
                             </div>
                         </div>
