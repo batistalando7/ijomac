@@ -135,7 +135,7 @@
                                     </thead>
 
                                     <tbody>
-                                        @foreach ($serviceRequests as $item)
+                                        @foreach ($serviceRequests as $cont => $item)
                                             <tr class="single-item">
                                                 <td>
                                                     <div class="item-checkbox ms-1">
@@ -146,7 +146,9 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td>{{ $item->id }}</td>
+                                                <td>
+                                                    {{ $item->id }}
+                                                </td>
                                                 <td>{{ $item->service->name }}</td>
                                                 <td>
 

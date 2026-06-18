@@ -16,6 +16,8 @@ Route::get('portal/cursos/{course:slug}/participar', ['as' => 'site.courses.part
 Route::get('portal/quem-somos', ['as' => 'site.about', 'uses' => 'Site\AboutController@index']);
 Route::get('portal/servicos', ['as' => 'site.services', 'uses' => 'Site\ServiceController@index']);
 Route::get('portal/servicos/{service}', ['as' => 'site.services.details', 'uses' => 'Site\ServiceController@show']);
+Route::get('portal/servicos/{service}/solicitação', ['as' => 'site.services.request', 'uses' => 'Site\ServiceController@request']);
+Route::post('portal/solicitação-servico', ['as' => 'site.serviceRequest.store', 'uses' => 'Site\ServiceController@store']);
 Route::get('portal/about/faqs', ['as' => 'site.about.faq', 'uses' => 'Site\AboutController@faqs']);
 
 /* Rota de Comentarios */

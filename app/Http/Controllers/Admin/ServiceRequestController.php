@@ -11,7 +11,7 @@ class ServiceRequestController extends Controller
 {
     public function index()
     {
-        $response['serviceRequests'] = ServiceRequest::with('service')->get();
+        $response['serviceRequests'] = ServiceRequest::with('service')->orderByDesc('id')->get();
 
         return view('_admin.serviceRequest.list.index', $response);
     }
