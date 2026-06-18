@@ -19,11 +19,6 @@
                     <input type="password" class="form-control" name="password" id="password"
                         value="{{ old('password', $user->password ?? '') }}">
                 </div>
-                {{-- <div class="col-lg-4 mb-4">
-                                        <label class="form-label">Confirmar Password</label>
-                                        <input type="password" name="passwordConfirm" class="form-control"
-                                            value="{{ old('passwordConfirm') }}" placeholder="Digite a passwordConfirm...">
-                                    </div> --}}
                 @can('is-admin')
                     <div class="col-lg-4 mb-4">
                         <label class="form-label">Nivel de Acesso</label>

@@ -21,7 +21,9 @@ class HomeController extends Controller
         $response['usersTotal'] = User::count();//número total de usuários
         $response['teachersTotal'] = Teacher::count();//número total de professores
 
-        $response['categoryCourses'] = Category::with('course')->get();
+        $response['categoryCourses'] = Category::with('course')->whereHas('course', function ($query) {
+            $query->whereNotNull('category_id');
+        })->get();
 
         $response['users'] = User::paginate(5);//bucando ustilizadores
 

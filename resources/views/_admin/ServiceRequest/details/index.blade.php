@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'IJOMAC - Detalhes do Serviço')
+@section('title', 'IJOMAC - Detalhes da Solicitação')
 @section('content')
 
     <div class="nxl-content">
@@ -7,10 +7,10 @@
         <div class="page-header">
             <div class="page-header-left d-flex align-items-center">
                 <div class="page-header-title">
-                    <h5 class="m-b-10">Serviço</h5>
+                    <h5 class="m-b-10">Solicitação de Serviço</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item">Detalhes do Serviço</li>
+                    <li class="breadcrumb-item">Detalhes da Solicitaçã</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">
@@ -22,7 +22,7 @@
                         </a>
                     </div>
                     <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">
-                        <a href="{{ route('admin.service.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.serviceRequest.index') }}" class="btn btn-danger">
                             <i class="feather-chevron-left me-2"></i>
                             Voltar</a>
                     </div>
@@ -41,31 +41,49 @@
                         <div class="mb-4 d-flex align-items-center justify-content-between">
                             <h5 class="fw-bold mb-0">
                                 <span class="d-block mb-2">Informação Geral :</span>
-                                <span class="fs-12 fw-normal text-muted d-block">Informação geral do Serviço</span>
+                                <span class="fs-12 fw-normal text-muted d-block">Informação geral da Solicitação</span>
                             </h5>
                             <a href="{{ route('admin.service.index') }}" class="btn btn-sm btn-light-brand">Listar
-                                Serviço</a>
+                                Solicitações</a>
                         </div>
                         <div class="row mb-4">
                             <div class="col-lg-2 fw-medium">ID</div>
                             <div class="col-lg-10 hstack gap-1">
                                 <a href="javascript:void(0);" class="hstack gap-2">
-                                    <span>{{ $service->id }}</span>
+                                    <span>{{ $serviceRequest->id }}</span>
                                 </a>
                             </div>
                         </div>
                         <div class="row mb-4">
-                            <div class="col-lg-2 fw-medium">Nome da Categoria</div>
+                            <div class="col-lg-2 fw-medium">Nome do Cliente</div>
                             <div class="col-lg-10 hstack gap-1">
                                 <a href="javascript:void(0);" class="hstack gap-2">
-                                    <span>{{ $service->name ?? 'Sem Nome' }}</span>
+                                    <span>{{ $serviceRequest->client_name ?? 'Sem Nome' }}</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-lg-2 fw-medium">E-mail do Cliente</div>
+                            <div class="col-lg-10 hstack gap-1">
+                                <a href="javascript:void(0);" class="hstack gap-2">
+                                    <span>{{ $serviceRequest->client_email ?? 'Sem Nome' }}</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-lg-2 fw-medium">Telefone do Cliente</div>
+                            <div class="col-lg-10 hstack gap-1">
+                                <a href="javascript:void(0);" class="hstack gap-2">
+                                    <span>{{ $serviceRequest->client_phone ?? 'Sem Nome' }}</span>
                                 </a>
                             </div>
                         </div>
 
                         <div class="row mb-4">
-                            <div class="col-lg-2 fw-medium">Descrição</div>
-                            <div class="col-lg-10 hstack gap-1">{{ $service->description ?? 'Sem descrição'}}</div>
+                            <div class="col-lg-2 fw-medium">Serviço</div>
+                            <div class="col-lg-10 hstack gap-1">{{ $serviceRequest->service->name ?? 'Sem descrição'}}</div>
                         </div>
                     </div>
                 </div>
