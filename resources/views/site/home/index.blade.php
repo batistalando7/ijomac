@@ -28,7 +28,7 @@
                         <!-- Start Home Banner -->
                         <section class="home-banner"
                             style="
-                                    background-image: url({{ url('site/wp-content/uploads/2025/11/slide1.jpg') }});
+                                    background-image: url({{ url('site/wp-content/uploads/2025/11/slide1.png') }});
                                 ">
                             <div class="container position-relative">
                                 <div class="row">
@@ -166,9 +166,9 @@
                                     </div>
 
                                     <div class="ab_images position-relative z-1">
-                                        <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/3-1.jpg') }}"
+                                        <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/b1.png') }}"
                                             class="about_img_1" alt="" />
-                                        <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/4-1.jpg') }}"
+                                        <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/b2.png') }}"
                                             class="about_img_2" alt="" />
                                     </div>
 
