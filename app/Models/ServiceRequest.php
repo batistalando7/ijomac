@@ -15,7 +15,7 @@ class ServiceRequest extends Model
     protected $guarded = ['id'];
 
      /* Função de Slug */
-    /* protected static function boot()
+    protected static function boot()
     {
         parent::boot();
 
@@ -27,7 +27,7 @@ class ServiceRequest extends Model
             $serviceRequest->slug = Str::slug($serviceRequest->name);
         });
     }
- */
+
     //relacionamento
     public function service()
     {
