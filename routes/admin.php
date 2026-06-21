@@ -92,54 +92,20 @@ Route::middleware(['role:admin', 'auth'])->prefix('admin/')->name('admin.')->gro
         Route::put('update/{service}', ['as' => 'update', 'uses' => 'Admin\ServiceController@update']);
         Route::get('delete/{service}', ['as' => 'delete', 'uses' => 'Admin\ServiceController@destroy']);
     });
+    
+    /*serviceRequest routes*/
+    Route::prefix('services-request')->name('serviceRequest.')->group(function () {
+        Route::get('/', ['as' => 'index', 'uses' => 'Admin\ServiceRequestController@index']);
+        Route::get('create', ['as' => 'create', 'uses' => 'Admin\ServiceRequestController@create']);
+        Route::post('store', ['as' => 'store', 'uses' => 'Admin\ServiceRequestController@store']);
+        Route::get('details/{serviceRequest}', ['as' => 'show', 'uses' => 'Admin\ServiceRequestController@show']);
+        Route::get('edit/{serviceRequest}', ['as' => 'edit', 'uses' => 'Admin\ServiceRequestController@edit']);
+        Route::put('update/{serviceRequest}', ['as' => 'update', 'uses' => 'Admin\ServiceRequestController@update']);
+        Route::get('delete/{serviceRequest}', ['as' => 'delete', 'uses' => 'Admin\ServiceRequestController@destroy']);
+    });
 
     Route::post('/notifications/mark-all-read', [AlertsController::class, 'markAllRead'])->name('notifications.markAllRead');
     Route::get('/notifications', [AlertsController::class, 'index'])->name('notifications.all');
-
-    /* news routes */
-    /* Route::get('news', ['as' => 'news.index', 'uses' => 'Admin\NewsController@index']);
-    Route::get('newsArchived', ['as' => 'newsArchived.index', 'uses' => 'Admin\NewsController@arquivadas']);
-    Route::get('newsDraft', ['as' => 'newsDraft.index', 'uses' => 'Admin\NewsController@rascunho']);
-    Route::get('create', ['as' => 'news.create', 'uses' => 'Admin\NewsController@create']);
-    Route::post('newsStore', ['as' => 'news.store', 'uses' => 'Admin\NewsController@store']);
-    Route::get('edit/{news}', ['as' => 'news.edit', 'uses' => 'Admin\NewsController@edit']);
-    Route::put('newsUpdate/{news}', ['as' => 'news.update', 'uses' => 'Admin\NewsController@update']);
-    Route::get('details/{news}', ['as' => 'news.view', 'uses' => 'Admin\NewsController@show']);
-    Route::get('newsDelete/{news}', ['as' => 'news.delete', 'uses' => 'Admin\NewsController@destroy']);
-    Route::resource('tags', TagController::class);
-    Route::post('news/upload-image', ['as' => 'news.uploadImage', 'uses' => 'Admin\NewsController@uploadImage']); */
-
-    /* Gerar Relatorio */
-    /* Route::get('formulario/relatorio', [RelatorioController::class, 'formReports'])->name('form.reports');
-    Route::get('relatorio', [RelatorioController::class, 'noticia'])->name('relatorio.noticia'); */
-
-
-    /* comments routes */
-    /* Route::get('comment', ['as' => 'comments.index', 'uses' => 'Admin\CommentController@index']);
-    Route::get('create', ['as' => 'comment.create', 'uses' => 'Admin\CommentController@create']);
-    Route::post('commentStore', ['as' => 'comment.store', 'uses' => 'Admin\CommentController@store']);
-    Route::get('edit/{comment}', ['as' => 'comment.edit', 'uses' => 'Admin\CommentController@edit']);
-    Route::put('commentUpdate/{comment}', ['as' => 'comment.update', 'uses' => 'Admin\CommentController@update']);
-    Route::get('details/{comment}', ['as' => 'comment.view', 'uses' => 'Admin\CommentController@show']);
-    Route::get('commentDelete/{comment}', ['as' => 'comment.delete', 'uses' => 'Admin\CommentController@destroy']); */
-
-    /* tags routes */
-    /* Route::get('tags', ['as' => 'tags.index', 'uses' => 'Admin\TagController@index']);
-    Route::get('create', ['as' => 'tag.create', 'uses' => 'Admin\TagController@create']);
-    Route::post('tagStore', ['as' => 'tag.store', 'uses' => 'Admin\TagController@store']);
-    Route::get('edit/{tag}', ['as' => 'tag.edit', 'uses' => 'Admin\TagController@edit']);
-    Route::put('tagUpdate/{tag}', ['as' => 'tag.update', 'uses' => 'Admin\TagController@update']);
-    Route::get('tagView/{tag}', ['as' => 'tag.view', 'uses' => 'Admin\TagController@show']);
-    Route::get('tagDelete/{tag}', ['as' => 'tag.delete', 'uses' => 'Admin\TagController@destroy']); */
-
-    /* typeCategory routes */
-    /* Route::get('typeCategory', ['as' => 'typeCategories.index', 'uses' => 'Admin\TypeCategoryController@index']);
-    Route::get('create', ['as' => 'typeCategory.create', 'uses' => 'Admin\TypeCategoryController@create']);
-    Route::post('typeCategories', ['as' => 'typeCategories.store', 'uses' => 'Admin\TypeCategoryController@store']);
-    Route::get('typeview/{typeCategory}', ['as' => 'typeCategory.show', 'uses' => 'Admin\TypeCategoryController@show']);
-    Route::get('typeedit/{typeCategory}', ['as' => 'typeCategory.edit', 'uses' => 'Admin\TypeCategoryController@edit']);
-    Route::put('typeCategoryUpdate/{typeCategory}', ['as' => 'typeCategory.update', 'uses' => 'Admin\TypeCategoryController@update']);
-    Route::get('typeCategoryDelete/{typeCategory}', ['as' => 'typeCategory.delete', 'uses' => 'Admin\TypeCategoryController@destroy']); */
 
     /*-------------------------------------------------------
                     Ads routes

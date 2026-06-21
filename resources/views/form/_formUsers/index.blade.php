@@ -19,19 +19,12 @@
                     <input type="password" class="form-control" name="password" id="password"
                         value="{{ old('password', $user->password ?? '') }}">
                 </div>
-                {{-- <div class="col-lg-4 mb-4">
-                                        <label class="form-label">Confirmar Password</label>
-                                        <input type="password" name="passwordConfirm" class="form-control"
-                                            value="{{ old('passwordConfirm') }}" placeholder="Digite a passwordConfirm...">
-                                    </div> --}}
                 @can('is-admin')
                     <div class="col-lg-4 mb-4">
                         <label class="form-label">Nivel de Acesso</label>
                         <select class="form-control" name="role" id="role">
                             <option value="{{ old('role', $user->role ?? '') }}" selected>{{ 'Selecione' ?? $user->role }}
                             </option>
-                            <option value="assinante">Assinante</option>
-                            <option value="jornalista">Jornalista</option>
                             <option value="editor">Editor</option>
                             <option value="admin">Admin</option>
                         </select>

@@ -110,19 +110,19 @@
                 </li>
 
                 {{-- Menu Tags --}}
-                {{-- <li class="nxl-item nxl-hasmenu">
+                <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-tag"></i></span>
-                        <span class="nxl-mtext">Tags</span><span class="nxl-arrow"><i
+                        <span class="nxl-mtext">Solicitação de Serviços</span><span class="nxl-arrow"><i
                                 class="feather-chevron-right"></i></span>
                     </a>
                     <ul class="nxl-submenu">
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.tags.index') }}">Lista de
-                                Tags</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.tag.create') }}">Nova Tag</a>
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.serviceRequest.index') }}">Lista de
+                                Solicitações</a></li>
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.serviceRequest.create') }}">Nova Solicitação</a>
                         </li>
                     </ul>
-                </li> --}}
+                </li>
                 
                 {{-- Menu News --}}
                 {{-- <li class="nxl-item nxl-hasmenu">
@@ -152,7 +152,7 @@
 
                 {{-- Menu Comentários --}}
                 {{-- <li class="nxl-item">
-                    <a href="{{ route('admin.comments.index') }}"class="nxl-link">
+                    <a href="{{ route('admin.serviceRequest.index') }}"class="nxl-link">
                         <span class="nxl-micon"><i class="feather-message-square"></i></span>
                         <span class="nxl-mtext">Comentários</span>
                     </a>

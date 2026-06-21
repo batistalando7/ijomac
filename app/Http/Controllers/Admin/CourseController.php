@@ -87,6 +87,7 @@ class CourseController extends Controller
         $course->duration = $request->duration;
         $course->level = $request->level;
         $course->teacher_id = $request->teacher_id;
+
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time() . '_' . $image->getClientOriginalName();
@@ -221,4 +222,6 @@ class CourseController extends Controller
 
         return redirect()->back()->with('success', 'Curso excluído com sucesso!');
     }
+
+    
 }

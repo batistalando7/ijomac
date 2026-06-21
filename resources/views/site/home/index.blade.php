@@ -52,18 +52,9 @@
                                             </p>
 
                                             <div class="d-flex gap-4 wow fadeInUp" data-wow-delay=".9s">
-                                                <a href="courses/index.html" class="blue_btn round_btn">Nossos serviços
+                                                <a href="{{ route('site.services') }}" class="blue_btn round_btn">Nossos
+                                                    serviços
                                                     <i class="ph ph-arrow-right"></i></a>
-
-                                                {{-- <div class="brating d-flex">
-                                                    <img decoding="async"
-                                                        src="{{ url('site/wp-content/themes/edplus/assets/img/icons/trustpilot.svg') }}"
-                                                        class="align-self-center" alt="" />
-                                                    <p class="align-self-center">
-                                                        <i class="fa-solid fa-star"></i>
-                                                        4.8 Rating
-                                                    </p>
-                                                </div> --}}
                                             </div>
                                         </div>
                                     </div>
@@ -73,29 +64,6 @@
                                         <div class="row">
                                             <div class="col-lg-5 col-md-4 align-self-center">
                                                 <div class="badge_wrap wow fadeInUp" data-wow-delay=".5s">
-                                                    {{-- <div class="bbadge">
-                                                        <img decoding="async"
-                                                            src="{{ url('site/wp-content/uploads/2025/03/bbadge-icon.svg') }}"
-                                                            alt="" />
-                                                        <h3>
-                                                            <span>250</span>
-                                                            +
-                                                        </h3>
-                                                        <p>Nossos Clientes</p>
-                                                    </div>
-
-                                                    <div class="bbadge two">
-                                                        <img decoding="async"
-                                                            src="{{ url('site/wp-content/uploads/2025/03/bbadge-icon2.svg') }}"
-                                                            alt="" />
-                                                        <h3>
-                                                            <span>3652</span>
-                                                            +
-                                                        </h3>
-                                                        <p>
-                                                            Finished Session
-                                                        </p>
-                                                    </div> --}}
                                                 </div>
                                             </div>
                                             <!-- End Col -->
@@ -103,9 +71,11 @@
                                             <div class="col-lg-7 col-md-8 align-self-center wow fadeInUp"
                                                 data-wow-delay=".9s">
                                                 <div class="banner_courses">
-                                                   @isset ($bannerCourse)
-                                                       @include('components.singleCourse', ['course' => $bannerCourse])
-                                                   @endisset
+                                                    @isset($bannerCourse)
+                                                        @include('components.singleCourse', [
+                                                            'course' => $bannerCourse,
+                                                        ])
+                                                    @endisset
                                                 </div>
                                             </div>
                                             <!-- End Col -->
@@ -155,7 +125,7 @@
                                 </div>
 
                                 <div class="row">
-                                     @foreach ($services as $item)
+                                    @foreach ($services as $item)
                                         <div class="col-xl-4 col-md-6 col-12 wow fadeInUp">
                                             @include('components.blogItem', ['item' => $item])
                                         </div>
@@ -174,8 +144,7 @@
                 </div>
             </div>
             <div class="elementor-element elementor-element-9dd6922 e-flex e-con-boxed e-con e-parent" data-id="9dd6922"
-                data-element_type="container" data-e-type="container"
-                data-settings='{"background_background":"classic"}'>
+                data-element_type="container" data-e-type="container" data-settings='{"background_background":"classic"}'>
                 <div class="e-con-inner">
                     <div class="elementor-element elementor-element-924703d e-con-full e-flex e-con e-child"
                         data-id="924703d" data-element_type="container" data-e-type="container">
@@ -531,10 +500,10 @@
                     </div>
                 </div>
             </div>
-           
+
             {{-- formadores --}}
             @include('components.formadores')
-            
+
             <div class="elementor-element elementor-element-763ada1 e-con-full e-flex e-con e-parent" data-id="763ada1"
                 data-element_type="container" data-e-type="container">
                 <div class="elementor-element elementor-element-7c73090 elementor-widget elementor-widget-edplus-clients"
@@ -586,7 +555,7 @@
                     data-widget_type="edplus-blog.default">
                     <div class="elementor-widget-container">
                         <!-- Start Blog -->
-                       {{--  <section class="blog">
+                        {{--  <section class="blog">
                             <div class="container">
                                 <div class="section-title text-center wow fadeInUp">
                                     <span>

@@ -101,7 +101,7 @@
                                     </li>
                                 </ul>
                                 <div class="event_info_register">
-                                    <a class="blue_btn" href="#"
+                                    <a class="blue_btn" href="{{ route('site.services.request', ['service' => $service]) }}"
                                         >Solicitar</a
                                     >
                                 </div>
