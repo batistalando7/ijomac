@@ -130,19 +130,11 @@
                                             Inscrever-se </span>
                                     </div>
 
-                                    <div class="tutor-course-single-btn-group tutor-course-entry-box-login"
+                                    <div class="tutor-course-single-btn-group"
                                         data-login_url="">
-                                        <form class="tutor-enrol-course-form" method="post">
-                                            <input type="hidden" id="_tutor_nonce" name="_tutor_nonce"
-                                                value="942283c3eb" /><input type="hidden" name="_wp_http_referer"
-                                                value="/edplus/courses/the-complete-javascript-course-2019-build-real-projects/" />
-                                            <input type="hidden" name="tutor_course_id" value="2094">
-                                            <input type="hidden" name="tutor_course_action"
-                                                value="_tutor_course_enroll_now">
-                                            <button type="submit"
-                                                class="tutor-btn blue_btn tutor-btn-lg tutor-btn-block tutor-mt-24 tutor-enroll-course-button ">
-                                                Aplicar </button>
-                                        </form>
+                                        <a href="{{ route('site.courses.request', ['course' => $course]) }}"
+                                            class="tutor-btn blue_btn tutor-btn-lg tutor-btn-block tutor-mt-24 tutor-enroll-course-button ">
+                                            Aplicar </a>
                                     </div>
 
                                     <div class="tutor-fs-7 tutor-color-muted tutor-mt-20 tutor-text-center">

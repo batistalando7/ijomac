@@ -1,5 +1,5 @@
  @extends('layouts._site.main')
- @section('title', 'Detalhes dos Serviços | IJOMAC')
+ @section('title', 'Inscrição à Cursos | IJOMAC')
  @section('content')
 
      <!-- Start Main Banner -->
@@ -9,10 +9,10 @@
             ">
          <div class="container text-center">
              <div class="mbanner_content">
-                 <h2>Solicitar serviço ({{ $service->name }})</h2>
+                 <h2>Inscrição ao curso ({{ $course->name }})</h2>
                  <p>
                      <a href="../index.html">Página Inicial</a>
-                     <i class="ph ph-caret-right"></i> Solicitar serviço
+                     <i class="ph ph-caret-right"></i> Inscrição à Cursos
                  </p>
              </div>
          </div>
@@ -29,17 +29,11 @@
                          <div class="post-single">
                              <div class="single-post-content">
                                  <div id="tutor-registration-wrap">
-                                     <form method="post" enctype="multipart/form-data"  action="{{ route('site.service.store') }}">
-                                         {{-- <input type="hidden" name="tutor_course_enroll_attempt" value="" />
-
-                                         <input type="hidden" id="_tutor_nonce" name="_tutor_nonce"
-                                             value="942283c3eb" /><input type="hidden" name="_wp_http_referer"
-                                             value="/edplus/student-registration/" />
-                                         <input type="hidden" value="tutor_register_student" name="tutor_action" /> --}}
-
+                                     <form method="post" enctype="multipart/form-data"  action="{{ route('site.courses.store') }}">
+                                         
                                          @csrf
 
-                                         <input type="hidden" name="service_id" value="{{ $service->id }}" required />
+                                         <input type="hidden" name="course_id" value="{{ $course->id }}" required />
 
                                          <div class="tutor-form-row">
                                              <div class="tutor-form-col-6">
@@ -62,7 +56,7 @@
                                                      </label>
 
                                                      <input type="text" name="client_phone" class="tutor_client_phone"
-                                                         value="" placeholder="User Name" required
+                                                         value="" placeholder="User Name"
                                                          autocomplete="client_phone" />
                                                  </div>
                                              </div>
@@ -76,14 +70,11 @@
                                                             name="client_email"
                                                             value=""
                                                             placeholder="E-Mail"
-                                                            required
                                                             autocomplete="email"
                                                         />
                                                  </div>
                                              </div>
                                          </div>
-
-                                         {{--   --}}
 
                                          <div class="tutor-mb-24">
                                              Ao me cadastrar, concordo com os
