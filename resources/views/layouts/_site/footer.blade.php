@@ -149,8 +149,8 @@
                              })();
                          </script>
                          <!-- Mailchimp for WordPress v4.12.5 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
-                         <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-1188" method="post" data-id="1188"
-                             data-name="Main Form">
+                         <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-1188" method="POST" action="{{ route('site.subscrive') }}">
+                            @csrf
                              <div class="mc4wp-form-fields">
                                  <div class="news_form position-relative">
                                      <input type="email" name="EMAIL" placeholder="Inserir Email" />
