@@ -68,6 +68,17 @@ Route::middleware(['role:admin', 'auth'])->prefix('admin/')->name('admin.')->gro
         Route::put('update/{course}', ['as' => 'update', 'uses' => 'Admin\CourseController@update']);
         Route::get('delete/{course}', ['as' => 'delete', 'uses' => 'Admin\CourseController@destroy']);
     });
+    
+    /*aluno routes*/
+    Route::prefix('alunos')->name('student.')->group(function () {
+        Route::get('/', ['as' => 'index', 'uses' => 'Admin\StudentController@index']);
+        Route::get('create', ['as' => 'create', 'uses' => 'Admin\StudentController@create']);
+        Route::post('store', ['as' => 'store', 'uses' => 'Admin\StudentController@store']);
+        Route::get('details/{student}', ['as' => 'show', 'uses' => 'Admin\StudentController@show']);
+        Route::get('edit/{student}', ['as' => 'edit', 'uses' => 'Admin\StudentController@edit']);
+        Route::put('update/{student}', ['as' => 'update', 'uses' => 'Admin\StudentController@update']);
+        Route::get('delete/{student}', ['as' => 'delete', 'uses' => 'Admin\StudentController@destroy']);
+    });
 
 
     /*Formadores routes*/

@@ -60,7 +60,6 @@
                                     <a href="javascript:void(0);"
                                         class="fs-12 fw-medium text-muted text-truncate-1-line">Total de Cursos </a>
                                     <div class="w-100 text-end">
-                                        <span class="fs-12 text-dark">Cursos</span>
                                         <span class="fs-11 text-muted">(100%)</span>
                                     </div>
                                 </div>
@@ -96,7 +95,6 @@
                                     <a href="javascript:void(0);"
                                         class="fs-12 fw-medium text-muted text-truncate-1-line">Total de Serviços</a>
                                     <div class="w-100 text-end">
-                                        <span class="fs-12 text-dark">Total de Serviços</span>
                                         <span class="fs-11 text-muted">(100%)</span>
                                     </div>
                                 </div>
@@ -133,7 +131,6 @@
                                     <a href="javascript:void(0);"
                                         class="fs-12 fw-medium text-muted text-truncate-1-line">Total de Professores</a>
                                     <div class="w-100 text-end">
-                                        <span class="fs-12 text-dark">{{ $teachersTotal ?? '' }}</span>
                                         <span class="fs-11 text-muted">(100%)</span>
                                     </div>
                                 </div>
@@ -171,7 +168,6 @@
                                     <a href="javascript:void(0);"
                                         class="fs-12 fw-medium text-muted text-truncate-1-line">Total de Utilizadores</a>
                                     <div class="w-100 text-end">
-                                        <span class="fs-12 text-dark">{{ $usersTotal ?? '' }}</span>
                                         <span class="fs-11 text-muted">(100%)</span>
                                     </div>
                                 </div>

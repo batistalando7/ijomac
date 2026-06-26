@@ -18,7 +18,7 @@ class CreateServiceRequestsTable extends Migration
             $table->string('client_name');
             $table->string('client_email')->nullable();
             $table->string('client_phone')->nullable();
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->unsignedBigInteger('service_id');
             $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
             $table->softDeletes();

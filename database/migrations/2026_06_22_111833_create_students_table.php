@@ -18,9 +18,11 @@ class CreateStudentsTable extends Migration
             $table->string('client_name');
             $table->string('client_email')->nullable();
             $table->string('client_phone')->nullable();
-            $table->string('slug');
+            $table->boolean('status')->default(false);
+            $table->string('slug')->unique();
             $table->unsignedBigInteger('course_id');
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

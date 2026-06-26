@@ -42,7 +42,7 @@ class HomeController extends Controller
         $response['unreadNotifications'] = $response['admin']->unreadNotifications; // não lidas
         $response['unreadCount'] = auth()->user()->unreadNotifications->count(); */
         
-        return view('_admin.dashboard.crm.index', $response);
+        return view('_admin.dashboard.index', $response);
     }
 
 
