@@ -2,7 +2,8 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <!-- Mirrored from wpdemothemes.com/edplus/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 May 2026 08:33:33 GMT -->
 <!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack --> 
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,9 +20,9 @@
         href="{{ url('site/feed/index.html') }}" />
     <link rel="alternate" type="application/rss+xml" title="Edplus &raquo; Comments Feed"
         href="{{ url('site/comments/feed/index.html') }}" />
-        <!--! BEGIN: Favicon-->
+    <!--! BEGIN: Favicon-->
     <link rel="shortcut icon" type="image/x-icon" href="{{ url('site/logo/cute.png') }}">
-    
+
     <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
         href="{{ url('site/wp-json/oembed/1.0/embedc90c.json?url=https%3A%2F%2Fwpdemothemes.com%2Fedplus%2F') }}" />
     <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
@@ -34,7 +35,7 @@
 
         /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
     </style>
-    
+
     {{-- alpine --}}
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -466,7 +467,8 @@
     <link rel="stylesheet" id="tutor-css"
         href="{{ url('site/wp-content/plugins/tutor/assets/css/tutor.minfd0c.css?ver=3.9.7') }}" media="all" />
     <link rel="stylesheet" id="tutor-frontend-css"
-        href="{{ url('site/wp-content/plugins/tutor/assets/css/tutor-front.minfd0c.css?ver=3.9.7') }}" media="all" />
+        href="{{ url('site/wp-content/plugins/tutor/assets/css/tutor-front.minfd0c.css?ver=3.9.7') }}"
+        media="all" />
     <style id="tutor-frontend-inline-css">
         .mce-notification.mce-notification-error {
             display: none !important;
@@ -558,21 +560,13 @@
         href="{{ url('site/fonts.googleapis.com/cssb6c5.css?family=Roboto+Slab:100,100italic,200,200italic,300,300italic,400,40₀ italic,5₀₀ italic,6₀₀ italic,7₀₀ italic,8₀₀ italic,9₀₀ italic&amp;display=swap') }}"
         media="all" />
 
-        {{-- dependencias dos faqs --}}
-        <link
-    rel="stylesheet"
-    id="elementor-post-1110-css"
-    href="{{ url('site/wp-content/uploads/elementor/css/post-1110aa4b.css?ver=1778988713') }}"
-    media="all"
-  />
+    {{-- dependencias dos faqs --}}
+    <link rel="stylesheet" id="elementor-post-1110-css"
+        href="{{ url('site/wp-content/uploads/elementor/css/post-1110aa4b.css?ver=1778988713') }}" media="all" />
 
-  {{-- dependencias dos contactos --}}
-  <link
-            rel="stylesheet"
-            id="elementor-post-1074-css"
-            href="{{ url('site/wp-content/uploads/elementor/css/post-10742f8a.css?ver=1778823161') }}"
-            media="all"
-        />
+    {{-- dependencias dos contactos --}}
+    <link rel="stylesheet" id="elementor-post-1074-css"
+        href="{{ url('site/wp-content/uploads/elementor/css/post-10742f8a.css?ver=1778823161') }}" media="all" />
     <script id="jquery-core-js" src="{{ url('site/wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1') }}"></script>
     <script id="jquery-migrate-js" src="{{ url('site/wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1') }}">
     </script>
@@ -708,8 +702,7 @@
 
     <!-- Preloader -->
     <div class="preloader_wrap">
-        <img src="{{ url('site/logo/cute.png') }}" width="110" class="pre_logo"
-            alt="" />
+        <img src="{{ url('site/logo/cute.png') }}" width="110" class="pre_logo" alt="" />
         <span class="preloader"></span>
     </div>
     <!-- Offcanvas Area Start -->
@@ -719,7 +712,8 @@
                 <div class="offcanvas__content">
                     <div class="offcanvas__top d-flex justify-content-between align-items-center">
                         <div class="offcanvas__logo">
-                            <a href="index.html"><img src="{{ url('site/wp-content/themes/edplus/assets/img/logo.svg"') }}
+                            <a href="index.html"><img
+                                    src="{{ url('site/wp-content/themes/edplus/assets/img/logo.svg"') }}
                                     alt="Edplus" /></a>
                         </div>
                         <div class="offcanvas__close">
@@ -791,17 +785,12 @@
     @include('layouts._site.footer')
 
     <!-- Start progress-wrap -->
-        <div class="progress-wrap">
-            <svg
-                class="progress-circle svg-content"
-                width="100%"
-                height="100%"
-                viewBox="-1 -1 102 102"
-            >
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-            </svg>
-        </div>
-        <!-- End progress-wrap -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- End progress-wrap -->
 
     <script type="speculationrules">
             {
@@ -1800,7 +1789,8 @@
         src="{{ url('site/wp-content/themes/edplus/assets/js/modernizr-2.8.3.min3c43.js?ver=8754') }}"></script>
     <script id="owl-carousel-js"
         src="{{ url('site/wp-content/themes/edplus/assets/owlcarousel/js/owl.carousel.min3c43.js?ver=8754') }}"></script>
-    <script id="phosphor-icons-js" src="{{ url('site/cdn.jsdelivr.net/npm/%40phosphor-icons/web%402.1.1?ver=8754') }}"></script>
+    <script id="phosphor-icons-js" src="{{ url('site/cdn.jsdelivr.net/npm/%40phosphor-icons/web%402.1.1?ver=8754') }}">
+    </script>
     <script id="inview-js" src="{{ url('site/wp-content/themes/edplus/assets/js/jquery.inview.min3c43.js?ver=8754') }}">
     </script>
     <script id="magnific-popup-js"
