@@ -33,7 +33,7 @@ Route::get('/admin/activity-logs', [ActivityLogController::class, 'index'])->nam
 Route::redirect('/admin', 'admin/dashboard')->name('dashboard');
 Route::get('/admin/dashboard', [HomeController::class, 'management'])->name('admin.dashboard')->middleware(['auth', 'role:admin']);
 
-Route::middleware(['role:admin', 'auth'])->prefix('admin/')->name('admin.')->group(function () {
+Route::middleware(['role:admin,editor', 'auth'])->prefix('admin/')->name('admin.')->group(function () {
     /* Users routes */
     Route::prefix('users')->name('user.')->group(function () {
         Route::get('/', ['as' => 'index', 'uses' => 'Admin\UserController@index']);
