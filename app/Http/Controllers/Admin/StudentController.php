@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Course;
 use Illuminate\Http\Request;
 use App\Models\Student;
 
@@ -16,7 +17,8 @@ class StudentController extends Controller
 
     public function create()
     {
-        return view('_admin.students.create.index');
+        $courses = Course::all();
+        return view('_admin.students.create.index', compact('courses'));
     }
 
     public function store(Request $request)
@@ -101,7 +103,7 @@ class StudentController extends Controller
      */
     private function generateStudentNumber()
     {
-        $number = 'MC-' . date('Y') . '-' . str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
+        $number = 'IJ-' . date('Y') . '-' . str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
 
         return $number;
     }

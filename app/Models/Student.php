@@ -38,16 +38,16 @@ class Student extends Model
 
         // Antes de inserir um novo registro
         static::creating(function ($student) {
-            $student->slug = self::generateSlug($student->client_name);
+            $student->slug = self::generateSlug($student->name);
         });
 
         // Antes de atualizar um registro existente
         static::updating(function ($student) {
 
             // Regenera o slug somente se o nome tiver sido modificado
-            if ($student->isDirty('client_name')) {
+            if ($student->isDirty('name')) {
                 $student->slug = self::generateSlug(
-                    $student->client_name,
+                    $student->name,
                     $student->id
                 );
             }

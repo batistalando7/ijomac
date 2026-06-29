@@ -47,6 +47,23 @@
                         </ul>
                     </li>
                 @endcan
+                                
+                {{-- Menu Curso --}}
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="javascript:void(0);" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-users"></i></span>
+                        <span class="nxl-mtext">Alunos</span><span class="nxl-arrow"><i
+                                class="feather-chevron-right"></i></span>
+                    </a>
+                    <ul class="nxl-submenu">
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.student.index') }}">Lista de
+                                alunos</a></li>
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.student.create') }}">Adicionar
+                                aluno</a>
+                        </li>
+                    </ul>
+                </li>
+
                 {{-- Menu Category --}}
                 <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">
@@ -75,22 +92,6 @@
                                 Cursos</a></li>
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.course.create') }}">Criar
                                 Curso</a>
-                        </li>
-                    </ul>
-                </li>
-                
-                {{-- Menu Curso --}}
-                <li class="nxl-item nxl-hasmenu">
-                    <a href="javascript:void(0);" class="nxl-link">
-                        <span class="nxl-micon"><i class="feather-users"></i></span>
-                        <span class="nxl-mtext">Alunos</span><span class="nxl-arrow"><i
-                                class="feather-chevron-right"></i></span>
-                    </a>
-                    <ul class="nxl-submenu">
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.student.index') }}">Lista de
-                                alunos</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.student.create') }}">Adicionar
-                                aluno</a>
                         </li>
                     </ul>
                 </li>
@@ -139,40 +140,6 @@
                         </li>
                     </ul>
                 </li>
-                
-                {{-- Menu News --}}
-                {{-- <li class="nxl-item nxl-hasmenu">
-                    <a href="javascript:void(0);" class="nxl-link">
-                        <span class="nxl-micon"><i class="feather-send"></i></span>
-                        <span class="nxl-mtext">Eventos</span><span class="nxl-arrow"><i
-                                class="feather-chevron-right"></i></span>
-                    </a>
-                    <ul class="nxl-submenu">
-                        <li class="nxl-item nxl-hasmenu">
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.news.index') }}">Todos
-                            </a></li>
-                        @can('is-editor')
-                            <li class="nxl-item">
-                                <a href="{{ route('admin.newsArchived.index') }}" class="nxl-link">
-                                    <span class="nxl-mtext">Arquivados</span>
-                                </a>
-                            </li>
-                            <li class="nxl-item">
-                                <a href="{{ route('admin.newsDraft.index') }}" class="nxl-link">
-                                    <span class="nxl-mtext">Rascunho</span>
-                                </a>
-                            </li>
-                        @endcan
-                    </ul>
-                </li> --}}
-
-                {{-- Menu Comentários --}}
-                {{-- <li class="nxl-item">
-                    <a href="{{ route('admin.serviceRequest.index') }}"class="nxl-link">
-                        <span class="nxl-micon"><i class="feather-message-square"></i></span>
-                        <span class="nxl-mtext">Comentários</span>
-                    </a>
-                </li> --}}
 
                 <li class="nxl-item nxl-caption">
                     <label>Multimedia</label>
