@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Course;
-use App\Models\Students;
+use App\Models\Student;
 
 class CourseController extends Controller
 {
@@ -52,15 +52,15 @@ class CourseController extends Controller
             'client_name.required' => 'Nome do Cliente é obrigatório',
             'client_email.email' => 'Email não é válido',
             'client_phone.max' => 'Excedeu o número caracteres para um número válido',
-            'course_id.required' => 'Id do Curso não identificado'
+            'course_id.required' => 'Id do curso não identificado'
         ]);
 
         if (empty($request->client_email) && empty($request->client_phone)) {
             return redirect()->back()->with('error', 'Não podemos avançar sem o email ou número de telefone do cliente!');
         }
 
-        $student = new Students();
-
+        $student = new Student();
+        
         $student->client_name = $request->client_name;
         $student->client_email = $request->client_email;
         $student->client_phone = $request->client_phone;

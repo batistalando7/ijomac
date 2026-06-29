@@ -35,3 +35,6 @@ Route::post('/portal/subscrever', ['as' => 'site.subscrive', 'uses' => 'Site\Sub
 /* Rota de Mensagens */
 Route::post('portal/contactos', ['as' => 'site.message', 'uses' => 'Site\ContactController@store']);
 
+//pesquisa
+Route::get('portal/pesquisar/finalistas', ['as' => 'site.search', 'uses' => 'Site\SearchController@search']);
+

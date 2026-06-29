@@ -26,9 +26,9 @@ class Course extends Model
         return $this->belongsTo(Teacher::class);
     }
 
-    public function student()
-    {
-        return $this->hasMany(Students::class);
+    //relacionamento com students
+    public function studnet() {
+        return $this->hasMany(Student::class);
     }
 
     /* Função de Slug */

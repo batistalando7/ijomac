@@ -3,11 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 
-class Students extends Model
+
+class Student extends Model
 {
     use SoftDeletes;
 
@@ -15,22 +15,21 @@ class Students extends Model
 
     protected $guarded = ['id'];
 
-    public function course ()
-    { 
-        return $this->belongsTo(Course::class);
-    }
-
+    public function course() {
+     return $this->belongsTo(Course::class);
+     }
+    
     /* Função de Slug */
     protected static function boot()
     {
         parent::boot();
 
         static::creating(function ($student) {
-            $student->slug = Str::slug($student->client_name);
+            $student->slug = Str::slug($student->name);
         });
 
         static::updating(function ($student) {
-            $student->slug = Str::slug($student->client_name);
+            $student->slug = Str::slug($student->name);
         });
     }
 }
