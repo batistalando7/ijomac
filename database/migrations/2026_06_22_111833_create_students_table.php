@@ -15,11 +15,12 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string('client_name');
-            $table->string('client_email')->nullable();
-            $table->string('client_phone')->nullable();
+            $table->string('name');
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
             $table->boolean('status')->default(false);
             $table->string('slug')->unique();
+            $table->string('code');
             $table->unsignedBigInteger('course_id');
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
             $table->softDeletes();

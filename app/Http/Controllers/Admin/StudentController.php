@@ -21,28 +21,29 @@ class StudentController extends Controller
 
     public function store(Request $request)
     {
-       $request->validate([
-            'client_name' => 'required|string|max:255',
-            'client_email' => 'nullable|email|max:255',
-            'client_phone' => 'nullable|string|max:13',
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'nullable|email|max:255',
+            'phone' => 'nullable|string|max:13',
             'course_id' => 'required|exists:courses,id'
         ], [
-            'client_name.required' => 'Nome do Cliente é obrigatório',
-            'client_email.email' => 'Email não é válido',
-            'client_phone.max' => 'Excedeu o número caracteres para um número válido',
+            'name.required' => 'Nome do Cliente é obrigatório',
+            'email.email' => 'Email não é válido',
+            'phone.max' => 'Excedeu o número caracteres para um número válido',
             'course_id.required' => 'Id do curso não identificado'
         ]);
 
-        if (empty($request->client_email) && empty($request->client_phone)) {
+        if (empty($request->email) && empty($request->phone)) {
             return redirect()->back()->with('error', 'Não podemos avançar sem o email ou número de telefone do cliente!');
         }
 
         $student = new Student();
-        
-        $student->client_name = $request->client_name;
-        $student->client_email = $request->client_email;
-        $student->client_phone = $request->client_phone;
+
+        $student->name = $request->name;
+        $student->email = $request->email;
+        $student->phone = $request->phone;
         $student->course_id = $request->course_id;
+        $student->code = $this->generateStudentNumber();
 
         $student->save();
 
@@ -62,25 +63,26 @@ class StudentController extends Controller
     public function update(Request $request, Student $student)
     {
         $request->validate([
-            'client_name' => 'required|string|max:255',
-            'client_email' => 'nullable|email|max:255',
-            'client_phone' => 'nullable|string|max:13',
+            'name' => 'required|string|max:255',
+            'email' => 'nullable|email|max:255',
+            'phone' => 'nullable|string|max:13',
             'course_id' => 'required|exists:courses,id'
         ], [
-            'client_name.required' => 'Nome do Cliente é obrigatório',
-            'client_email.email' => 'Email não é válido',
-            'client_phone.max' => 'Excedeu o número caracteres para um número válido',
+            'name.required' => 'Nome do Cliente é obrigatório',
+            'email.email' => 'Email não é válido',
+            'phone.max' => 'Excedeu o número caracteres para um número válido',
             'course_id.required' => 'Id do curso não identificado'
         ]);
 
-        if (empty($request->client_email) && empty($request->client_phone)) {
+        if (empty($request->email) && empty($request->phone)) {
             return redirect()->back()->with('error', 'Não podemos avançar sem o email ou número de telefone do cliente!');
         }
-        
-        $student->client_name = $request->client_name;
-        $student->client_email = $request->client_email;
-        $student->client_phone = $request->client_phone;
+
+        $student->name = $request->name;
+        $student->email = $request->email;
+        $student->phone = $request->phone;
         $student->course_id = $request->course_id;
+        $student->code = $this->generateStudentNumber();
 
         $student->update();
 
@@ -92,5 +94,15 @@ class StudentController extends Controller
         $student->delete();
 
         return redirect()->back()->with('success', 'Deletado com sucesso!');
+    }
+
+    /**
+     * GERAR NÚMERO CARTÃO
+     */
+    private function generateStudentNumber()
+    {
+        $number = 'MC-' . date('Y') . '-' . str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
+
+        return $number;
     }
 }

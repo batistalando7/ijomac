@@ -11,11 +11,11 @@
         </div>
     </div>
     <!-- End Popup Search Box -->
-   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('[data-menu="#popup_success"]').click();
-    });
-</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('[data-menu="#popup_success"]').click();
+        });
+    </script>
 @endif
 
 @if (session('error'))

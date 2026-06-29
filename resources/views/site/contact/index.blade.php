@@ -158,10 +158,10 @@
                                                     type="hidden" name="_wpcf7_posted_data_hash" value="" />
                                             </fieldset>
                                             <p>
-                                                <input type="text" placeholder="Nome Completo*" /><br />
-                                                <input type="email" placeholder="Endereço de Email*" /><br />
-                                                <input type="text" placeholder="Assunto *" /><br />
-                                                <textarea placeholder="Sua Mensagem*"></textarea><br />
+                                                <input type="text" name="name" placeholder="Nome Completo*" /><br />
+                                                <input type="email" name="email" placeholder="Endereço de Email*" /><br />
+                                                <input type="text" name="subject" placeholder="Assunto *" /><br />
+                                                <textarea name="message" placeholder="Sua Mensagem*"></textarea><br />
                                                 <button type="submit" class="fbtn">
                                                     Enviar Mensagem
                                                     <i class="ph ph-arrow-right"></i>

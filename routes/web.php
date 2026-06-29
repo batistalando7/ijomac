@@ -23,8 +23,8 @@ Route::post('portal/inscricao-curso', ['as' => 'site.courses.store', 'uses' => '
 
 /* rota de serviços */
 Route::get('portal/servicos', ['as' => 'site.services', 'uses' => 'Site\ServiceController@index']);
-Route::get('portal/servicos/{service}', ['as' => 'site.services.details', 'uses' => 'Site\ServiceController@show']);
-Route::get('portal/servicos/{service}/solicitação', ['as' => 'site.services.request', 'uses' => 'Site\ServiceController@request']);
+Route::get('portal/servicos/{service:slug}', ['as' => 'site.services.details', 'uses' => 'Site\ServiceController@show']);
+Route::get('portal/servicos/{service:slug}/solicitação', ['as' => 'site.services.request', 'uses' => 'Site\ServiceController@request']);
 Route::post('portal/solicitação-servico', ['as' => 'site.service.store', 'uses' => 'Site\ServiceController@store']);
 /* fim das rota de serviço */
 

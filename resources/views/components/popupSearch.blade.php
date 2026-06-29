@@ -72,7 +72,7 @@
                     <div class="mb-5">
 
                         <h5 class="border-bottom pb-2">
-                            Alunos
+                            Alunos Finalistas
                         </h5>
                 `;
 
@@ -84,7 +84,7 @@
 
                             <div class="mb-3">
 
-                                <strong>${student.client_name}</strong>
+                                <strong>${student.name}</strong>
 
                                 <br>
 

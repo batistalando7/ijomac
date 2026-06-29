@@ -26,7 +26,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
-     public function comment()
+    /* public function comment()
     {
         return $this->hasMany(Comment::class);
     }
@@ -34,7 +34,7 @@ class User extends Authenticatable implements MustVerifyEmail
     public function news()
     {
         return $this->hasMany(News::class);
-    }
+    } */
 
     /* Função de Slug */
     protected static function boot()

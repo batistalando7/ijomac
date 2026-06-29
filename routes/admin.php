@@ -30,7 +30,7 @@ Auth::routes(['verify' => true]);
 /* Rota de Logging (página de visualização de logs) */
 Route::get('/admin/activity-logs', [ActivityLogController::class, 'index'])->name('activity.logs');
 /* Dashboard */
-Route::redirect('/admin', 'admin/dashboard')->name('dashboard');
+Route::redirect('/admin', '/admin/dashboard')->name('dashboard');
 Route::get('/admin/dashboard', [HomeController::class, 'management'])->name('admin.dashboard')->middleware(['auth', 'role:admin']);
 
 Route::middleware(['role:admin,editor', 'auth'])->prefix('admin/')->name('admin.')->group(function () {
