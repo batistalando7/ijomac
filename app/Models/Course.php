@@ -26,6 +26,11 @@ class Course extends Model
         return $this->belongsTo(Teacher::class);
     }
 
+    public function student()
+    {
+        return $this->hasMany(Students::class);
+    }
+
     /* Função de Slug */
     protected static function boot()
     {
