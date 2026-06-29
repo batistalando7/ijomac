@@ -778,6 +778,9 @@
     {{-- popup search --}}
     @include('components.popupSearch')
 
+    {{-- alerts --}}
+    @include('components.alerts')
+
     {{-- incluindo o conteudo principal --}}
     @yield('content')
 

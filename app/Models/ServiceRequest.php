@@ -14,7 +14,7 @@ class ServiceRequest extends Model
 
     protected $guarded = ['id'];
 
-     /* Função de Slug */
+    /* Função de Slug */
     protected static function boot()
     {
         parent::boot();
