@@ -280,7 +280,7 @@
 
                                             <div class="ccontent">
                                                 <h3>
-                                                    <span class="count">118</span>K
+                                                    <span class="count">{{ $clientTotal ?? '' }}</span>
                                                 </h3>
                                                 <span>Clientes Satisfeitos</span>
                                             </div>
@@ -298,7 +298,7 @@
 
                                             <div class="ccontent">
                                                 <h3>
-                                                    <span class="count">25</span>K
+                                                    <span class="count">{{ $finalistTotal ?? '' }}</span>
                                                 </h3>
                                                 <span>
                                                     Formados
@@ -318,7 +318,7 @@
 
                                             <div class="ccontent">
                                                 <h3>
-                                                    <span class="count">120</span>K
+                                                    <span class="count">{{ $teacher ?? '' }}</span>
                                                 </h3>
                                                 <span>
                                                     Proficionais
@@ -339,7 +339,7 @@
 
                                             <div class="ccontent">
                                                 <h3>
-                                                    <span class="count">96</span>%
+                                                    <span class="count">{{ $successPercent ?? ''}}</span>%
                                                 </h3>
                                                 <span>Taxa de Satisfação</span>
                                             </div>

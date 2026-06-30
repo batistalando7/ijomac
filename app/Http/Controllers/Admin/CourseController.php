@@ -129,7 +129,7 @@ class CourseController extends Controller
     {
         $response = [
             'course' => $course,
-            'categories' => Category::all(),
+            'categories' => Category::where('id', '!=', $course->category_id)->get(),
             'teachers' => Teacher::all(),
             'levels' => [
                 'beginner' => 'Iniciante',

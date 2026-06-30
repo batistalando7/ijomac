@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'IJOMAC - Editar Categoria')
+@section('title', 'IJOMAC - Editar Aluno')
 @section('content')
 
     <!-- [ Craete Form ] -->
@@ -8,10 +8,10 @@
         <div class="page-header">
             <div class="page-header-left d-flex align-items-center">
                 <div class="page-header-title">
-                    <h5 class="m-b-10">Categoria</h5>
+                    <h5 class="m-b-10">Alunos</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item">Editar</li>
+                    <li class="breadcrumb-item">Editar aluno ({{$student->name}})</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">
@@ -27,7 +27,7 @@
                             <i class="feather-layers me-2"></i>
                             <span>Save as Draft</span>
                         </a> --}}
-                        <a href="{{ route('admin.category.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.student.index') }}" class="btn btn-danger">
                             <i class="feather-chevron-left me-2"></i>
                             <span>Voltar</span>
                         </a>
@@ -53,15 +53,15 @@
                                     <span class="fs-12 fw-normal text-muted text-truncate-1-line">Normalmente se refere a
                                         editar/atualizar uma nova Categoria</span>
                                 </h5>
-                                <a href="{{ route('admin.category.index') }}" class="btn btn-sm btn-light-brand">Listar
+                                <a href="{{ route('admin.student.index') }}" class="btn btn-sm btn-light-brand">Listar
                                     Categoria</a>
                             </div>
-                            <form action="{{ route('admin.category.update', ['category' => $category->id]) }}"
+                            <form action="{{ route('admin.student.update', ['student' => $student->id]) }}"
                                 method="POST">
                                 @csrf
                                 @method('PUT')
                                 {{-- aqui o formulário --}}
-                                @include('form._formCategories.index')
+                                @include('form._formStudents.index')
                                 {{-- fim do formulário --}}
                             </form>
                         </div>

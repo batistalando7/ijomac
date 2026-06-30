@@ -78,6 +78,12 @@ Route::middleware(['role:admin,editor', 'auth'])->prefix('admin/')->name('admin.
         Route::get('edit/{student:slug}', ['as' => 'edit', 'uses' => 'Admin\StudentController@edit']);
         Route::put('update/{student:slug}', ['as' => 'update', 'uses' => 'Admin\StudentController@update']);
         Route::get('delete/{student:slug}', ['as' => 'delete', 'uses' => 'Admin\StudentController@destroy']);
+
+        //rota para tornar aluno finalista
+        Route::put('finalizar-curso/{student:slug}', ['as' =>'setFinalist', 'uses' => 'Admin\StudentController@setFinalist']);
+        
+        //rota para imprimir certificado do aluno finalista
+        Route::get('certificado-curso/{student:slug}', ['as' =>'certificate', 'uses' => 'Admin\StudentController@certificate']);
     });
 
 

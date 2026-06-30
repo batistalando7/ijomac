@@ -17,8 +17,8 @@ class DatabaseSeeder extends Seeder
             UserTableSeeder::class,
             CategoriesTableSeeder::class,
             TeacherTableSeeder::class,
-            CourseTableSeeder::class,
-            ServiceTableSeeder::class,
+            /* CourseTableSeeder::class,
+            ServiceTableSeeder::class, */
         ]);
     }
 }

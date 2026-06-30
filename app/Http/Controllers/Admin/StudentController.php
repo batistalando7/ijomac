@@ -6,12 +6,14 @@ use App\Http\Controllers\Controller;
 use App\Models\Course;
 use Illuminate\Http\Request;
 use App\Models\Student;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Str;
 
 class StudentController extends Controller
 {
     public function index()
     {
-        $students = Student::all();
+        $students = Student::orderByDesc('id')->get();
         return view('_admin.students.list.index', compact('students'));
     }
 
@@ -59,7 +61,8 @@ class StudentController extends Controller
 
     public function edit(Student $student)
     {
-        return view('_admin.students.edit.index', compact('student'));
+        $courses = Course::all();
+        return view('_admin.students.edit.index', compact('student', 'courses'));
     }
 
     public function update(Request $request, Student $student)
@@ -106,5 +109,36 @@ class StudentController extends Controller
         $number = 'IJ-' . date('Y') . '-' . str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
 
         return $number;
+    }
+
+    /* Tornar um estudante como finalista */
+    public function setFinalist(Student $student)
+    {
+        $student->status = true;
+        $student->secret_code = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
+        $student->save();
+
+        return redirect()->back()->with('success', 'O aluno ' . $student->name . ' finalizou o curso de ' . $student->course->name . '. Agora podes baixar o certificado!');
+    }
+
+    /* baixar certificado */
+    public function certificate(Student $student)
+    {
+        $levels = [
+            'beginner' => 'Iniciante',
+            'intermediate' => 'Intermediário',
+            'advanced' => 'Avançado'
+        ];
+
+        $courseName = Str::snake(Str::lower($student->course->name));
+
+        $serie = 'IJOMAC-' . date('Y') . '-' . str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
+        // Gera o QR Code com os dados desejados
+        $qrData = route('admin.student.show', ['student' => $student->slug]); // ou qualquer link/texto que você quiser
+
+        $qrUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" . urlencode($qrData);
+
+        $pdf = PDF::loadView('pdf.student.certificate', compact(['student', 'qrUrl', 'levels', 'serie']))->setPaper('a4', 'portrait');
+        return $pdf->stream($student->code . '_certificado_do_curso_de_' . $courseName . '.pdf');
     }
 }

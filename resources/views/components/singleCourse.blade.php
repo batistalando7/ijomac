@@ -2,7 +2,7 @@
     <div class="course_img">
         <div class="ccategory">
             <a href=""><i class="ph ph-folder-open"></i>
-                {{ $course->category->name }}</a>
+                {{ Str::limit($course->category->name, 20) }}</a>
         </div>
         <img fetchpriority="high" decoding="async" width="690" height="430"
             src="{{ isset($course->image) ? asset('storage/' . $course->image) : '' }}"

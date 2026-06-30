@@ -41,7 +41,8 @@ class ServiceRequestController extends Controller
             return redirect()->back()->with('error', 'Não podemos avançar sem o email ou número de telefone do cliente!');
         }
 
-        ServiceRequest::create([
+        $serviceRequest = new ServiceRequest();
+        $serviceRequest->create([
             'client_name' => $request->client_name,
             'client_email' => $request->client_email,
             'client_phone' => $request->client_phone,

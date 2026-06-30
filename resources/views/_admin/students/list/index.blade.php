@@ -155,13 +155,24 @@
                                                     </div>
 
                                                 </td>
-                                                <td>{{ $item->email}}</td>
-                                                <td>{{ $item->phone}}</td>
-                                                <td>{{ $item->course->name}}</td>
+                                                <td>{{ $item->email }}</td>
+                                                <td>{{ $item->phone }}</td>
+                                                <td>{{ $item->course->name }}</td>
                                                 <td>
                                                     <div class="hstack gap-2 justify-content-end">
+                                                        @if ($item->status == false)
+                                                            <form
+                                                                action="{{ route('admin.student.setFinalist', ['student' => $item->slug]) }}"
+                                                                method="post">
+                                                                @csrf
+                                                                @method('PUT')
+                                                                <button class="avatar-text avatar-md">
+                                                                    <i class="feather feather-check"></i>
+                                                                </button>
+                                                            </form>
+                                                        @endif
                                                         <a class="avatar-text avatar-md"
-                                                            href="{{ route('admin.student.show',  ['student' => $item->slug]) }}">
+                                                            href="{{ route('admin.student.show', ['student' => $item->slug]) }}">
                                                             <i class="feather feather-eye"></i>
                                                         </a>
                                                         <div class="dropdown">
@@ -184,6 +195,15 @@
                                                                         <span>Delete</span>
                                                                     </a>
                                                                 </li>
+                                                                @if ($item->status == true)
+                                                                    <li>
+                                                                        <a class="dropdown-item"
+                                                                            href="{{ route('admin.student.certificate', ['student' => $item->slug]) }}" target="_blanck">
+                                                                            <i class="feather feather-download me-3"></i>
+                                                                            <span>Certificado</span>
+                                                                        </a>
+                                                                    </li>
+                                                                @endif
                                                             </ul>
                                                         </div>
                                                     </div>

@@ -66,6 +66,7 @@ class CourseController extends Controller
         $student->phone = $request->phone;
         $student->course_id = $request->course_id;
         $student->code = $this->generateStudentNumber();
+        $student->secret_code = 'N/A';
 
         $student->save();
 

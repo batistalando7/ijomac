@@ -8,6 +8,8 @@ use App\Models\Advertisement;
 use App\Models\Course;
 use App\Models\Teacher;
 use App\Models\Service;
+use App\Models\ServiceRequest;
+use App\Models\Student;
 
 class HomeController extends Controller
 {
@@ -25,9 +27,8 @@ class HomeController extends Controller
             $bannerCourse = Course::where('status', 'published')->orderByDesc('id')->first();
             $response['bannerCourse'] = $bannerCourse;
             $response['courses'] = Course::where('status', 'published')->where('id', '!=', $bannerCourse->id)->orderByDesc('id')->take(6)->get();
-
         }
-        $response['services'] = Service::orderByDesc('id')->take(3)->get();
+        $response['services'] = Service::where('status', 'published')->orderByDesc('id')->take(3)->get();
 
 
         $response['teachers'] = Teacher::orderByDesc('id')->take(3)->get();
@@ -41,6 +42,12 @@ class HomeController extends Controller
 
         $response['ads'] = Advertisement::orderByDesc('id')->take(1)->get();
 
+        $response['clientTotal'] = ServiceRequest::count() + Student::count();
+        $response['finalistTotal'] = Student::where('status', true)->count();
+        $response['teacher'] = Teacher::count();
+        if ($response['clientTotal'] != 0) {
+            $response['successPercent'] = ($response['clientTotal'] * 100) / $response['clientTotal'];
+        }
         return view('site.home.index', $response);
     }
 }
