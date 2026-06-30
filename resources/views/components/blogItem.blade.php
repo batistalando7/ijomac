@@ -22,9 +22,9 @@
             </span>
         </div>
         <h3>
-            <a href="{{ route('site.services.details', $item->id) }}">{{ $item->name }}</a>
+            <a href="{{ route('site.services.details', ['service' => $item]) }}">{{ $item->name }}</a>
         </h3>
-        <a href="{{ route('site.services.details', $item->id) }}" class="blog_btn">Ver Detalhes
+        <a href="{{ route('site.services.details', ['service' => $item]) }}" class="blog_btn">Ver Detalhes
             <i class="ph ph-arrow-right"></i></a>
     </div>
 </div>

@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'IJOMAC - Criar Categoria')
+@section('title', 'IJOMAC - Adicionar Aluno')
 @section('content')
 
     <!-- [ Craete Form ] -->
@@ -8,10 +8,10 @@
         <div class="page-header">
             <div class="page-header-left d-flex align-items-center">
                 <div class="page-header-title">
-                    <h5 class="m-b-10">Categoria</h5>
+                    <h5 class="m-b-10">Alunos</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item">Criar</li>
+                    <li class="breadcrumb-item">Adicionar</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">
@@ -27,7 +27,7 @@
                             <i class="feather-layers me-2"></i>
                             <span>Save as Draft</span>
                         </a> --}}
-                        <a href="{{ route('admin.category.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.student.index') }}" class="btn btn-danger">
                             <i class="feather-chevron-left me-2"></i>
                             <span>Visualizar</span>
                         </a>
@@ -49,18 +49,18 @@
                         <div class="card-body lead-status">
                             <div class="mb-5 d-flex align-items-center justify-content-between">
                                 <h5 class="fw-bold mb-0 me-4">
-                                    <span class="d-block mb-2">Criando Categoria :</span>
+                                    <span class="d-block mb-2">Criando  :</span>
                                     <span class="fs-12 fw-normal text-muted text-truncate-1-line">Normalmente se refere a
-                                        adicionar uma nova Categoria</span>
+                                        adicionar uma nova </span>
                                 </h5>
-                                <a href="{{ route('admin.category.index') }}" class="btn btn-sm btn-light-brand">Listar
-                                    Categoria</a>
+                                <a href="{{ route('admin.student.index') }}" class="btn btn-sm btn-light-brand">Listar
+                                    </a>
                             </div>
-                            <form action="{{ route('admin.category.store') }}" method="POST">
+                            <form action="{{ route('admin.student.store') }}" method="POST">
                                 @csrf
                                 @method('POST')
                                 {{-- aqui o formulário --}}
-                                @include('form._formCategories.index')
+                                @include('form._formStudents.index')
                                 {{-- fim do formulário --}}
                             </form>
                         </div>

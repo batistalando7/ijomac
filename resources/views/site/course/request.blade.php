@@ -42,7 +42,7 @@
                                                          Nome Completo
                                                      </label>
 
-                                                     <input type="text" name="client_name" value=""
+                                                     <input type="text" name="name" value=""
                                                          placeholder="First Name" required autocomplete="given-name" />
                                                  </div>
                                              </div>
@@ -55,9 +55,9 @@
                                                          Telefone
                                                      </label>
 
-                                                     <input type="text" name="client_phone" class="tutor_client_phone"
+                                                     <input type="text" name="phone" class="tutor_client_phone"
                                                          value="" placeholder="User Name"
-                                                         autocomplete="client_phone" />
+                                                         autocomplete="phone" />
                                                  </div>
                                              </div>
 
@@ -67,7 +67,7 @@
 
                                                      <input
                                                             type="text"
-                                                            name="client_email"
+                                                            name="email"
                                                             value=""
                                                             placeholder="E-Mail"
                                                             autocomplete="email"
@@ -78,7 +78,7 @@
 
                                          <div class="tutor-mb-24">
                                              Ao me cadastrar, concordo com os
-                                             <a target="_blank" href="../terms-and-conditions/index.html"
+                                             <a href="javascript:void(0);"
                                                  title="Terms and Conditions">Termos e Condições do site.</a>
                                          </div>
 

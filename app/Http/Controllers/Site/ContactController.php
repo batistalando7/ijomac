@@ -13,13 +13,12 @@ class ContactController extends Controller
 
     public function store(Request $request){
         $request->validate([
-            'name' => 'required',
+            'name' => 'required|string|max:255',
             'email' => 'required|email',
-            'message' => 'required',
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string|max:255'
         ]);
 
-        // Here you can handle the form submission, e.g., save to database or send an email
-
-        return redirect()->back()->with('success', 'Your message has been sent successfully!');
+        return redirect()->back()->with('success', 'Sua mensagem foi enviada com sucesso!');
     }
 }

@@ -16,10 +16,14 @@ class SearchController extends Controller
 
         $search = $request->search;
 
-        $response['students'] = Student::with('course')->where('client_name', 'LIKE', '%'.$search.'%')->where('status', true)->get();
+        $response['students'] = Student::with('course')->where('name', 'LIKE', '%'.$search.'%')->where('status', true)->get();
         $response['courses'] = Course::where('name', 'LIKE', '%'.$search.'%')->take(6)->get();
         $response['services'] = Service::where('name', 'LIKE', '%'.$search.'%')->take(6)->get();
 
         return response()->json($response);
+    }
+
+    public function studentCertificate(){
+        
     }
 }

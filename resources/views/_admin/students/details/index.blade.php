@@ -10,7 +10,7 @@
                     <h5 class="m-b-10">Alunos</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item">Detalhes do aluno ({{ $student->client_name }})</li>
+                    <li class="breadcrumb-item">Detalhes do aluno ({{ $student->name }})</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">
@@ -26,7 +26,7 @@
                         <i class="feather-layers me-2"></i>
                         <span>Save & Send</span>
                     </a> --}}
-                        <a href="{{ route('admin.category.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.student.index') }}" class="btn btn-danger">
                             <i class="feather-chevron-left me-2"></i>
                             Voltar</a>
                     </div>
@@ -59,17 +59,51 @@
                             </div>
                         </div>
                         <div class="row mb-4">
-                            <div class="col-lg-2 fw-medium">Nome da Aluno</div>
+                            <div class="col-lg-2 fw-medium">Nome</div>
                             <div class="col-lg-10 hstack gap-1">
                                 <a href="javascript:void(0);" class="hstack gap-2">
-                                    <span>{{ $student->client_name ?? 'Sem Aluno'}}</span>
+                                    <span>{{ $student->name ?? 'Sem Aluno'}}</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-2 fw-medium">Email</div>
+                            <div class="col-lg-10 hstack gap-1">
+                                <a href="javascript:void(0);" class="hstack gap-2">
+                                    <span>{{ $student->email ?? 'Sem Aluno'}}</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-2 fw-medium">Telefone</div>
+                            <div class="col-lg-10 hstack gap-1">
+                                <a href="javascript:void(0);" class="hstack gap-2">
+                                    <span>{{ $student->phone ?? 'Sem Aluno'}}</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-2 fw-medium">Curso</div>
+                            <div class="col-lg-10 hstack gap-1">
+                                <a href="javascript:void(0);" class="hstack gap-2">
+                                    <span>{{ $student->course->name ?? 'Sem Aluno'}}</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-2 fw-medium">Certificado</div>
+                            <div class="col-lg-10 hstack gap-1">
+                                <a href="javascript:void(0);" class="hstack gap-2">
+                                    <span>{{ $student->status == true ? 'Disponível' : 'Indisponível'}}</span>
                                 </a>
                             </div>
                         </div>
 
                         <div class="row mb-4">
-                            <div class="col-lg-2 fw-medium">Descrição</div>
-                            <div class="col-lg-10 hstack gap-1">{{ $student->description ?? 'Sem descrição'}}</div>
+                            <div class="col-lg-2 fw-medium">Criado em</div>
+                            <div class="col-lg-10 hstack gap-1">{{ $student->created_at->format('d/m/Y')}}</div>
+                            <div class="col-lg-2 fw-medium">Actualizado em</div>
+                            <div class="col-lg-10 hstack gap-1">{{ $student->updated_at->format('d/m/Y')}}</div>
                         </div>
                     </div>
                 </div>

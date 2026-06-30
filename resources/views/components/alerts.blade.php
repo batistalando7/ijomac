@@ -1,21 +1,8 @@
 @if (session('success'))
-    <!-- Start Popup Search Box -->
-    <div id="popup_success" class="popup_searchbox_wrapper">
-        <div class="searchbox_drawer position-relative">
-            <a href="#" class="popup_close"><i class="bx bx-x"></i></a>
-            <div class="popup_searchform text-center">
-                <div class="col-lg-7 mx-auto">
-                    {!! session('success') !!}
-                </div>
-            </div>
-        </div>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {!! session('success') !!}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    <!-- End Popup Search Box -->
-   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('[data-menu="#popup_success"]').click();
-    });
-</script>
 @endif
 
 @if (session('error'))

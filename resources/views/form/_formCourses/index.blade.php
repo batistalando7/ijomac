@@ -8,31 +8,23 @@
     <div class="col-lg-4 mb-4">
         <label class="form-label">Categoria</label>
         <select name="category_id" class="form-control">
-            @if(isset($course->category))
-                <option value="{{ $course->category->id }}" selected>{{ $course->category->name }}</option>
-            @else
-            <option value="">Selecione uma categoria</option>
+            <option value="{{ $course->category_id ?? '' }}">{{ $course->category->name ?? 'Selecione uma categoria' }}</option>
             @foreach($categories as $item)
                 <option value="{{ $item->id }}" {{ old('category_id') == $item->id ? 'selected' : '' }}>
                     {{ $item->name }}
                 </option>
             @endforeach
-            @endif
         </select>
     </div>
     <div class="col-lg-4 mb-4">
         <label class="form-label">Formador</label>
         <select name="teacher_id" class="form-control">
-            @if(isset($teacher))
-                <option value="{{ $teacher->id }}" selected>{{ $teacher->name }}</option>
-            @else
-            <option value="">Selecione um formador</option>
+            <option value="{{ $course->teacher_id ?? '' }}">{{ $course->teacher->name ?? 'Selecione um formador' }}</option>
             @foreach($teachers as $item)
                 <option value="{{ $item->id }}" {{ old('teacher_id') == $item->id ? 'selected' : '' }}>
                     {{ $item->name }}
                 </option>
             @endforeach
-            @endif
         </select>
     </div>
     <div class="col-lg-4 mb-4">

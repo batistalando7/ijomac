@@ -30,7 +30,7 @@ Auth::routes(['verify' => true]);
 /* Rota de Logging (página de visualização de logs) */
 Route::get('/admin/activity-logs', [ActivityLogController::class, 'index'])->name('activity.logs');
 /* Dashboard */
-Route::redirect('/admin', 'admin/dashboard')->name('dashboard');
+Route::redirect('/admin', '/admin/dashboard')->name('dashboard');
 Route::get('/admin/dashboard', [HomeController::class, 'management'])->name('admin.dashboard')->middleware(['auth', 'role:admin']);
 
 Route::middleware(['role:admin,editor', 'auth'])->prefix('admin/')->name('admin.')->group(function () {
@@ -74,10 +74,16 @@ Route::middleware(['role:admin,editor', 'auth'])->prefix('admin/')->name('admin.
         Route::get('/', ['as' => 'index', 'uses' => 'Admin\StudentController@index']);
         Route::get('create', ['as' => 'create', 'uses' => 'Admin\StudentController@create']);
         Route::post('store', ['as' => 'store', 'uses' => 'Admin\StudentController@store']);
-        Route::get('details/{student}', ['as' => 'show', 'uses' => 'Admin\StudentController@show']);
-        Route::get('edit/{student}', ['as' => 'edit', 'uses' => 'Admin\StudentController@edit']);
-        Route::put('update/{student}', ['as' => 'update', 'uses' => 'Admin\StudentController@update']);
-        Route::get('delete/{student}', ['as' => 'delete', 'uses' => 'Admin\StudentController@destroy']);
+        Route::get('details/{student:slug}', ['as' => 'show', 'uses' => 'Admin\StudentController@show']);
+        Route::get('edit/{student:slug}', ['as' => 'edit', 'uses' => 'Admin\StudentController@edit']);
+        Route::put('update/{student:slug}', ['as' => 'update', 'uses' => 'Admin\StudentController@update']);
+        Route::get('delete/{student:slug}', ['as' => 'delete', 'uses' => 'Admin\StudentController@destroy']);
+
+        //rota para tornar aluno finalista
+        Route::put('finalizar-curso/{student:slug}', ['as' =>'setFinalist', 'uses' => 'Admin\StudentController@setFinalist']);
+        
+        //rota para imprimir certificado do aluno finalista
+        Route::get('certificado-curso/{student:slug}', ['as' =>'certificate', 'uses' => 'Admin\StudentController@certificate']);
     });
 
 

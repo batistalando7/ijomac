@@ -18,8 +18,8 @@ class UsersEvent extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function event()
+    /* public function event()
     {
         return $this->belongsTo(News::class, 'event_id');
-    }
+    } */
 }
