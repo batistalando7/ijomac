@@ -48,6 +48,9 @@ class HomeController extends Controller
         if ($response['clientTotal'] != 0) {
             $response['successPercent'] = ($response['clientTotal'] * 100) / $response['clientTotal'];
         }
+
+        //carregar logo dos parceiros
+        $response['partners'] = Advertisement::where('status', true)->orderByDesc('id')->take(6)->get();
         return view('site.home.index', $response);
     }
 }

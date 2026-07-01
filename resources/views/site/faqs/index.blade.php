@@ -19,7 +19,7 @@
         <div class="container text-center">
             <div class="mbanner_content">
                 <h2>FAQ </h2>
-                <p><a href="{{ url('site/index.html') }}">Página Inicial</a> <i class="ph ph-caret-right"></i> FAQ</p>
+                <p><a href="{{ route('site.home') }}">Página Inicial</a> <i class="ph ph-caret-right"></i> FAQ</p>
             </div>
         </div>
         <img src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/blshape.svg') }}" alt="" class="blshape">

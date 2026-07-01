@@ -128,6 +128,8 @@
                                             <th>ID</th>
                                             <th>Nome do Curso</th>
                                             <th>Categoria</th>
+                                            <th>Nivel</th>
+                                            <th>Duração</th>
                                             <th>Preço</th>
                                             <th>Estado</th>
                                             <th class="text-end">Ações</th>
@@ -151,13 +153,15 @@
                                                 <td>
 
                                                     <div>
-                                                        <span class="text-truncate-1-line">{{ $item->name }}</span>
+                                                        <span class="text-truncate-1-line">{{ Str::limit($item->name, 35) }}</span>
                                                         {{-- <small
                                                                 class="fs-12 fw-normal text-muted">alex.della@outlook.com</small> --}}
                                                     </div>
 
                                                 </td>
-                                                <td>{{ $item->category ? $item->category->name : 'Sem Categoria' }}</td>
+                                                <td>{{  Str::limit($item->category->name, 20)  }}</td>
+                                                <td>{{ $levels[$item->level] }}</td>
+                                                <td>{{ $item->duration }}</td>
                                                 <td>R$ {{ number_format($item->price, 2, ',', '.') }}</td>
                                                 <td>
                                                     @if ($item->status === 'published')

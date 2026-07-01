@@ -504,58 +504,19 @@
             {{-- formadores --}}
             @include('components.formadores')
 
-            <div class="elementor-element elementor-element-763ada1 e-con-full e-flex e-con e-parent" data-id="763ada1"
-                data-element_type="container" data-e-type="container">
-                <div class="elementor-element elementor-element-7c73090 elementor-widget elementor-widget-edplus-clients"
-                    data-id="7c73090" data-element_type="widget" data-e-type="widget"
-                    data-widget_type="edplus-clients.default">
-                    <div class="elementor-widget-container">
-                        <!-- Start Client two -->
-                        <div class="client-two">
-                            <div class="container">
-                                <div class="client_slider2 position-relative owl-carousel wow fadeInUp">
-                                    <a href="#"><img decoding="async"
-                                            src="{{ url('site/wp-content/uploads/2025/03/5.svg') }}"
-                                            alt="image" /></a>
+            {{-- parceiros --}}
+            @if ($partners->isNotEmpty())
+                @include('components.patners', ['patners' => $partners])
+            @endif
 
-                                    <a href="#"><img decoding="async"
-                                            src="{{ url('site/wp-content/uploads/2025/03/4.svg') }}"
-                                            alt="image" /></a>
-
-                                    <a href="#"><img decoding="async"
-                                            src="{{ url('site/wp-content/uploads/2025/03/3.svg') }}"
-                                            alt="image" /></a>
-
-                                    <a href="#"><img decoding="async"
-                                            src="{{ url('site/wp-content/uploads/2025/03/2.svg') }}"
-                                            alt="image" /></a>
-
-                                    <a href="#"><img decoding="async"
-                                            src="{{ url('site/wp-content/uploads/2025/03/1.svg') }}"
-                                            alt="image" /></a>
-
-                                    <a href="#"><img decoding="async"
-                                            src="{{ url('site/wp-content/uploads/2025/03/3.svg') }}"
-                                            alt="image" /></a>
-
-                                    <a href="#"><img decoding="async"
-                                            src="{{ url('site/wp-content/uploads/2025/03/4.svg') }}"
-                                            alt="image" /></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Client -->
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-c85d15a e-con-full e-flex e-con e-parent" data-id="c85d15a"
+            {{-- <div class="elementor-element elementor-element-c85d15a e-con-full e-flex e-con e-parent" data-id="c85d15a"
                 data-element_type="container" data-e-type="container">
                 <div class="elementor-element elementor-element-675904c elementor-widget elementor-widget-edplus-blog"
                     data-id="675904c" data-element_type="widget" data-e-type="widget"
                     data-widget_type="edplus-blog.default">
                     <div class="elementor-widget-container">
                         <!-- Start Blog -->
-                        {{--  <section class="blog">
+                         <section class="blog">
                             <div class="container">
                                 <div class="section-title text-center wow fadeInUp">
                                     <span>
@@ -688,11 +649,11 @@
                                     <!-- End blog_item -->
                                 </div>
                             </div>
-                        </section> --}}
+                        </section>
                         <!-- End Blog -->
                     </div>
                 </div>
-            </div>
+            </div> --}}
             {{-- <div class="elementor-element elementor-element-95b4bb1 e-grid e-con-boxed e-con e-parent" data-id="95b4bb1"
                 data-element_type="container" data-e-type="container">
                 <div class="e-con-inner">
