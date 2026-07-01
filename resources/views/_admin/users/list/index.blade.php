@@ -10,8 +10,7 @@
                     <h5 class="m-b-10">Utilizadores</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                    <li class="breadcrumb-item">Utilizadores</li>
+                    <li class="breadcrumb-item">Lista deUtilizadores</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">

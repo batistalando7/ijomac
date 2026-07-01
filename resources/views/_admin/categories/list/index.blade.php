@@ -9,7 +9,7 @@
                     <h5 class="m-b-10">Categorias</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item">Listagem</li>
+                    <li class="breadcrumb-item">Lista de Categorias</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">

@@ -41,7 +41,7 @@
                         <ul class="nxl-submenu">
                             <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.user.index') }}">Lista de
                                     Utilizadores</a></li>
-                            <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.user.create') }}">Novo
+                            <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.user.create') }}">Adicionar
                                     Utilizador</a>
                             </li>
                         </ul>
@@ -74,7 +74,7 @@
                     <ul class="nxl-submenu">
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.category.index') }}">Lista de
                                 Categoria</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.category.create') }}">Criar
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.category.create') }}">Adicionar
                                 Categoria</a>
                         </li>
                     </ul>
@@ -90,7 +90,7 @@
                     <ul class="nxl-submenu">
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.course.index') }}">Lista de
                                 Cursos</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.course.create') }}">Criar
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.course.create') }}">Adicionar
                                 Curso</a>
                         </li>
                     </ul>
@@ -106,7 +106,7 @@
                     <ul class="nxl-submenu">
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.teacher.index') }}">Lista
                                 de Formadores</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.teacher.create') }}">Novo
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.teacher.create') }}">Adicionar
                                 Formador</a></li>
                     </ul>
                 </li>
@@ -121,7 +121,7 @@
                     <ul class="nxl-submenu">
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.service.index') }}">Lista
                                 de Serviços</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.service.create') }}">Novo
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.service.create') }}">Adicionar
                                 Serviço</a></li>
                     </ul>
                 </li>
@@ -136,7 +136,7 @@
                     <ul class="nxl-submenu">
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.serviceRequest.index') }}">Lista de
                                 Solicitações</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.serviceRequest.create') }}">Nova Solicitação</a>
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.serviceRequest.create') }}">Adicionar Solicitação</a>
                         </li>
                     </ul>
                 </li>
@@ -156,7 +156,7 @@
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.ads.index') }}">Lista de
                                 Anúncios</a>
                         </li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.ads.create') }}">Criar
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.ads.create') }}">Adicionar
                                 Anúncios</a>
                         </li>
                     </ul>

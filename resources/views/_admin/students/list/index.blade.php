@@ -9,7 +9,7 @@
                     <h5 class="m-b-10">Alunos</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item">Listagem</li>
+                    <li class="breadcrumb-item">Lista de Alunos</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">
@@ -130,6 +130,7 @@
                                             <th>Email</th>
                                             <th>Telefone</th>
                                             <th>Curso</th>
+                                            <th>Estado</th>
                                             <th class="text-end">Ações</th>
                                         </tr>
 
@@ -158,6 +159,7 @@
                                                 <td>{{ $item->email }}</td>
                                                 <td>{{ $item->phone }}</td>
                                                 <td>{{ $item->course->name }}</td>
+                                                <td>{{ $item->status ? 'Finalista' : 'Inscrito' }}</td>
                                                 <td>
                                                     <div class="hstack gap-2 justify-content-end">
                                                         @if ($item->status == false)
