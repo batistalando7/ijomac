@@ -8,7 +8,7 @@
         <div class="page-header">
             <div class="page-header-left d-flex align-items-center">
                 <div class="page-header-title">
-                    <h5 class="m-b-10">Anúncios</h5>
+                    <h5 class="m-b-10">Parceiros</h5>
                 </div>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item">Adicionar Anúncio</li>
@@ -54,7 +54,7 @@
                                         adicionar uma novo Anúncio</span>
                                 </h5>
                                 <a href="{{ route('admin.ads.index') }}" class="btn btn-sm btn-light-brand">Listar
-                                    Anúncios</a>
+                                    Parceiros</a>
                             </div>
                             <form action="{{ route('admin.ads.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
