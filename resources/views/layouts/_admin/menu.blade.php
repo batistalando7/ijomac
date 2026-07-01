@@ -10,7 +10,7 @@
                     style="heigth:10rem; width:12rem;"> --}}
 
                 <h1 class="logo logo-lg">IJOMAC </h1>
-                <img src="{{ url('site/images/favicon.png') }}" alt="" class="logo logo-sm">
+                <img src="{{ url('site/logo/cute.png') }}" alt="" class="logo logo-sm">
             </a>
         </div>
         <div class="navbar-content">
@@ -149,15 +149,15 @@
                 <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-volume-2"></i></span>
-                        <span class="nxl-mtext">Anúncios</span><span class="nxl-arrow"><i
+                        <span class="nxl-mtext">Parceiros</span><span class="nxl-arrow"><i
                                 class="feather-chevron-right"></i></span>
                     </a>
                     <ul class="nxl-submenu">
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.ads.index') }}">Lista de
-                                Anúncios</a>
+                                Parceiros</a>
                         </li>
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.ads.create') }}">Adicionar
-                                Anúncios</a>
+                                Parceiros</a>
                         </li>
                     </ul>
                 </li>

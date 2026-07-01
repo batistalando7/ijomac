@@ -1,16 +1,16 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte- Listar Ads(Publicidades)')
+@section('title', 'IJOMAC - Listar Parceiros')
 @section('content')
     <div class="nxl-content">
         <!-- [ page-header ] start -->
         <div class="page-header">
             <div class="page-header-left d-flex align-items-center">
                 <div class="page-header-title">
-                    <h5 class="m-b-10">Categories</h5>
+                    <h5 class="m-b-10">Parceiros</h5>
                 </div>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                    <li class="breadcrumb-item">Listagem</li>
+                    <li class="breadcrumb-item">Lista de Parceiros</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">
@@ -36,7 +36,7 @@
                         </div>
                         <a href="{{ route('admin.ads.create') }}" class="btn btn-danger">
                             <i class="feather-plus me-2"></i>
-                            <span>Nova Categoria</span>
+                            <span>Adicionar Parceiro</span>
                         </a>
                     </div>
                 </div>
@@ -129,7 +129,6 @@
                                             <th>ID</th>
                                             <th>Título</th>
                                             <th>Link</th>
-                                            <th>Posição</th>
                                             <th class="text-end">Ações</th>
                                         </tr>
 
@@ -157,7 +156,6 @@
                                                 </td>
                                                 <td><a href="{{ $ad->link }}" target="_blank">{{ $ad->link }}</a>
                                                 </td>
-                                                <td>{{ ucfirst($ad->position) }}</td>
                                                 <td>
                                                     <div class="hstack gap-2 justify-content-end">
                                                         <a class="avatar-text avatar-md" href="#">
