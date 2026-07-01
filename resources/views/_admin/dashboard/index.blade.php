@@ -209,13 +209,17 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card-body custom-card-action p-0">
+                            <div id="students-records-chart"></div>
+                        </div>
                         <div class="card-footer">
                             <div class="row g-4">
                                 @foreach ($categoryCourses as $item)
                                     <div class="col-lg-3">
                                         <div class="p-3 border border-dashed rounded">
                                             <div class="fs-12 text-muted mb-1">
-                                                {{ $item->name ?? 'Sem Categoria' }}</div>
+                                                {{ $item->name ?? 'Sem Categoria' }}
+                                            </div>
                                             <h6 class="fw-bold text-dark">{{ $item->course->count() ?? '0' }}</h6>
                                             <div class="progress mt-2 ht-3">
                                                 <div class="progress-bar bg-primary" role="progressbar"
@@ -336,5 +340,31 @@
         </div>
         <!-- [ Main Content ] end -->
     </div>
+<script>
+    //pegar o ano atual
+    const year = {{ now()->format('y') }};
 
+    // Dados do backend para o gráfico
+    //informações sobre os alunos e pedidos de serviços por mês
+    const studentsData = @json($students);
+    const serviceRequestsData = @json($serviceRequests);
+
+    const studentsPerMonth = Array(12).fill(0);
+    const serviceRequestsPerMonth = Array(12).fill(0);
+
+    studentsPerMonth.forEach((_, index) => {
+        const student = studentsData.find(s => s.month === index + 1);
+        if (student) {
+            studentsPerMonth[index] = student.total;
+        }
+    });
+
+    serviceRequestsPerMonth.forEach((_, index) => {
+        const serviceRequest = serviceRequestsData.find(s => s.month === index + 1);
+        if (serviceRequest) {
+            serviceRequestsPerMonth[index] = serviceRequest.total;
+        }
+    });
+
+</script>
 @endsection
