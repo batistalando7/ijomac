@@ -79,7 +79,6 @@ class CourseController extends Controller
 
         $course = new Course();
         $course->name = $request->name;
-        $course->slug = $request->slug;
         $course->description = $request->description;
         $course->price = $request->price;
         $course->status = $request->status;
@@ -178,7 +177,6 @@ class CourseController extends Controller
         ]);
 
         $course->name = $request->name;
-        $course->slug = $request->slug;
         $course->description = $request->description;
         $course->price = $request->price;
         $course->status = $request->status;

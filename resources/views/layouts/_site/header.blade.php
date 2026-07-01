@@ -16,10 +16,10 @@
                             <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://ao.linkedin.com/in/ijomac-lda-56618140b" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://www.youtube.com/channel/UC4NS5nDDkwIxavgpoOZ2qGA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                         </li>
                     </ul>
                 </div>

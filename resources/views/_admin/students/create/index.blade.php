@@ -11,7 +11,7 @@
                     <h5 class="m-b-10">Alunos</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item">Adicionar</li>
+                    <li class="breadcrumb-item">Adicionar Aluno</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">
@@ -49,9 +49,9 @@
                         <div class="card-body lead-status">
                             <div class="mb-5 d-flex align-items-center justify-content-between">
                                 <h5 class="fw-bold mb-0 me-4">
-                                    <span class="d-block mb-2">Criando  :</span>
+                                    <span class="d-block mb-2">Adicionar Aluno  :</span>
                                     <span class="fs-12 fw-normal text-muted text-truncate-1-line">Normalmente se refere a
-                                        adicionar uma nova </span>
+                                        adicionar um novo aluno </span>
                                 </h5>
                                 <a href="{{ route('admin.student.index') }}" class="btn btn-sm btn-light-brand">Listar
                                     </a>

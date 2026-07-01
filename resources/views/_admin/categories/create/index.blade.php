@@ -11,7 +11,7 @@
                     <h5 class="m-b-10">Categoria</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item">Criar</li>
+                    <li class="breadcrumb-item">Adicionar Categoria</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">
@@ -23,10 +23,6 @@
                         </a>
                     </div>
                     <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">
-                        {{-- <a href="javascript:void(0);" class="btn btn-light-brand successAlertMessage">
-                            <i class="feather-layers me-2"></i>
-                            <span>Save as Draft</span>
-                        </a> --}}
                         <a href="{{ route('admin.category.index') }}" class="btn btn-danger">
                             <i class="feather-chevron-left me-2"></i>
                             <span>Visualizar</span>
@@ -49,7 +45,7 @@
                         <div class="card-body lead-status">
                             <div class="mb-5 d-flex align-items-center justify-content-between">
                                 <h5 class="fw-bold mb-0 me-4">
-                                    <span class="d-block mb-2">Criando Categoria :</span>
+                                    <span class="d-block mb-2">Adicionar Categoria :</span>
                                     <span class="fs-12 fw-normal text-muted text-truncate-1-line">Normalmente se refere a
                                         adicionar uma nova Categoria</span>
                                 </h5>

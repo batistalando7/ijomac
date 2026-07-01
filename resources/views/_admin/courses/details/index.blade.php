@@ -80,10 +80,39 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-2 fw-medium">Duração</div>
+                            <div class="col-lg-10 hstack gap-1">
+                                <a href="javascript:void(0);" class="hstack gap-2">
+                                    <span>{{ $course->duration ?? 'Sem Duração'}}</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-2 fw-medium">Nível</div>
+                            <div class="col-lg-10 hstack gap-1">
+                                <a href="javascript:void(0);" class="hstack gap-2">
+                                    <span>{{ $levels[$course->level] ?? 'Sem Nível'}}</span>
+                                </a>
+                            </div>
+                        </div>
 
                         <div class="row mb-4">
                             <div class="col-lg-2 fw-medium">Preço</div>
-                            <div class="col-lg-10 hstack gap-1">{{ $course->price ?? 'Sem preço'}}</div>
+                            <div class="col-lg-10 hstack gap-1">
+                                <a href="javascript:void(0);" class="hstack gap-2">
+                                    <span>Kz {{ number_format($course->price, 2, ',', '.') ?? 'Sem preço' }}</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-lg-2 fw-medium">Formador</div>
+                            <div class="col-lg-10 hstack gap-1">
+                                <a href="javascript:void(0);" class="hstack gap-2">
+                                    <span>{{ $course->teacher->name ?? 'Sem formador' }}</span>
+                                </a>
+                            </div>
                         </div>
 
                         <div class="row mb-4">

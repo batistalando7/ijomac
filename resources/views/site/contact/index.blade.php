@@ -24,7 +24,7 @@
         <div class="mbanner_content">
             <h2>Contactos</h2>
             <p>
-                <a href="../index.html">Página Inicial</a>
+                <a href="{{ route('site.home') }}">Página Inicial</a>
                 <i class="ph ph-caret-right"></i> Contactos
             </p>
         </div>

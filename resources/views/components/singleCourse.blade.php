@@ -4,13 +4,8 @@
             <a href=""><i class="ph ph-folder-open"></i>
                 {{ Str::limit($course->category->name, 20) }}</a>
         </div>
-        <img fetchpriority="high" decoding="async" width="690" height="430"
-            src="{{ isset($course->image) ? asset('storage/' . $course->image) : '' }}"
-            class="attachment-edplus_course size-edplus_course wp-post-image" alt=""
-            srcset="{{ isset($course->image) ? asset('storage/' . $course->image) : '' }} 690w,
-                    {{ isset($course->image) ? asset('storage/' . $course->image) : '' }} 600w,
-                    {{ isset($course->image) ? asset('storage/' . $course->image) : '' }} 300w"
-            sizes="(max-width: 690px) 100vw, 690px" />
+        <img src="{{ asset('storage/' . $course->image) }}" class="img-fluid w-100" style="height:250px; object-fit:cover;"
+            alt="{{ $course->name }}">
         {{-- <a href="#" class="cvbtn" data-source="youtube">
             <i class="ph ph-video-camera"></i>
         </a> --}}

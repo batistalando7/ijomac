@@ -20,7 +20,7 @@
         <div class="container text-center">
             <div class="mbanner_content">
                 <h2>Sobre Nós </h2>
-                <p><a href="{{ url('site.home') }}">Página Principal</a> <i class="ph ph-caret-right"></i> Sobre Nós</p>
+                <p><a href="{{ route('site.home') }}">Página Principal</a> <i class="ph ph-caret-right"></i> Sobre Nós</p>
             </div>
         </div>
         <img src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/blshape.svg') }}" alt="" class="blshape">

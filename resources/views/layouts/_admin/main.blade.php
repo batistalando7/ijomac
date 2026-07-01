@@ -141,7 +141,7 @@
 
     <!--! END: Apps Init !-->
     <!--! BEGIN: Theme Customizer  !-->
-    <script src="{{ url('assets/js/widgets-charts-init.min.js') }}"></script>
+    {{-- <script src="{{ url('assets/js/widgets-charts-init.min.js') }}"></script> --}}
     <script src="{{ url('assets/js/theme-customizer-init.min.js') }}"></script>
     <!--! END: Theme Customizer !-->
 
