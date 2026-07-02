@@ -38,3 +38,7 @@ Route::post('portal/contactos', ['as' => 'site.message', 'uses' => 'Site\Contact
 //pesquisa
 Route::get('portal/pesquisar/finalistas', ['as' => 'site.search', 'uses' => 'Site\SearchController@search']);
 
+//verificação de certificado
+Route::get('portal/{student:slug}/verificar-certificado', ['as' => 'site.verify.certificate', 'uses' => 'Site\CertificateController@verify']);
+Route::get('portal/{student:slug}/mostrar-certificado', ['as' => 'site.verify.show', 'uses' => 'Site\CertificateController@show']);
+
