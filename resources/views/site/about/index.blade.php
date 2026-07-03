@@ -167,44 +167,10 @@
             {{-- formadores --}}
             @include('components.formadores')
 
-            <div class="elementor-element elementor-element-e27138f e-con-full e-flex e-con e-parent" data-id="e27138f"
-                data-element_type="container" data-e-type="container">
-                <div class="elementor-element elementor-element-2b1934a elementor-widget elementor-widget-edplus-clients"
-                    data-id="2b1934a" data-element_type="widget" data-e-type="widget"
-                    data-widget_type="edplus-clients.default">
-                    <div class="elementor-widget-container">
-                        <!-- Start Client two -->
-                        <div class="client-two">
-                            <div class="container">
-                                <div class="client_slider2 position-relative owl-carousel wow fadeInUp">
-
-                                    <a href="#"><img decoding="async"
-                                            src="{{ url('site/wp-content/uploads/2025/03/5.svg') }}" alt="image"></a>
-
-                                    <a href="#"><img decoding="async"
-                                            src="{{ url('site/wp-content/uploads/2025/03/4.svg') }}" alt="image"></a>
-
-                                    <a href="#"><img decoding="async"
-                                            src="{{ url('site/wp-content/uploads/2025/03/3.svg') }}" alt="image"></a>
-
-                                    <a href="#"><img decoding="async"
-                                            src="{{ url('site/wp-content/uploads/2025/03/2.svg') }}" alt="image"></a>
-
-                                    <a href="#"><img decoding="async"
-                                            src="{{ url('site/wp-content/uploads/2025/03/1.svg') }}" alt="image"></a>
-
-                                    <a href="#"><img decoding="async"
-                                            src="{{ url('site/wp-content/uploads/2025/03/3.svg') }}" alt="image"></a>
-
-                                    <a href="#"><img decoding="async"
-                                            src="{{ url('site/wp-content/uploads/2025/03/4.svg') }}" alt="image"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Client -->
-                    </div>
-                </div>
-            </div>
+            {{-- parceiros --}}
+            @if ($partners->isNotEmpty())
+                @include('components.patners', ['patners' => $partners])
+            @endif
         </div>
     </div>
 
