@@ -67,6 +67,14 @@
                             </div>
                         </div>
                         <div class="row mb-4">
+                            <div class="col-lg-2 fw-medium">Código</div>
+                            <div class="col-lg-10 hstack gap-1">
+                                <a href="javascript:void(0);" class="hstack gap-2">
+                                    <span>{{ $student->code ?? 'Sem Aluno'}}</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
                             <div class="col-lg-2 fw-medium">Email</div>
                             <div class="col-lg-10 hstack gap-1">
                                 <a href="javascript:void(0);" class="hstack gap-2">
@@ -97,8 +105,8 @@
                                     <span>{{ $student->status == true ? 'Disponível' : 'Indisponível'}}</span>
                                 </a>
                             </div>
+                            <small class="form-text text-muted">Código Secreto: {{ $student->secret_code ?? 'N/A' }}</small>
                         </div>
-
                         <div class="row mb-4">
                             <div class="col-lg-2 fw-medium">Criado em</div>
                             <div class="col-lg-10 hstack gap-1">{{ $student->created_at->format('d/m/Y')}}</div>

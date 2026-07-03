@@ -14,7 +14,7 @@ class AddSecretToStudentsTable extends Migration
     public function up()
     {
         Schema::table('students', function (Blueprint $table) {
-            $table->string('secret_code');
+            $table->string('secret_code')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class AddSecretToStudentsTable extends Migration
     public function down()
     {
         Schema::table('students', function (Blueprint $table) {
-            $table->string('secret_code');
+            $table->dropColumn('secret_code');
         });
     }
 }
