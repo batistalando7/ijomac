@@ -93,6 +93,10 @@
                                     ${student.course ? student.course.name : ''}
 
                                 </small>
+                                <br>
+                                <a href="/portal/${student.slug}/verificar-certificado" class="ms-2 me-4" >
+                                    Ver Certificado
+                                </a>
 
                             </div>
 
@@ -261,6 +265,15 @@
             });
 
         });
+
+        function secretCode(studentSlug) {
+            const code = prompt("Digite o código secreto para acessar o certificado:");
+            if (code === student.secret_code) {
+                window.open(`/admin/alunos/certificado-curso/${studentSlug}`, '_blank');
+            } else {
+                alert("Código secreto incorreto!");
+            }
+        }
 
     });
 </script>

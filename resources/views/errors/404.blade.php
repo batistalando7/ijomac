@@ -23,7 +23,7 @@
 
 
 <!-- Start Main Banner -->
-<section class="main-banner" style="background-image: url(https://wpdemothemes.com/edplus/wp-content/themes/edplus/assets/img/bg/main-banner.jpg);">
+<section class="main-banner" style="background-image: url({{ url('site/wp-content/themes/edplus/assets/img/bg/banner.png') }});">
 	<div class="container text-center">
 		<div class="mbanner_content">
 			<h2>
