@@ -183,7 +183,7 @@
                 <div class="col-xxl-12">
                     <div class="card stretch stretch-full">
                         <div class="card-header">
-                            <h5 class="card-title">Cursos Por Categoria</h5>
+                            <h5 class="card-title">Gráfico de Clientes</h5>
                             <div class="card-header-action">
                                 <div class="card-header-btn">
                                     <div data-bs-toggle="tooltip" title="Delete">
