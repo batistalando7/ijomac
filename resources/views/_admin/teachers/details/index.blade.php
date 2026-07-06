@@ -34,7 +34,7 @@
                                 <i class="feather-trash-2"></i>
                             </a>
                         @endcan
-                        <a href="{{ route('admin.teacher.index') }}" class="btn btn-danger ">
+                        <a href="{{ route('admin.teacher.index') }}" class="btn btn-primary ">
                             <i class="feather-chevron-left me-2"></i>
                             <span>Voltar</span>
 

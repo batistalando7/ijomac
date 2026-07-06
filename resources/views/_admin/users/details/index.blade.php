@@ -36,7 +36,7 @@
                         @endcan
 
                         @can('is-editor')
-                            <a href="{{ route('admin.user.index') }}" class="btn btn-danger ">
+                            <a href="{{ route('admin.user.index') }}" class="btn btn-primary ">
                                 <i class="feather-chevron-left me-2"></i>
                                 <span>Voltar</span>
 

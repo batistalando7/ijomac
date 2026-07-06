@@ -33,7 +33,7 @@
                                 </a>
                             </div>
                         </div>
-                        <a href="{{ route('admin.student.create') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.student.create') }}" class="btn btn-primary">
                             <i class="feather-plus me-2"></i>
                             <span>Adicionar Aluno</span>
                         </a>

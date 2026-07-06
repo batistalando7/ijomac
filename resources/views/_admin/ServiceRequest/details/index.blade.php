@@ -22,7 +22,7 @@
                         </a>
                     </div>
                     <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">
-                        <a href="{{ route('admin.serviceRequest.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.serviceRequest.index') }}" class="btn btn-primary">
                             <i class="feather-chevron-left me-2"></i>
                             Voltar</a>
                     </div>

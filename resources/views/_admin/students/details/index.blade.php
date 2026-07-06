@@ -26,7 +26,7 @@
                         <i class="feather-layers me-2"></i>
                         <span>Save & Send</span>
                     </a> --}}
-                        <a href="{{ route('admin.student.index') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.student.index') }}" class="btn btn-primary">
                             <i class="feather-chevron-left me-2"></i>
                             Voltar</a>
                     </div>

@@ -27,7 +27,7 @@
                             <i class="feather-layers me-2"></i>
                             <span>Save as Draft</span>
                         </a> --}}
-                        <a onclick="window.history.back()" class="btn btn-danger">
+                        <a onclick="window.history.back()" class="btn btn-primary">
                             <i class="feather-chevron-left me-2"></i>
                             <span>Voltar</span>
                         </a>

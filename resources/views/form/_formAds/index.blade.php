@@ -46,7 +46,7 @@
 
     {{-- Botão de Enviar --}}
     <div class="col-12">
-        <button type="submit" class="btn btn-danger"> Salvar
+        <button type="submit" class="btn btn-primary"> Salvar
             <i class="feather-save ms-2"></i>
         </button>
     </div>
