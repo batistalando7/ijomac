@@ -12,7 +12,7 @@ class AdvertisementController extends Controller
 {
     public function index()
     {
-        $response['ads'] = Advertisement::orderByDesc('id')->get();
+        $response['advertisement'] = Advertisement::orderByDesc('id')->get();
 
         /* Alerts */
         $response['admin'] = Auth::user();
@@ -60,7 +60,7 @@ class AdvertisementController extends Controller
             'title' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5120',
             'link' => 'nullable|url',
-            'active' => 'boolean'
+            'status' => 'boolean'
         ], [
             'image.image' => 'O arquivo deve ser uma imagem.',
             'image.mimes' => 'A imagem deve ser do tipo: jpeg, png, jpg ou gif.',
@@ -70,7 +70,7 @@ class AdvertisementController extends Controller
         $adevertisement = new Advertisement();
         $adevertisement->title = $request->title;
         $adevertisement->link = $request->link;
-        $adevertisement->status = $request->active;
+        $adevertisement->status = $request->status;
 
         // Upload da imagem
         $imageName = null;
@@ -103,7 +103,7 @@ class AdvertisementController extends Controller
             'title' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5120',
             'link' => 'nullable|url',
-            'active' => 'boolean'
+            'status' => 'boolean'
         ], [
             'image.image' => 'O arquivo deve ser uma imagem.',
             'image.mimes' => 'A imagem deve ser do tipo: jpeg, png, jpg ou gif.',
@@ -130,7 +130,7 @@ class AdvertisementController extends Controller
 
         $advertisement->title = $request->title;
         $advertisement->link = $request->link;
-        $advertisement->status = $request->active;
+        $advertisement->status = $request->status;
         $advertisement->update();
 
         return redirect()->route('admin.ads.index')->with('success', 'Anúncio atualizado com sucesso!');
@@ -149,6 +149,6 @@ class AdvertisementController extends Controller
 
         $advertisement->delete();
 
-        return redirect()->route('admin.ads.index')->with('success', 'Anúncio excluído com sucesso!');
+        return redirect()->back()->with('success', 'Anúncio excluído com sucesso!');
     }
 }

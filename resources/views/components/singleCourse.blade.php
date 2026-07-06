@@ -1,7 +1,7 @@
 <div class="single_course">
     <div class="course_img">
         <div class="ccategory">
-            <a href=""><i class="ph ph-folder-open"></i>
+            <a href="javascript:void(0);"><i class="ph ph-folder-open"></i>
                 {{ Str::limit($course->category->name, 20) }}</a>
         </div>
         <img src="{{ asset('storage/' . $course->image) }}" class="img-fluid w-100" style="height:250px; object-fit:cover;"
@@ -57,7 +57,7 @@
                     <img alt="" src="{{ asset('storage/' . $course->teacher->photo) }}"
                         srcset="{{ asset('storage/' . $course->teacher->photo) }}" class="avatar avatar-30 photo"
                         height="30" width="30" />
-                    <a href="profile/edplus/indexd527.html?view=instructor">{{ $course->teacher->name }}</a>
+                    <a href="javascript:void(0);">{{ $course->teacher->name }}</a>
                 </div>
             @endisset
         </div>

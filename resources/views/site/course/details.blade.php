@@ -63,7 +63,7 @@
                                             <span>Formador:</span>
                                             <p>
                                                 <a
-                                                    href="../../profile/edplus/indexd527.html?view=instructor">{{ $course->teacher->name }}</a>
+                                                    href="javascript:void(0);">{{ $course->teacher->name }}</a>
                                             </p>
                                         </div>
                                     </div>
@@ -75,7 +75,7 @@
                                     <span>Category:</span>
                                     <p>
                                         <a
-                                            href="../../course-category/marketing/index737f.html?tutor-course-filter-category=72">{{ $course->category->name }}</a>
+                                            href="javascript:void(0);">{{ $course->category->name }}</a>
                                     </p>
                                 </div>
                             </div>
