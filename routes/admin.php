@@ -127,9 +127,15 @@ Route::middleware(['role:admin,editor', 'auth'])->prefix('admin/')->name('admin.
     /*-------------------------------------------------------
                     Ads routes
     -------------------------------------------------------*/
-    Route::get('ads', ['as' => 'ads.index', 'uses' => 'Admin\AdvertisementController@index']);
-    Route::get('create', ['as' => 'ads.create', 'uses' => 'Admin\AdvertisementController@create']);
-    Route::post('ads', ['as' => 'ads.store', 'uses' => 'Admin\AdvertisementController@store']);
+   Route::prefix('ads')->name('ads.')->group(function () {
+        Route::get('/', ['as' => 'index', 'uses' => 'Admin\AdvertisementController@index']);
+        Route::get('create', ['as' => 'create', 'uses' => 'Admin\AdvertisementController@create']);
+        Route::post('store', ['as' => 'store', 'uses' => 'Admin\AdvertisementController@store']);
+        Route::get('details/{advertisement}', ['as' => 'show', 'uses' => 'Admin\AdvertisementController@show']);
+        Route::get('edit/{advertisement}', ['as' => 'edit', 'uses' => 'Admin\AdvertisementController@edit']);
+        Route::put('update/{advertisement}', ['as' => 'update', 'uses' => 'Admin\AdvertisementController@update']);
+        Route::get('delete/{advertisement}', ['as' => 'delete', 'uses' => 'Admin\AdvertisementController@destroy']);
+    });
 });
 /*-------------------------------------------------------
                     Auth routes

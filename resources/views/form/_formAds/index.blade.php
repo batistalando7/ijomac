@@ -1,26 +1,29 @@
 
 <div class="row">
     {{-- Titulo --}}
-    <div class="col-lg-4 mb-4">
+    <div class="col-lg-6 mb-4">
         <label for="title" class="form-label">Título (opcional)</label>
-        <input type="text" name="title" id="title" class="form-control" value="{{ old('title') }}">
+        <input type="text" name="title" id="title" class="form-control" value="{{ old('title', $advertisement->title ?? '') }}">
     </div>
 
     {{-- Link --}}
-    <div class="col-lg-4 mb-4">
+    <div class="col-lg-6 mb-4">
         <label for="link" class="form-label">Link (opcional)</label>
         <input type="url" name="link" id="link" class="form-control" placeholder="https://exemplo.com"
-            value="{{ old('link') }}">
+            value="{{ old('link', $advertisement->link ?? '') }}">
     </div>
 
     {{-- Status Ativo --}}
     <div class="col-12 mb-4">
-        <input type="checkbox" name="active" id="active" class="form-check-input" value="1" checked>
-        <label for="active" class="form-check-label">Ativo</label>
+        <label for="status" class="form-label">Status</label>
+        <select name="status" id="status" class="form-select">
+            <option value="1" {{ old('status', $advertisement->status ?? 1) == 1 ? 'selected' : '' }}>Ativo</option>
+            <option value="0" {{ old('status', $advertisement->status ?? 1) == 0 ? 'selected' : '' }}>Inativo</option>
+        </select>
     </div>
 
     {{-- Posição --}}
-    <div class="col-12 mb-4">
+    {{-- <div class="col-12 mb-4">
         <label for="position" class="form-label">Posição</label>
         <select name="position" id="position" class="form-select" required>
             <option value="">-- Selecione --</option>
@@ -35,7 +38,7 @@
             <option value="custom" {{ old('position') == 'custom' ? 'selected' : '' }}>
                 Custom</option>
         </select>
-    </div>
+    </div> --}}
 
     {{-- Imagem --}}
     <div class="col-12 mb-4">
@@ -46,7 +49,7 @@
 
     {{-- Botão de Enviar --}}
     <div class="col-12">
-        <button type="submit" class="btn btn-danger"> Salvar
+        <button type="submit" class="btn btn-primary"> Salvar
             <i class="feather-save ms-2"></i>
         </button>
     </div>

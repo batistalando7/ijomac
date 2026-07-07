@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'IJOMAC - Criar Categoria')
+@section('title', 'IJOMAC- Editar Parceiro')
 @section('content')
 
     <!-- [ Craete Form ] -->
@@ -8,10 +8,10 @@
         <div class="page-header">
             <div class="page-header-left d-flex align-items-center">
                 <div class="page-header-title">
-                    <h5 class="m-b-10">Categoria</h5>
+                    <h5 class="m-b-10">Parceiros</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item">Adicionar Categoria</li>
+                    <li class="breadcrumb-item">Editar Parceiro</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">
@@ -23,9 +23,9 @@
                         </a>
                     </div>
                     <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">
-                        <a href="{{ route('admin.category.index') }}" class="btn btn-primary">
+                        <a href="{{ route('admin.ads.index') }}" class="btn btn-primary">
                             <i class="feather-chevron-left me-2"></i>
-                            <span>Visualizar</span>
+                            <span>Voltar</span>
                         </a>
                     </div>
                 </div>
@@ -45,20 +45,19 @@
                         <div class="card-body lead-status">
                             <div class="mb-5 d-flex align-items-center justify-content-between">
                                 <h5 class="fw-bold mb-0 me-4">
-                                    <span class="d-block mb-2">Adicionar Categoria :</span>
+                                    <span class="d-block mb-2">Editar Parceiro :</span>
                                     <span class="fs-12 fw-normal text-muted text-truncate-1-line">Normalmente se refere a
-                                        adicionar uma nova Categoria</span>
+                                        editar um Parceiro existente</span>
                                 </h5>
-                                <a href="{{ route('admin.category.index') }}" class="btn btn-sm btn-light-brand">Listar
-                                    Categoria</a>
+                                <a href="{{ route('admin.ads.index') }}" class="btn btn-sm btn-light-brand">Listar
+                                    Parceiros</a>
                             </div>
-                            <form action="{{ route('admin.category.store') }}" method="POST">
+                            <form action="{{ route('admin.ads.update', $advertisement->id) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                @method('POST')
-                                {{-- aqui o formulário --}}
-                                @include('form._formCategories.index')
-                                {{-- fim do formulário --}}
+                                @method('PUT')
+                                @include('form._formAds.index')
                             </form>
+
                         </div>
                     </div>
                 </div>

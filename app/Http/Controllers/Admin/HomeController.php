@@ -20,7 +20,7 @@ class HomeController extends Controller
 
         $response['coursesTotal'] = Course::count(); //número total de cursos
         $response['servicesTotal'] = Service::count(); //número total de serviços
-        $response['usersTotal'] = User::count(); //número total de usuários
+        $response['studentsTotal'] = Student::count(); //número total de estudantes
         $response['teachersTotal'] = Teacher::count(); //número total de professores
 
         $response['categoryCourses'] = Category::with('course')->whereHas('course', function ($query) {

@@ -34,7 +34,7 @@
                                 </a>
                             </div>
                         </div>
-                        <a href="{{ route('admin.ads.create') }}" class="btn btn-danger">
+                        <a href="{{ route('admin.ads.create') }}" class="btn btn-primary">
                             <i class="feather-plus me-2"></i>
                             <span>Adicionar Parceiro</span>
                         </a>
@@ -129,13 +129,14 @@
                                             <th>ID</th>
                                             <th>Título</th>
                                             <th>Link</th>
+                                            <th>Estado</th>
                                             <th class="text-end">Ações</th>
                                         </tr>
 
                                     </thead>
 
                                     <tbody>
-                                        @foreach ($ads as $ad)
+                                        @foreach ($advertisement as $item)
                                             <tr class="single-item">
                                                 <td>
                                                     <div class="item-checkbox ms-1">
@@ -146,35 +147,38 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td>{{ $ad->id }}</td>
+                                                <td>{{ $item->id }}</td>
                                                 <td>
 
                                                     <div>
-                                                        <span class="text-truncate-1-line">{{ $ad->title }}</span>
+                                                        <span class="text-truncate-1-line">{{ $item->title }}</span>
                                                     </div>
 
                                                 </td>
-                                                <td><a href="{{ $ad->link }}" target="_blank">{{ $ad->link }}</a>
+                                                <td><a href="{{ $item->link }}" target="_blank">{{ $item->link }}</a>
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-soft-{{ $item->status ? 'success' : 'danger' }} text-{{ $item->status ? 'success' : 'danger' }}">{{ $item->status ? 'Ativo' : 'Inativo' }}</span>
                                                 </td>
                                                 <td>
                                                     <div class="hstack gap-2 justify-content-end">
-                                                        <a class="avatar-text avatar-md" href="#">
+                                                       {{--  <a class="avatar-text avatar-md" href="{{ route('admin.ads.show', ['advertisement' => $item->id]) }}">
                                                             <i class="feather feather-eye"></i>
-                                                        </a>
+                                                        </a> --}}
                                                         <div class="dropdown">
                                                             <a href="javascript:void(0)" class="avatar-text avatar-md"
                                                                 data-bs-toggle="dropdown" data-bs-offset="0,21">
                                                                 <i class="feather feather-more-horizontal"></i>
                                                             </a>
                                                             <ul class="dropdown-menu">
-                                                                <a class="dropdown-item" href="#">
+                                                                <a class="dropdown-item" href="{{ route('admin.ads.edit', ['advertisement' => $item->id]) }}">
                                                                     <i class="feather feather-edit-3 me-3"></i>
                                                                     <span>Edit</span>
                                                                 </a>
                                                                 </li>
                                                                 <li class="dropdown-divider"></li>
                                                                 <li>
-                                                                    <a class="dropdown-item" href="#">
+                                                                    <a class="dropdown-item" href="{{ route('admin.ads.delete', ['advertisement' => $item->id]) }}">
                                                                         <i class="feather feather-trash-2 me-3"></i>
                                                                         <span>Delete</span>
                                                                     </a>

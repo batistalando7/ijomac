@@ -132,7 +132,7 @@
                                     @endforeach
 
                                     <div class="col-12 text-center mt-4 wow fadeInUp">
-                                        <a class="blue_btn round_btn" href="course-categories/index.html">Todos
+                                        <a class="blue_btn round_btn" href="{{ route('site.services') }}">Todos
                                             Serviços
                                             <i class="ph ph-arrow-right"></i></a>
                                     </div>
