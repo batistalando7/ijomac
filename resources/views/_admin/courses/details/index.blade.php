@@ -52,7 +52,8 @@
                         </div>
                         <div class="row mb-4">
                             <div class="col-lg-2 fw-medium">
-                                <img src="{{ asset('storage/' . $course->image) }}" alt="{{ $course->name }}" class="img-fluid" s>
+                                <img src="{{ asset('storage/' . $course->image) }}" alt="{{ $course->name }}"
+                                    class="img-fluid" s>
                             </div>
                         </div>
                         <div class="row mb-4">
@@ -67,16 +68,16 @@
                             <div class="col-lg-2 fw-medium">Nome do Curso</div>
                             <div class="col-lg-10 hstack gap-1">
                                 <a href="javascript:void(0);" class="hstack gap-2">
-                                    <span>{{ $course->name ?? 'Sem Nome'}}</span>
+                                    <span>{{ $course->name ?? 'Sem Nome' }}</span>
                                 </a>
                             </div>
                         </div>
-                        
+
                         <div class="row mb-4">
                             <div class="col-lg-2 fw-medium">Categoria</div>
                             <div class="col-lg-10 hstack gap-1">
                                 <a href="javascript:void(0);" class="hstack gap-2">
-                                    <span>{{ $course->category->name ?? 'Sem Categoria'}}</span>
+                                    <span>{{ $course->category->name ?? 'Sem Categoria' }}</span>
                                 </a>
                             </div>
                         </div>
@@ -84,7 +85,7 @@
                             <div class="col-lg-2 fw-medium">Duração</div>
                             <div class="col-lg-10 hstack gap-1">
                                 <a href="javascript:void(0);" class="hstack gap-2">
-                                    <span>{{ $course->duration ?? 'Sem Duração'}}</span>
+                                    <span>{{ $course->duration ?? 'Sem Duração' }}</span>
                                 </a>
                             </div>
                         </div>
@@ -92,7 +93,7 @@
                             <div class="col-lg-2 fw-medium">Nível</div>
                             <div class="col-lg-10 hstack gap-1">
                                 <a href="javascript:void(0);" class="hstack gap-2">
-                                    <span>{{ $levels[$course->level] ?? 'Sem Nível'}}</span>
+                                    <span>{{ $levels[$course->level] ?? 'Sem Nível' }}</span>
                                 </a>
                             </div>
                         </div>
@@ -105,7 +106,7 @@
                                 </a>
                             </div>
                         </div>
-                        
+
                         <div class="row mb-4">
                             <div class="col-lg-2 fw-medium">Formador</div>
                             <div class="col-lg-10 hstack gap-1">
@@ -117,13 +118,14 @@
 
                         <div class="row mb-4">
                             <div class="col-lg-2 fw-medium">Descrição</div>
-                            <div class="col-lg-10 hstack gap-1">{{ $course->description ?? 'Sem descrição'}}</div>
+                            <div class="col-lg-10 hstack gap-1">{{ $course->description ?? 'Sem descrição' }}</div>
                         </div>
                     </div>
                 </div>
 
             </div>
         </div>
+    </div>
 
 
-    @endsection
+@endsection

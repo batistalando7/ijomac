@@ -21,7 +21,7 @@
                         </a>
                     </div>
                     <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">
-                        <div class="dropdown">
+                        {{-- <div class="dropdown">
                             <a class="btn btn-icon btn-light-brand" data-bs-toggle="dropdown" data-bs-offset="0, 12"
                                 data-bs-auto-close="outside">
                                 <i class="feather-paperclip"></i>
@@ -32,7 +32,7 @@
                                     <span>PDF</span>
                                 </a>
                             </div>
-                        </div>
+                        </div> --}}
                         <a href="{{ route('admin.course.create') }}" class="btn btn-primary">
                             <i class="feather-plus me-2"></i>
                             <span>Adicionar Curso</span>
@@ -153,13 +153,14 @@
                                                 <td>
 
                                                     <div>
-                                                        <span class="text-truncate-1-line">{{ Str::limit($item->name, 35) }}</span>
+                                                        <span
+                                                            class="text-truncate-1-line">{{ Str::limit($item->name, 35) }}</span>
                                                         {{-- <small
                                                                 class="fs-12 fw-normal text-muted">alex.della@outlook.com</small> --}}
                                                     </div>
 
                                                 </td>
-                                                <td>{{  Str::limit($item->category->name, 20)  }}</td>
+                                                <td>{{ Str::limit($item->category->name, 20) }}</td>
                                                 <td>{{ $levels[$item->level] }}</td>
                                                 <td>{{ $item->duration }}</td>
                                                 <td>R$ {{ number_format($item->price, 2, ',', '.') }}</td>

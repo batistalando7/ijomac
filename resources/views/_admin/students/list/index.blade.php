@@ -21,7 +21,7 @@
                         </a>
                     </div>
                     <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">
-                        <div class="dropdown">
+                        {{-- <div class="dropdown">
                             <a class="btn btn-icon btn-light-brand" data-bs-toggle="dropdown" data-bs-offset="0, 12"
                                 data-bs-auto-close="outside">
                                 <i class="feather-paperclip"></i>
@@ -32,7 +32,7 @@
                                     <span>PDF</span>
                                 </a>
                             </div>
-                        </div>
+                        </div> --}}
                         <a href="{{ route('admin.student.create') }}" class="btn btn-primary">
                             <i class="feather-plus me-2"></i>
                             <span>Adicionar Aluno</span>
