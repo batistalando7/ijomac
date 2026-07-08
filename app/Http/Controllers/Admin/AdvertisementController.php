@@ -87,10 +87,10 @@ class AdvertisementController extends Controller
         return redirect()->route('admin.ads.index')->with('success', 'Publicidade criada com sucesso!');
     }
 
-    public function show(Advertisement $advertisement)
+    /* public function show(Advertisement $advertisement)
     {
         return view('_admin.ads.show.index', compact('advertisement'));
-    }
+    } */ //Não há necessidade de visualizar os parceiros
 
     public function edit(Advertisement $advertisement)
     {
