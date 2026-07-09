@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Mail\SecretCode;
 use App\Models\Course;
 use Illuminate\Http\Request;
 use App\Models\Student;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class StudentController extends Controller
@@ -116,6 +118,9 @@ class StudentController extends Controller
     {
         $student->status = true;
         $student->secret_code = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
+        $secretCode = $student->secret_code;
+        //enviar email ao aluno com o código secreto
+        Mail::to($student->email)->send(new SecretCode($secretCode));
         $student->save();
 
         return redirect()->back()->with('success', 'O aluno ' . $student->name . ' finalizou o curso de ' . $student->course->name . '. Agora podes baixar o certificado!');
