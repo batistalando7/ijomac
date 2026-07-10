@@ -6,7 +6,7 @@
             title: 'Sucesso',
             text: @json(session('success')),
             showConfirmButton: false,
-            timer: 2500
+            timer: 3000
         });
     </script>
 @endif
@@ -19,7 +19,7 @@
             title: 'Erro',
             text: @json(session('error')),
             showConfirmButton: false,
-            timer: 2500
+            timer: 3000
         });
     </script>
 @endif
@@ -32,7 +32,7 @@
             title: 'Atenção',
             text: @json(session('warning')),
             showConfirmButton: false,
-            timer: 2500
+            timer: 3000
         });
     </script>
 @endif
