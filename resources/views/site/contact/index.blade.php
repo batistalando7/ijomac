@@ -89,8 +89,8 @@
                                 <div class="cont_content">
                                     <h4>Email Address</h4>
                                     <p>
-                                        <a href="mailto:support@example.com">Support @example.com</a><br />
-                                        <a href="mailto:support@example.com">Info@example.com</a>
+                                        <a href="mailto:geral@ijomac.com.ao">geral@ijomac.com.ao</a><br />
+                                        <a href="mailto:geral@ijomac.com.ao">Info@ijomac.com.ao</a>
                                     </p>
                                 </div>
                             </div>
@@ -108,8 +108,8 @@
                                 <div class="cont_content">
                                     <h4>Phone Number</h4>
                                     <p>
-                                        <a href="tel:support@example.com">+244 941 991 533</a><br />
-                                        <a href="tel:support@example.com">+244 923 949 839</a>
+                                        <a href="tel:geral@ijomac.com.ao">+244 941 991 533</a><br />
+                                        <a href="tel:geral@ijomac.com.ao">+244 923 949 839</a>
                                     </p>
                                 </div>
                             </div>
