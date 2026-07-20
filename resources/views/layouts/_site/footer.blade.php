@@ -16,7 +16,7 @@
                          <ul>
                              <li>
                                  <span>Email:</span>
-                                 <a href="mailto:support@example.com">support@example.com</a>
+                                 <a href="mailto:geral@ijomac.com.ao">geral@ijomac.com.ao</a>
                              </li>
                              <li>
                                  <span>Telefone:</span>

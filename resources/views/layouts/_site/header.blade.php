@@ -34,7 +34,7 @@
                     <p class="align-self-center">
                         <i class="fa-regular fa-envelope"></i>
                         <span>Email:</span>
-                        <a href="mailto:support@example.com">support@example.com</a>
+                        <a href="mailto:geral@ijomac.com.ao">geral@ijomac.com.ao</a>
                     </p>
                 </div>
             </div>
