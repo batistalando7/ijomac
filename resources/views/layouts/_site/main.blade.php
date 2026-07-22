@@ -712,8 +712,8 @@
                 <div class="offcanvas__content">
                     <div class="offcanvas__top d-flex justify-content-between align-items-center">
                         <div class="offcanvas__logo">
-                            <a href="index.html"><img
-                                    src="{{ url('site/wp-content/themes/edplus/assets/img/logo.svg"') }}
+                            <a href="{{ route('site.home') }}"><img
+                                    src="{{ url('site/logo/logo.png') }}
                                     alt="Edplus" /></a>
                         </div>
                         <div class="offcanvas__close">
@@ -725,30 +725,30 @@
                     <div class="mobile-menu fix mb-3"></div>
 
                     <div class="sidebar_contact_info">
-                        <h3>Contact Info</h3>
+                        <h3>Nosso Contactos</h3>
                         <hr />
-                        <p>
+                        {{-- <p>
                             Duis aute irure dolor in reprehenderit in
                             volupta velit esse cillum dolore eu fugiat nulla
                             pariatur. excepteur sint occaecat corporis
-                        </p>
+                        </p> --}}
                         <ul class="scinof">
                             <li>
                                 <i class="ph ph-map-pin"></i>
                                 <span>
-                                    3500 Lenox Road , GA 30326. USA</span>
+                                    Luanda, Cacuaco</span>
                             </li>
                             <li>
                                 <i class="ph ph-envelope-simple"></i>
-                                <span><a href="mailto:support@example.com">support@example.com</a></span>
+                                <span><a href="mailto:geral@ijoimac.com.ao">geral@ijoimac.com.ao</a></span>
                             </li>
                             <li>
                                 <i class="ph ph-headset"></i>
-                                <span><a href="tel:+99925476854">+99925476854</a></span>
+                                <span><a href="tel:+244941991533">+244941991533</a></span>
                             </li>
                         </ul>
 
-                        <h4>Follow On</h4>
+                        <h4>Siga-nos</h4>
                         <ul class="hsidebar_social">
                             <li>
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -757,10 +757,10 @@
                                 <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://ao.linkedin.com/in/ijomac-lda-56618140b"><i class="fa-brands fa-linkedin-in"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="https://www.youtube.com/channel/UC4NS5nDDkwIxavgpoOZ2qGA"><i class="fa-brands fa-youtube"></i></a>
                             </li>
                         </ul>
                     </div>

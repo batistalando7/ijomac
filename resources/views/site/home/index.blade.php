@@ -100,49 +100,51 @@
                     </div>
                 </div>
             </div>
-            <div class="elementor-element elementor-element-741c749 e-con-full e-flex e-con e-parent" data-id="741c749"
-                data-element_type="container" data-e-type="container">
-                <div class="elementor-element elementor-element-bd5a44d elementor-widget elementor-widget-edplus-course-category"
-                    data-id="bd5a44d" data-element_type="widget" data-e-type="widget"
-                    data-widget_type="edplus-course-category.default">
-                    <div class="elementor-widget-container">
-                        <!-- End Course Category -->
-                        <section class="course-category section-padding">
-                            <div class="container">
-                                <div class="section-title text-center wow fadeInUp">
-                                    <span>
-                                        <span class="ticon">
-                                            <img decoding="async"
-                                                src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
-                                                alt="" />
-                                        </span>
-                                        Serviços
-                                    </span>
-                                    <h2>Nossos Serviços</h2>
-                                    <img decoding="async"
-                                        src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/linha-laranja.png') }}"
-                                        alt="" />
-                                </div>
-
-                                <div class="row">
-                                    @foreach ($services as $item)
-                                        <div class="col-xl-4 col-md-6 col-12 wow fadeInUp">
-                                            @include('components.blogItem', ['item' => $item])
-                                        </div>
-                                    @endforeach
-
-                                    <div class="col-12 text-center mt-4 wow fadeInUp">
-                                        <a class="blue_btn round_btn" href="{{ route('site.services') }}">Todos
+            @if ($services->isNotEmpty())
+                <div class="elementor-element elementor-element-741c749 e-con-full e-flex e-con e-parent" data-id="741c749"
+                    data-element_type="container" data-e-type="container">
+                    <div class="elementor-element elementor-element-bd5a44d elementor-widget elementor-widget-edplus-course-category"
+                        data-id="bd5a44d" data-element_type="widget" data-e-type="widget"
+                        data-widget_type="edplus-course-category.default">
+                        <div class="elementor-widget-container">
+                            <!-- End Course Category -->
+                            <section class="course-category section-padding">
+                                <div class="container">
+                                    <div class="section-title text-center wow fadeInUp">
+                                        <span>
+                                            <span class="ticon">
+                                                <img decoding="async"
+                                                    src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
+                                                    alt="" />
+                                            </span>
                                             Serviços
-                                            <i class="ph ph-arrow-right"></i></a>
+                                        </span>
+                                        <h2>Nossos Serviços</h2>
+                                        <img decoding="async"
+                                            src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/linha-laranja.png') }}"
+                                            alt="" />
+                                    </div>
+
+                                    <div class="row">
+                                        @foreach ($services as $item)
+                                            <div class="col-xl-4 col-md-6 col-12 wow fadeInUp">
+                                                @include('components.blogItem', ['item' => $item])
+                                            </div>
+                                        @endforeach
+
+                                        <div class="col-12 text-center mt-4 wow fadeInUp">
+                                            <a class="blue_btn round_btn" href="{{ route('site.services') }}">Todos
+                                                Serviços
+                                                <i class="ph ph-arrow-right"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </section>
-                        <!-- End Course Category -->
+                            </section>
+                            <!-- End Course Category -->
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endif
             <div class="elementor-element elementor-element-9dd6922 e-flex e-con-boxed e-con e-parent" data-id="9dd6922"
                 data-element_type="container" data-e-type="container" data-settings='{"background_background":"classic"}'>
                 <div class="e-con-inner">
@@ -257,7 +259,7 @@
                     </div>
                 </div>
             </div>
-            <div class="elementor-element elementor-element-3fad5e1 e-con-full e-flex e-con e-parent" data-id="3fad5e1"
+            {{-- <div class="elementor-element elementor-element-3fad5e1 e-con-full e-flex e-con e-parent" data-id="3fad5e1"
                 data-element_type="container" data-e-type="container">
                 <div class="elementor-element elementor-element-7295c56 elementor-widget elementor-widget-edplus-counter-up"
                     data-id="7295c56" data-element_type="widget" data-e-type="widget"
@@ -352,55 +354,60 @@
                         <!-- End Counter Up -->
                     </div>
                 </div>
-            </div>
-            <div class="elementor-element elementor-element-dff3f98 e-con-full e-flex e-con e-parent" data-id="dff3f98"
-                data-element_type="container" data-e-type="container">
-                <div class="elementor-element elementor-element-ac34084 elementor-widget elementor-widget-edplus-courses"
-                    data-id="ac34084" data-element_type="widget" data-e-type="widget"
-                    data-widget_type="edplus-courses.default">
-                    <div class="elementor-widget-container">
-                        <!-- Start Courses -->
-                        <section class="courses">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-5 wow fadeInUp">
-                                        <div class="section-title">
-                                            <span>
-                                                <span class="ticon">
-                                                    <img decoding="async"
-                                                        src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
-                                                        alt="" />
+            </div> --}}
+            @if ($courses->isNotEmpty())
+                <div class="elementor-element elementor-element-dff3f98 e-con-full e-flex e-con e-parent"
+                    data-id="dff3f98" data-element_type="container" data-e-type="container">
+                    <div class="elementor-element elementor-element-ac34084 elementor-widget elementor-widget-edplus-courses"
+                        data-id="ac34084" data-element_type="widget" data-e-type="widget"
+                        data-widget_type="edplus-courses.default">
+                        <div class="elementor-widget-container">
+                            <!-- Start Courses -->
+                            <section class="courses">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-5 wow fadeInUp">
+                                            <div class="section-title">
+                                                <span>
+                                                    <span class="ticon">
+                                                        <img decoding="async"
+                                                            src="{{ url('site/wp-content/themes/edplus/assets/img/icons/title-icon.svg') }}"
+                                                            alt="" />
+                                                    </span>
+                                                    Cursos
                                                 </span>
-                                                Cursos
-                                            </span>
-                                            <h2>Os cursos mais populares</h2>
-                                            <img decoding="async"
-                                                src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/linha-laranja.png') }}"
-                                                alt="" />
+                                                <h2>Os cursos mais populares</h2>
+                                                <img decoding="async"
+                                                    src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/linha-laranja.png') }}"
+                                                    alt="" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- End Col-->
+                                    <!-- End Col-->
 
-                                <div class="row gy-4 course_item">
-                                    @foreach ($courses as $item)
-                                        <div class="col-xl-4 col-md-6 col-12 mix data-science wow fadeInUp">
-                                            @include('components.singleCourse', ['course' => $item])
-                                        </div>
-                                        <!-- End Col-->
-                                    @endforeach
+
+                                    <div class="row gy-4 course_item">
+                                        @foreach ($courses as $item)
+                                            <div class="col-xl-4 col-md-6 col-12 mix data-science wow fadeInUp">
+                                                @include('components.singleCourse', ['course' => $item])
+                                            </div>
+                                            <!-- End Col-->
+                                        @endforeach
+
+                                    </div>
 
                                 </div>
-                            </div>
-                        </section>
-                        <!-- End Courses -->
+                            </section>
+                            <!-- End Courses -->
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endif
 
             {{-- formadores --}}
-            @include('components.formadores')
-
+            @if ($teachers->isNotEmpty())
+                @include('components.formadores')
+            @endif
             {{-- parceiros --}}
             @if ($partners->isNotEmpty())
                 @include('components.patners', ['patners' => $partners])

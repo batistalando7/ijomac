@@ -27,7 +27,7 @@
                 <div class="col-lg-6 col-md-12 text-center htright d-lg-flex justify-content-end">
                     <p class="align-self-center">
                         <i class="fa-solid fa-headset"></i>
-                        <span>Ligar Nos:</span>
+                        <span>Ligar-nos:</span>
                         <a href="tel:+244941991533">+244941991533</a>
                     </p>
 
@@ -49,7 +49,7 @@
                     <div class="header-left d-flex justify-content-start">
                         <div class="site-logo">
                             <a href="{{ route('site.home') }}"><img src="{{ url('site/logo/logo.png') }}"
-                                    alt="Edplus" /></a>
+                                    alt="ijomac-logo" /></a>
                         </div>
                     </div>
                 </div>
