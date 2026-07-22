@@ -230,7 +230,7 @@
                                             </li>
                                             <li>
                                                 <i class="ph ph-check"></i>
-                                                Certificado de Válido
+                                                Certificado Válido
                                             </li>
                                         </ul>
 
