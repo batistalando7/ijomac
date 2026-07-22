@@ -23,7 +23,7 @@
                                  <a href="tel:+244 941 991 533">+244 941 991 533</a>
                              </li>
                              <li>
-                                 <span>Location:</span> Luanda, Cacuaco
+                                 <span>Localização:</span> Luanda, Cacuaco
                              </li>
                          </ul>
                      </div>

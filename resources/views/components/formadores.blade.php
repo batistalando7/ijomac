@@ -12,7 +12,7 @@
                     </span>
                     Formadores
                 </span>
-                <h2>Profissionais experiêntes</h2>
+                <h2>Profissionais experientes </h2>
                 <img decoding="async"
                     src="{{ url('site/wp-content/themes/edplus/assets/img/shapes/linha-laranja.png') }}"
                     alt="" />
