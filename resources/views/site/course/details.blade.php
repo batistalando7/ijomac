@@ -72,7 +72,7 @@
 
                             <div class="col-lg-3 col-sm-6">
                                 <div class="smeta sm_cat">
-                                    <span>Category:</span>
+                                    <span>Categoria:</span>
                                     <p>
                                         <a
                                             href="javascript:void(0);">{{ $course->category->name }}</a>
