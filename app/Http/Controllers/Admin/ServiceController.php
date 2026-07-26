@@ -43,6 +43,11 @@ class ServiceController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ], [
+            'name.required' => 'O campo nome é obrigatório.',
+            'image.image' => 'O ficheiro deve ser imagem',
+            'image.mimes' => 'A imagem de ser dos seguntes formatos:jpeg,png,jpg,gif,svg',
+            'image.max' => 'imagem não superior a 2Mb'
         ]);
 
         $service = new Service();
