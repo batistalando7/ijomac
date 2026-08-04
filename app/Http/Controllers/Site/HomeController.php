@@ -18,7 +18,7 @@ class HomeController extends Controller
 
         $response['categories'] = Category::take(4)->get();
 
-        $courses = Course::all();
+        $courses = Course::where('status', 'published')->get();
         $response['courses'] = $courses;
 
         if ($courses->count() > 0) {
