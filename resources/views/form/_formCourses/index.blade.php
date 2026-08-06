@@ -17,9 +17,10 @@
         </select>
     </div>
     <div class="col-lg-4 mb-4">
-        <label class="form-label">Formador</label>
+        <label class="form-label">Formador (Opcional)</label>
         <select name="teacher_id" class="form-control">
             <option value="{{ $course->teacher_id ?? '' }}">{{ $course->teacher->name ?? 'Selecione um formador' }}</option>
+            <option value="">Nenhum</option>
             @foreach($teachers as $item)
                 <option value="{{ $item->id }}" {{ old('teacher_id') == $item->id ? 'selected' : '' }}>
                     {{ $item->name }}
