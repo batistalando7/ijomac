@@ -129,7 +129,7 @@ class CourseController extends Controller
         $response = [
             'course' => $course,
             'categories' => Category::where('id', '!=', $course->category_id)->get(),
-            'teachers' => Teacher::all(),
+            'teachers' => Teacher::where('id', '!=', $course->teacher_id)->get(),
             'levels' => [
                 'beginner' => 'Iniciante',
                 'intermediate' => 'Intermediário',
@@ -197,7 +197,7 @@ class CourseController extends Controller
             $course->image = $imagePath;
         }
 
-        $course->save();
+        $course->update();
 
         return redirect()->route('admin.course.index')->with('success', 'Curso atualizado com sucesso!');
     }

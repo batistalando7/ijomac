@@ -15,7 +15,7 @@
     </div>
 
     <!-- Start Main Banner -->
-    <section class="main-banner" style="background-image: url({{ url('site/wp-content/themes/edplus/assets/img/bg/banner.png') }});">
+    <section class="main-banner" style="background-image: url({{ url('site/wp-content/themes/edplus/assets/img/bg/banner2.jpeg') }});">
         <div class="container text-center">
             <div class="mbanner_content">
                 <h2>FAQ </h2>
@@ -37,9 +37,9 @@
                         data-id="541abb5" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
                         <div class="elementor-widget-container">
                             <img fetchpriority="high" decoding="async" width="640" height="707"
-                                src="{{ url('site/wp-content/uploads/2025/12/ceo.png') }}"
+                                src="{{ url('site/wp-content/uploads/2025/12/ceo2.jpeg') }}"
                                 class="attachment-large size-large wp-image-1763" alt=""
-                                srcset="{{ url('site/wp-content/uploads/2025/12/ceo.png') }} 660w, {{ url('site/wp-content/uploads/2025/12/ceo.png') }} 272w, {{ url('site/wp-content/uploads/2025/12/ceo.png') }} 600w"
+                                srcset="{{ url('site/wp-content/uploads/2025/12/ceo2.jpeg') }} 660w, {{ url('site/wp-content/uploads/2025/12/ceo2.jpeg') }} 272w, {{ url('site/wp-content/uploads/2025/12/ceo2.jpeg') }} 600w"
                                 sizes="(max-width: 640px) 100vw, 640px" />
                         </div>
                     </div>

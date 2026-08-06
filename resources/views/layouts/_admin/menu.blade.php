@@ -145,6 +145,23 @@
                     <label>Multimedia</label>
                 </li>
 
+                {{-- Menu Galeria --}}
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="javascript:void(0);" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-image"></i></span>
+                        <span class="nxl-mtext">Galeria</span><span class="nxl-arrow"><i
+                                class="feather-chevron-right"></i></span>
+                    </a>
+                    <ul class="nxl-submenu">
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.galery.index') }}">Lista de
+                                Galeria</a>
+                        </li>
+                        <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.galery.create') }}">Adicionar
+                                Galeria</a>
+                        </li>
+                    </ul>
+                </li>
+                
                 {{-- Menu Publicidade --}}
                 <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">

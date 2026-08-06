@@ -125,6 +125,19 @@ Route::middleware(['role:admin,editor', 'auth'])->prefix('admin/')->name('admin.
     Route::get('/notifications', [AlertsController::class, 'index'])->name('notifications.all');
 
     /*-------------------------------------------------------
+                    galery routes
+    -------------------------------------------------------*/
+   Route::prefix('galery')->name('galery.')->group(function () {
+        Route::get('/', ['as' => 'index', 'uses' => 'Admin\GaleryController@index']);
+        Route::get('create', ['as' => 'create', 'uses' => 'Admin\GaleryController@create']);
+        Route::post('store', ['as' => 'store', 'uses' => 'Admin\GaleryController@store']);
+        Route::get('details/{galery}', ['as' => 'show', 'uses' => 'Admin\GaleryController@show']);
+        Route::get('edit/{galery}', ['as' => 'edit', 'uses' => 'Admin\GaleryController@edit']);
+        Route::put('update/{galery}', ['as' => 'update', 'uses' => 'Admin\GaleryController@update']);
+        Route::get('delete/{galery}', ['as' => 'delete', 'uses' => 'Admin\GaleryController@destroy']);
+    });
+   
+    /*-------------------------------------------------------
                     Ads routes
     -------------------------------------------------------*/
    Route::prefix('ads')->name('ads.')->group(function () {
