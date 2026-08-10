@@ -18,6 +18,13 @@
         </div>
         <div class="col-md-12">
             <div class="form-group">
+                <label for="name">Data</label>
+                <input type="date" class="form-control" id="date" name="date"
+                    value="{{ old('date', $galery->date ?? now()->format('Y-m-d')) }}" required>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
                 <label for="description">Descrição</label>
                 <textarea type="text" class="form-control" id="description" name="description"
                     placeholder="Ex: Evento de Natal 2025" required>{{ old('description', $galery->description ?? '') }}</textarea>

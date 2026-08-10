@@ -57,7 +57,7 @@
                                     Galeria</a>
                             </div>
                             <form action="{{ route('admin.galery.update', ['galery' => $galery->id]) }}"
-                                method="POST">
+                                method="POST" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
                                 {{-- aqui o formulário --}}
