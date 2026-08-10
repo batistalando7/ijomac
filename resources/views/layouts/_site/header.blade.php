@@ -77,8 +77,8 @@
                                         </li>
                                         {{-- <li id="menu-item-1155"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1155">
-                                            <a href="teachers-and-instructors/index.html"
-                                                onClick="return true">Formadores</a>
+                                            <a href="{{ route('site.about.galery') }}"
+                                                onClick="return true">Galeria</a>
                                         </li> --}}
                                         <li id="menu-item-1151"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1151">
@@ -89,6 +89,10 @@
                                 <li id="menu-item-1970"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1970">
                                     <a href="{{ route('site.services') }}" onClick="return true">Serviços</a>
+                                </li>
+                                <li id="menu-item-1970"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1970">
+                                    <a href="{{ route('site.galery.index') }}" onClick="return true">Galeria</a>
                                 </li>
                                 <li id="menu-item-1088"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1088">

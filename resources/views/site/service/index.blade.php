@@ -5,7 +5,7 @@
     <!-- Start Main Banner -->
     <section class="main-banner"
         style="
-                background-image: url({{ url('site/wp-content/themes/edplus/assets/img/bg/banner2.jpeg') }});
+                background-image: url('{{ url('site/wp-content/themes/edplus/assets/img/bg/banner2.jpeg') }}');
             ">
         <div class="container text-center">
             <div class="mbanner_content">

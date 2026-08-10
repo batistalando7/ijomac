@@ -4,14 +4,13 @@
      <!-- Start Main Banner -->
      <section class="main-banner"
          style="
-                background-image: url({{ url('site/wp-content/themes/edplus/assets/img/bg/banner2.jpeg') }});
+                background-image: url('{{ url('site/wp-content/themes/edplus/assets/img/bg/banner2.jpeg') }}');
             ">
          <div class="container text-center">
              <div class="mbanner_content">
                  <h2>{{ $service->name }}</h2>
                  <p>
-                     <a href="../index.html">Página Inicial</a>
-                     <i class="ph ph-caret-right"></i> {{ $service->name }}
+                     <a href="{{ route('site.home') }}">Página Inicial</a><i class="ph ph-caret-right"></i><a href="{{ route('site.services') }}">Serviços</a> <i class="ph ph-caret-right"></i> {{ $service->name }}
                  </p>
              </div>
          </div>

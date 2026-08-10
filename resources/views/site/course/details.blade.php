@@ -2,27 +2,15 @@
 @section('title', 'Detalhes do Curso')
 @section('content')
 
-    <div id="mini_cart" class="min_cart_wrapper">
-        <div class="cart_drawer">
-            <div class="cart_top">
-                <a href="#" class="cart_close"><i class='bx bx-x'></i></a>
-                <h3 class="title">Courses List</h3>
-                <span class="cart_number">
-                    0 </span>
-            </div>
-            <p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
-        </div>
-    </div>
-
     <!-- Start Main Banner -->
     <section class="main-banner"
-        style="background-image: url({{ url('site/wp-content/themes/edplus/assets/img/bg/banner2.jpeg') }});">
+        style="background-image: url('{{ url('site/wp-content/themes/edplus/assets/img/bg/banner2.jpeg') }}');">
         <div class="container text-center">
             <div class="mbanner_content">
                 <h2>
                     {{ $course->name }} </h2>
                 <p>
-                    <a href="{{ route('site.home') }}">Home</a> <i class="ph ph-caret-right"></i>
+                    <a href="{{ route('site.home') }}">Página Inicial</a> <i class="ph ph-caret-right"></i><a href="{{ route('site.courses') }}">Cursos</a> <i class="ph ph-caret-right"></i>
                     {{ $course->name }}
                 </p>
             </div>
