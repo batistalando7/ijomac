@@ -28,6 +28,10 @@ Route::get('portal/servicos/{service:slug}/solicitação', ['as' => 'site.servic
 Route::post('portal/solicitação-servico', ['as' => 'site.service.store', 'uses' => 'Site\ServiceController@store']);
 /* fim das rota de serviço */
 
+/* rota de galeria */
+Route::get('portal/galery', ['as' => 'site.galery.index', 'uses' => 'Site\GaleryController@index']);
+Route::get('portal/galery/{galery:slug}', ['as' => 'site.galery.show', 'uses' => 'Site\GaleryController@show']);
+/* fim das rotas da galeria */
 
 /* Rota de subscrição */
 Route::post('/portal/subscrever', ['as' => 'site.subscrive', 'uses' => 'Site\SubscriptionController@store']);

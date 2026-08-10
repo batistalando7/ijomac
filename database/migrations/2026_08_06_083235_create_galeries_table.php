@@ -19,6 +19,7 @@ class CreateGaleriesTable extends Migration
             $table->string('slug')->unique();
             $table->text('description')->nullable();
             $table->boolean('status')->default(true);
+            $table->date('date')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
