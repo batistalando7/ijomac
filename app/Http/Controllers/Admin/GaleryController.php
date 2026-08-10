@@ -26,6 +26,7 @@ class GaleryController extends Controller
         $request->validate([
             'name'    => 'required|string|max:255',
             'description' => 'nullable|string',
+            'date' => 'required|date',
             'status' => 'required|boolean',
             'images'   => 'required|array',
             'images.*' => 'image|mimes:jpg,jpeg,png,webp|max:2048',
@@ -40,6 +41,7 @@ class GaleryController extends Controller
         $galery = Galery::create([
             'name' => $request->name,
             'description' => $request->description,
+            'date' => $request->date,
             'status' => $request->status
         ]);
 
@@ -79,10 +81,11 @@ class GaleryController extends Controller
 
     public function update(Request $request, Galery $galery)
     {
-        dd($request->all(), $request->file('images'));
+        /* dd($request->all(), $request->file('images')); */
         $request->validate([
             'name'    => 'required|string|max:255',
             'description' => 'nullable|string',
+            'date' => 'required|date',
             'status' => 'required|boolean',
             'images'   => 'nullable|array',
             'images.*' => 'image|mimes:jpg,jpeg,png,webp|max:2048',
@@ -97,6 +100,7 @@ class GaleryController extends Controller
         $galery->update([
             'name' => $request->name,
             'description' => $request->description,
+            'date' => $request->date,
             'status' => $request->status
         ]);
 
