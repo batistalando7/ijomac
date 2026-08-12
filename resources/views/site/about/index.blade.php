@@ -165,7 +165,7 @@
                 </div>
             </div>
             {{-- formadores --}}
-            @include('components.formadores')
+            {{-- @include('components.formadores') --}}
 
             {{-- parceiros --}}
             @if ($partners->isNotEmpty())
