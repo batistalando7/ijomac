@@ -294,10 +294,10 @@
                     {{ $levels[$student->course->level] }}
                 </div>
 
-                <div class="item">
+                {{-- <div class="item">
                     <strong>Orientador / Formador:</strong>
                     {{ $student->course->teacher->name }}
-                </div>
+                </div> --}}
 
                 <div class="item">
                     <strong>Data de Emissão:</strong>

@@ -107,14 +107,14 @@
                             </div>
                         </div>
 
-                        <div class="row mb-4">
+                        {{-- <div class="row mb-4">
                             <div class="col-lg-2 fw-medium">Formador</div>
                             <div class="col-lg-10 hstack gap-1">
                                 <a href="javascript:void(0);" class="hstack gap-2">
                                     <span>{{ $course->teacher->name ?? 'Sem formador' }}</span>
                                 </a>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="row mb-4">
                             <div class="col-lg-2 fw-medium">Descrição</div>

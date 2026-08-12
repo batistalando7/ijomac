@@ -97,7 +97,7 @@
                 </li>
 
                 {{-- Menu Formadores --}}
-                <li class="nxl-item nxl-hasmenu">
+                {{-- <li class="nxl-item nxl-hasmenu">
                     <a href="javascript:void(0);" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-facebook"></i></span>
                         <span class="nxl-mtext">Formadores</span><span class="nxl-arrow"><i
@@ -109,7 +109,7 @@
                         <li class="nxl-item"><a class="nxl-link" href="{{ route('admin.teacher.create') }}">Adicionar
                                 Formador</a></li>
                     </ul>
-                </li>
+                </li> --}}
                 
                 {{-- Menu services --}}
                 <li class="nxl-item nxl-hasmenu">

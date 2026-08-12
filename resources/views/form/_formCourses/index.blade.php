@@ -16,7 +16,7 @@
             @endforeach
         </select>
     </div>
-    <div class="col-lg-4 mb-4">
+    {{-- <div class="col-lg-4 mb-4">
         <label class="form-label">Formador (Opcional)</label>
         <select name="teacher_id" class="form-control">
             <option value="{{ $course->teacher_id ?? '' }}">{{ $course->teacher->name ?? 'Selecione um formador' }}</option>
@@ -27,7 +27,7 @@
                 </option>
             @endforeach
         </select>
-    </div>
+    </div> --}}
     <div class="col-lg-4 mb-4">
         <label class="form-label">Estado</label>
         <select name="status" class="form-control">

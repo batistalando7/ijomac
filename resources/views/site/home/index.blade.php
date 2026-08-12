@@ -32,7 +32,7 @@
                                 ">
                             <div class="container position-relative">
                                 <div class="row">
-                                    <div class="col-xl-6 col-lg-5 col-12 align-self-center">
+                                    <div class="col-xl-12 col-lg-5 col-12 align-self-center">
                                         <div class="banner_content">
                                             <span class="wow fadeInUp" data-wow-delay=".3s"><img decoding="async"
                                                     src="{{ url('site/wp-content/themes/edplus/assets/img/icons/graduation-hat-white.svg') }}"
@@ -60,7 +60,7 @@
                                     </div>
                                     <!-- End Col -->
 
-                                    <div class="col-xl-6 col-lg-7 col-12 align-self-center">
+                                    {{-- <div class="col-xl-6 col-lg-7 col-12 align-self-center">
                                         <div class="row">
                                             <div class="col-lg-5 col-md-4 align-self-center">
                                                 <div class="badge_wrap wow fadeInUp" data-wow-delay=".5s">
@@ -80,7 +80,7 @@
                                             </div>
                                             <!-- End Col -->
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <!-- End Col -->
                                 </div>
                                 <img decoding="async" src="{{ url('site/wp-content/uploads/2025/03/b1.svg') }}"
@@ -405,9 +405,9 @@
             @endif
 
             {{-- formadores --}}
-            @if ($teachers->isNotEmpty())
+           {{--  @if ($teachers->isNotEmpty())
                 @include('components.formadores')
-            @endif
+            @endif --}}
             {{-- parceiros --}}
             @if ($partners->isNotEmpty())
                 @include('components.patners', ['patners' => $partners])

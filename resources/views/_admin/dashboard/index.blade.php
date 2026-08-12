@@ -37,7 +37,7 @@
         <div class="main-content">
             <div class="row">
                 <!-- [Notícias Publicadas] start -->
-                <div class="col-xxl-3 col-md-6">
+                <div class="col-xxl-4 col-md-6">
                     <div class="card stretch stretch-full">
                         <div class="card-body">
                             <div class="d-flex align-items-start justify-content-between mb-4">
@@ -72,7 +72,7 @@
                 </div>
                 <!-- [Notícias Publicadas] end -->
                 <!-- [Notícias Arquivadas] start -->
-                <div class="col-xxl-3 col-md-6">
+                <div class="col-xxl-4 col-md-6">
                     <div class="card stretch stretch-full">
                         <div class="card-body">
                             <div class="d-flex align-items-start justify-content-between mb-4">
@@ -107,7 +107,7 @@
                 </div>
                 <!-- [Notícias Arquivadas] end -->
                 <!-- [Notícias em Rascunho] start -->
-                <div class="col-xxl-3 col-md-6">
+                {{-- <div class="col-xxl-3 col-md-6">
                     <div class="card stretch stretch-full">
                         <div class="card-body">
                             <div class="d-flex align-items-start justify-content-between mb-4">
@@ -140,11 +140,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <!-- [Notícias em Rascunho] end -->
 
                 <!-- [Noticias Premium] start -->
-                <div class="col-xxl-3 col-md-6">
+                <div class="col-xxl-4 col-md-6">
                     <div class="card stretch stretch-full">
                         <div class="card-body">
                             <div class="d-flex align-items-start justify-content-between mb-4">
