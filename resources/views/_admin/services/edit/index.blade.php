@@ -57,7 +57,7 @@
                                     Serviço</a>
                             </div>
                             <form action="{{ route('admin.service.update', ['service' => $service->id]) }}"
-                                method="POST">
+                                method="POST" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
                                 {{-- aqui o formulário --}}
